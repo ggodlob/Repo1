@@ -2,7 +2,17 @@
     "name": "Vakuumstand",
     "description": "A Node-RED Project",
     "version": "0.0.1",
-    "dependencies": {},
+    "dependencies": {
+        "node-red-contrib-edge-trigger": "1.0.1",
+        "node-red-contrib-fs": "1.4.1",
+        "node-red-contrib-modbustcp": "1.2.3",
+        "node-red-contrib-modbus": "5.43.0",
+        "node-red-contrib-ta-cmi": "0.1.15",
+        "node-red-contrib-ui-etable": "4.6.3",
+        "node-red-dashboard": "3.6.5",
+        "node-red-node-base64": "0.3.0",
+        "node-red-node-random": "0.4.1"
+    },
     "node-red": {
         "settings": {
             "flowFile": "flows.json",
