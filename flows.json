@@ -765,7 +765,7 @@
         "name": "CMI",
         "host": "192.168.45.55",
         "port": "502",
-        "unit_id": "56",
+        "unit_id": "1",
         "reconnecttimeout": "120"
     },
     {
