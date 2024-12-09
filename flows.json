@@ -1,1 +1,4490 @@
-[]
+[
+    {
+        "id": "8e6f93d6c1999015",
+        "type": "tab",
+        "label": "Vakuumpumpen",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "61d663c65d5d04a2",
+        "type": "tab",
+        "label": "WP1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "cb52c966d2fad605",
+        "type": "tab",
+        "label": "WP2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f820c1bd7223bd88",
+        "type": "tab",
+        "label": "WP3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "28c240172645bd4e",
+        "type": "tab",
+        "label": "WP4",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "7a2056c27a24a46a",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f685952b3b13c23f",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "62168f16fb9cb960",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0f7a1f209ffd4d33",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#007f7f",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#007f7f",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#007f7f",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#00cbcb",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#007f7f",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "OVUM Vakuumstand",
+            "hideToolbar": "false",
+            "allowSwipe": "mouse",
+            "lockMenu": "true",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "58c2aa06.ef46e4",
+        "type": "ui_tab",
+        "name": "OVUM Vakuumstand",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c78356c0b92f2c3f",
+        "type": "ui_group",
+        "name": "HC1",
+        "tab": "8e641f0cfca8c308",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "72b2cd2853debb46",
+        "type": "ui_group",
+        "name": "Buffer",
+        "tab": "8e641f0cfca8c308",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "03ed3271ca65bda8",
+        "type": "ui_group",
+        "name": "HC1",
+        "tab": "36e44a558ea5ec97",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "161660e89a033d04",
+        "type": "ui_group",
+        "name": "System",
+        "tab": "36e44a558ea5ec97",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d6c44e8c04d16f6a",
+        "type": "ui_group",
+        "name": "Upheating",
+        "tab": "36e44a558ea5ec97",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "26689541d0756141",
+        "type": "ui_group",
+        "name": "System",
+        "tab": "897e23b01df3d61f",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f1e01d0bcd6547a0",
+        "type": "ui_group",
+        "name": "Datalog",
+        "tab": "36e44a558ea5ec97",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c2b1d9eb11f7dd10",
+        "type": "ui_group",
+        "name": "Datalog",
+        "tab": "897e23b01df3d61f",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7401d2cafca2927a",
+        "type": "ui_group",
+        "name": "System",
+        "tab": "8e641f0cfca8c308",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1509d015be2746fc",
+        "type": "ui_group",
+        "name": "MB VLsoll",
+        "tab": "8e641f0cfca8c308",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7da995cc61ae7b8d",
+        "type": "ui_group",
+        "name": "System",
+        "tab": "14284e268e2b2c46",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d39a94e777fc2590",
+        "type": "ui_group",
+        "name": "Settings",
+        "tab": "8e641f0cfca8c308",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d634c856afabdd51",
+        "type": "ui_group",
+        "name": "Chart test",
+        "tab": "e921c12d600a5e0b",
+        "order": 6,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "be7cf1b0ef25e0f3",
+        "type": "ui_group",
+        "name": "System",
+        "tab": "b5addfe08c0a46f5",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "38b0f55fe341dbd6",
+        "type": "ui_group",
+        "name": "Settings",
+        "tab": "b5addfe08c0a46f5",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f0d340761cf6b074",
+        "type": "ui_group",
+        "name": "Group 6",
+        "tab": "8e641f0cfca8c308",
+        "order": 6,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "ee759164a37d2540",
+        "type": "ui_group",
+        "name": "Group 2",
+        "tab": "e921c12d600a5e0b",
+        "order": 2,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "625872f.40b1e8c",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ff9fdb9a.7da098",
+        "type": "ui_group",
+        "name": "TEST",
+        "tab": "7dcc246f.ee661c",
+        "order": 1,
+        "disp": false,
+        "width": "8",
+        "collapse": false
+    },
+    {
+        "id": "f3dddb11fb623196",
+        "type": "ui_group",
+        "name": "Standard",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5d5f0cfb7f61f4e8",
+        "type": "ui_group",
+        "name": "Home",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1591b6c7b8497e57",
+        "type": "ui_group",
+        "name": "WP1",
+        "tab": "58c2aa06.ef46e4",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b26cc45d75dc03bc",
+        "type": "ui_group",
+        "name": "Standard",
+        "tab": "",
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "de078532d6f5e387",
+        "type": "ui_group",
+        "name": "WP2",
+        "tab": "58c2aa06.ef46e4",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "422ba1667a7ab9f8",
+        "type": "ui_group",
+        "name": "WP3",
+        "tab": "58c2aa06.ef46e4",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f31df9e398e4c15e",
+        "type": "ui_group",
+        "name": "WP4",
+        "tab": "58c2aa06.ef46e4",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "88a17a33.f3f398",
+        "type": "ui_group",
+        "name": "Entfeuchtung Keller",
+        "tab": "18886b9.a624594",
+        "order": 9,
+        "disp": true,
+        "width": "12",
+        "collapse": true
+    },
+    {
+        "id": "571a38b1.5e3638",
+        "type": "ui_group",
+        "name": "Richer Table",
+        "tab": "29ec6908.552b36",
+        "order": 1,
+        "disp": true,
+        "width": "8",
+        "collapse": false
+    },
+    {
+        "id": "321dfc80ac5422dc",
+        "type": "ui_group",
+        "name": "Table",
+        "tab": "29ec6908.552b36",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e2933fb5c76543f0",
+        "type": "modbus-client",
+        "name": "Aircube",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "192.168.31.240",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": 247,
+        "commandDelay": 1,
+        "clientTimeout": 1000,
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": 5000,
+        "parallelUnitIdsAllowed": true,
+        "showErrors": false,
+        "showWarnings": true,
+        "showLogs": true
+    },
+    {
+        "id": "b07e0fc9b4c1ddf2",
+        "type": "modbus-client",
+        "name": "Aircube1",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "192.168.45.240",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": 1,
+        "commandDelay": 1,
+        "clientTimeout": 1000,
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": 2000,
+        "parallelUnitIdsAllowed": true,
+        "showErrors": false,
+        "showWarnings": true,
+        "showLogs": true
+    },
+    {
+        "id": "afd4264994ebeb0f",
+        "type": "modbus-client",
+        "name": "UVR",
+        "clienttype": "simpleser",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "127.0.0.1",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "1200",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": true,
+        "showErrors": false,
+        "showWarnings": true,
+        "showLogs": true
+    },
+    {
+        "id": "c74df921f477ca14",
+        "type": "modbus-client",
+        "name": "CMI",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "192.165.45.55",
+        "tcpPort": "502",
+        "tcpType": "TCP-RTU-BUFFERED",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": "56",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": true,
+        "showErrors": false,
+        "showWarnings": true,
+        "showLogs": true
+    },
+    {
+        "id": "28e5d995362e8f62",
+        "type": "modbus-client",
+        "name": "Aircube 2",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "192.168.45.241",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": 2,
+        "commandDelay": 1,
+        "clientTimeout": 1000,
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": 2000,
+        "parallelUnitIdsAllowed": true,
+        "showErrors": false,
+        "showWarnings": true,
+        "showLogs": true
+    },
+    {
+        "id": "8f8fcdae6b82fd7d",
+        "type": "modbus-client",
+        "name": "Aircube 3",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "192.168.45.242",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": "3",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": true,
+        "showErrors": false,
+        "showWarnings": true,
+        "showLogs": true
+    },
+    {
+        "id": "462ceb77bd6ddbb6",
+        "type": "modbus-client",
+        "name": "Aircube 4",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "192.168.45.243",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": "4",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": true,
+        "showErrors": false,
+        "showWarnings": true,
+        "showLogs": true
+    },
+    {
+        "id": "49f5877b8dc72619",
+        "type": "modbustcp-server",
+        "name": "CMI",
+        "host": "192.168.45.55",
+        "port": "502",
+        "unit_id": "56",
+        "reconnecttimeout": "120"
+    },
+    {
+        "id": "63a18cd95492413f",
+        "type": "cmi config",
+        "description": "TA C.M.I.",
+        "ip": "192.168.45.55",
+        "canNode": "1",
+        "interval": "1"
+    },
+    {
+        "id": "3c034aa5c3057cc7",
+        "type": "ui_group",
+        "name": "VP3",
+        "tab": "58c2aa06.ef46e4",
+        "order": 7,
+        "disp": true,
+        "width": "6",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "a53d8deeea11707a",
+        "type": "ui_group",
+        "name": "VP1",
+        "tab": "58c2aa06.ef46e4",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5adbafdcfcc90c64",
+        "type": "ui_group",
+        "name": "VP2",
+        "tab": "58c2aa06.ef46e4",
+        "order": 6,
+        "disp": true,
+        "width": "6",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "212b7f06.b4731",
+        "type": "ui_group",
+        "name": "Gauge",
+        "tab": "e7f7ff66.2de07",
+        "order": 2,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "e7f7ff66.2de07",
+        "type": "ui_tab",
+        "name": "Restore",
+        "icon": "dashboard"
+    },
+    {
+        "id": "7c3d1ffe5de85af4",
+        "type": "ui_group",
+        "name": "File Browser",
+        "tab": "db5ac7bc58fb5462",
+        "order": 1,
+        "disp": true,
+        "width": "18",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b9eaf4515438b94a",
+        "type": "ui_group",
+        "name": "File Preview",
+        "tab": "db5ac7bc58fb5462",
+        "order": 2,
+        "disp": true,
+        "width": "10",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "db5ac7bc58fb5462",
+        "type": "ui_tab",
+        "name": "Files (New)",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "2d4646b0db2f1313",
+        "type": "ui_gauge",
+        "z": "8e6f93d6c1999015",
+        "name": "",
+        "group": "a53d8deeea11707a",
+        "order": 2,
+        "width": "3",
+        "height": "2",
+        "gtype": "gage",
+        "title": "Temp 1",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "60",
+        "seg2": "75",
+        "diff": false,
+        "className": "",
+        "x": 540,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "4792b5d5ea1aed4f",
+        "type": "ui_gauge",
+        "z": "8e6f93d6c1999015",
+        "name": "",
+        "group": "a53d8deeea11707a",
+        "order": 3,
+        "width": "3",
+        "height": "2",
+        "gtype": "gage",
+        "title": "Temp 2",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "60",
+        "seg2": "75",
+        "diff": false,
+        "className": "",
+        "x": 540,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "0bbb900fda5f8a90",
+        "type": "ui_gauge",
+        "z": "8e6f93d6c1999015",
+        "name": "",
+        "group": "5adbafdcfcc90c64",
+        "order": 2,
+        "width": "3",
+        "height": "3",
+        "gtype": "gage",
+        "title": "Temp 3",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "60",
+        "seg2": "75",
+        "diff": false,
+        "className": "",
+        "x": 540,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "b29637cc286b1e69",
+        "type": "ui_gauge",
+        "z": "8e6f93d6c1999015",
+        "name": "",
+        "group": "5adbafdcfcc90c64",
+        "order": 3,
+        "width": "3",
+        "height": "3",
+        "gtype": "gage",
+        "title": "Temp 4",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "60",
+        "seg2": "75",
+        "diff": false,
+        "className": "",
+        "x": 540,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "b88c8f75645447d7",
+        "type": "ui_chart",
+        "z": "8e6f93d6c1999015",
+        "name": "",
+        "group": "5adbafdcfcc90c64",
+        "order": 1,
+        "width": "6",
+        "height": "3",
+        "label": "Vakuumpumpe 2",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-1000",
+        "ymax": "0",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 570,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6fa0c3400be1c116",
+        "type": "ui_text",
+        "z": "8e6f93d6c1999015",
+        "group": "5adbafdcfcc90c64",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Magnetventil 2",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 560,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "b30772b67fc22a77",
+        "type": "cmi in",
+        "z": "8e6f93d6c1999015",
+        "cmi": "63a18cd95492413f",
+        "name": "Pressure 2",
+        "item": "2",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 200,
+        "y": 100,
+        "wires": [
+            [
+                "fce49c478cef3616"
+            ]
+        ]
+    },
+    {
+        "id": "458bfb9d562305f4",
+        "type": "cmi in",
+        "z": "8e6f93d6c1999015",
+        "cmi": "63a18cd95492413f",
+        "name": "Pressure 4",
+        "item": "4",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 200,
+        "y": 340,
+        "wires": [
+            [
+                "b88c8f75645447d7"
+            ]
+        ]
+    },
+    {
+        "id": "bb89600175255b9e",
+        "type": "cmi in",
+        "z": "8e6f93d6c1999015",
+        "cmi": "63a18cd95492413f",
+        "name": "Temp 1",
+        "item": "9",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 210,
+        "y": 160,
+        "wires": [
+            [
+                "2d4646b0db2f1313"
+            ]
+        ]
+    },
+    {
+        "id": "c361f25ebd1a8332",
+        "type": "cmi in",
+        "z": "8e6f93d6c1999015",
+        "cmi": "63a18cd95492413f",
+        "name": "Temp 2",
+        "item": "10",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 210,
+        "y": 220,
+        "wires": [
+            [
+                "4792b5d5ea1aed4f"
+            ]
+        ]
+    },
+    {
+        "id": "3675d7378d6aa2cc",
+        "type": "cmi in",
+        "z": "8e6f93d6c1999015",
+        "cmi": "63a18cd95492413f",
+        "name": "Temp 3",
+        "item": "11",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 210,
+        "y": 400,
+        "wires": [
+            [
+                "0bbb900fda5f8a90"
+            ]
+        ]
+    },
+    {
+        "id": "af39c5cd048210c0",
+        "type": "cmi in",
+        "z": "8e6f93d6c1999015",
+        "cmi": "63a18cd95492413f",
+        "name": "Temp 4",
+        "item": "12",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 210,
+        "y": 460,
+        "wires": [
+            [
+                "b29637cc286b1e69"
+            ]
+        ]
+    },
+    {
+        "id": "eaee38cd727c1251",
+        "type": "ui_gauge",
+        "z": "8e6f93d6c1999015",
+        "name": "",
+        "group": "",
+        "order": 2,
+        "width": "3",
+        "height": "3",
+        "gtype": "gage",
+        "title": "Temp 5",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "60",
+        "seg2": "75",
+        "diff": false,
+        "className": "",
+        "x": 540,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "12972f49c15be411",
+        "type": "ui_gauge",
+        "z": "8e6f93d6c1999015",
+        "name": "",
+        "group": "",
+        "order": 3,
+        "width": "3",
+        "height": "3",
+        "gtype": "gage",
+        "title": "Temp 6",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "60",
+        "seg2": "75",
+        "diff": false,
+        "className": "",
+        "x": 540,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "65876a0943268809",
+        "type": "ui_chart",
+        "z": "8e6f93d6c1999015",
+        "name": "",
+        "group": "",
+        "order": 1,
+        "width": "6",
+        "height": "3",
+        "label": "Vakuumpumpe 3",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-1000",
+        "ymax": "0",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 570,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "35074865ceba4929",
+        "type": "cmi in",
+        "z": "8e6f93d6c1999015",
+        "cmi": "63a18cd95492413f",
+        "name": "Pressure 6",
+        "item": "6",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 200,
+        "y": 580,
+        "wires": [
+            [
+                "65876a0943268809"
+            ]
+        ]
+    },
+    {
+        "id": "4f08e3881b463ba3",
+        "type": "cmi in",
+        "z": "8e6f93d6c1999015",
+        "cmi": "63a18cd95492413f",
+        "name": "Temp 5",
+        "item": "13",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 210,
+        "y": 640,
+        "wires": [
+            [
+                "eaee38cd727c1251"
+            ]
+        ]
+    },
+    {
+        "id": "d2da10bf34f1fb73",
+        "type": "cmi in",
+        "z": "8e6f93d6c1999015",
+        "cmi": "63a18cd95492413f",
+        "name": "Temp 6",
+        "item": "14",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 210,
+        "y": 700,
+        "wires": [
+            [
+                "12972f49c15be411"
+            ]
+        ]
+    },
+    {
+        "id": "fce49c478cef3616",
+        "type": "ui_chart",
+        "z": "8e6f93d6c1999015",
+        "name": "",
+        "group": "a53d8deeea11707a",
+        "order": 1,
+        "width": "6",
+        "height": "3",
+        "label": "Vakuumpumpe 1",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-1000",
+        "ymax": "0",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 570,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3e546ec86a098a36",
+        "type": "ui_text",
+        "z": "8e6f93d6c1999015",
+        "group": "a53d8deeea11707a",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Magnetventil 1",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 560,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "1933c09cb4fbc57c",
+        "type": "cmi in",
+        "z": "8e6f93d6c1999015",
+        "cmi": "63a18cd95492413f",
+        "name": "Magnetventil 1",
+        "item": "1",
+        "source": "1",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 180,
+        "y": 40,
+        "wires": [
+            [
+                "3e546ec86a098a36"
+            ]
+        ]
+    },
+    {
+        "id": "73dca5198265af4a",
+        "type": "cmi in",
+        "z": "8e6f93d6c1999015",
+        "cmi": "63a18cd95492413f",
+        "name": "Magnetventil 2",
+        "item": "4",
+        "source": "1",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 180,
+        "y": 280,
+        "wires": [
+            [
+                "6fa0c3400be1c116"
+            ]
+        ]
+    },
+    {
+        "id": "34e4382fd48aae50",
+        "type": "ui_text",
+        "z": "8e6f93d6c1999015",
+        "group": "",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Magnetventil 3",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 560,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "2538b8a186fe5992",
+        "type": "cmi in",
+        "z": "8e6f93d6c1999015",
+        "cmi": "63a18cd95492413f",
+        "name": "Magnetventil 3",
+        "item": "7",
+        "source": "1",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 180,
+        "y": 520,
+        "wires": [
+            [
+                "34e4382fd48aae50"
+            ]
+        ]
+    },
+    {
+        "id": "fedd3c65efaf645f",
+        "type": "function",
+        "z": "61d663c65d5d04a2",
+        "name": "Export data 1",
+        "func": "var sw=msg.payload;\nif (sw>=true)\n    {\n    msg.payload=\"Wärmepumpe 1, messung abgeschlossen\";\n    }\nelse\n    {\n    msg.payload=\"\";\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 620,
+        "wires": [
+            [
+                "aa7bba2e68df2853",
+                "eefa65f84f542a67"
+            ]
+        ]
+    },
+    {
+        "id": "780917d00adf7991",
+        "type": "debug",
+        "z": "61d663c65d5d04a2",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "eefa65f84f542a67",
+        "type": "debug",
+        "z": "61d663c65d5d04a2",
+        "name": "debug 3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "aace742ac1d86035",
+        "type": "function",
+        "z": "61d663c65d5d04a2",
+        "name": "32bit converter",
+        "func": "var msg0 = {payload:(msg.payload[1]<<16) + msg.payload[0]}\nreturn msg0;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "44734ecb313db565",
+        "type": "ui_text",
+        "z": "61d663c65d5d04a2",
+        "group": "1591b6c7b8497e57",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Überdruckvetil WP1",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 520,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "87be1f3f2b0360b2",
+        "type": "ui_text",
+        "z": "61d663c65d5d04a2",
+        "group": "1591b6c7b8497e57",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Messzeit WP1",
+        "format": "{{msg.payload}} Sek",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 500,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "f563ef869b6642b1",
+        "type": "ui_text",
+        "z": "61d663c65d5d04a2",
+        "group": "1591b6c7b8497e57",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Druckverlust WP1",
+        "format": "{{msg.payload}} mbar",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 510,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "668723cb7ac53144",
+        "type": "ui_text",
+        "z": "61d663c65d5d04a2",
+        "group": "1591b6c7b8497e57",
+        "order": 2,
+        "width": "6",
+        "height": "1",
+        "name": "",
+        "label": "Seriennummer 1",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 510,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "aa7bba2e68df2853",
+        "type": "ui_audio",
+        "z": "61d663c65d5d04a2",
+        "name": "Messung abgeschlossen",
+        "group": "1591b6c7b8497e57",
+        "voice": "Microsoft Hedda - German (Germany)",
+        "always": true,
+        "x": 730,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "639fb3a6663fcca4",
+        "type": "ui_chart",
+        "z": "61d663c65d5d04a2",
+        "name": "",
+        "group": "1591b6c7b8497e57",
+        "order": 4,
+        "width": "0",
+        "height": "0",
+        "label": "Druck WP1",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-1000",
+        "ymax": "0",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 490,
+        "y": 160,
+        "wires": [
+            [
+                "bab91d7325ec272a"
+            ]
+        ]
+    },
+    {
+        "id": "19f11ef8b43ed893",
+        "type": "rising-edge",
+        "z": "61d663c65d5d04a2",
+        "name": "Export data 1",
+        "threshold": "0",
+        "x": 310,
+        "y": 620,
+        "wires": [
+            [
+                "fedd3c65efaf645f",
+                "780917d00adf7991"
+            ]
+        ]
+    },
+    {
+        "id": "037b31f2b9ee09d3",
+        "type": "modbus-read",
+        "z": "61d663c65d5d04a2",
+        "name": "Serialnumber 1",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "56",
+        "dataType": "HoldingRegister",
+        "adr": "29",
+        "quantity": "1",
+        "rate": "1",
+        "rateUnit": "m",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "c74df921f477ca14",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 160,
+        "y": 440,
+        "wires": [
+            [
+                "aace742ac1d86035"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "cab8d9e56a40ab64",
+        "type": "cmi in",
+        "z": "61d663c65d5d04a2",
+        "cmi": "63a18cd95492413f",
+        "name": "Pressure 1",
+        "item": "1",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 180,
+        "y": 160,
+        "wires": [
+            [
+                "639fb3a6663fcca4"
+            ]
+        ]
+    },
+    {
+        "id": "116513555b36ba30",
+        "type": "cmi in",
+        "z": "61d663c65d5d04a2",
+        "cmi": "63a18cd95492413f",
+        "name": "Überdruckventil 1",
+        "item": "3",
+        "source": "1",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 160,
+        "y": 40,
+        "wires": [
+            [
+                "44734ecb313db565"
+            ]
+        ]
+    },
+    {
+        "id": "9f139fac02dbdaa0",
+        "type": "cmi in",
+        "z": "61d663c65d5d04a2",
+        "cmi": "63a18cd95492413f",
+        "name": "SN 1",
+        "item": "17",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 190,
+        "y": 100,
+        "wires": [
+            [
+                "668723cb7ac53144"
+            ]
+        ]
+    },
+    {
+        "id": "cf30e5419fedd884",
+        "type": "ui_chart",
+        "z": "61d663c65d5d04a2",
+        "name": "",
+        "group": "1591b6c7b8497e57",
+        "order": 4,
+        "width": "0",
+        "height": "0",
+        "label": "Messzeit",
+        "chartType": "pie",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "200",
+        "ymax": "900",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": "50",
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 480,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f43489c54b3ce0d4",
+        "type": "inject",
+        "z": "61d663c65d5d04a2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 340,
+        "wires": [
+            [
+                "96bd7268dbc259c2",
+                "4a2c7889b033f882"
+            ]
+        ]
+    },
+    {
+        "id": "96bd7268dbc259c2",
+        "type": "function",
+        "z": "61d663c65d5d04a2",
+        "name": "function 1",
+        "func": "msg.payload = 900\nmsg.topic = \"Messzeit\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 340,
+        "wires": [
+            [
+                "cf30e5419fedd884"
+            ]
+        ]
+    },
+    {
+        "id": "4a2c7889b033f882",
+        "type": "function",
+        "z": "61d663c65d5d04a2",
+        "name": "function 2",
+        "func": "msg.payload = 450\nmsg.topic = \"Restzeit\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 380,
+        "wires": [
+            [
+                "cf30e5419fedd884"
+            ]
+        ]
+    },
+    {
+        "id": "bab91d7325ec272a",
+        "type": "csv",
+        "z": "61d663c65d5d04a2",
+        "name": "",
+        "spec": "rfc",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\r\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 670,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7cd15b310a690116",
+        "type": "function",
+        "z": "cb52c966d2fad605",
+        "name": "32bit converter",
+        "func": "var msg0 = {payload:(msg.payload[1]<<16) + msg.payload[0]}\nreturn msg0;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9bb7bdb1eae4948e",
+        "type": "ui_text",
+        "z": "cb52c966d2fad605",
+        "group": "de078532d6f5e387",
+        "order": 2,
+        "width": "6",
+        "height": "1",
+        "name": "",
+        "label": "Seriennummer 2",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 510,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "0913bfd313b2f67c",
+        "type": "ui_text",
+        "z": "cb52c966d2fad605",
+        "group": "de078532d6f5e387",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Überdruckvetil WP2",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 520,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "244d8d9f6e6c67f4",
+        "type": "ui_chart",
+        "z": "cb52c966d2fad605",
+        "name": "",
+        "group": "de078532d6f5e387",
+        "order": 4,
+        "width": "0",
+        "height": "0",
+        "label": "Druck WP2",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-1000",
+        "ymax": "0",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 490,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d1d6a45f6138b55f",
+        "type": "modbus-read",
+        "z": "cb52c966d2fad605",
+        "name": "Serialnumber 2",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "2",
+        "dataType": "HoldingRegister",
+        "adr": "74",
+        "quantity": "2",
+        "rate": "10",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "28e5d995362e8f62",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 160,
+        "y": 440,
+        "wires": [
+            [
+                "7cd15b310a690116"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "730d51ad838c3289",
+        "type": "ui_text",
+        "z": "cb52c966d2fad605",
+        "group": "de078532d6f5e387",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Messzeit WP2",
+        "format": "{{msg.payload}} Sek",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 500,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "3be77a102f31d277",
+        "type": "ui_text",
+        "z": "cb52c966d2fad605",
+        "group": "de078532d6f5e387",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Druckverlust WP2",
+        "format": "{{msg.payload}} mbar",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 510,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "e1128d40e28d5679",
+        "type": "cmi in",
+        "z": "cb52c966d2fad605",
+        "cmi": "63a18cd95492413f",
+        "name": "Pressure 3",
+        "item": "3",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 180,
+        "y": 160,
+        "wires": [
+            [
+                "244d8d9f6e6c67f4"
+            ]
+        ]
+    },
+    {
+        "id": "cd54f36073f5dfb4",
+        "type": "cmi in",
+        "z": "cb52c966d2fad605",
+        "cmi": "63a18cd95492413f",
+        "name": "Überdruckventil 2",
+        "item": "6",
+        "source": "1",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 160,
+        "y": 40,
+        "wires": [
+            [
+                "0913bfd313b2f67c"
+            ]
+        ]
+    },
+    {
+        "id": "1ff0b4bab1172124",
+        "type": "cmi in",
+        "z": "cb52c966d2fad605",
+        "cmi": "63a18cd95492413f",
+        "name": "SN 2",
+        "item": "18",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 190,
+        "y": 100,
+        "wires": [
+            [
+                "9bb7bdb1eae4948e"
+            ]
+        ]
+    },
+    {
+        "id": "e3ba7a980ec17e5e",
+        "type": "function",
+        "z": "f820c1bd7223bd88",
+        "name": "32bit converter",
+        "func": "var msg0 = {payload:(msg.payload[1]<<16) + msg.payload[0]}\nreturn msg0;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "12bbbd87a10398fa",
+        "type": "ui_text",
+        "z": "f820c1bd7223bd88",
+        "group": "422ba1667a7ab9f8",
+        "order": 2,
+        "width": "6",
+        "height": "1",
+        "name": "",
+        "label": "Seriennummer 3",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 510,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "2c0c38adf570a5e0",
+        "type": "ui_text",
+        "z": "f820c1bd7223bd88",
+        "group": "422ba1667a7ab9f8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Überdruckvetil WP3",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 520,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "04b283f4a235b802",
+        "type": "ui_chart",
+        "z": "f820c1bd7223bd88",
+        "name": "",
+        "group": "422ba1667a7ab9f8",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "label": "Druck WP3",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-1000",
+        "ymax": "0",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 490,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e018f54e4e011ee6",
+        "type": "modbus-read",
+        "z": "f820c1bd7223bd88",
+        "name": "Serialnumber 3",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "3",
+        "dataType": "HoldingRegister",
+        "adr": "74",
+        "quantity": "2",
+        "rate": "10",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "8f8fcdae6b82fd7d",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 160,
+        "y": 440,
+        "wires": [
+            [
+                "e3ba7a980ec17e5e"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "6a317b620df64d1c",
+        "type": "ui_text",
+        "z": "f820c1bd7223bd88",
+        "group": "422ba1667a7ab9f8",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Messzeit WP3",
+        "format": "{{msg.payload}} Sek",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 500,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "371420ab9311d8d9",
+        "type": "ui_text",
+        "z": "f820c1bd7223bd88",
+        "group": "422ba1667a7ab9f8",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Druckverlust WP3",
+        "format": "{{msg.payload}} mbar",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 510,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "44d9c6442bf614be",
+        "type": "cmi in",
+        "z": "f820c1bd7223bd88",
+        "cmi": "63a18cd95492413f",
+        "name": "Pressure 5",
+        "item": "5",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 180,
+        "y": 160,
+        "wires": [
+            [
+                "04b283f4a235b802"
+            ]
+        ]
+    },
+    {
+        "id": "04be3b414a993791",
+        "type": "cmi in",
+        "z": "f820c1bd7223bd88",
+        "cmi": "63a18cd95492413f",
+        "name": "Überdruckventil 3",
+        "item": "9",
+        "source": "1",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 160,
+        "y": 40,
+        "wires": [
+            [
+                "2c0c38adf570a5e0"
+            ]
+        ]
+    },
+    {
+        "id": "95199828f07eabb9",
+        "type": "cmi in",
+        "z": "f820c1bd7223bd88",
+        "cmi": "63a18cd95492413f",
+        "name": "SN 3",
+        "item": "19",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 190,
+        "y": 100,
+        "wires": [
+            [
+                "12bbbd87a10398fa"
+            ]
+        ]
+    },
+    {
+        "id": "bce431684206e30c",
+        "type": "function",
+        "z": "28c240172645bd4e",
+        "name": "32bit converter",
+        "func": "var msg0 = {payload:(msg.payload[1]<<16) + msg.payload[0]}\nreturn msg0;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bc0279d6d6d66c7a",
+        "type": "ui_text",
+        "z": "28c240172645bd4e",
+        "group": "f31df9e398e4c15e",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Messzeit WP4",
+        "format": "{{msg.payload}} Sek",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 500,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "153d8ec83f3e3c6a",
+        "type": "ui_chart",
+        "z": "28c240172645bd4e",
+        "name": "",
+        "group": "f31df9e398e4c15e",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Druck WP4",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-1000",
+        "ymax": "0",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 490,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "07ee0e3d7d9d0fc7",
+        "type": "modbus-read",
+        "z": "28c240172645bd4e",
+        "name": "Serialnumber 4",
+        "topic": "",
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "4",
+        "dataType": "HoldingRegister",
+        "adr": "74",
+        "quantity": "2",
+        "rate": "10",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "462ceb77bd6ddbb6",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 160,
+        "y": 440,
+        "wires": [
+            [
+                "bce431684206e30c"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "7fb0ee86dd7afcef",
+        "type": "ui_text",
+        "z": "28c240172645bd4e",
+        "group": "f31df9e398e4c15e",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Druckverlust WP4",
+        "format": "{{msg.payload}} mbar",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 510,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "53f6c8b3d8184e7d",
+        "type": "cmi in",
+        "z": "28c240172645bd4e",
+        "cmi": "63a18cd95492413f",
+        "name": "Pressure 7",
+        "item": "7",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 180,
+        "y": 160,
+        "wires": [
+            [
+                "153d8ec83f3e3c6a"
+            ]
+        ]
+    },
+    {
+        "id": "b2c11f424328c412",
+        "type": "ui_text",
+        "z": "28c240172645bd4e",
+        "group": "f31df9e398e4c15e",
+        "order": 2,
+        "width": "6",
+        "height": "1",
+        "name": "",
+        "label": "Seriennummer 4",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 510,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "3c3f94a3ea981add",
+        "type": "cmi in",
+        "z": "28c240172645bd4e",
+        "cmi": "63a18cd95492413f",
+        "name": "SN 4",
+        "item": "20",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 190,
+        "y": 100,
+        "wires": [
+            [
+                "b2c11f424328c412"
+            ]
+        ]
+    },
+    {
+        "id": "89644dc73fa4bfb2",
+        "type": "ui_text",
+        "z": "28c240172645bd4e",
+        "group": "f31df9e398e4c15e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Überdruckvetil WP4",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 520,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "4679091.0341ff8",
+        "type": "ui_button",
+        "z": "7a2056c27a24a46a",
+        "name": "",
+        "group": "212b7f06.b4731",
+        "order": 2,
+        "width": "2",
+        "height": "1",
+        "label": "Inject",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 250,
+        "y": 160,
+        "wires": [
+            [
+                "63911393.d1513c"
+            ]
+        ]
+    },
+    {
+        "id": "fa4f25b6.ea4048",
+        "type": "ui_button",
+        "z": "7a2056c27a24a46a",
+        "name": "",
+        "group": "212b7f06.b4731",
+        "order": 4,
+        "width": "2",
+        "height": "1",
+        "label": "restore",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 250,
+        "y": 460,
+        "wires": [
+            [
+                "9b9cfb63.2f50f8"
+            ]
+        ]
+    },
+    {
+        "id": "9e4c2fd0.aac16",
+        "type": "ui_chart",
+        "z": "7a2056c27a24a46a",
+        "name": "",
+        "group": "212b7f06.b4731",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "bezier",
+        "nodata": "",
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "15",
+        "removeOlderPoints": "100",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "outputs": 1,
+        "x": 550,
+        "y": 160,
+        "wires": [
+            [
+                "ef3ff83b.aa5008"
+            ]
+        ]
+    },
+    {
+        "id": "8f316ad0.85cdd8",
+        "type": "file",
+        "z": "7a2056c27a24a46a",
+        "name": "",
+        "filename": "/tmp/chart.log",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "x": 720,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9b9cfb63.2f50f8",
+        "type": "file in",
+        "z": "7a2056c27a24a46a",
+        "name": "",
+        "filename": "/tmp/chart.log",
+        "filenameType": "str",
+        "format": "utf8",
+        "x": 420,
+        "y": 460,
+        "wires": [
+            [
+                "b13ea0c3.a7955"
+            ]
+        ]
+    },
+    {
+        "id": "ef3ff83b.aa5008",
+        "type": "json",
+        "z": "7a2056c27a24a46a",
+        "name": "",
+        "x": 690,
+        "y": 160,
+        "wires": [
+            [
+                "ef80c15e.8dbc3"
+            ]
+        ]
+    },
+    {
+        "id": "b13ea0c3.a7955",
+        "type": "json",
+        "z": "7a2056c27a24a46a",
+        "name": "",
+        "x": 610,
+        "y": 460,
+        "wires": [
+            [
+                "9e4c2fd0.aac16"
+            ]
+        ]
+    },
+    {
+        "id": "ef80c15e.8dbc3",
+        "type": "function",
+        "z": "7a2056c27a24a46a",
+        "name": "",
+        "func": "if (msg.topic === \"save\") {\n    msg.payload = context.last;\n    return msg;\n}\nelse {\n    context.last = msg.payload;\n}\nreturn null;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 430,
+        "y": 320,
+        "wires": [
+            [
+                "8f316ad0.85cdd8"
+            ]
+        ]
+    },
+    {
+        "id": "87cc5e2e.b0836",
+        "type": "ui_button",
+        "z": "7a2056c27a24a46a",
+        "name": "",
+        "group": "212b7f06.b4731",
+        "order": 3,
+        "width": "2",
+        "height": "1",
+        "label": "save",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "save",
+        "x": 250,
+        "y": 320,
+        "wires": [
+            [
+                "ef80c15e.8dbc3"
+            ]
+        ]
+    },
+    {
+        "id": "63911393.d1513c",
+        "type": "random",
+        "z": "7a2056c27a24a46a",
+        "name": "",
+        "low": "0",
+        "high": "10",
+        "inte": "true",
+        "x": 400,
+        "y": 160,
+        "wires": [
+            [
+                "9e4c2fd0.aac16"
+            ]
+        ]
+    },
+    {
+        "id": "782b06fb.cc1df8",
+        "type": "comment",
+        "z": "f685952b3b13c23f",
+        "name": "Auto Logger archiving",
+        "info": "Generate file name that are to be archived.\n\nIdea is that this generates a list of file names for let's say between current day-5 days to current day-10 days, so all files that are 5-10 days old will get archived. And this can be executed daily or weekly, and the interval allows some overlap (e.g. the program fails, Node-Red was down, etc.)\n\nInject node should contain a JSON:\n{    \n    \"start\": 20,    \n    \"end\": 10\n}\n\nThis will generate file names D-20 to D-10 days.\nStart should be greather than end!\n",
+        "x": 200,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "f14e2f71.1ad87",
+        "type": "function",
+        "z": "f685952b3b13c23f",
+        "name": "Maplin Filename generator",
+        "func": "let output = [];\nfor (var i=msg.payload.end;i<msg.payload.start;i++) {\n    \n    // calculate the date\n    let now = new Date();\n    now.setTime(now.getTime() - 1000*60*60*24*i);\n    let yyyy = now.getFullYear();\n    let mm = now.getMonth() < 9 ? \"0\" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based\n    let dd  = now.getDate() < 10 ? \"0\" + now.getDate() : now.getDate();\n    let hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\n    let mmm  = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\n    let ss  = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\n    \n    let newfile = { \"topic\": \"archive\", \"payload\": \"\"};\n    // Generate out file name pattern\n    newfile.fname = \"maplin_\"+ yyyy + mm + dd + \".csv\";\n    // Full filename with path \n    newfile.filename = \"/home/pi/datalog/\"+ newfile.fname;\n    \n    // Shell script only needs the filename without the path\n    newfile.payload = newfile.fname;\n    output.push(newfile);\n\n}\n\nreturn [output];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 360,
+        "y": 160,
+        "wires": [
+            [
+                "5ba61ce5.11d8a4"
+            ]
+        ]
+    },
+    {
+        "id": "b57ab78e.cf1658",
+        "type": "function",
+        "z": "f685952b3b13c23f",
+        "name": "Weather Station Filename generator",
+        "func": "let output = [];\nfor (var i=msg.payload.end;i<msg.payload.start;i++) {\n    \n    // calculate the date\n    let now = new Date();\n    now.setTime(now.getTime() - 1000*60*60*24*i);\n    let yyyy = now.getFullYear();\n    let mm = now.getMonth() < 9 ? \"0\" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based\n    let dd  = now.getDate() < 10 ? \"0\" + now.getDate() : now.getDate();\n    let hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\n    let mmm  = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\n    let ss  = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\n    \n    let newfile = { \"topic\": \"archive\", \"payload\": \"\"};\n    // Generate out file name pattern\n    newfile.fname = \"weather_sensor_\"+ yyyy + mm + dd + \".csv\";\n    // Full filename with path \n    newfile.filename = \"/home/pi/datalog/\"+ newfile.fname;\n    \n    // Shell script only needs the filename without the path\n    newfile.payload = newfile.fname;\n    output.push(newfile);\n\n}\n\nreturn [output];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 390,
+        "y": 220,
+        "wires": [
+            [
+                "5ba61ce5.11d8a4"
+            ]
+        ]
+    },
+    {
+        "id": "5e47f3b4.7c779c",
+        "type": "inject",
+        "z": "f685952b3b13c23f",
+        "name": "Start",
+        "props": [
+            {
+                "p": "payload",
+                "v": "{\"start\":20,\"end\":10}",
+                "vt": "json"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "string"
+            }
+        ],
+        "repeat": "",
+        "crontab": "40 02 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"start\":20,\"end\":10}",
+        "payloadType": "json",
+        "x": 90,
+        "y": 180,
+        "wires": [
+            [
+                "f14e2f71.1ad87",
+                "b57ab78e.cf1658"
+            ]
+        ]
+    },
+    {
+        "id": "ad87fee.c53d5",
+        "type": "exec",
+        "z": "f685952b3b13c23f",
+        "command": "/home/pi/log_upload.sh",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "File upload",
+        "x": 690,
+        "y": 160,
+        "wires": [
+            [],
+            [],
+            [
+                "5f0f09f4.a09208"
+            ]
+        ]
+    },
+    {
+        "id": "5f0f09f4.a09208",
+        "type": "switch",
+        "z": "f685952b3b13c23f",
+        "name": "Return code",
+        "property": "payload.code",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 970,
+        "y": 260,
+        "wires": [
+            [],
+            [
+                "639dcab5.1028b4"
+            ]
+        ]
+    },
+    {
+        "id": "49210be0.0dbbe4",
+        "type": "exec",
+        "z": "f685952b3b13c23f",
+        "command": "sudo rm ",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "File delete",
+        "x": 1110,
+        "y": 160,
+        "wires": [
+            [],
+            [],
+            [
+                "1fee1de5.695e32"
+            ]
+        ]
+    },
+    {
+        "id": "639dcab5.1028b4",
+        "type": "change",
+        "z": "f685952b3b13c23f",
+        "name": "Get filename",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "filename",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 930,
+        "y": 160,
+        "wires": [
+            [
+                "49210be0.0dbbe4"
+            ]
+        ]
+    },
+    {
+        "id": "1fee1de5.695e32",
+        "type": "switch",
+        "z": "f685952b3b13c23f",
+        "name": "Return code",
+        "property": "payload.code",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "outputs": 2,
+        "x": 1330,
+        "y": 180,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "5ba61ce5.11d8a4",
+        "type": "delay",
+        "z": "f685952b3b13c23f",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 620,
+        "y": 360,
+        "wires": [
+            [
+                "ad87fee.c53d5"
+            ]
+        ]
+    },
+    {
+        "id": "9da5c02.66c844",
+        "type": "comment",
+        "z": "f685952b3b13c23f",
+        "name": "log_upload.sh",
+        "info": "ftp -inv 192.168.1.x << EOF\n    user <username> <password>\n    binary\n    cd backup/logs\n    lcd /home/pi/datalog\n    put $1\nEOF",
+        "x": 670,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "f79c29b7.055068",
+        "type": "comment",
+        "z": "f685952b3b13c23f",
+        "name": "Auto Logger",
+        "info": "",
+        "x": 810,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "4c8ae605.33be88",
+        "type": "function",
+        "z": "f685952b3b13c23f",
+        "name": "Set data",
+        "func": "var now = new Date();\n\nmsg.payload = {\n    \"timestamp\" : now.getTime(),\n    \"temperature\" : msg.msg433.TEMP,\n    \"humidity\" : msg.msg433.HUM\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 380,
+        "y": 620,
+        "wires": [
+            [
+                "f46f569e.ff1a08"
+            ]
+        ]
+    },
+    {
+        "id": "f46f569e.ff1a08",
+        "type": "function",
+        "z": "f685952b3b13c23f",
+        "name": "Filename generator",
+        "func": "// Get the current time and convert it to text\nvar now = new Date();\nvar yyyy = now.getFullYear();\nvar mm = now.getMonth() < 9 ? \"0\" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based\nvar dd  = now.getDate() < 10 ? \"0\" + now.getDate() : now.getDate();\nvar hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\nvar mmm  = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\nvar ss  = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\n\n// Generate out file name pattern\nmsg.fname = \"maplin_\"+ yyyy + mm + dd + \".csv\";\n// Full filename with path for the file node later\nmsg.filename = \"/home/pi/datalog/\"+ msg.fname;\n\n// We save the current payload into a different place on the msg object\nmsg.filecontent = msg.payload;\n\n// We are passing the file name search pattern to fs node to tell us if the file exists or not\nmsg.payload = {\"pattern\":msg.fname};\n\nnode.status({fill:\"blue\",shape:\"ring\",text:msg.fname});\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 550,
+        "y": 620,
+        "wires": [
+            [
+                "fa6936f.7758dc8"
+            ]
+        ]
+    },
+    {
+        "id": "a96494a5.b0f4c8",
+        "type": "debug",
+        "z": "f685952b3b13c23f",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 890,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "3db97537.b889ea",
+        "type": "switch",
+        "z": "f685952b3b13c23f",
+        "name": "",
+        "property": "$count(msg.payload)",
+        "propertyType": "jsonata",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 870,
+        "y": 620,
+        "wires": [
+            [
+                "3cb887e8.e533a8"
+            ],
+            [
+                "f3ba1c7a.54ef5"
+            ]
+        ]
+    },
+    {
+        "id": "fe6f74d5.674ec8",
+        "type": "csv",
+        "z": "f685952b3b13c23f",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "all",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "timestamp,temperature,humidity",
+        "skip": "0",
+        "strings": true,
+        "x": 1210,
+        "y": 600,
+        "wires": [
+            [
+                "3a8ebdf3.772cc2"
+            ]
+        ]
+    },
+    {
+        "id": "3a8ebdf3.772cc2",
+        "type": "file",
+        "z": "f685952b3b13c23f",
+        "name": "",
+        "filename": "",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 1370,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f226a86d.9bdfb8",
+        "type": "csv",
+        "z": "f685952b3b13c23f",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "timestamp,temperature,humidity",
+        "skip": "0",
+        "strings": true,
+        "x": 1210,
+        "y": 640,
+        "wires": [
+            [
+                "3a8ebdf3.772cc2"
+            ]
+        ]
+    },
+    {
+        "id": "3cb887e8.e533a8",
+        "type": "change",
+        "z": "f685952b3b13c23f",
+        "name": "Get file content",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "filecontent",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1040,
+        "y": 600,
+        "wires": [
+            [
+                "fe6f74d5.674ec8"
+            ]
+        ]
+    },
+    {
+        "id": "f3ba1c7a.54ef5",
+        "type": "change",
+        "z": "f685952b3b13c23f",
+        "name": "Get file content",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "filecontent",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1040,
+        "y": 640,
+        "wires": [
+            [
+                "f226a86d.9bdfb8"
+            ]
+        ]
+    },
+    {
+        "id": "fa6936f.7758dc8",
+        "type": "fs-file-lister",
+        "z": "f685952b3b13c23f",
+        "name": "",
+        "start": "/home/pi/datalog/",
+        "pattern": "",
+        "folders": "*",
+        "hidden": true,
+        "lstype": "files",
+        "path": true,
+        "single": true,
+        "depth": 0,
+        "stat": true,
+        "showWarnings": false,
+        "x": 720,
+        "y": 620,
+        "wires": [
+            [
+                "a96494a5.b0f4c8",
+                "3db97537.b889ea"
+            ]
+        ]
+    },
+    {
+        "id": "aa8c482.93734b8",
+        "type": "http in",
+        "z": "62168f16fb9cb960",
+        "name": "",
+        "url": "/download",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 240,
+        "y": 580,
+        "wires": [
+            [
+                "d969ba04.e24028"
+            ]
+        ]
+    },
+    {
+        "id": "d19cc7d8.646328",
+        "type": "http response",
+        "z": "62168f16fb9cb960",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1030,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "d969ba04.e24028",
+        "type": "function",
+        "z": "62168f16fb9cb960",
+        "name": "Get the file name",
+        "func": "msg.filename = msg.req.query.filename;\nmsg.contentdisposition = \"attachment; filename=\\\"\" + msg.req.query.filename.replace(/^.*(\\\\|\\/|\\:)/, '') + \"\\\"\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 580,
+        "wires": [
+            [
+                "e92381c3.c4cd2"
+            ]
+        ],
+        "outputLabels": [
+            "Folder selected"
+        ]
+    },
+    {
+        "id": "e92381c3.c4cd2",
+        "type": "file in",
+        "z": "62168f16fb9cb960",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 680,
+        "y": 580,
+        "wires": [
+            [
+                "99ff4953.d0d5c8"
+            ]
+        ]
+    },
+    {
+        "id": "99ff4953.d0d5c8",
+        "type": "change",
+        "z": "62168f16fb9cb960",
+        "name": "Set Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers.content-type",
+                "pt": "msg",
+                "to": "text/csv",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "headers.Content-Disposition",
+                "pt": "msg",
+                "to": "contentdisposition",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 850,
+        "y": 580,
+        "wires": [
+            [
+                "d19cc7d8.646328"
+            ]
+        ]
+    },
+    {
+        "id": "8dd5fe2ad1c1362e",
+        "type": "ui_etable",
+        "z": "62168f16fb9cb960",
+        "payload": "[{\"title\":\"Type\",\"field\":\"icon\",\"formatter\":\"html\",\"width\":50},{\"title\":\"Name\",\"field\":\"fname\"},{\"title\":\"Size\",\"field\":\"stat.size\",\"sorter\":\"number\",\"width\":100,\"sorterParams\":{\"thousandSeparator\":\",\",\"decimalSeparator\":\".\",\"alignEmptyValues\":\"top\"}},{\"title\":\"Created\",\"field\":\"stat.created\",\"formatter\":\"datetime\",\"width\":200,\"formatterParams\":{\"outputFormat\":\"yyyy.MM.DD HH:mm:ss\",\"invalidPlaceholder\":\"(invalid date)\",\"timezone\":\"system\"}},{\"title\":\"Changed\",\"field\":\"stat.changed\",\"formatter\":\"datetime\",\"width\":200,\"formatterParams\":{\"outputFormat\":\"yyyy.MM.DD HH:mm:ss\",\"invalidPlaceholder\":\"(invalid date)\",\"timezone\":\"system\"}}]",
+        "payloadType": "json",
+        "options": "{\"movableColumns\":true,\"resizableColumns\":true,\"selectable\":1,\"responsiveLayout\":\"collapse\",\"autoResize\":true,\"layout\":\"fitColumns\",\"pagination\":\"local\",\"height\":\"100%\"}",
+        "group": "7c3d1ffe5de85af4",
+        "name": "File Browser",
+        "order": 6,
+        "width": "18",
+        "height": "10",
+        "columns": [],
+        "outputs": 1,
+        "cts": false,
+        "x": 790,
+        "y": 180,
+        "wires": [
+            [
+                "9f0139c9d4cf303c",
+                "2fd8e45dcc9f2743",
+                "cf09d98db7656238",
+                "ab85eb9606fc412a"
+            ]
+        ]
+    },
+    {
+        "id": "4c19cb23d0b871bb",
+        "type": "comment",
+        "z": "62168f16fb9cb960",
+        "name": "New File Browser",
+        "info": "",
+        "x": 120,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "52a7d9cf9e103e93",
+        "type": "inject",
+        "z": "62168f16fb9cb960",
+        "name": "Init",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "change",
+        "payload": "filebrowser_default_folder",
+        "payloadType": "global",
+        "x": 90,
+        "y": 140,
+        "wires": [
+            [
+                "5e18896e060736a2"
+            ]
+        ]
+    },
+    {
+        "id": "5e18896e060736a2",
+        "type": "function",
+        "z": "62168f16fb9cb960",
+        "name": "Folder handling",
+        "func": "let folder = context.get(\"folder\");\nif (folder===undefined) {\n    folder=\"/\";\n    context.set(\"folder\", folder);\n}\n\nlet hidden = context.get(\"hidden\");\nif (hidden===undefined) {\n    hidden=false;\n    context.set(\"hidden\", hidden);\n}\n\nif (msg.topic===\"up\") {\n    var the_arr = folder.split('/');\n    the_arr.pop();\n    folder=the_arr.join('/'); \n    context.set(\"folder\", folder);\n}\nif (msg.topic===\"change\") {\n    folder=msg.payload;    \n    context.set(\"folder\", folder);\n}\nif (msg.topic===\"hidden\") {\n    hidden=msg.payload;    \n    context.set(\"hidden\", hidden);\n}\n\nmsg.payload = {\"start\":folder, \"hidden\": hidden};\nflow.set(\"folder\", folder);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 180,
+        "wires": [
+            [
+                "7940237deb98874d",
+                "c9bad6d25a599039"
+            ]
+        ]
+    },
+    {
+        "id": "7940237deb98874d",
+        "type": "fs-file-lister",
+        "z": "62168f16fb9cb960",
+        "name": "Files",
+        "start": "/home/nygma",
+        "pattern": "*.*",
+        "folders": "*",
+        "hidden": false,
+        "lstype": "both",
+        "path": true,
+        "single": true,
+        "depth": 0,
+        "stat": true,
+        "showWarnings": false,
+        "x": 470,
+        "y": 180,
+        "wires": [
+            [
+                "1a853077cd0370f3",
+                "4434a55ef1ec1dbc"
+            ]
+        ]
+    },
+    {
+        "id": "1a853077cd0370f3",
+        "type": "function",
+        "z": "62168f16fb9cb960",
+        "name": "Prep Data",
+        "func": "function convertDate(local) {\n    let d = new Date(local);\n    d.setTime(d.getTime()+3600*1000);\n    return d.toISOString().slice(0, 19).replace('T', ' ');\n}\n\nif (msg.topic === \"quickfilter\") {\n    let filter = msg.payload;\n    msg.payload = flow.get(\"currentfolder\").slice();\n    if (msg.payload !== \"\") {\n        for (var i = msg.payload.length-1; i >= 0; i--) {\n            if (!msg.payload[i].fname.includes(filter)) {\n                msg.payload.splice(i,1);\n            }\n        }\n    }\n    return msg;\n}\n\nfor (var i=0; i<msg.payload.length; i++) {\n   // msg.payload[i].stat.created = convertDate(msg.payload[i].stat.created);\n   // msg.payload[i].stat.changed = convertDate(msg.payload[i].stat.changed);\n   // msg.payload[i].stat.accessed = convertDate(msg.payload[i].stat.accessed);\n   // msg.payload[i].stat.statusChanged = convertDate(msg.payload[i].stat.statusChanged);\n    msg.payload[i].fname = msg.payload[i].name.replace(/^.*(\\\\|\\/|\\:)/, '');\n    if (msg.payload[i].stat.isDirectory) {\n        msg.payload[i].ext = \"folder\";\n        msg.payload[i].icon = \"<i class=\\\"fa fa-folder-o\\\"></i>\";\n    } else {\n        msg.payload[i].ext = msg.payload[i].fname.split('.').pop().toLowerCase();\n        msg.payload[i].downloadlink = \"/download?filename=\"+msg.payload[i].name;\n        switch (msg.payload[i].ext) {\n            case \"csv\":\n            case \"txt\":\n                msg.payload[i].icon = \"<i class=\\\"fa fa-file-text-o\\\"></i>\";\n                break;\n            case \"jpg\":\n            case \"jpeg\":\n            case \"png\":\n            case \"gif\":\n                msg.payload[i].icon = \"<i class=\\\"fa fa-file-image-o\\\"></i>\";\n                break;\n            case \"json\":\n            case \"py\":\n            case \"sh\":\n                msg.payload[i].icon = \"<i class=\\\"fa fa-file-code-o\\\"></i>\";\n                break;\n            default:\n                msg.payload[i].icon = \"<i class=\\\"fa fa-file-o\\\"></i>\";\n        }\n    }\n}\nflow.set(\"currentfolder\",msg.payload);\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 180,
+        "wires": [
+            [
+                "8dd5fe2ad1c1362e"
+            ]
+        ]
+    },
+    {
+        "id": "1049939dcaf15797",
+        "type": "inject",
+        "z": "62168f16fb9cb960",
+        "name": "Default folder",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "/home/nygma",
+        "payloadType": "str",
+        "x": 120,
+        "y": 80,
+        "wires": [
+            [
+                "97eb3daaadda1ae8"
+            ]
+        ]
+    },
+    {
+        "id": "97eb3daaadda1ae8",
+        "type": "change",
+        "z": "62168f16fb9cb960",
+        "name": "Store settings",
+        "rules": [
+            {
+                "t": "set",
+                "p": "filebrowser_default_folder",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 330,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4c3c5231e3d633dd",
+        "type": "ui_button",
+        "z": "62168f16fb9cb960",
+        "name": "",
+        "group": "7c3d1ffe5de85af4",
+        "order": 1,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "Refresh",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "refresh",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "refresh",
+        "topicType": "str",
+        "x": 80,
+        "y": 180,
+        "wires": [
+            [
+                "5e18896e060736a2"
+            ]
+        ]
+    },
+    {
+        "id": "8ee8106b5f5eda72",
+        "type": "ui_button",
+        "z": "62168f16fb9cb960",
+        "name": "",
+        "group": "b9eaf4515438b94a",
+        "order": 2,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "Delete",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "delete",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "delete",
+        "topicType": "str",
+        "x": 950,
+        "y": 280,
+        "wires": [
+            [
+                "ab85eb9606fc412a"
+            ]
+        ]
+    },
+    {
+        "id": "c79fd4ed4bd87baa",
+        "type": "ui_button",
+        "z": "62168f16fb9cb960",
+        "name": "",
+        "group": "7c3d1ffe5de85af4",
+        "order": 3,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "Up",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "arrow_upwards",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "up",
+        "topicType": "str",
+        "x": 90,
+        "y": 260,
+        "wires": [
+            [
+                "5e18896e060736a2"
+            ]
+        ]
+    },
+    {
+        "id": "630956d807bb897f",
+        "type": "ui_button",
+        "z": "62168f16fb9cb960",
+        "name": "",
+        "group": "7c3d1ffe5de85af4",
+        "order": 2,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "Reset",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "autorenew",
+        "payload": "filebrowser_default_folder",
+        "payloadType": "global",
+        "topic": "change",
+        "topicType": "str",
+        "x": 90,
+        "y": 220,
+        "wires": [
+            [
+                "5e18896e060736a2"
+            ]
+        ]
+    },
+    {
+        "id": "58dab00dd15f92fc",
+        "type": "ui_switch",
+        "z": "62168f16fb9cb960",
+        "name": "",
+        "label": "Hidden",
+        "tooltip": "Show hidden files or not",
+        "group": "7c3d1ffe5de85af4",
+        "order": 5,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "decouple": "false",
+        "topic": "hidden",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "check_box",
+        "oncolor": "#000000",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "check_box_outline_blank",
+        "offcolor": "#000000",
+        "animate": true,
+        "className": "",
+        "x": 80,
+        "y": 300,
+        "wires": [
+            [
+                "5e18896e060736a2"
+            ]
+        ]
+    },
+    {
+        "id": "1ec03f77c131fff2",
+        "type": "ui_template",
+        "z": "62168f16fb9cb960",
+        "group": "b9eaf4515438b94a",
+        "name": "File Preview",
+        "order": 3,
+        "width": "10",
+        "height": "11",
+        "format": "<div ng-bind-html=\"msg.payload\" height=\"100%\" style=\"height: 100%;\"><br/>\n</div>\n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 1230,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9f0139c9d4cf303c",
+        "type": "ui_text",
+        "z": "62168f16fb9cb960",
+        "group": "b9eaf4515438b94a",
+        "order": 1,
+        "width": "5",
+        "height": "1",
+        "name": "Filename",
+        "label": "",
+        "format": "{{msg.payload.fname}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 1100,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "2fd8e45dcc9f2743",
+        "type": "switch",
+        "z": "62168f16fb9cb960",
+        "name": "File type",
+        "property": "payload.ext",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "csv",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "txt",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "json",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "sh",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "py",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "jpg",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "jpeg",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "png",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "gif",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 10,
+        "x": 340,
+        "y": 420,
+        "wires": [
+            [
+                "f4a765c1f1902e7a"
+            ],
+            [
+                "f4a765c1f1902e7a"
+            ],
+            [
+                "f4a765c1f1902e7a"
+            ],
+            [
+                "f4a765c1f1902e7a"
+            ],
+            [
+                "f4a765c1f1902e7a"
+            ],
+            [
+                "d01017c774b3015b"
+            ],
+            [
+                "d01017c774b3015b"
+            ],
+            [
+                "d01017c774b3015b"
+            ],
+            [
+                "d01017c774b3015b"
+            ],
+            [
+                "94f0866931125570"
+            ]
+        ]
+    },
+    {
+        "id": "f4a765c1f1902e7a",
+        "type": "function",
+        "z": "62168f16fb9cb960",
+        "name": "Get the file name",
+        "func": "if (msg.payload.stat.size<200000) {\n    msg.filename = msg.payload.name;\n    return [msg,null];\n} else {\n    return [null,msg];  \n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 380,
+        "wires": [
+            [
+                "1bd0dae8f649fd8a"
+            ],
+            [
+                "777954f42573efc6"
+            ]
+        ],
+        "outputLabels": [
+            "Folder selected",
+            ""
+        ]
+    },
+    {
+        "id": "1bd0dae8f649fd8a",
+        "type": "file in",
+        "z": "62168f16fb9cb960",
+        "name": "",
+        "filename": "",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 740,
+        "y": 380,
+        "wires": [
+            [
+                "87752f132359caad"
+            ]
+        ]
+    },
+    {
+        "id": "87752f132359caad",
+        "type": "function",
+        "z": "62168f16fb9cb960",
+        "name": "Div text",
+        "func": "function HTMLEncode(str) {\n    var i = str.length,\n        aRet = [];\n\n    while (i--) {\n        var iC = str[i].charCodeAt();\n        if (iC < 65 || iC > 127 || (iC > 90 && iC < 97)) {\n            aRet[i] = '&#' + iC + ';';\n        } else {\n            aRet[i] = str[i];\n        }\n    }\n    return aRet.join('');\n}\n\nlet text = \"<div>\";\nlet filecontent = \"\";\nfilecontent += msg.payload;\n\nfilecontent = HTMLEncode(filecontent);\n\n// Convert line feed to <br>\nfilecontent = filecontent.replace(/(?:\\r\\n|\\r|\\n)/g, '<br/>');\n\n\n\ntext += filecontent;\ntext += \"</div>\";\nmsg.payload = text;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 380,
+        "wires": [
+            [
+                "1ec03f77c131fff2"
+            ]
+        ]
+    },
+    {
+        "id": "d01017c774b3015b",
+        "type": "function",
+        "z": "62168f16fb9cb960",
+        "name": "Get the file name",
+        "func": "if (msg.payload.stat.size < 2000000) {\n    msg.filename = msg.payload.name;\n    return [msg, null];\n} else {\n    return [null, msg];\n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 460,
+        "wires": [
+            [
+                "36938b3decb00b93"
+            ],
+            [
+                "777954f42573efc6"
+            ]
+        ],
+        "outputLabels": [
+            "Folder selected",
+            ""
+        ]
+    },
+    {
+        "id": "36938b3decb00b93",
+        "type": "file in",
+        "z": "62168f16fb9cb960",
+        "name": "",
+        "filename": "",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "x": 740,
+        "y": 460,
+        "wires": [
+            [
+                "f3a77316a142090b"
+            ]
+        ]
+    },
+    {
+        "id": "ee1728b79fedf48f",
+        "type": "function",
+        "z": "62168f16fb9cb960",
+        "name": "Div image",
+        "func": "let text = \"<img src=\\\"data:image/png;base64,\";\ntext += msg.payload;\ntext += \"\\\" width=\\\"100%\\\"/>\";\nmsg.payload = text;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1040,
+        "y": 460,
+        "wires": [
+            [
+                "1ec03f77c131fff2"
+            ]
+        ]
+    },
+    {
+        "id": "f3a77316a142090b",
+        "type": "base64",
+        "z": "62168f16fb9cb960",
+        "name": "",
+        "action": "",
+        "property": "payload",
+        "x": 900,
+        "y": 460,
+        "wires": [
+            [
+                "ee1728b79fedf48f"
+            ]
+        ]
+    },
+    {
+        "id": "cf09d98db7656238",
+        "type": "function",
+        "z": "62168f16fb9cb960",
+        "name": "Change folder",
+        "func": "\nif (msg.payload.stat.isDirectory) {\n\n    msg.topic = \"change\";\n    msg.payload = msg.payload.name;\n\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 260,
+        "wires": [
+            [
+                "5e18896e060736a2"
+            ]
+        ]
+    },
+    {
+        "id": "c9bad6d25a599039",
+        "type": "ui_text",
+        "z": "62168f16fb9cb960",
+        "group": "7c3d1ffe5de85af4",
+        "order": 4,
+        "width": "9",
+        "height": "1",
+        "name": "",
+        "label": "Folder:",
+        "format": "{{msg.payload.start}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 480,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "ab85eb9606fc412a",
+        "type": "function",
+        "z": "62168f16fb9cb960",
+        "name": "Handle file actions",
+        "func": "switch (msg.topic) {\n    case (\"delete\"):\n        msg.file = context.get(\"lastfile\");\n        if (msg.file!==undefined) {\n            msg.filename = msg.file.name;\n            return [msg,null];\n        }\n        break;\n    case (\"download\"):\n        msg.file = context.get(\"lastfile\");\n        if (msg.file !== undefined) {\n            //msg.template = \"<script>window.location.href = \\\"/download?filename=\"+msg.file.name+\"\\\";</script>\";\n            msg.template = \"<script>window.open('/download?filename=\" + encodeURIComponent(msg.file.name) + \"', '_blank');</script>\";\n            return [null, msg];\n        }\n        break;\n    default:\n        context.set(\"lastfile\", msg.payload);\n}",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1150,
+        "y": 280,
+        "wires": [
+            [
+                "346d1bfad5842d5e"
+            ],
+            [
+                "f27d36356901af0b"
+            ]
+        ]
+    },
+    {
+        "id": "346d1bfad5842d5e",
+        "type": "change",
+        "z": "62168f16fb9cb960",
+        "name": "Set message",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Delete confirmation",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Are you sure you want to delete this file?",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1370,
+        "y": 280,
+        "wires": [
+            [
+                "89dc6deaab1808aa"
+            ]
+        ]
+    },
+    {
+        "id": "89dc6deaab1808aa",
+        "type": "ui_toast",
+        "z": "62168f16fb9cb960",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": false,
+        "outputs": 1,
+        "ok": "Yes",
+        "cancel": "No",
+        "raw": false,
+        "topic": "",
+        "name": "Confirmation",
+        "x": 1550,
+        "y": 280,
+        "wires": [
+            [
+                "32285273e011031e"
+            ]
+        ]
+    },
+    {
+        "id": "32285273e011031e",
+        "type": "switch",
+        "z": "62168f16fb9cb960",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Yes",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1710,
+        "y": 280,
+        "wires": [
+            [
+                "2ac7af71cd82b7a7"
+            ]
+        ]
+    },
+    {
+        "id": "2ac7af71cd82b7a7",
+        "type": "file",
+        "z": "62168f16fb9cb960",
+        "name": "Delete file",
+        "filename": "filename",
+        "filenameType": "msg",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "delete",
+        "encoding": "none",
+        "x": 1860,
+        "y": 280,
+        "wires": [
+            [
+                "3d10270c932dca69"
+            ]
+        ]
+    },
+    {
+        "id": "3d10270c932dca69",
+        "type": "link out",
+        "z": "62168f16fb9cb960",
+        "name": "link out 13",
+        "mode": "link",
+        "links": [
+            "1275bed0427c4097"
+        ],
+        "x": 1975,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "1275bed0427c4097",
+        "type": "link in",
+        "z": "62168f16fb9cb960",
+        "name": "Refresh File List",
+        "links": [
+            "3d10270c932dca69"
+        ],
+        "x": 125,
+        "y": 340,
+        "wires": [
+            [
+                "5e18896e060736a2"
+            ]
+        ]
+    },
+    {
+        "id": "94f0866931125570",
+        "type": "function",
+        "z": "62168f16fb9cb960",
+        "name": "Div text",
+        "func": "msg.payload = \"<div>No preview available</div>\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1040,
+        "y": 520,
+        "wires": [
+            [
+                "1ec03f77c131fff2"
+            ]
+        ]
+    },
+    {
+        "id": "f27d36356901af0b",
+        "type": "ui_template",
+        "z": "62168f16fb9cb960",
+        "group": "b9eaf4515438b94a",
+        "name": "",
+        "order": 18,
+        "width": 0,
+        "height": 0,
+        "format": "",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 1380,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9c81f3c971381924",
+        "type": "ui_button",
+        "z": "62168f16fb9cb960",
+        "name": "",
+        "group": "b9eaf4515438b94a",
+        "order": 2,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Download",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "file_download",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "download",
+        "topicType": "str",
+        "x": 960,
+        "y": 320,
+        "wires": [
+            [
+                "ab85eb9606fc412a"
+            ]
+        ]
+    },
+    {
+        "id": "777954f42573efc6",
+        "type": "function",
+        "z": "62168f16fb9cb960",
+        "name": "File too big",
+        "func": "msg.payload = \"<div>File too large for preview</div>\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 420,
+        "wires": [
+            [
+                "1ec03f77c131fff2"
+            ]
+        ]
+    },
+    {
+        "id": "aabb0360fd74425e",
+        "type": "ui_button",
+        "z": "62168f16fb9cb960",
+        "name": "",
+        "group": "7c3d1ffe5de85af4",
+        "order": 7,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Download All",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "file_download",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "download_all",
+        "topicType": "str",
+        "x": 130,
+        "y": 640,
+        "wires": [
+            [
+                "66bc0f58da04db30"
+            ]
+        ]
+    },
+    {
+        "id": "66bc0f58da04db30",
+        "type": "function",
+        "z": "62168f16fb9cb960",
+        "name": "Sure?",
+        "func": "let folder = flow.get(\"currentfolder\");\nlet count = 0;\nlet total = 0;\n\nif (folder===undefined) {\n    return;\n}\n\nfor (var i = 0; i < folder.length; i++) {\n    if (folder[i].stat.isFile) {\n        count++\n        total+=folder[i].stat.size;\n    } \n}\n\nmsg.topic=\"Download all files?\"\nmsg.payload = \"This will zip \" + count + \" file(s) in this folder with a total size of \" + total.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, \",\")+\" bytes. Are you sure?\";\nreturn msg;\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 640,
+        "wires": [
+            [
+                "fe70301f0dba3337"
+            ]
+        ]
+    },
+    {
+        "id": "fe70301f0dba3337",
+        "type": "ui_toast",
+        "z": "62168f16fb9cb960",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": false,
+        "outputs": 1,
+        "ok": "Yes",
+        "cancel": "No",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Confirmation",
+        "x": 470,
+        "y": 640,
+        "wires": [
+            [
+                "1342a37f07b7f60b"
+            ]
+        ]
+    },
+    {
+        "id": "1342a37f07b7f60b",
+        "type": "switch",
+        "z": "62168f16fb9cb960",
+        "name": "Yes?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Yes",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 630,
+        "y": 640,
+        "wires": [
+            [
+                "03c02db4323050f9"
+            ]
+        ]
+    },
+    {
+        "id": "03c02db4323050f9",
+        "type": "function",
+        "z": "62168f16fb9cb960",
+        "name": "Zip command",
+        "func": "let folder = flow.get(\"folder\");\n\n// Get the current time and convert it to text\nvar now = new Date();\nvar yyyy = now.getFullYear();\nvar mm = now.getMonth() < 9 ? \"0\" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based\nvar dd = now.getDate() < 10 ? \"0\" + now.getDate() : now.getDate();\nvar hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\nvar mmm = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\nvar ss = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\n\n// Generate out file name pattern\nlet filename = folder.match(/([^\\/]*)\\/*$/)[1]+\"_\" + yyyy + mm + dd + hh + mmm+ss+\".zip\";\nlet filepath = folder + \"/\" + filename;\n\nmsg.save = {\"name\": filepath, \"fname\": filename };\n\nmsg.payload = \"zip \" + filepath+\" \"+folder+\"/*.*\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 640,
+        "wires": [
+            [
+                "08f02bd4e485aba7"
+            ]
+        ]
+    },
+    {
+        "id": "08f02bd4e485aba7",
+        "type": "exec",
+        "z": "62168f16fb9cb960",
+        "command": "",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Execute zip",
+        "x": 1010,
+        "y": 640,
+        "wires": [
+            [
+                "9442aea2f165046c"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "278d2f3e30bb8eed",
+        "type": "change",
+        "z": "62168f16fb9cb960",
+        "name": "Get zip details",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "save",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1400,
+        "y": 600,
+        "wires": [
+            [
+                "9f0139c9d4cf303c",
+                "ab85eb9606fc412a"
+            ]
+        ]
+    },
+    {
+        "id": "9442aea2f165046c",
+        "type": "switch",
+        "z": "62168f16fb9cb960",
+        "name": "Success?",
+        "property": "rc.code",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1180,
+        "y": 620,
+        "wires": [
+            [
+                "278d2f3e30bb8eed",
+                "33821421f5f9e1c3"
+            ],
+            [
+                "a14832dbe8ca1c31"
+            ]
+        ]
+    },
+    {
+        "id": "33821421f5f9e1c3",
+        "type": "change",
+        "z": "62168f16fb9cb960",
+        "name": "Notification",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Zip file containing all files in this folder has been generated. Click on Download above.",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1390,
+        "y": 640,
+        "wires": [
+            [
+                "1ec03f77c131fff2"
+            ]
+        ]
+    },
+    {
+        "id": "a14832dbe8ca1c31",
+        "type": "change",
+        "z": "62168f16fb9cb960",
+        "name": "Failed notification",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Download all failed!",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Download All",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1410,
+        "y": 680,
+        "wires": [
+            [
+                "6c43b2f8441fd24e"
+            ]
+        ]
+    },
+    {
+        "id": "6c43b2f8441fd24e",
+        "type": "ui_toast",
+        "z": "62168f16fb9cb960",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": false,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1610,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bfc3ef112044fb10",
+        "type": "ui_text_input",
+        "z": "62168f16fb9cb960",
+        "name": "",
+        "label": "Filter:",
+        "tooltip": "",
+        "group": "7c3d1ffe5de85af4",
+        "order": 7,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "quickfilter",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 770,
+        "y": 120,
+        "wires": [
+            [
+                "1a853077cd0370f3"
+            ]
+        ]
+    },
+    {
+        "id": "4434a55ef1ec1dbc",
+        "type": "change",
+        "z": "62168f16fb9cb960",
+        "name": "Empty",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 630,
+        "y": 120,
+        "wires": [
+            [
+                "bfc3ef112044fb10"
+            ]
+        ]
+    }
+]
