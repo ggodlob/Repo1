@@ -749,11 +749,11 @@
         "serialParity": "none",
         "serialConnectionDelay": "100",
         "serialAsciiResponseStartDelimiter": "0x3A",
-        "unit_id": "1",
-        "commandDelay": "1",
-        "clientTimeout": "1000",
+        "unit_id": 1,
+        "commandDelay": 1,
+        "clientTimeout": 1000,
         "reconnectOnTimeout": true,
-        "reconnectTimeout": "2000",
+        "reconnectTimeout": 2000,
         "parallelUnitIdsAllowed": true,
         "showErrors": false,
         "showWarnings": true,
@@ -783,6 +783,14 @@
         "id": "ef6702f2eebd5bef",
         "type": "cmi config",
         "description": "TA C.M.I.",
+        "ip": "192.168.45.55",
+        "canNode": "1",
+        "interval": "1"
+    },
+    {
+        "id": "387cba70d0bdb139",
+        "type": "cmi config",
+        "description": "TA C.M.I.2",
         "ip": "192.168.45.55",
         "canNode": "1",
         "interval": "1"
@@ -1376,6 +1384,23 @@
             [
                 "34e4382fd48aae50"
             ]
+        ]
+    },
+    {
+        "id": "fed5f5d52310eacb",
+        "type": "cmi in",
+        "z": "8e6f93d6c1999015",
+        "cmi": "387cba70d0bdb139",
+        "name": "test",
+        "item": "1",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 1010,
+        "y": 220,
+        "wires": [
+            []
         ]
     },
     {
