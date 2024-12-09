@@ -403,14 +403,6 @@
         "hidden": false
     },
     {
-        "id": "ff8ef490b73acde2",
-        "type": "cmi config",
-        "description": "TA C.M.I. 1",
-        "ip": "192.168.45.55",
-        "canNode": "1",
-        "interval": "1"
-    },
-    {
         "id": "9f2caf0eefda8f89",
         "type": "ui_group",
         "name": "HC1",
