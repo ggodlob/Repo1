@@ -648,120 +648,6 @@
         "wires": []
     },
     {
-        "id": "b30772b67fc22a77",
-        "type": "cmi in",
-        "z": "8e6f93d6c1999015",
-        "cmi": "ff8ef490b73acde2",
-        "name": "Pressure 2",
-        "item": "2",
-        "source": "0",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 200,
-        "y": 100,
-        "wires": [
-            [
-                "fce49c478cef3616"
-            ]
-        ]
-    },
-    {
-        "id": "458bfb9d562305f4",
-        "type": "cmi in",
-        "z": "8e6f93d6c1999015",
-        "cmi": "ff8ef490b73acde2",
-        "name": "Pressure 4",
-        "item": "4",
-        "source": "0",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 200,
-        "y": 340,
-        "wires": [
-            [
-                "b88c8f75645447d7"
-            ]
-        ]
-    },
-    {
-        "id": "bb89600175255b9e",
-        "type": "cmi in",
-        "z": "8e6f93d6c1999015",
-        "cmi": "ff8ef490b73acde2",
-        "name": "Temp 1",
-        "item": "9",
-        "source": "0",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 210,
-        "y": 160,
-        "wires": [
-            [
-                "2d4646b0db2f1313"
-            ]
-        ]
-    },
-    {
-        "id": "c361f25ebd1a8332",
-        "type": "cmi in",
-        "z": "8e6f93d6c1999015",
-        "cmi": "ff8ef490b73acde2",
-        "name": "Temp 2",
-        "item": "10",
-        "source": "0",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 210,
-        "y": 220,
-        "wires": [
-            [
-                "4792b5d5ea1aed4f"
-            ]
-        ]
-    },
-    {
-        "id": "3675d7378d6aa2cc",
-        "type": "cmi in",
-        "z": "8e6f93d6c1999015",
-        "cmi": "ff8ef490b73acde2",
-        "name": "Temp 3",
-        "item": "11",
-        "source": "0",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 210,
-        "y": 400,
-        "wires": [
-            [
-                "0bbb900fda5f8a90"
-            ]
-        ]
-    },
-    {
-        "id": "af39c5cd048210c0",
-        "type": "cmi in",
-        "z": "8e6f93d6c1999015",
-        "cmi": "ff8ef490b73acde2",
-        "name": "Temp 4",
-        "item": "12",
-        "source": "0",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 210,
-        "y": 460,
-        "wires": [
-            [
-                "b29637cc286b1e69"
-            ]
-        ]
-    },
-    {
         "id": "eaee38cd727c1251",
         "type": "ui_gauge",
         "z": "8e6f93d6c1999015",
@@ -862,63 +748,6 @@
         ]
     },
     {
-        "id": "35074865ceba4929",
-        "type": "cmi in",
-        "z": "8e6f93d6c1999015",
-        "cmi": "ff8ef490b73acde2",
-        "name": "Pressure 6",
-        "item": "6",
-        "source": "0",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 200,
-        "y": 580,
-        "wires": [
-            [
-                "65876a0943268809"
-            ]
-        ]
-    },
-    {
-        "id": "4f08e3881b463ba3",
-        "type": "cmi in",
-        "z": "8e6f93d6c1999015",
-        "cmi": "ff8ef490b73acde2",
-        "name": "Temp 5",
-        "item": "13",
-        "source": "0",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 210,
-        "y": 640,
-        "wires": [
-            [
-                "eaee38cd727c1251"
-            ]
-        ]
-    },
-    {
-        "id": "d2da10bf34f1fb73",
-        "type": "cmi in",
-        "z": "8e6f93d6c1999015",
-        "cmi": "ff8ef490b73acde2",
-        "name": "Temp 6",
-        "item": "14",
-        "source": "0",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 210,
-        "y": 700,
-        "wires": [
-            [
-                "12972f49c15be411"
-            ]
-        ]
-    },
-    {
         "id": "fce49c478cef3616",
         "type": "ui_chart",
         "z": "8e6f93d6c1999015",
@@ -984,44 +813,6 @@
         "wires": []
     },
     {
-        "id": "1933c09cb4fbc57c",
-        "type": "cmi in",
-        "z": "8e6f93d6c1999015",
-        "cmi": "ff8ef490b73acde2",
-        "name": "Magnetventil 1",
-        "item": "1",
-        "source": "1",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 180,
-        "y": 40,
-        "wires": [
-            [
-                "3e546ec86a098a36"
-            ]
-        ]
-    },
-    {
-        "id": "73dca5198265af4a",
-        "type": "cmi in",
-        "z": "8e6f93d6c1999015",
-        "cmi": "ff8ef490b73acde2",
-        "name": "Magnetventil 2",
-        "item": "4",
-        "source": "1",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 180,
-        "y": 280,
-        "wires": [
-            [
-                "6fa0c3400be1c116"
-            ]
-        ]
-    },
-    {
         "id": "34e4382fd48aae50",
         "type": "ui_text",
         "z": "8e6f93d6c1999015",
@@ -1041,25 +832,6 @@
         "x": 560,
         "y": 520,
         "wires": []
-    },
-    {
-        "id": "2538b8a186fe5992",
-        "type": "cmi in",
-        "z": "8e6f93d6c1999015",
-        "cmi": "ff8ef490b73acde2",
-        "name": "Magnetventil 3",
-        "item": "7",
-        "source": "1",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 180,
-        "y": 520,
-        "wires": [
-            [
-                "34e4382fd48aae50"
-            ]
-        ]
     },
     {
         "id": "fedd3c65efaf645f",
@@ -1285,63 +1057,6 @@
                 "aace742ac1d86035"
             ],
             []
-        ]
-    },
-    {
-        "id": "cab8d9e56a40ab64",
-        "type": "cmi in",
-        "z": "61d663c65d5d04a2",
-        "cmi": "ff8ef490b73acde2",
-        "name": "Pressure 1",
-        "item": "1",
-        "source": "0",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 180,
-        "y": 160,
-        "wires": [
-            [
-                "639fb3a6663fcca4"
-            ]
-        ]
-    },
-    {
-        "id": "116513555b36ba30",
-        "type": "cmi in",
-        "z": "61d663c65d5d04a2",
-        "cmi": "ff8ef490b73acde2",
-        "name": "Überdruckventil 1",
-        "item": "3",
-        "source": "1",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 160,
-        "y": 40,
-        "wires": [
-            [
-                "44734ecb313db565"
-            ]
-        ]
-    },
-    {
-        "id": "9f139fac02dbdaa0",
-        "type": "cmi in",
-        "z": "61d663c65d5d04a2",
-        "cmi": "ff8ef490b73acde2",
-        "name": "SN 1",
-        "item": "17",
-        "source": "0",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 190,
-        "y": 100,
-        "wires": [
-            [
-                "668723cb7ac53144"
-            ]
         ]
     },
     {
@@ -1659,63 +1374,6 @@
         "wires": []
     },
     {
-        "id": "e1128d40e28d5679",
-        "type": "cmi in",
-        "z": "cb52c966d2fad605",
-        "cmi": "ff8ef490b73acde2",
-        "name": "Pressure 3",
-        "item": "3",
-        "source": "0",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 180,
-        "y": 160,
-        "wires": [
-            [
-                "244d8d9f6e6c67f4"
-            ]
-        ]
-    },
-    {
-        "id": "cd54f36073f5dfb4",
-        "type": "cmi in",
-        "z": "cb52c966d2fad605",
-        "cmi": "ff8ef490b73acde2",
-        "name": "Überdruckventil 2",
-        "item": "6",
-        "source": "1",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 160,
-        "y": 40,
-        "wires": [
-            [
-                "0913bfd313b2f67c"
-            ]
-        ]
-    },
-    {
-        "id": "1ff0b4bab1172124",
-        "type": "cmi in",
-        "z": "cb52c966d2fad605",
-        "cmi": "ff8ef490b73acde2",
-        "name": "SN 2",
-        "item": "18",
-        "source": "0",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 190,
-        "y": 100,
-        "wires": [
-            [
-                "9bb7bdb1eae4948e"
-            ]
-        ]
-    },
-    {
         "id": "e3ba7a980ec17e5e",
         "type": "function",
         "z": "f820c1bd7223bd88",
@@ -1894,63 +1552,6 @@
         "wires": []
     },
     {
-        "id": "44d9c6442bf614be",
-        "type": "cmi in",
-        "z": "f820c1bd7223bd88",
-        "cmi": "ff8ef490b73acde2",
-        "name": "Pressure 5",
-        "item": "5",
-        "source": "0",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 180,
-        "y": 160,
-        "wires": [
-            [
-                "04b283f4a235b802"
-            ]
-        ]
-    },
-    {
-        "id": "04be3b414a993791",
-        "type": "cmi in",
-        "z": "f820c1bd7223bd88",
-        "cmi": "ff8ef490b73acde2",
-        "name": "Überdruckventil 3",
-        "item": "9",
-        "source": "1",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 160,
-        "y": 40,
-        "wires": [
-            [
-                "2c0c38adf570a5e0"
-            ]
-        ]
-    },
-    {
-        "id": "95199828f07eabb9",
-        "type": "cmi in",
-        "z": "f820c1bd7223bd88",
-        "cmi": "ff8ef490b73acde2",
-        "name": "SN 3",
-        "item": "19",
-        "source": "0",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 190,
-        "y": 100,
-        "wires": [
-            [
-                "12bbbd87a10398fa"
-            ]
-        ]
-    },
-    {
         "id": "bce431684206e30c",
         "type": "function",
         "z": "28c240172645bd4e",
@@ -2087,25 +1688,6 @@
         "wires": []
     },
     {
-        "id": "53f6c8b3d8184e7d",
-        "type": "cmi in",
-        "z": "28c240172645bd4e",
-        "cmi": "ff8ef490b73acde2",
-        "name": "Pressure 7",
-        "item": "7",
-        "source": "0",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 180,
-        "y": 160,
-        "wires": [
-            [
-                "153d8ec83f3e3c6a"
-            ]
-        ]
-    },
-    {
         "id": "b2c11f424328c412",
         "type": "ui_text",
         "z": "28c240172645bd4e",
@@ -2125,25 +1707,6 @@
         "x": 510,
         "y": 100,
         "wires": []
-    },
-    {
-        "id": "3c3f94a3ea981add",
-        "type": "cmi in",
-        "z": "28c240172645bd4e",
-        "cmi": "63a18cd95492413f",
-        "name": "SN 4",
-        "item": "20",
-        "source": "0",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 190,
-        "y": 100,
-        "wires": [
-            [
-                "b2c11f424328c412"
-            ]
-        ]
     },
     {
         "id": "89644dc73fa4bfb2",
