@@ -327,8 +327,8 @@
         "name": "",
         "group": "a53d8deeea11707a",
         "order": 2,
-        "width": "3",
-        "height": "2",
+        "width": 3,
+        "height": 2,
         "gtype": "gage",
         "title": "Temp 1",
         "label": "°C",
@@ -344,7 +344,7 @@
         "seg2": "75",
         "diff": false,
         "className": "",
-        "x": 540,
+        "x": 580,
         "y": 160,
         "wires": []
     },
@@ -355,8 +355,8 @@
         "name": "",
         "group": "a53d8deeea11707a",
         "order": 3,
-        "width": "3",
-        "height": "2",
+        "width": 3,
+        "height": 2,
         "gtype": "gage",
         "title": "Temp 2",
         "label": "°C",
@@ -372,7 +372,7 @@
         "seg2": "75",
         "diff": false,
         "className": "",
-        "x": 540,
+        "x": 580,
         "y": 220,
         "wires": []
     },
@@ -383,8 +383,8 @@
         "name": "",
         "group": "5adbafdcfcc90c64",
         "order": 2,
-        "width": "3",
-        "height": "3",
+        "width": 3,
+        "height": 3,
         "gtype": "gage",
         "title": "Temp 3",
         "label": "°C",
@@ -400,7 +400,7 @@
         "seg2": "75",
         "diff": false,
         "className": "",
-        "x": 540,
+        "x": 580,
         "y": 400,
         "wires": []
     },
@@ -411,8 +411,8 @@
         "name": "",
         "group": "5adbafdcfcc90c64",
         "order": 3,
-        "width": "3",
-        "height": "3",
+        "width": 3,
+        "height": 3,
         "gtype": "gage",
         "title": "Temp 4",
         "label": "°C",
@@ -428,7 +428,7 @@
         "seg2": "75",
         "diff": false,
         "className": "",
-        "x": 540,
+        "x": 580,
         "y": 460,
         "wires": []
     },
@@ -456,7 +456,7 @@
         "seg2": "75",
         "diff": false,
         "className": "",
-        "x": 540,
+        "x": 580,
         "y": 640,
         "wires": []
     },
@@ -484,7 +484,7 @@
         "seg2": "75",
         "diff": false,
         "className": "",
-        "x": 540,
+        "x": 580,
         "y": 700,
         "wires": []
     },
@@ -505,7 +505,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 560,
+        "x": 600,
         "y": 280,
         "wires": []
     },
@@ -526,7 +526,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 560,
+        "x": 600,
         "y": 40,
         "wires": []
     },
@@ -547,7 +547,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 560,
+        "x": 600,
         "y": 520,
         "wires": []
     },
@@ -558,8 +558,8 @@
         "name": "",
         "group": "5adbafdcfcc90c64",
         "order": 1,
-        "width": "6",
-        "height": "3",
+        "width": 6,
+        "height": 3,
         "label": "Vakuumpumpe 2",
         "chartType": "line",
         "legend": "false",
@@ -589,7 +589,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 570,
+        "x": 610,
         "y": 340,
         "wires": [
             []
@@ -633,7 +633,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 570,
+        "x": 610,
         "y": 580,
         "wires": [
             []
@@ -646,8 +646,8 @@
         "name": "",
         "group": "a53d8deeea11707a",
         "order": 1,
-        "width": "6",
-        "height": "3",
+        "width": 6,
+        "height": 3,
         "label": "Vakuumpumpe 1",
         "chartType": "line",
         "legend": "false",
@@ -677,7 +677,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 570,
+        "x": 610,
         "y": 100,
         "wires": [
             []
@@ -923,8 +923,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 510,
-        "y": 620,
+        "x": 330,
+        "y": 940,
         "wires": [
             [
                 "aa7bba2e68df2853"
@@ -943,8 +943,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 340,
-        "y": 440,
+        "x": 960,
+        "y": 340,
         "wires": [
             []
         ]
@@ -970,8 +970,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 170,
-        "y": 340,
+        "x": 150,
+        "y": 280,
         "wires": [
             [
                 "96bd7268dbc259c2",
@@ -991,8 +991,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 320,
-        "y": 340,
+        "x": 360,
+        "y": 280,
         "wires": [
             [
                 "cf30e5419fedd884"
@@ -1011,34 +1011,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 320,
-        "y": 380,
+        "x": 360,
+        "y": 320,
         "wires": [
             [
                 "cf30e5419fedd884"
             ]
-        ]
-    },
-    {
-        "id": "bab91d7325ec272a",
-        "type": "csv",
-        "z": "61d663c65d5d04a2",
-        "name": "",
-        "spec": "rfc",
-        "sep": ",",
-        "hdrin": "",
-        "hdrout": "none",
-        "multi": "one",
-        "ret": "\\r\\n",
-        "temp": "",
-        "skip": "0",
-        "strings": true,
-        "include_empty_strings": "",
-        "include_null_values": "",
-        "x": 670,
-        "y": 160,
-        "wires": [
-            []
         ]
     },
     {
@@ -1058,7 +1036,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 520,
+        "x": 620,
         "y": 40,
         "wires": []
     },
@@ -1079,8 +1057,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 500,
-        "y": 220,
+        "x": 600,
+        "y": 160,
         "wires": []
     },
     {
@@ -1100,8 +1078,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 510,
-        "y": 280,
+        "x": 610,
+        "y": 220,
         "wires": []
     },
     {
@@ -1110,8 +1088,8 @@
         "z": "61d663c65d5d04a2",
         "group": "1591b6c7b8497e57",
         "order": 2,
-        "width": "6",
-        "height": "1",
+        "width": 6,
+        "height": 1,
         "name": "",
         "label": "Seriennummer 1",
         "format": "{{msg.payload}}",
@@ -1121,7 +1099,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 510,
+        "x": 610,
         "y": 100,
         "wires": []
     },
@@ -1133,8 +1111,8 @@
         "group": "1591b6c7b8497e57",
         "voice": "Microsoft Hedda - German (Germany)",
         "always": true,
-        "x": 730,
-        "y": 620,
+        "x": 550,
+        "y": 940,
         "wires": []
     },
     {
@@ -1143,9 +1121,9 @@
         "z": "61d663c65d5d04a2",
         "name": "",
         "group": "1591b6c7b8497e57",
-        "order": 4,
-        "width": "0",
-        "height": "0",
+        "order": 3,
+        "width": 0,
+        "height": 0,
         "label": "Druck WP1",
         "chartType": "line",
         "legend": "false",
@@ -1175,11 +1153,11 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 490,
-        "y": 160,
+        "x": 370,
+        "y": 500,
         "wires": [
             [
-                "bab91d7325ec272a"
+                "bea26b0a3facb8d9"
             ]
         ]
     },
@@ -1188,7 +1166,7 @@
         "type": "ui_chart",
         "z": "61d663c65d5d04a2",
         "name": "",
-        "group": "1591b6c7b8497e57",
+        "group": "",
         "order": 4,
         "width": "0",
         "height": "0",
@@ -1221,8 +1199,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 480,
-        "y": 340,
+        "x": 580,
+        "y": 280,
         "wires": [
             []
         ]
@@ -1233,44 +1211,12 @@
         "z": "61d663c65d5d04a2",
         "name": "Export data 1",
         "threshold": "0",
-        "x": 310,
-        "y": 620,
+        "x": 130,
+        "y": 940,
         "wires": [
             [
                 "fedd3c65efaf645f"
             ]
-        ]
-    },
-    {
-        "id": "037b31f2b9ee09d3",
-        "type": "modbus-read",
-        "z": "61d663c65d5d04a2",
-        "name": "Serialnumber 1",
-        "topic": "",
-        "showStatusActivities": false,
-        "logIOActivities": false,
-        "showErrors": false,
-        "showWarnings": true,
-        "unitid": "56",
-        "dataType": "HoldingRegister",
-        "adr": "29",
-        "quantity": "1",
-        "rate": "1",
-        "rateUnit": "m",
-        "delayOnStart": false,
-        "startDelayTime": "",
-        "server": "ba51c7e6bf23486c",
-        "useIOFile": false,
-        "ioFile": "",
-        "useIOForPayload": false,
-        "emptyMsgOnFail": false,
-        "x": 160,
-        "y": 440,
-        "wires": [
-            [
-                "aace742ac1d86035"
-            ],
-            []
         ]
     },
     {
@@ -1284,8 +1230,8 @@
         "timestamp": "0",
         "skip": "0",
         "severity": "0",
-        "x": 180,
-        "y": 160,
+        "x": 160,
+        "y": 500,
         "wires": [
             [
                 "639fb3a6663fcca4"
@@ -1303,7 +1249,7 @@
         "timestamp": "0",
         "skip": "0",
         "severity": "0",
-        "x": 160,
+        "x": 140,
         "y": 40,
         "wires": [
             [
@@ -1322,11 +1268,141 @@
         "timestamp": "0",
         "skip": "0",
         "severity": "0",
-        "x": 190,
+        "x": 170,
         "y": 100,
         "wires": [
             [
                 "668723cb7ac53144"
+            ]
+        ]
+    },
+    {
+        "id": "2d82142df8fa992a",
+        "type": "file",
+        "z": "61d663c65d5d04a2",
+        "name": "",
+        "filename": "/pi-apps/data/chart.log",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "x": 620,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "775ea065ab0a2d91",
+        "type": "file in",
+        "z": "61d663c65d5d04a2",
+        "name": "",
+        "filename": "/tmp/chart.log",
+        "filenameType": "str",
+        "format": "utf8",
+        "x": 330,
+        "y": 400,
+        "wires": [
+            [
+                "1cd2e37886e2b603"
+            ]
+        ]
+    },
+    {
+        "id": "bea26b0a3facb8d9",
+        "type": "json",
+        "z": "61d663c65d5d04a2",
+        "name": "",
+        "x": 570,
+        "y": 500,
+        "wires": [
+            [
+                "e6bd68c8275667cb"
+            ]
+        ]
+    },
+    {
+        "id": "1cd2e37886e2b603",
+        "type": "json",
+        "z": "61d663c65d5d04a2",
+        "name": "",
+        "x": 570,
+        "y": 400,
+        "wires": [
+            [
+                "639fb3a6663fcca4"
+            ]
+        ]
+    },
+    {
+        "id": "e6bd68c8275667cb",
+        "type": "function",
+        "z": "61d663c65d5d04a2",
+        "name": "",
+        "func": "if (msg.topic === \"save\") {\n    msg.payload = context.last;\n    return msg;\n}\nelse {\n    context.last = msg.payload;\n}\nreturn null;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 360,
+        "y": 600,
+        "wires": [
+            [
+                "2d82142df8fa992a"
+            ]
+        ]
+    },
+    {
+        "id": "3ac7c5470604ded2",
+        "type": "ui_button",
+        "z": "61d663c65d5d04a2",
+        "name": "",
+        "group": "",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "restore",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 160,
+        "y": 400,
+        "wires": [
+            [
+                "775ea065ab0a2d91"
+            ]
+        ]
+    },
+    {
+        "id": "0ae5798d7a228b95",
+        "type": "ui_button",
+        "z": "61d663c65d5d04a2",
+        "name": "",
+        "group": "1591b6c7b8497e57",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "save",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "save",
+        "topicType": "str",
+        "x": 170,
+        "y": 600,
+        "wires": [
+            [
+                "e6bd68c8275667cb"
             ]
         ]
     },
@@ -1354,8 +1430,8 @@
         "z": "cb52c966d2fad605",
         "group": "de078532d6f5e387",
         "order": 2,
-        "width": "6",
-        "height": "1",
+        "width": 6,
+        "height": 1,
         "name": "",
         "label": "Seriennummer 2",
         "format": "{{msg.payload}}",
@@ -1365,7 +1441,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 510,
+        "x": 610,
         "y": 100,
         "wires": []
     },
@@ -1386,7 +1462,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 520,
+        "x": 620,
         "y": 40,
         "wires": []
     },
@@ -1395,7 +1471,7 @@
         "type": "ui_text",
         "z": "cb52c966d2fad605",
         "group": "de078532d6f5e387",
-        "order": 6,
+        "order": 4,
         "width": 0,
         "height": 0,
         "name": "",
@@ -1407,7 +1483,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 500,
+        "x": 600,
         "y": 220,
         "wires": []
     },
@@ -1416,7 +1492,7 @@
         "type": "ui_text",
         "z": "cb52c966d2fad605",
         "group": "de078532d6f5e387",
-        "order": 7,
+        "order": 5,
         "width": 0,
         "height": 0,
         "name": "",
@@ -1428,7 +1504,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 510,
+        "x": 610,
         "y": 280,
         "wires": []
     },
@@ -1438,9 +1514,9 @@
         "z": "cb52c966d2fad605",
         "name": "",
         "group": "de078532d6f5e387",
-        "order": 4,
-        "width": "0",
-        "height": "0",
+        "order": 3,
+        "width": 0,
+        "height": 0,
         "label": "Druck WP2",
         "chartType": "line",
         "legend": "false",
@@ -1470,7 +1546,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 490,
+        "x": 590,
         "y": 160,
         "wires": [
             []
@@ -1487,7 +1563,7 @@
         "timestamp": "0",
         "skip": "0",
         "severity": "0",
-        "x": 180,
+        "x": 160,
         "y": 160,
         "wires": [
             [
@@ -1506,7 +1582,7 @@
         "timestamp": "0",
         "skip": "0",
         "severity": "0",
-        "x": 160,
+        "x": 140,
         "y": 40,
         "wires": [
             [
@@ -1525,7 +1601,7 @@
         "timestamp": "0",
         "skip": "0",
         "severity": "0",
-        "x": 190,
+        "x": 170,
         "y": 100,
         "wires": [
             [
@@ -1557,8 +1633,8 @@
         "z": "f820c1bd7223bd88",
         "group": "422ba1667a7ab9f8",
         "order": 2,
-        "width": "6",
-        "height": "1",
+        "width": 6,
+        "height": 1,
         "name": "",
         "label": "Seriennummer 3",
         "format": "{{msg.payload}}",
@@ -1568,7 +1644,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 510,
+        "x": 610,
         "y": 100,
         "wires": []
     },
@@ -1589,7 +1665,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 520,
+        "x": 620,
         "y": 40,
         "wires": []
     },
@@ -1598,7 +1674,7 @@
         "type": "ui_text",
         "z": "f820c1bd7223bd88",
         "group": "422ba1667a7ab9f8",
-        "order": 6,
+        "order": 4,
         "width": 0,
         "height": 0,
         "name": "",
@@ -1610,7 +1686,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 500,
+        "x": 600,
         "y": 220,
         "wires": []
     },
@@ -1619,7 +1695,7 @@
         "type": "ui_text",
         "z": "f820c1bd7223bd88",
         "group": "422ba1667a7ab9f8",
-        "order": 7,
+        "order": 5,
         "width": 0,
         "height": 0,
         "name": "",
@@ -1631,7 +1707,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 510,
+        "x": 610,
         "y": 280,
         "wires": []
     },
@@ -1641,7 +1717,7 @@
         "z": "f820c1bd7223bd88",
         "name": "",
         "group": "422ba1667a7ab9f8",
-        "order": 4,
+        "order": 3,
         "width": 0,
         "height": 0,
         "label": "Druck WP3",
@@ -1673,7 +1749,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 490,
+        "x": 590,
         "y": 160,
         "wires": [
             []
@@ -1702,7 +1778,7 @@
         "ioFile": "",
         "useIOForPayload": false,
         "emptyMsgOnFail": false,
-        "x": 160,
+        "x": 140,
         "y": 440,
         "wires": [
             [
@@ -1722,7 +1798,7 @@
         "timestamp": "0",
         "skip": "0",
         "severity": "0",
-        "x": 200,
+        "x": 160,
         "y": 160,
         "wires": [
             [
@@ -1741,7 +1817,7 @@
         "timestamp": "0",
         "skip": "0",
         "severity": "0",
-        "x": 180,
+        "x": 140,
         "y": 40,
         "wires": [
             [
@@ -1760,7 +1836,7 @@
         "timestamp": "0",
         "skip": "0",
         "severity": "0",
-        "x": 210,
+        "x": 170,
         "y": 100,
         "wires": [
             [
@@ -1803,7 +1879,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 500,
+        "x": 600,
         "y": 220,
         "wires": []
     },
@@ -1824,7 +1900,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 510,
+        "x": 610,
         "y": 280,
         "wires": []
     },
@@ -1834,8 +1910,8 @@
         "z": "28c240172645bd4e",
         "group": "f31df9e398e4c15e",
         "order": 2,
-        "width": "6",
-        "height": "1",
+        "width": 6,
+        "height": 1,
         "name": "",
         "label": "Seriennummer 4",
         "format": "{{msg.payload}}",
@@ -1845,7 +1921,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 510,
+        "x": 610,
         "y": 100,
         "wires": []
     },
@@ -1866,7 +1942,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 520,
+        "x": 620,
         "y": 40,
         "wires": []
     },
@@ -1908,7 +1984,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 490,
+        "x": 590,
         "y": 160,
         "wires": [
             []
@@ -1976,7 +2052,7 @@
         "timestamp": "0",
         "skip": "0",
         "severity": "0",
-        "x": 150,
+        "x": 170,
         "y": 100,
         "wires": [
             [
@@ -1995,7 +2071,7 @@
         "timestamp": "0",
         "skip": "0",
         "severity": "0",
-        "x": 180,
+        "x": 140,
         "y": 40,
         "wires": [
             [
