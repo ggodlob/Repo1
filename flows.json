@@ -172,6 +172,20 @@
         "hidden": false
     },
     {
+        "id": "e7f7ff66.2de07",
+        "type": "ui_tab",
+        "name": "Restore",
+        "icon": "dashboard"
+    },
+    {
+        "id": "db5ac7bc58fb5462",
+        "type": "ui_tab",
+        "name": "Files (New)",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
         "id": "1591b6c7b8497e57",
         "type": "ui_group",
         "name": "WP1",
@@ -216,126 +230,6 @@
         "className": ""
     },
     {
-        "id": "c74df921f477ca14",
-        "type": "modbus-client",
-        "name": "CMI",
-        "clienttype": "tcp",
-        "bufferCommands": true,
-        "stateLogEnabled": false,
-        "queueLogEnabled": false,
-        "failureLogEnabled": true,
-        "tcpHost": "192.165.45.55",
-        "tcpPort": "502",
-        "tcpType": "TCP-RTU-BUFFERED",
-        "serialPort": "/dev/ttyUSB",
-        "serialType": "RTU-BUFFERD",
-        "serialBaudrate": "9600",
-        "serialDatabits": "8",
-        "serialStopbits": "1",
-        "serialParity": "none",
-        "serialConnectionDelay": "100",
-        "serialAsciiResponseStartDelimiter": "0x3A",
-        "unit_id": "56",
-        "commandDelay": "1",
-        "clientTimeout": "1000",
-        "reconnectOnTimeout": true,
-        "reconnectTimeout": "2000",
-        "parallelUnitIdsAllowed": true,
-        "showErrors": false,
-        "showWarnings": true,
-        "showLogs": true
-    },
-    {
-        "id": "28e5d995362e8f62",
-        "type": "modbus-client",
-        "name": "Aircube 2",
-        "clienttype": "tcp",
-        "bufferCommands": true,
-        "stateLogEnabled": false,
-        "queueLogEnabled": false,
-        "failureLogEnabled": true,
-        "tcpHost": "192.168.45.241",
-        "tcpPort": "502",
-        "tcpType": "DEFAULT",
-        "serialPort": "/dev/ttyUSB",
-        "serialType": "RTU-BUFFERD",
-        "serialBaudrate": "9600",
-        "serialDatabits": "8",
-        "serialStopbits": "1",
-        "serialParity": "none",
-        "serialConnectionDelay": "100",
-        "serialAsciiResponseStartDelimiter": "0x3A",
-        "unit_id": 2,
-        "commandDelay": 1,
-        "clientTimeout": 1000,
-        "reconnectOnTimeout": true,
-        "reconnectTimeout": 2000,
-        "parallelUnitIdsAllowed": true,
-        "showErrors": false,
-        "showWarnings": true,
-        "showLogs": true
-    },
-    {
-        "id": "8f8fcdae6b82fd7d",
-        "type": "modbus-client",
-        "name": "Aircube 3",
-        "clienttype": "tcp",
-        "bufferCommands": true,
-        "stateLogEnabled": false,
-        "queueLogEnabled": false,
-        "failureLogEnabled": true,
-        "tcpHost": "192.168.45.242",
-        "tcpPort": "502",
-        "tcpType": "DEFAULT",
-        "serialPort": "/dev/ttyUSB",
-        "serialType": "RTU-BUFFERD",
-        "serialBaudrate": "9600",
-        "serialDatabits": "8",
-        "serialStopbits": "1",
-        "serialParity": "none",
-        "serialConnectionDelay": "100",
-        "serialAsciiResponseStartDelimiter": "0x3A",
-        "unit_id": "3",
-        "commandDelay": "1",
-        "clientTimeout": "1000",
-        "reconnectOnTimeout": true,
-        "reconnectTimeout": "2000",
-        "parallelUnitIdsAllowed": true,
-        "showErrors": false,
-        "showWarnings": true,
-        "showLogs": true
-    },
-    {
-        "id": "462ceb77bd6ddbb6",
-        "type": "modbus-client",
-        "name": "Aircube 4",
-        "clienttype": "tcp",
-        "bufferCommands": true,
-        "stateLogEnabled": false,
-        "queueLogEnabled": false,
-        "failureLogEnabled": true,
-        "tcpHost": "192.168.45.243",
-        "tcpPort": "502",
-        "tcpType": "DEFAULT",
-        "serialPort": "/dev/ttyUSB",
-        "serialType": "RTU-BUFFERD",
-        "serialBaudrate": "9600",
-        "serialDatabits": "8",
-        "serialStopbits": "1",
-        "serialParity": "none",
-        "serialConnectionDelay": "100",
-        "serialAsciiResponseStartDelimiter": "0x3A",
-        "unit_id": "4",
-        "commandDelay": "1",
-        "clientTimeout": "1000",
-        "reconnectOnTimeout": true,
-        "reconnectTimeout": "2000",
-        "parallelUnitIdsAllowed": true,
-        "showErrors": false,
-        "showWarnings": true,
-        "showLogs": true
-    },
-    {
         "id": "a53d8deeea11707a",
         "type": "ui_group",
         "name": "VP1",
@@ -367,12 +261,6 @@
         "width": "6"
     },
     {
-        "id": "e7f7ff66.2de07",
-        "type": "ui_tab",
-        "name": "Restore",
-        "icon": "dashboard"
-    },
-    {
         "id": "7c3d1ffe5de85af4",
         "type": "ui_group",
         "name": "File Browser",
@@ -393,14 +281,6 @@
         "width": "10",
         "collapse": false,
         "className": ""
-    },
-    {
-        "id": "db5ac7bc58fb5462",
-        "type": "ui_tab",
-        "name": "Files (New)",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
     },
     {
         "id": "9f2caf0eefda8f89",
@@ -670,6 +550,137 @@
         "className": ""
     },
     {
+        "id": "5330d3731827d8ef",
+        "type": "ui_group",
+        "name": "VP3",
+        "tab": "58c2aa06.ef46e4",
+        "order": 7,
+        "disp": true,
+        "width": "6",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "c74df921f477ca14",
+        "type": "modbus-client",
+        "name": "CMI",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "192.165.45.55",
+        "tcpPort": "502",
+        "tcpType": "TCP-RTU-BUFFERED",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": "56",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": true,
+        "showErrors": false,
+        "showWarnings": true,
+        "showLogs": true
+    },
+    {
+        "id": "28e5d995362e8f62",
+        "type": "modbus-client",
+        "name": "Aircube 2",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "192.168.45.241",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": 2,
+        "commandDelay": 1,
+        "clientTimeout": 1000,
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": 2000,
+        "parallelUnitIdsAllowed": true,
+        "showErrors": false,
+        "showWarnings": true,
+        "showLogs": true
+    },
+    {
+        "id": "8f8fcdae6b82fd7d",
+        "type": "modbus-client",
+        "name": "Aircube 3",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "192.168.45.242",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": "3",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": true,
+        "showErrors": false,
+        "showWarnings": true,
+        "showLogs": true
+    },
+    {
+        "id": "462ceb77bd6ddbb6",
+        "type": "modbus-client",
+        "name": "Aircube 4",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "failureLogEnabled": true,
+        "tcpHost": "192.168.45.243",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": "4",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": true,
+        "showErrors": false,
+        "showWarnings": true,
+        "showLogs": true
+    },
+    {
         "id": "1b912c43f4e73ef0",
         "type": "modbus-client",
         "name": "Aircube",
@@ -769,23 +780,12 @@
         "reconnecttimeout": "120"
     },
     {
-        "id": "5330d3731827d8ef",
-        "type": "ui_group",
-        "name": "VP3",
-        "tab": "58c2aa06.ef46e4",
-        "order": 7,
-        "disp": true,
-        "width": "6",
-        "collapse": true,
-        "className": ""
-    },
-    {
         "id": "ef6702f2eebd5bef",
         "type": "cmi config",
         "description": "TA C.M.I.",
         "ip": "192.168.45.55",
         "canNode": "1",
-        "interval": "1"
+        "interval": "2"
     },
     {
         "id": "387cba70d0bdb139",
@@ -793,7 +793,7 @@
         "description": "TA C.M.I.2",
         "ip": "192.168.45.55",
         "canNode": "1",
-        "interval": "1"
+        "interval": "2"
     },
     {
         "id": "2d4646b0db2f1313",
@@ -908,71 +908,6 @@
         "wires": []
     },
     {
-        "id": "b88c8f75645447d7",
-        "type": "ui_chart",
-        "z": "8e6f93d6c1999015",
-        "name": "",
-        "group": "5adbafdcfcc90c64",
-        "order": 1,
-        "width": "6",
-        "height": "3",
-        "label": "Vakuumpumpe 2",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "-1000",
-        "ymax": "0",
-        "removeOlder": "30",
-        "removeOlderPoints": "",
-        "removeOlderUnit": "60",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 570,
-        "y": 340,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "6fa0c3400be1c116",
-        "type": "ui_text",
-        "z": "8e6f93d6c1999015",
-        "group": "5adbafdcfcc90c64",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Magnetventil 2",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 560,
-        "y": 280,
-        "wires": []
-    },
-    {
         "id": "eaee38cd727c1251",
         "type": "ui_gauge",
         "z": "8e6f93d6c1999015",
@@ -1027,6 +962,113 @@
         "x": 540,
         "y": 700,
         "wires": []
+    },
+    {
+        "id": "6fa0c3400be1c116",
+        "type": "ui_text",
+        "z": "8e6f93d6c1999015",
+        "group": "5adbafdcfcc90c64",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Magnetventil 2",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 560,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "3e546ec86a098a36",
+        "type": "ui_text",
+        "z": "8e6f93d6c1999015",
+        "group": "a53d8deeea11707a",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Magnetventil 1",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 560,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "34e4382fd48aae50",
+        "type": "ui_text",
+        "z": "8e6f93d6c1999015",
+        "group": "",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Magnetventil 3",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 560,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "b88c8f75645447d7",
+        "type": "ui_chart",
+        "z": "8e6f93d6c1999015",
+        "name": "",
+        "group": "5adbafdcfcc90c64",
+        "order": 1,
+        "width": "6",
+        "height": "3",
+        "label": "Vakuumpumpe 2",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-1000",
+        "ymax": "0",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 570,
+        "y": 340,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "65876a0943268809",
@@ -1117,52 +1159,10 @@
         ]
     },
     {
-        "id": "3e546ec86a098a36",
-        "type": "ui_text",
-        "z": "8e6f93d6c1999015",
-        "group": "a53d8deeea11707a",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Magnetventil 1",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 560,
-        "y": 40,
-        "wires": []
-    },
-    {
-        "id": "34e4382fd48aae50",
-        "type": "ui_text",
-        "z": "8e6f93d6c1999015",
-        "group": "",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Magnetventil 3",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 560,
-        "y": 520,
-        "wires": []
-    },
-    {
         "id": "4947b6e5851162dd",
         "type": "cmi in",
         "z": "8e6f93d6c1999015",
-        "cmi": "",
+        "cmi": "387cba70d0bdb139",
         "name": "Pressure 2",
         "item": "2",
         "source": "0",
@@ -1387,23 +1387,6 @@
         ]
     },
     {
-        "id": "fed5f5d52310eacb",
-        "type": "cmi in",
-        "z": "8e6f93d6c1999015",
-        "cmi": "387cba70d0bdb139",
-        "name": "test",
-        "item": "1",
-        "source": "0",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 1010,
-        "y": 220,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "fedd3c65efaf645f",
         "type": "function",
         "z": "61d663c65d5d04a2",
@@ -1437,6 +1420,98 @@
         "libs": [],
         "x": 340,
         "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f43489c54b3ce0d4",
+        "type": "inject",
+        "z": "61d663c65d5d04a2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 340,
+        "wires": [
+            [
+                "96bd7268dbc259c2",
+                "4a2c7889b033f882"
+            ]
+        ]
+    },
+    {
+        "id": "96bd7268dbc259c2",
+        "type": "function",
+        "z": "61d663c65d5d04a2",
+        "name": "function 1",
+        "func": "msg.payload = 900\nmsg.topic = \"Messzeit\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 340,
+        "wires": [
+            [
+                "cf30e5419fedd884"
+            ]
+        ]
+    },
+    {
+        "id": "4a2c7889b033f882",
+        "type": "function",
+        "z": "61d663c65d5d04a2",
+        "name": "function 2",
+        "func": "msg.payload = 450\nmsg.topic = \"Restzeit\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 380,
+        "wires": [
+            [
+                "cf30e5419fedd884"
+            ]
+        ]
+    },
+    {
+        "id": "bab91d7325ec272a",
+        "type": "csv",
+        "z": "61d663c65d5d04a2",
+        "name": "",
+        "spec": "rfc",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\r\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 670,
+        "y": 160,
         "wires": [
             []
         ]
@@ -1584,52 +1659,6 @@
         ]
     },
     {
-        "id": "19f11ef8b43ed893",
-        "type": "rising-edge",
-        "z": "61d663c65d5d04a2",
-        "name": "Export data 1",
-        "threshold": "0",
-        "x": 310,
-        "y": 620,
-        "wires": [
-            [
-                "fedd3c65efaf645f"
-            ]
-        ]
-    },
-    {
-        "id": "037b31f2b9ee09d3",
-        "type": "modbus-read",
-        "z": "61d663c65d5d04a2",
-        "name": "Serialnumber 1",
-        "topic": "",
-        "showStatusActivities": false,
-        "logIOActivities": false,
-        "showErrors": false,
-        "showWarnings": true,
-        "unitid": "56",
-        "dataType": "HoldingRegister",
-        "adr": "29",
-        "quantity": "1",
-        "rate": "1",
-        "rateUnit": "m",
-        "delayOnStart": false,
-        "startDelayTime": "",
-        "server": "c74df921f477ca14",
-        "useIOFile": false,
-        "ioFile": "",
-        "useIOForPayload": false,
-        "emptyMsgOnFail": false,
-        "x": 160,
-        "y": 440,
-        "wires": [
-            [
-                "aace742ac1d86035"
-            ],
-            []
-        ]
-    },
-    {
         "id": "cf30e5419fedd884",
         "type": "ui_chart",
         "z": "61d663c65d5d04a2",
@@ -1674,94 +1703,48 @@
         ]
     },
     {
-        "id": "f43489c54b3ce0d4",
-        "type": "inject",
+        "id": "19f11ef8b43ed893",
+        "type": "rising-edge",
         "z": "61d663c65d5d04a2",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "60",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
+        "name": "Export data 1",
+        "threshold": "0",
+        "x": 310,
+        "y": 620,
+        "wires": [
+            [
+                "fedd3c65efaf645f"
+            ]
+        ]
+    },
+    {
+        "id": "037b31f2b9ee09d3",
+        "type": "modbus-read",
+        "z": "61d663c65d5d04a2",
+        "name": "Serialnumber 1",
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 170,
-        "y": 340,
+        "showStatusActivities": false,
+        "logIOActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "unitid": "56",
+        "dataType": "HoldingRegister",
+        "adr": "29",
+        "quantity": "1",
+        "rate": "1",
+        "rateUnit": "m",
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "server": "c74df921f477ca14",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "x": 160,
+        "y": 440,
         "wires": [
             [
-                "96bd7268dbc259c2",
-                "4a2c7889b033f882"
-            ]
-        ]
-    },
-    {
-        "id": "96bd7268dbc259c2",
-        "type": "function",
-        "z": "61d663c65d5d04a2",
-        "name": "function 1",
-        "func": "msg.payload = 900\nmsg.topic = \"Messzeit\"\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 320,
-        "y": 340,
-        "wires": [
-            [
-                "cf30e5419fedd884"
-            ]
-        ]
-    },
-    {
-        "id": "4a2c7889b033f882",
-        "type": "function",
-        "z": "61d663c65d5d04a2",
-        "name": "function 2",
-        "func": "msg.payload = 450\nmsg.topic = \"Restzeit\"\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 320,
-        "y": 380,
-        "wires": [
-            [
-                "cf30e5419fedd884"
-            ]
-        ]
-    },
-    {
-        "id": "bab91d7325ec272a",
-        "type": "csv",
-        "z": "61d663c65d5d04a2",
-        "name": "",
-        "spec": "rfc",
-        "sep": ",",
-        "hdrin": "",
-        "hdrout": "none",
-        "multi": "one",
-        "ret": "\\r\\n",
-        "temp": "",
-        "skip": "0",
-        "strings": true,
-        "include_empty_strings": "",
-        "include_null_values": "",
-        "x": 670,
-        "y": 160,
-        "wires": [
+                "aace742ac1d86035"
+            ],
             []
         ]
     },
@@ -1883,6 +1866,48 @@
         "wires": []
     },
     {
+        "id": "730d51ad838c3289",
+        "type": "ui_text",
+        "z": "cb52c966d2fad605",
+        "group": "de078532d6f5e387",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Messzeit WP2",
+        "format": "{{msg.payload}} Sek",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 500,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "3be77a102f31d277",
+        "type": "ui_text",
+        "z": "cb52c966d2fad605",
+        "group": "de078532d6f5e387",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Druckverlust WP2",
+        "format": "{{msg.payload}} mbar",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 510,
+        "y": 280,
+        "wires": []
+    },
+    {
         "id": "244d8d9f6e6c67f4",
         "type": "ui_chart",
         "z": "cb52c966d2fad605",
@@ -1957,48 +1982,6 @@
             ],
             []
         ]
-    },
-    {
-        "id": "730d51ad838c3289",
-        "type": "ui_text",
-        "z": "cb52c966d2fad605",
-        "group": "de078532d6f5e387",
-        "order": 6,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Messzeit WP2",
-        "format": "{{msg.payload}} Sek",
-        "layout": "col-center",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 500,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "3be77a102f31d277",
-        "type": "ui_text",
-        "z": "cb52c966d2fad605",
-        "group": "de078532d6f5e387",
-        "order": 7,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Druckverlust WP2",
-        "format": "{{msg.payload}} mbar",
-        "layout": "col-center",
-        "className": "",
-        "style": true,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 510,
-        "y": 280,
-        "wires": []
     },
     {
         "id": "e2976faf21ef3429",
@@ -2118,6 +2101,48 @@
         "wires": []
     },
     {
+        "id": "6a317b620df64d1c",
+        "type": "ui_text",
+        "z": "f820c1bd7223bd88",
+        "group": "422ba1667a7ab9f8",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Messzeit WP3",
+        "format": "{{msg.payload}} Sek",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 500,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "371420ab9311d8d9",
+        "type": "ui_text",
+        "z": "f820c1bd7223bd88",
+        "group": "422ba1667a7ab9f8",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Druckverlust WP3",
+        "format": "{{msg.payload}} mbar",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 510,
+        "y": 280,
+        "wires": []
+    },
+    {
         "id": "04b283f4a235b802",
         "type": "ui_chart",
         "z": "f820c1bd7223bd88",
@@ -2192,48 +2217,6 @@
             ],
             []
         ]
-    },
-    {
-        "id": "6a317b620df64d1c",
-        "type": "ui_text",
-        "z": "f820c1bd7223bd88",
-        "group": "422ba1667a7ab9f8",
-        "order": 6,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Messzeit WP3",
-        "format": "{{msg.payload}} Sek",
-        "layout": "col-center",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 500,
-        "y": 220,
-        "wires": []
-    },
-    {
-        "id": "371420ab9311d8d9",
-        "type": "ui_text",
-        "z": "f820c1bd7223bd88",
-        "group": "422ba1667a7ab9f8",
-        "order": 7,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Druckverlust WP3",
-        "format": "{{msg.payload}} mbar",
-        "layout": "col-center",
-        "className": "",
-        "style": true,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 510,
-        "y": 280,
-        "wires": []
     },
     {
         "id": "30e635d19735dd29",
@@ -2332,6 +2315,69 @@
         "wires": []
     },
     {
+        "id": "7fb0ee86dd7afcef",
+        "type": "ui_text",
+        "z": "28c240172645bd4e",
+        "group": "f31df9e398e4c15e",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Druckverlust WP4",
+        "format": "{{msg.payload}} mbar",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 510,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "b2c11f424328c412",
+        "type": "ui_text",
+        "z": "28c240172645bd4e",
+        "group": "f31df9e398e4c15e",
+        "order": 2,
+        "width": "6",
+        "height": "1",
+        "name": "",
+        "label": "Seriennummer 4",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 510,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "89644dc73fa4bfb2",
+        "type": "ui_text",
+        "z": "28c240172645bd4e",
+        "group": "f31df9e398e4c15e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Überdruckvetil WP4",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 520,
+        "y": 40,
+        "wires": []
+    },
+    {
         "id": "153d8ec83f3e3c6a",
         "type": "ui_chart",
         "z": "28c240172645bd4e",
@@ -2408,69 +2454,6 @@
         ]
     },
     {
-        "id": "7fb0ee86dd7afcef",
-        "type": "ui_text",
-        "z": "28c240172645bd4e",
-        "group": "f31df9e398e4c15e",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Druckverlust WP4",
-        "format": "{{msg.payload}} mbar",
-        "layout": "col-center",
-        "className": "",
-        "style": true,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 510,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "b2c11f424328c412",
-        "type": "ui_text",
-        "z": "28c240172645bd4e",
-        "group": "f31df9e398e4c15e",
-        "order": 2,
-        "width": "6",
-        "height": "1",
-        "name": "",
-        "label": "Seriennummer 4",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 510,
-        "y": 100,
-        "wires": []
-    },
-    {
-        "id": "89644dc73fa4bfb2",
-        "type": "ui_text",
-        "z": "28c240172645bd4e",
-        "group": "f31df9e398e4c15e",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Überdruckvetil WP4",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 520,
-        "y": 40,
-        "wires": []
-    },
-    {
         "id": "4c5831159efa3864",
         "type": "cmi in",
         "z": "28c240172645bd4e",
@@ -2505,84 +2488,6 @@
         "wires": [
             [
                 "89644dc73fa4bfb2"
-            ]
-        ]
-    },
-    {
-        "id": "4679091.0341ff8",
-        "type": "ui_button",
-        "z": "7a2056c27a24a46a",
-        "name": "",
-        "group": "212b7f06.b4731",
-        "order": 2,
-        "width": "2",
-        "height": "1",
-        "label": "Inject",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "",
-        "x": 250,
-        "y": 160,
-        "wires": [
-            [
-                "63911393.d1513c"
-            ]
-        ]
-    },
-    {
-        "id": "fa4f25b6.ea4048",
-        "type": "ui_button",
-        "z": "7a2056c27a24a46a",
-        "name": "",
-        "group": "212b7f06.b4731",
-        "order": 4,
-        "width": "2",
-        "height": "1",
-        "label": "restore",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "",
-        "x": 250,
-        "y": 460,
-        "wires": [
-            [
-                "9b9cfb63.2f50f8"
-            ]
-        ]
-    },
-    {
-        "id": "9e4c2fd0.aac16",
-        "type": "ui_chart",
-        "z": "7a2056c27a24a46a",
-        "name": "",
-        "group": "212b7f06.b4731",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "label": "chart",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "bezier",
-        "nodata": "",
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": "15",
-        "removeOlderPoints": "100",
-        "removeOlderUnit": "60",
-        "cutout": 0,
-        "outputs": 1,
-        "x": 550,
-        "y": 160,
-        "wires": [
-            [
-                "ef3ff83b.aa5008"
             ]
         ]
     },
@@ -2661,6 +2566,54 @@
         ]
     },
     {
+        "id": "4679091.0341ff8",
+        "type": "ui_button",
+        "z": "7a2056c27a24a46a",
+        "name": "",
+        "group": "212b7f06.b4731",
+        "order": 2,
+        "width": "2",
+        "height": "1",
+        "label": "Inject",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 250,
+        "y": 160,
+        "wires": [
+            [
+                "63911393.d1513c"
+            ]
+        ]
+    },
+    {
+        "id": "fa4f25b6.ea4048",
+        "type": "ui_button",
+        "z": "7a2056c27a24a46a",
+        "name": "",
+        "group": "212b7f06.b4731",
+        "order": 4,
+        "width": "2",
+        "height": "1",
+        "label": "restore",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 250,
+        "y": 460,
+        "wires": [
+            [
+                "9b9cfb63.2f50f8"
+            ]
+        ]
+    },
+    {
         "id": "87cc5e2e.b0836",
         "type": "ui_button",
         "z": "7a2056c27a24a46a",
@@ -2681,6 +2634,36 @@
         "wires": [
             [
                 "ef80c15e.8dbc3"
+            ]
+        ]
+    },
+    {
+        "id": "9e4c2fd0.aac16",
+        "type": "ui_chart",
+        "z": "7a2056c27a24a46a",
+        "name": "",
+        "group": "212b7f06.b4731",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "bezier",
+        "nodata": "",
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "15",
+        "removeOlderPoints": "100",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "outputs": 1,
+        "x": 550,
+        "y": 160,
+        "wires": [
+            [
+                "ef3ff83b.aa5008"
             ]
         ]
     },
@@ -3276,32 +3259,6 @@
         ]
     },
     {
-        "id": "8dd5fe2ad1c1362e",
-        "type": "ui_etable",
-        "z": "62168f16fb9cb960",
-        "payload": "[{\"title\":\"Type\",\"field\":\"icon\",\"formatter\":\"html\",\"width\":50},{\"title\":\"Name\",\"field\":\"fname\"},{\"title\":\"Size\",\"field\":\"stat.size\",\"sorter\":\"number\",\"width\":100,\"sorterParams\":{\"thousandSeparator\":\",\",\"decimalSeparator\":\".\",\"alignEmptyValues\":\"top\"}},{\"title\":\"Created\",\"field\":\"stat.created\",\"formatter\":\"datetime\",\"width\":200,\"formatterParams\":{\"outputFormat\":\"yyyy.MM.DD HH:mm:ss\",\"invalidPlaceholder\":\"(invalid date)\",\"timezone\":\"system\"}},{\"title\":\"Changed\",\"field\":\"stat.changed\",\"formatter\":\"datetime\",\"width\":200,\"formatterParams\":{\"outputFormat\":\"yyyy.MM.DD HH:mm:ss\",\"invalidPlaceholder\":\"(invalid date)\",\"timezone\":\"system\"}}]",
-        "payloadType": "json",
-        "options": "{\"movableColumns\":true,\"resizableColumns\":true,\"selectable\":1,\"responsiveLayout\":\"collapse\",\"autoResize\":true,\"layout\":\"fitColumns\",\"pagination\":\"local\",\"height\":\"100%\"}",
-        "group": "7c3d1ffe5de85af4",
-        "name": "File Browser",
-        "order": 6,
-        "width": "18",
-        "height": "10",
-        "columns": [],
-        "outputs": 1,
-        "cts": false,
-        "x": 790,
-        "y": 180,
-        "wires": [
-            [
-                "9f0139c9d4cf303c",
-                "2fd8e45dcc9f2743",
-                "cf09d98db7656238",
-                "ab85eb9606fc412a"
-            ]
-        ]
-    },
-    {
         "id": "4c19cb23d0b871bb",
         "type": "comment",
         "z": "62168f16fb9cb960",
@@ -3357,30 +3314,6 @@
             [
                 "7940237deb98874d",
                 "c9bad6d25a599039"
-            ]
-        ]
-    },
-    {
-        "id": "7940237deb98874d",
-        "type": "fs-file-lister",
-        "z": "62168f16fb9cb960",
-        "name": "Files",
-        "start": "/home/nygma",
-        "pattern": "*.*",
-        "folders": "*",
-        "hidden": false,
-        "lstype": "both",
-        "path": true,
-        "single": true,
-        "depth": 0,
-        "stat": true,
-        "showWarnings": false,
-        "x": 470,
-        "y": 180,
-        "wires": [
-            [
-                "1a853077cd0370f3",
-                "4434a55ef1ec1dbc"
             ]
         ]
     },
@@ -3452,190 +3385,6 @@
         "wires": [
             []
         ]
-    },
-    {
-        "id": "4c3c5231e3d633dd",
-        "type": "ui_button",
-        "z": "62168f16fb9cb960",
-        "name": "",
-        "group": "7c3d1ffe5de85af4",
-        "order": 1,
-        "width": "2",
-        "height": "1",
-        "passthru": false,
-        "label": "Refresh",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "refresh",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "refresh",
-        "topicType": "str",
-        "x": 80,
-        "y": 180,
-        "wires": [
-            [
-                "5e18896e060736a2"
-            ]
-        ]
-    },
-    {
-        "id": "8ee8106b5f5eda72",
-        "type": "ui_button",
-        "z": "62168f16fb9cb960",
-        "name": "",
-        "group": "b9eaf4515438b94a",
-        "order": 2,
-        "width": "2",
-        "height": "1",
-        "passthru": false,
-        "label": "Delete",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "delete",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "delete",
-        "topicType": "str",
-        "x": 950,
-        "y": 280,
-        "wires": [
-            [
-                "ab85eb9606fc412a"
-            ]
-        ]
-    },
-    {
-        "id": "c79fd4ed4bd87baa",
-        "type": "ui_button",
-        "z": "62168f16fb9cb960",
-        "name": "",
-        "group": "7c3d1ffe5de85af4",
-        "order": 3,
-        "width": "2",
-        "height": "1",
-        "passthru": false,
-        "label": "Up",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "arrow_upwards",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "up",
-        "topicType": "str",
-        "x": 90,
-        "y": 260,
-        "wires": [
-            [
-                "5e18896e060736a2"
-            ]
-        ]
-    },
-    {
-        "id": "630956d807bb897f",
-        "type": "ui_button",
-        "z": "62168f16fb9cb960",
-        "name": "",
-        "group": "7c3d1ffe5de85af4",
-        "order": 2,
-        "width": "2",
-        "height": "1",
-        "passthru": false,
-        "label": "Reset",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "autorenew",
-        "payload": "filebrowser_default_folder",
-        "payloadType": "global",
-        "topic": "change",
-        "topicType": "str",
-        "x": 90,
-        "y": 220,
-        "wires": [
-            [
-                "5e18896e060736a2"
-            ]
-        ]
-    },
-    {
-        "id": "58dab00dd15f92fc",
-        "type": "ui_switch",
-        "z": "62168f16fb9cb960",
-        "name": "",
-        "label": "Hidden",
-        "tooltip": "Show hidden files or not",
-        "group": "7c3d1ffe5de85af4",
-        "order": 5,
-        "width": "2",
-        "height": "1",
-        "passthru": false,
-        "decouple": "false",
-        "topic": "hidden",
-        "topicType": "str",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "check_box",
-        "oncolor": "#000000",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "check_box_outline_blank",
-        "offcolor": "#000000",
-        "animate": true,
-        "className": "",
-        "x": 80,
-        "y": 300,
-        "wires": [
-            [
-                "5e18896e060736a2"
-            ]
-        ]
-    },
-    {
-        "id": "1ec03f77c131fff2",
-        "type": "ui_template",
-        "z": "62168f16fb9cb960",
-        "group": "b9eaf4515438b94a",
-        "name": "File Preview",
-        "order": 3,
-        "width": "10",
-        "height": "11",
-        "format": "<div ng-bind-html=\"msg.payload\" height=\"100%\" style=\"height: 100%;\"><br/>\n</div>\n\n",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": false,
-        "templateScope": "local",
-        "className": "",
-        "x": 1230,
-        "y": 380,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "9f0139c9d4cf303c",
-        "type": "ui_text",
-        "z": "62168f16fb9cb960",
-        "group": "b9eaf4515438b94a",
-        "order": 1,
-        "width": "5",
-        "height": "1",
-        "name": "Filename",
-        "label": "",
-        "format": "{{msg.payload.fname}}",
-        "layout": "row-left",
-        "className": "",
-        "x": 1100,
-        "y": 180,
-        "wires": []
     },
     {
         "id": "2fd8e45dcc9f2743",
@@ -3859,21 +3608,6 @@
         ]
     },
     {
-        "id": "f3a77316a142090b",
-        "type": "base64",
-        "z": "62168f16fb9cb960",
-        "name": "",
-        "action": "",
-        "property": "payload",
-        "x": 900,
-        "y": 460,
-        "wires": [
-            [
-                "ee1728b79fedf48f"
-            ]
-        ]
-    },
-    {
         "id": "cf09d98db7656238",
         "type": "function",
         "z": "62168f16fb9cb960",
@@ -3891,23 +3625,6 @@
                 "5e18896e060736a2"
             ]
         ]
-    },
-    {
-        "id": "c9bad6d25a599039",
-        "type": "ui_text",
-        "z": "62168f16fb9cb960",
-        "group": "7c3d1ffe5de85af4",
-        "order": 4,
-        "width": "9",
-        "height": "1",
-        "name": "",
-        "label": "Folder:",
-        "format": "{{msg.payload.start}}",
-        "layout": "row-left",
-        "className": "",
-        "x": 480,
-        "y": 120,
-        "wires": []
     },
     {
         "id": "ab85eb9606fc412a",
@@ -3962,28 +3679,6 @@
         "wires": [
             [
                 "89dc6deaab1808aa"
-            ]
-        ]
-    },
-    {
-        "id": "89dc6deaab1808aa",
-        "type": "ui_toast",
-        "z": "62168f16fb9cb960",
-        "position": "dialog",
-        "displayTime": "3",
-        "highlight": "",
-        "sendall": false,
-        "outputs": 1,
-        "ok": "Yes",
-        "cancel": "No",
-        "raw": false,
-        "topic": "",
-        "name": "Confirmation",
-        "x": 1550,
-        "y": 280,
-        "wires": [
-            [
-                "32285273e011031e"
             ]
         ]
     },
@@ -4080,55 +3775,6 @@
         ]
     },
     {
-        "id": "f27d36356901af0b",
-        "type": "ui_template",
-        "z": "62168f16fb9cb960",
-        "group": "b9eaf4515438b94a",
-        "name": "",
-        "order": 18,
-        "width": 0,
-        "height": 0,
-        "format": "",
-        "storeOutMessages": false,
-        "fwdInMessages": false,
-        "resendOnRefresh": false,
-        "templateScope": "local",
-        "className": "",
-        "x": 1380,
-        "y": 320,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "9c81f3c971381924",
-        "type": "ui_button",
-        "z": "62168f16fb9cb960",
-        "name": "",
-        "group": "b9eaf4515438b94a",
-        "order": 2,
-        "width": "3",
-        "height": "1",
-        "passthru": false,
-        "label": "Download",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "file_download",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "download",
-        "topicType": "str",
-        "x": 960,
-        "y": 320,
-        "wires": [
-            [
-                "ab85eb9606fc412a"
-            ]
-        ]
-    },
-    {
         "id": "777954f42573efc6",
         "type": "function",
         "z": "62168f16fb9cb960",
@@ -4148,34 +3794,6 @@
         ]
     },
     {
-        "id": "aabb0360fd74425e",
-        "type": "ui_button",
-        "z": "62168f16fb9cb960",
-        "name": "",
-        "group": "7c3d1ffe5de85af4",
-        "order": 7,
-        "width": "3",
-        "height": "1",
-        "passthru": false,
-        "label": "Download All",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "file_download",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "download_all",
-        "topicType": "str",
-        "x": 130,
-        "y": 640,
-        "wires": [
-            [
-                "66bc0f58da04db30"
-            ]
-        ]
-    },
-    {
         "id": "66bc0f58da04db30",
         "type": "function",
         "z": "62168f16fb9cb960",
@@ -4191,29 +3809,6 @@
         "wires": [
             [
                 "fe70301f0dba3337"
-            ]
-        ]
-    },
-    {
-        "id": "fe70301f0dba3337",
-        "type": "ui_toast",
-        "z": "62168f16fb9cb960",
-        "position": "dialog",
-        "displayTime": "3",
-        "highlight": "",
-        "sendall": false,
-        "outputs": 1,
-        "ok": "Yes",
-        "cancel": "No",
-        "raw": false,
-        "className": "",
-        "topic": "",
-        "name": "Confirmation",
-        "x": 470,
-        "y": 640,
-        "wires": [
-            [
-                "1342a37f07b7f60b"
             ]
         ]
     },
@@ -4405,24 +4000,258 @@
         ]
     },
     {
-        "id": "6c43b2f8441fd24e",
-        "type": "ui_toast",
+        "id": "4434a55ef1ec1dbc",
+        "type": "change",
         "z": "62168f16fb9cb960",
-        "position": "dialog",
-        "displayTime": "3",
-        "highlight": "",
-        "sendall": false,
-        "outputs": 1,
-        "ok": "OK",
-        "cancel": "",
-        "raw": false,
-        "className": "",
-        "topic": "",
-        "name": "",
-        "x": 1610,
-        "y": 680,
+        "name": "Empty",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 630,
+        "y": 120,
         "wires": [
-            []
+            [
+                "bfc3ef112044fb10"
+            ]
+        ]
+    },
+    {
+        "id": "8dd5fe2ad1c1362e",
+        "type": "ui_etable",
+        "z": "62168f16fb9cb960",
+        "payload": "[{\"title\":\"Type\",\"field\":\"icon\",\"formatter\":\"html\",\"width\":50},{\"title\":\"Name\",\"field\":\"fname\"},{\"title\":\"Size\",\"field\":\"stat.size\",\"sorter\":\"number\",\"width\":100,\"sorterParams\":{\"thousandSeparator\":\",\",\"decimalSeparator\":\".\",\"alignEmptyValues\":\"top\"}},{\"title\":\"Created\",\"field\":\"stat.created\",\"formatter\":\"datetime\",\"width\":200,\"formatterParams\":{\"outputFormat\":\"yyyy.MM.DD HH:mm:ss\",\"invalidPlaceholder\":\"(invalid date)\",\"timezone\":\"system\"}},{\"title\":\"Changed\",\"field\":\"stat.changed\",\"formatter\":\"datetime\",\"width\":200,\"formatterParams\":{\"outputFormat\":\"yyyy.MM.DD HH:mm:ss\",\"invalidPlaceholder\":\"(invalid date)\",\"timezone\":\"system\"}}]",
+        "payloadType": "json",
+        "options": "{\"movableColumns\":true,\"resizableColumns\":true,\"selectable\":1,\"responsiveLayout\":\"collapse\",\"autoResize\":true,\"layout\":\"fitColumns\",\"pagination\":\"local\",\"height\":\"100%\"}",
+        "group": "7c3d1ffe5de85af4",
+        "name": "File Browser",
+        "order": 6,
+        "width": "18",
+        "height": "10",
+        "columns": [],
+        "outputs": 1,
+        "cts": false,
+        "x": 790,
+        "y": 180,
+        "wires": [
+            [
+                "9f0139c9d4cf303c",
+                "2fd8e45dcc9f2743",
+                "cf09d98db7656238",
+                "ab85eb9606fc412a"
+            ]
+        ]
+    },
+    {
+        "id": "4c3c5231e3d633dd",
+        "type": "ui_button",
+        "z": "62168f16fb9cb960",
+        "name": "",
+        "group": "7c3d1ffe5de85af4",
+        "order": 1,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "Refresh",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "refresh",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "refresh",
+        "topicType": "str",
+        "x": 80,
+        "y": 180,
+        "wires": [
+            [
+                "5e18896e060736a2"
+            ]
+        ]
+    },
+    {
+        "id": "8ee8106b5f5eda72",
+        "type": "ui_button",
+        "z": "62168f16fb9cb960",
+        "name": "",
+        "group": "b9eaf4515438b94a",
+        "order": 2,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "Delete",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "delete",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "delete",
+        "topicType": "str",
+        "x": 950,
+        "y": 280,
+        "wires": [
+            [
+                "ab85eb9606fc412a"
+            ]
+        ]
+    },
+    {
+        "id": "c79fd4ed4bd87baa",
+        "type": "ui_button",
+        "z": "62168f16fb9cb960",
+        "name": "",
+        "group": "7c3d1ffe5de85af4",
+        "order": 3,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "Up",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "arrow_upwards",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "up",
+        "topicType": "str",
+        "x": 90,
+        "y": 260,
+        "wires": [
+            [
+                "5e18896e060736a2"
+            ]
+        ]
+    },
+    {
+        "id": "630956d807bb897f",
+        "type": "ui_button",
+        "z": "62168f16fb9cb960",
+        "name": "",
+        "group": "7c3d1ffe5de85af4",
+        "order": 2,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "Reset",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "autorenew",
+        "payload": "filebrowser_default_folder",
+        "payloadType": "global",
+        "topic": "change",
+        "topicType": "str",
+        "x": 90,
+        "y": 220,
+        "wires": [
+            [
+                "5e18896e060736a2"
+            ]
+        ]
+    },
+    {
+        "id": "9c81f3c971381924",
+        "type": "ui_button",
+        "z": "62168f16fb9cb960",
+        "name": "",
+        "group": "b9eaf4515438b94a",
+        "order": 2,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Download",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "file_download",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "download",
+        "topicType": "str",
+        "x": 960,
+        "y": 320,
+        "wires": [
+            [
+                "ab85eb9606fc412a"
+            ]
+        ]
+    },
+    {
+        "id": "aabb0360fd74425e",
+        "type": "ui_button",
+        "z": "62168f16fb9cb960",
+        "name": "",
+        "group": "7c3d1ffe5de85af4",
+        "order": 7,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Download All",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "file_download",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "download_all",
+        "topicType": "str",
+        "x": 130,
+        "y": 640,
+        "wires": [
+            [
+                "66bc0f58da04db30"
+            ]
+        ]
+    },
+    {
+        "id": "58dab00dd15f92fc",
+        "type": "ui_switch",
+        "z": "62168f16fb9cb960",
+        "name": "",
+        "label": "Hidden",
+        "tooltip": "Show hidden files or not",
+        "group": "7c3d1ffe5de85af4",
+        "order": 5,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "decouple": "false",
+        "topic": "hidden",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "check_box",
+        "oncolor": "#000000",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "check_box_outline_blank",
+        "offcolor": "#000000",
+        "animate": true,
+        "className": "",
+        "x": 80,
+        "y": 300,
+        "wires": [
+            [
+                "5e18896e060736a2"
+            ]
         ]
     },
     {
@@ -4452,29 +4281,183 @@
         ]
     },
     {
-        "id": "4434a55ef1ec1dbc",
-        "type": "change",
+        "id": "9f0139c9d4cf303c",
+        "type": "ui_text",
         "z": "62168f16fb9cb960",
-        "name": "Empty",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 630,
+        "group": "b9eaf4515438b94a",
+        "order": 1,
+        "width": "5",
+        "height": "1",
+        "name": "Filename",
+        "label": "",
+        "format": "{{msg.payload.fname}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 1100,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "c9bad6d25a599039",
+        "type": "ui_text",
+        "z": "62168f16fb9cb960",
+        "group": "7c3d1ffe5de85af4",
+        "order": 4,
+        "width": "9",
+        "height": "1",
+        "name": "",
+        "label": "Folder:",
+        "format": "{{msg.payload.start}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 480,
         "y": 120,
+        "wires": []
+    },
+    {
+        "id": "89dc6deaab1808aa",
+        "type": "ui_toast",
+        "z": "62168f16fb9cb960",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": false,
+        "outputs": 1,
+        "ok": "Yes",
+        "cancel": "No",
+        "raw": false,
+        "topic": "",
+        "name": "Confirmation",
+        "x": 1550,
+        "y": 280,
         "wires": [
             [
-                "bfc3ef112044fb10"
+                "32285273e011031e"
+            ]
+        ]
+    },
+    {
+        "id": "fe70301f0dba3337",
+        "type": "ui_toast",
+        "z": "62168f16fb9cb960",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": false,
+        "outputs": 1,
+        "ok": "Yes",
+        "cancel": "No",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Confirmation",
+        "x": 470,
+        "y": 640,
+        "wires": [
+            [
+                "1342a37f07b7f60b"
+            ]
+        ]
+    },
+    {
+        "id": "6c43b2f8441fd24e",
+        "type": "ui_toast",
+        "z": "62168f16fb9cb960",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": false,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1610,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1ec03f77c131fff2",
+        "type": "ui_template",
+        "z": "62168f16fb9cb960",
+        "group": "b9eaf4515438b94a",
+        "name": "File Preview",
+        "order": 3,
+        "width": "10",
+        "height": "11",
+        "format": "<div ng-bind-html=\"msg.payload\" height=\"100%\" style=\"height: 100%;\"><br/>\n</div>\n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 1230,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f27d36356901af0b",
+        "type": "ui_template",
+        "z": "62168f16fb9cb960",
+        "group": "b9eaf4515438b94a",
+        "name": "",
+        "order": 18,
+        "width": 0,
+        "height": 0,
+        "format": "",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 1380,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f3a77316a142090b",
+        "type": "base64",
+        "z": "62168f16fb9cb960",
+        "name": "",
+        "action": "",
+        "property": "payload",
+        "x": 900,
+        "y": 460,
+        "wires": [
+            [
+                "ee1728b79fedf48f"
+            ]
+        ]
+    },
+    {
+        "id": "7940237deb98874d",
+        "type": "fs-file-lister",
+        "z": "62168f16fb9cb960",
+        "name": "Files",
+        "start": "/home/nygma",
+        "pattern": "*.*",
+        "folders": "*",
+        "hidden": false,
+        "lstype": "both",
+        "path": true,
+        "single": true,
+        "depth": 0,
+        "stat": true,
+        "showWarnings": false,
+        "x": 470,
+        "y": 180,
+        "wires": [
+            [
+                "1a853077cd0370f3",
+                "4434a55ef1ec1dbc"
             ]
         ]
     }
