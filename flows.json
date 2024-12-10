@@ -42,7 +42,7 @@
     {
         "id": "7a2056c27a24a46a",
         "type": "tab",
-        "label": "Flow 1",
+        "label": "Restore",
         "disabled": false,
         "info": "",
         "env": []
@@ -50,7 +50,7 @@
     {
         "id": "f685952b3b13c23f",
         "type": "tab",
-        "label": "Flow 2",
+        "label": "Datalog",
         "disabled": false,
         "info": "",
         "env": []
@@ -58,7 +58,7 @@
     {
         "id": "62168f16fb9cb960",
         "type": "tab",
-        "label": "Flow 3",
+        "label": "File explorer",
         "disabled": false,
         "info": "",
         "env": []
@@ -1259,7 +1259,7 @@
         "rateUnit": "m",
         "delayOnStart": false,
         "startDelayTime": "",
-        "server": "",
+        "server": "ba51c7e6bf23486c",
         "useIOFile": false,
         "ioFile": "",
         "useIOForPayload": false,
@@ -1473,38 +1473,6 @@
         "x": 490,
         "y": 160,
         "wires": [
-            []
-        ]
-    },
-    {
-        "id": "d1d6a45f6138b55f",
-        "type": "modbus-read",
-        "z": "cb52c966d2fad605",
-        "name": "Serialnumber 2",
-        "topic": "",
-        "showStatusActivities": false,
-        "logIOActivities": false,
-        "showErrors": false,
-        "showWarnings": true,
-        "unitid": "2",
-        "dataType": "HoldingRegister",
-        "adr": "74",
-        "quantity": "2",
-        "rate": "10",
-        "rateUnit": "s",
-        "delayOnStart": false,
-        "startDelayTime": "",
-        "server": "",
-        "useIOFile": false,
-        "ioFile": "",
-        "useIOForPayload": false,
-        "emptyMsgOnFail": false,
-        "x": 160,
-        "y": 440,
-        "wires": [
-            [
-                "7cd15b310a690116"
-            ],
             []
         ]
     },
@@ -1989,11 +1957,11 @@
         "timestamp": "0",
         "skip": "0",
         "severity": "0",
-        "x": 140,
-        "y": 100,
+        "x": 160,
+        "y": 160,
         "wires": [
             [
-                "b2c11f424328c412"
+                "153d8ec83f3e3c6a"
             ]
         ]
     },
@@ -2009,6 +1977,25 @@
         "skip": "0",
         "severity": "0",
         "x": 150,
+        "y": 100,
+        "wires": [
+            [
+                "b2c11f424328c412"
+            ]
+        ]
+    },
+    {
+        "id": "74556f2b70a61e63",
+        "type": "cmi in",
+        "z": "28c240172645bd4e",
+        "cmi": "ef6702f2eebd5bef",
+        "name": "Überdruckvetil 4",
+        "item": "12",
+        "source": "1",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 180,
         "y": 40,
         "wires": [
             [
