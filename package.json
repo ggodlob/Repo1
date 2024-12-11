@@ -11,7 +11,8 @@
         "node-red-dashboard": "3.6.5",
         "node-red-node-base64": "0.3.0",
         "node-red-node-random": "0.4.1",
-        "node-red-contrib-ta-cmi": "0.1.15"
+        "node-red-contrib-ta-cmi": "0.1.15",
+        "node-red-contrib-influxdb": "0.7.0"
     },
     "node-red": {
         "settings": {
