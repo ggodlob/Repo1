@@ -40,7 +40,7 @@
         "env": []
     },
     {
-        "id": "7a2056c27a24a46a",
+        "id": "23ae8c9958392184",
         "type": "tab",
         "label": "Restore",
         "disabled": false,
@@ -48,25 +48,17 @@
         "env": []
     },
     {
-        "id": "62168f16fb9cb960",
+        "id": "fe54917cf124892f",
         "type": "tab",
-        "label": "File explorer(NEW)",
+        "label": "File browser",
         "disabled": false,
         "info": "",
         "env": []
     },
     {
-        "id": "6d0ed0a9ab0d76e2",
+        "id": "f97f75b309eab0be",
         "type": "tab",
-        "label": "File explorer",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "f685952b3b13c23f",
-        "type": "tab",
-        "label": "Archiving",
+        "label": "Logger",
         "disabled": false,
         "info": "",
         "env": []
@@ -1365,7 +1357,7 @@
         "type": "function",
         "z": "61d663c65d5d04a2",
         "name": "Filename generator",
-        "func": "// Get the current time and convert it to text\nvar now = new Date();\nvar yyyy = now.getFullYear();\nvar mm = now.getMonth() < 9 ? \"0\" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based\nvar dd  = now.getDate() < 10 ? \"0\" + now.getDate() : now.getDate();\nvar hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\nvar mmm  = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\nvar ss  = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\n\n// Generate out file name pattern\nmsg.fname = \"pressure  \"+ yyyy + mm + dd + \".csv\";\n// Full filename with path for the file node later\nmsg.filename = \"/home/ovum/datalog/\"+ msg.fname;\n\n// We save the current payload into a different place on the msg object\nmsg.filecontent = msg.payload;\n\n// We are passing the file name search pattern to fs node to tell us if the file exists or not\nmsg.payload = {\"pattern\":msg.fname};\n\nnode.status({fill:\"blue\",shape:\"ring\",text:msg.fname});\nreturn msg;",
+        "func": "// Get the current time and convert it to text\nvar now = new Date();\nvar yyyy = now.getFullYear();\nvar mm = now.getMonth() < 9 ? \"0\" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based\nvar dd  = now.getDate() < 10 ? \"0\" + now.getDate() : now.getDate();\nvar hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\nvar mmm  = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\nvar ss  = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\n\n// Generate out file name pattern\nmsg.fname = \"pressure  \"+ yyyy + mm + dd + \".csv\";\n// Full filename with path for the file node later\nmsg.filename = \"/home/ovum/\"+ msg.fname;\n\n// We save the current payload into a different place on the msg object\nmsg.filecontent = msg.payload;\n\n// We are passing the file name search pattern to fs node to tell us if the file exists or not\nmsg.payload = {\"pattern\":msg.fname};\n\nnode.status({fill:\"blue\",shape:\"ring\",text:msg.fname});\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -1545,7 +1537,7 @@
         "type": "fs-file-lister",
         "z": "61d663c65d5d04a2",
         "name": "",
-        "start": "/home/ovum/datalog/",
+        "start": "/home/ovum/",
         "pattern": "",
         "folders": "*",
         "hidden": true,
@@ -2299,67 +2291,68 @@
         ]
     },
     {
-        "id": "8f316ad0.85cdd8",
+        "id": "0b61ed2d88682e3f",
         "type": "file",
-        "z": "7a2056c27a24a46a",
+        "z": "23ae8c9958392184",
         "name": "",
-        "filename": "/tmp/chart.log",
+        "filename": "/home/ovum/chart.log",
         "filenameType": "str",
         "appendNewline": true,
         "createDir": false,
         "overwriteFile": "true",
-        "x": 720,
+        "x": 740,
         "y": 320,
         "wires": [
             []
         ]
     },
     {
-        "id": "9b9cfb63.2f50f8",
+        "id": "28a4eff1523a3b04",
         "type": "file in",
-        "z": "7a2056c27a24a46a",
+        "z": "23ae8c9958392184",
         "name": "",
-        "filename": "/tmp/chart.log",
+        "filename": "/home/ovum/chart.log",
         "filenameType": "str",
         "format": "utf8",
-        "x": 420,
+        "allProps": false,
+        "x": 440,
         "y": 460,
         "wires": [
             [
-                "b13ea0c3.a7955"
+                "b0ad92b8f04430e5"
             ]
         ]
     },
     {
-        "id": "ef3ff83b.aa5008",
+        "id": "e5c9d15b18b90c65",
         "type": "json",
-        "z": "7a2056c27a24a46a",
+        "z": "23ae8c9958392184",
         "name": "",
         "x": 690,
         "y": 160,
         "wires": [
             [
-                "ef80c15e.8dbc3"
+                "f9c7a725cf2c7658"
             ]
         ]
     },
     {
-        "id": "b13ea0c3.a7955",
+        "id": "b0ad92b8f04430e5",
         "type": "json",
-        "z": "7a2056c27a24a46a",
+        "z": "23ae8c9958392184",
         "name": "",
         "x": 610,
         "y": 460,
         "wires": [
             [
-                "9e4c2fd0.aac16"
+                "5f9474b7153f5ee9"
             ]
         ]
     },
     {
-        "id": "ef80c15e.8dbc3",
+        "id": "f9c7a725cf2c7658",
         "type": "function",
-        "z": "7a2056c27a24a46a",
+        "z": "23ae8c9958392184",
         "name": "",
         "func": "if (msg.topic === \"save\") {\n    msg.payload = context.last;\n    return msg;\n}\nelse {\n    context.last = msg.payload;\n}\nreturn null;",
         "outputs": 1,
@@ -2368,14 +2361,14 @@
         "y": 320,
         "wires": [
             [
-                "8f316ad0.85cdd8"
+                "0b61ed2d88682e3f"
             ]
         ]
     },
     {
-        "id": "4679091.0341ff8",
+        "id": "da2c47557c34dd61",
         "type": "ui_button",
-        "z": "7a2056c27a24a46a",
+        "z": "23ae8c9958392184",
         "name": "",
         "group": "212b7f06.b4731",
         "order": 2,
@@ -2392,14 +2385,14 @@
         "y": 160,
         "wires": [
             [
-                "63911393.d1513c"
+                "7343e5ea61328c71"
             ]
         ]
     },
     {
-        "id": "fa4f25b6.ea4048",
+        "id": "c3674e9a8a432b11",
         "type": "ui_button",
-        "z": "7a2056c27a24a46a",
+        "z": "23ae8c9958392184",
         "name": "",
         "group": "212b7f06.b4731",
         "order": 4,
@@ -2416,14 +2409,14 @@
         "y": 460,
         "wires": [
             [
-                "9b9cfb63.2f50f8"
+                "28a4eff1523a3b04"
             ]
         ]
     },
     {
-        "id": "87cc5e2e.b0836",
+        "id": "e32a35d3d315463e",
         "type": "ui_button",
-        "z": "7a2056c27a24a46a",
+        "z": "23ae8c9958392184",
         "name": "",
         "group": "212b7f06.b4731",
         "order": 3,
@@ -2440,14 +2433,14 @@
         "y": 320,
         "wires": [
             [
-                "ef80c15e.8dbc3"
+                "f9c7a725cf2c7658"
             ]
         ]
     },
     {
-        "id": "9e4c2fd0.aac16",
+        "id": "5f9474b7153f5ee9",
         "type": "ui_chart",
-        "z": "7a2056c27a24a46a",
+        "z": "23ae8c9958392184",
         "name": "",
         "group": "212b7f06.b4731",
         "order": 1,
@@ -2470,14 +2463,14 @@
         "y": 160,
         "wires": [
             [
-                "ef3ff83b.aa5008"
+                "e5c9d15b18b90c65"
             ]
         ]
     },
     {
-        "id": "63911393.d1513c",
+        "id": "7343e5ea61328c71",
         "type": "random",
-        "z": "7a2056c27a24a46a",
+        "z": "23ae8c9958392184",
         "name": "",
         "low": "0",
         "high": "10",
@@ -2486,42 +2479,42 @@
         "y": 160,
         "wires": [
             [
-                "9e4c2fd0.aac16"
+                "5f9474b7153f5ee9"
             ]
         ]
     },
     {
-        "id": "aa8c482.93734b8",
+        "id": "20fc8a44f4200a3c",
         "type": "http in",
-        "z": "62168f16fb9cb960",
+        "z": "fe54917cf124892f",
         "name": "",
         "url": "/download",
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 240,
-        "y": 580,
+        "x": 280,
+        "y": 600,
         "wires": [
             [
-                "d969ba04.e24028"
+                "37aedfdef5057ab8"
             ]
         ]
     },
     {
-        "id": "d19cc7d8.646328",
+        "id": "7cdc230a7ef11bb1",
         "type": "http response",
-        "z": "62168f16fb9cb960",
+        "z": "fe54917cf124892f",
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 1030,
-        "y": 580,
+        "x": 1070,
+        "y": 600,
         "wires": []
     },
     {
-        "id": "d969ba04.e24028",
+        "id": "37aedfdef5057ab8",
         "type": "function",
-        "z": "62168f16fb9cb960",
+        "z": "fe54917cf124892f",
         "name": "Get the file name",
         "func": "msg.filename = msg.req.query.filename;\nmsg.contentdisposition = \"attachment; filename=\\\"\" + msg.req.query.filename.replace(/^.*(\\\\|\\/|\\:)/, '') + \"\\\"\";\nreturn msg;\n",
         "outputs": 1,
@@ -2529,11 +2522,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 490,
-        "y": 580,
+        "x": 530,
+        "y": 600,
         "wires": [
             [
-                "e92381c3.c4cd2"
+                "49cc644baab454d4"
             ]
         ],
         "outputLabels": [
@@ -2541,9 +2534,9 @@
         ]
     },
     {
-        "id": "e92381c3.c4cd2",
+        "id": "49cc644baab454d4",
         "type": "file in",
-        "z": "62168f16fb9cb960",
+        "z": "fe54917cf124892f",
         "name": "",
         "filename": "filename",
         "filenameType": "msg",
@@ -2551,18 +2544,18 @@
         "chunk": false,
         "sendError": false,
         "encoding": "none",
-        "x": 680,
-        "y": 580,
+        "x": 720,
+        "y": 600,
         "wires": [
             [
-                "99ff4953.d0d5c8"
+                "596acfb88bb2117c"
             ]
         ]
     },
     {
-        "id": "99ff4953.d0d5c8",
+        "id": "596acfb88bb2117c",
         "type": "change",
-        "z": "62168f16fb9cb960",
+        "z": "fe54917cf124892f",
         "name": "Set Headers",
         "rules": [
             {
@@ -2592,28 +2585,54 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 850,
-        "y": 580,
+        "x": 890,
+        "y": 600,
         "wires": [
             [
-                "d19cc7d8.646328"
+                "7cdc230a7ef11bb1"
             ]
         ]
     },
     {
-        "id": "4c19cb23d0b871bb",
+        "id": "3557605b12a7d131",
+        "type": "ui_etable",
+        "z": "fe54917cf124892f",
+        "payload": "[{\"title\":\"Type\",\"field\":\"icon\",\"formatter\":\"html\",\"width\":50},{\"title\":\"Name\",\"field\":\"fname\"},{\"title\":\"Size\",\"field\":\"stat.size\",\"sorter\":\"number\",\"width\":100,\"sorterParams\":{\"thousandSeparator\":\",\",\"decimalSeparator\":\".\",\"alignEmptyValues\":\"top\"}},{\"title\":\"Created\",\"field\":\"stat.created\",\"formatter\":\"datetime\",\"width\":200,\"formatterParams\":{\"outputFormat\":\"yyyy.MM.DD HH:mm:ss\",\"invalidPlaceholder\":\"(invalid date)\",\"timezone\":\"system\"}},{\"title\":\"Changed\",\"field\":\"stat.changed\",\"formatter\":\"datetime\",\"width\":200,\"formatterParams\":{\"outputFormat\":\"yyyy.MM.DD HH:mm:ss\",\"invalidPlaceholder\":\"(invalid date)\",\"timezone\":\"system\"}}]",
+        "payloadType": "json",
+        "options": "{\"movableColumns\":true,\"resizableColumns\":true,\"selectable\":1,\"responsiveLayout\":\"collapse\",\"autoResize\":true,\"layout\":\"fitColumns\",\"pagination\":\"local\",\"height\":\"100%\"}",
+        "group": "7c3d1ffe5de85af4",
+        "name": "File Browser",
+        "order": 6,
+        "width": "18",
+        "height": "10",
+        "columns": [],
+        "outputs": 1,
+        "cts": false,
+        "x": 830,
+        "y": 200,
+        "wires": [
+            [
+                "8a9563fc8d848d29",
+                "bc7344cb912e3914",
+                "d1b51e6221d81c9e",
+                "7cea2f877f87e3ca"
+            ]
+        ]
+    },
+    {
+        "id": "194a8077e4c8311b",
         "type": "comment",
-        "z": "62168f16fb9cb960",
+        "z": "fe54917cf124892f",
         "name": "New File Browser",
         "info": "",
-        "x": 120,
-        "y": 40,
+        "x": 160,
+        "y": 60,
         "wires": []
     },
     {
-        "id": "52a7d9cf9e103e93",
+        "id": "4c62104c10c20ebd",
         "type": "inject",
-        "z": "62168f16fb9cb960",
+        "z": "fe54917cf124892f",
         "name": "Init",
         "props": [
             {
@@ -2631,38 +2650,63 @@
         "topic": "change",
         "payload": "filebrowser_default_folder",
         "payloadType": "global",
-        "x": 90,
-        "y": 140,
+        "x": 130,
+        "y": 160,
         "wires": [
             [
-                "5e18896e060736a2"
+                "179b082f62a7823e"
             ]
         ]
     },
     {
-        "id": "5e18896e060736a2",
+        "id": "179b082f62a7823e",
         "type": "function",
-        "z": "62168f16fb9cb960",
+        "z": "fe54917cf124892f",
         "name": "Folder handling",
         "func": "let folder = context.get(\"folder\");\nif (folder===undefined) {\n    folder=\"/\";\n    context.set(\"folder\", folder);\n}\n\nlet hidden = context.get(\"hidden\");\nif (hidden===undefined) {\n    hidden=false;\n    context.set(\"hidden\", hidden);\n}\n\nif (msg.topic===\"up\") {\n    var the_arr = folder.split('/');\n    the_arr.pop();\n    folder=the_arr.join('/'); \n    context.set(\"folder\", folder);\n}\nif (msg.topic===\"change\") {\n    folder=msg.payload;    \n    context.set(\"folder\", folder);\n}\nif (msg.topic===\"hidden\") {\n    hidden=msg.payload;    \n    context.set(\"hidden\", hidden);\n}\n\nmsg.payload = {\"start\":folder, \"hidden\": hidden};\nflow.set(\"folder\", folder);\nreturn msg;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 300,
-        "y": 180,
+        "x": 340,
+        "y": 200,
         "wires": [
             [
-                "7940237deb98874d",
-                "c9bad6d25a599039"
+                "827f29b462e2e049",
+                "5e41127cc0347f3a"
             ]
         ]
     },
     {
-        "id": "1a853077cd0370f3",
+        "id": "827f29b462e2e049",
+        "type": "fs-file-lister",
+        "z": "fe54917cf124892f",
+        "name": "Files",
+        "start": "/home/ovum",
+        "pattern": "*.*",
+        "folders": "*",
+        "hidden": false,
+        "lstype": "both",
+        "path": true,
+        "single": true,
+        "depth": 0,
+        "stat": true,
+        "showWarnings": false,
+        "x": 510,
+        "y": 200,
+        "wires": [
+            [
+                "09aeec3a5a2b5b59",
+                "5caa1aeabee2f1f9"
+            ]
+        ]
+    },
+    {
+        "id": "09aeec3a5a2b5b59",
         "type": "function",
-        "z": "62168f16fb9cb960",
+        "z": "fe54917cf124892f",
         "name": "Prep Data",
         "func": "function convertDate(local) {\n    let d = new Date(local);\n    d.setTime(d.getTime()+3600*1000);\n    return d.toISOString().slice(0, 19).replace('T', ' ');\n}\n\nif (msg.topic === \"quickfilter\") {\n    let filter = msg.payload;\n    msg.payload = flow.get(\"currentfolder\").slice();\n    if (msg.payload !== \"\") {\n        for (var i = msg.payload.length-1; i >= 0; i--) {\n            if (!msg.payload[i].fname.includes(filter)) {\n                msg.payload.splice(i,1);\n            }\n        }\n    }\n    return msg;\n}\n\nfor (var i=0; i<msg.payload.length; i++) {\n   // msg.payload[i].stat.created = convertDate(msg.payload[i].stat.created);\n   // msg.payload[i].stat.changed = convertDate(msg.payload[i].stat.changed);\n   // msg.payload[i].stat.accessed = convertDate(msg.payload[i].stat.accessed);\n   // msg.payload[i].stat.statusChanged = convertDate(msg.payload[i].stat.statusChanged);\n    msg.payload[i].fname = msg.payload[i].name.replace(/^.*(\\\\|\\/|\\:)/, '');\n    if (msg.payload[i].stat.isDirectory) {\n        msg.payload[i].ext = \"folder\";\n        msg.payload[i].icon = \"<i class=\\\"fa fa-folder-o\\\"></i>\";\n    } else {\n        msg.payload[i].ext = msg.payload[i].fname.split('.').pop().toLowerCase();\n        msg.payload[i].downloadlink = \"/download?filename=\"+msg.payload[i].name;\n        switch (msg.payload[i].ext) {\n            case \"csv\":\n            case \"txt\":\n                msg.payload[i].icon = \"<i class=\\\"fa fa-file-text-o\\\"></i>\";\n                break;\n            case \"jpg\":\n            case \"jpeg\":\n            case \"png\":\n            case \"gif\":\n                msg.payload[i].icon = \"<i class=\\\"fa fa-file-image-o\\\"></i>\";\n                break;\n            case \"json\":\n            case \"py\":\n            case \"sh\":\n                msg.payload[i].icon = \"<i class=\\\"fa fa-file-code-o\\\"></i>\";\n                break;\n            default:\n                msg.payload[i].icon = \"<i class=\\\"fa fa-file-o\\\"></i>\";\n        }\n    }\n}\nflow.set(\"currentfolder\",msg.payload);\nreturn msg;\n",
         "outputs": 1,
@@ -2671,18 +2715,18 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 620,
-        "y": 180,
+        "x": 660,
+        "y": 200,
         "wires": [
             [
-                "8dd5fe2ad1c1362e"
+                "3557605b12a7d131"
             ]
         ]
     },
     {
-        "id": "1049939dcaf15797",
+        "id": "8e4c80e74dd159df",
         "type": "inject",
-        "z": "62168f16fb9cb960",
+        "z": "fe54917cf124892f",
         "name": "Default folder",
         "props": [
             {
@@ -2694,20 +2738,20 @@
         "once": true,
         "onceDelay": "1",
         "topic": "",
-        "payload": "/home/ovum/",
+        "payload": "/home/ovum",
         "payloadType": "str",
-        "x": 120,
-        "y": 80,
+        "x": 160,
+        "y": 100,
         "wires": [
             [
-                "97eb3daaadda1ae8"
+                "fc30aa4c18c7df42"
             ]
         ]
     },
     {
-        "id": "97eb3daaadda1ae8",
+        "id": "fc30aa4c18c7df42",
         "type": "change",
-        "z": "62168f16fb9cb960",
+        "z": "fe54917cf124892f",
         "name": "Store settings",
         "rules": [
             {
@@ -2723,16 +2767,200 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 330,
-        "y": 80,
+        "x": 370,
+        "y": 100,
         "wires": [
             []
         ]
     },
     {
-        "id": "2fd8e45dcc9f2743",
+        "id": "7b08539945ca0580",
+        "type": "ui_button",
+        "z": "fe54917cf124892f",
+        "name": "",
+        "group": "7c3d1ffe5de85af4",
+        "order": 1,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "Refresh",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "refresh",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "refresh",
+        "topicType": "str",
+        "x": 120,
+        "y": 200,
+        "wires": [
+            [
+                "179b082f62a7823e"
+            ]
+        ]
+    },
+    {
+        "id": "69cc6a3c0f83db35",
+        "type": "ui_button",
+        "z": "fe54917cf124892f",
+        "name": "",
+        "group": "b9eaf4515438b94a",
+        "order": 2,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "Delete",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "delete",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "delete",
+        "topicType": "str",
+        "x": 990,
+        "y": 300,
+        "wires": [
+            [
+                "7cea2f877f87e3ca"
+            ]
+        ]
+    },
+    {
+        "id": "6c0c6411100d451e",
+        "type": "ui_button",
+        "z": "fe54917cf124892f",
+        "name": "",
+        "group": "7c3d1ffe5de85af4",
+        "order": 3,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "Up",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "arrow_upwards",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "up",
+        "topicType": "str",
+        "x": 130,
+        "y": 280,
+        "wires": [
+            [
+                "179b082f62a7823e"
+            ]
+        ]
+    },
+    {
+        "id": "7e8663eb65cd0342",
+        "type": "ui_button",
+        "z": "fe54917cf124892f",
+        "name": "",
+        "group": "7c3d1ffe5de85af4",
+        "order": 2,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "Reset",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "autorenew",
+        "payload": "filebrowser_default_folder",
+        "payloadType": "global",
+        "topic": "change",
+        "topicType": "str",
+        "x": 130,
+        "y": 240,
+        "wires": [
+            [
+                "179b082f62a7823e"
+            ]
+        ]
+    },
+    {
+        "id": "8c7e8e61c5ff7315",
+        "type": "ui_switch",
+        "z": "fe54917cf124892f",
+        "name": "",
+        "label": "Hidden",
+        "tooltip": "Show hidden files or not",
+        "group": "7c3d1ffe5de85af4",
+        "order": 5,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "decouple": "false",
+        "topic": "hidden",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "check_box",
+        "oncolor": "#000000",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "check_box_outline_blank",
+        "offcolor": "#000000",
+        "animate": true,
+        "className": "",
+        "x": 120,
+        "y": 320,
+        "wires": [
+            [
+                "179b082f62a7823e"
+            ]
+        ]
+    },
+    {
+        "id": "eaa1b785a82474e8",
+        "type": "ui_template",
+        "z": "fe54917cf124892f",
+        "group": "b9eaf4515438b94a",
+        "name": "File Preview",
+        "order": 3,
+        "width": "10",
+        "height": "11",
+        "format": "<div ng-bind-html=\"msg.payload\" height=\"100%\" style=\"height: 100%;\"><br/>\n</div>\n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 1270,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8a9563fc8d848d29",
+        "type": "ui_text",
+        "z": "fe54917cf124892f",
+        "group": "b9eaf4515438b94a",
+        "order": 1,
+        "width": "5",
+        "height": "1",
+        "name": "Filename",
+        "label": "",
+        "format": "{{msg.payload.fname}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 1140,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "bc7344cb912e3914",
         "type": "switch",
-        "z": "62168f16fb9cb960",
+        "z": "fe54917cf124892f",
         "name": "File type",
         "property": "payload.ext",
         "propertyType": "msg",
@@ -2789,45 +3017,45 @@
         "checkall": "true",
         "repair": false,
         "outputs": 10,
-        "x": 340,
-        "y": 420,
+        "x": 380,
+        "y": 440,
         "wires": [
             [
-                "f4a765c1f1902e7a"
+                "46193b8e97173164"
             ],
             [
-                "f4a765c1f1902e7a"
+                "46193b8e97173164"
             ],
             [
-                "f4a765c1f1902e7a"
+                "46193b8e97173164"
             ],
             [
-                "f4a765c1f1902e7a"
+                "46193b8e97173164"
             ],
             [
-                "f4a765c1f1902e7a"
+                "46193b8e97173164"
             ],
             [
-                "d01017c774b3015b"
+                "a97a0941fe188d60"
             ],
             [
-                "d01017c774b3015b"
+                "a97a0941fe188d60"
             ],
             [
-                "d01017c774b3015b"
+                "a97a0941fe188d60"
             ],
             [
-                "d01017c774b3015b"
+                "a97a0941fe188d60"
             ],
             [
-                "94f0866931125570"
+                "6ae3b5a5d657f2f8"
             ]
         ]
     },
     {
-        "id": "f4a765c1f1902e7a",
+        "id": "46193b8e97173164",
         "type": "function",
-        "z": "62168f16fb9cb960",
+        "z": "fe54917cf124892f",
         "name": "Get the file name",
         "func": "if (msg.payload.stat.size<200000) {\n    msg.filename = msg.payload.name;\n    return [msg,null];\n} else {\n    return [null,msg];  \n}\n",
         "outputs": 2,
@@ -2835,14 +3063,14 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 550,
-        "y": 380,
+        "x": 590,
+        "y": 400,
         "wires": [
             [
-                "1bd0dae8f649fd8a"
+                "4160aa2b7abcd767"
             ],
             [
-                "777954f42573efc6"
+                "ec346886c2c98b9b"
             ]
         ],
         "outputLabels": [
@@ -2851,28 +3079,27 @@
         ]
     },
     {
-        "id": "1bd0dae8f649fd8a",
+        "id": "4160aa2b7abcd767",
         "type": "file in",
-        "z": "62168f16fb9cb960",
+        "z": "fe54917cf124892f",
         "name": "",
-        "filename": "filename",
-        "filenameType": "msg",
+        "filename": "",
         "format": "",
         "chunk": false,
         "sendError": false,
         "encoding": "none",
-        "x": 740,
-        "y": 380,
+        "x": 780,
+        "y": 400,
         "wires": [
             [
-                "87752f132359caad"
+                "6ddfe0872aa55cab"
             ]
         ]
     },
     {
-        "id": "87752f132359caad",
+        "id": "6ddfe0872aa55cab",
         "type": "function",
-        "z": "62168f16fb9cb960",
+        "z": "fe54917cf124892f",
         "name": "Div text",
         "func": "function HTMLEncode(str) {\n    var i = str.length,\n        aRet = [];\n\n    while (i--) {\n        var iC = str[i].charCodeAt();\n        if (iC < 65 || iC > 127 || (iC > 90 && iC < 97)) {\n            aRet[i] = '&#' + iC + ';';\n        } else {\n            aRet[i] = str[i];\n        }\n    }\n    return aRet.join('');\n}\n\nlet text = \"<div>\";\nlet filecontent = \"\";\nfilecontent += msg.payload;\n\nfilecontent = HTMLEncode(filecontent);\n\n// Convert line feed to <br>\nfilecontent = filecontent.replace(/(?:\\r\\n|\\r|\\n)/g, '<br/>');\n\n\n\ntext += filecontent;\ntext += \"</div>\";\nmsg.payload = text;\nreturn msg;",
         "outputs": 1,
@@ -2880,18 +3107,18 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 900,
-        "y": 380,
+        "x": 940,
+        "y": 400,
         "wires": [
             [
-                "1ec03f77c131fff2"
+                "eaa1b785a82474e8"
             ]
         ]
     },
     {
-        "id": "d01017c774b3015b",
+        "id": "a97a0941fe188d60",
         "type": "function",
-        "z": "62168f16fb9cb960",
+        "z": "fe54917cf124892f",
         "name": "Get the file name",
         "func": "if (msg.payload.stat.size < 2000000) {\n    msg.filename = msg.payload.name;\n    return [msg, null];\n} else {\n    return [null, msg];\n}\n",
         "outputs": 2,
@@ -2899,14 +3126,14 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 550,
-        "y": 460,
+        "x": 590,
+        "y": 480,
         "wires": [
             [
-                "36938b3decb00b93"
+                "182a576703b2ab2c"
             ],
             [
-                "777954f42573efc6"
+                "ec346886c2c98b9b"
             ]
         ],
         "outputLabels": [
@@ -2915,28 +3142,27 @@
         ]
     },
     {
-        "id": "36938b3decb00b93",
+        "id": "182a576703b2ab2c",
         "type": "file in",
-        "z": "62168f16fb9cb960",
+        "z": "fe54917cf124892f",
         "name": "",
-        "filename": "filename",
-        "filenameType": "msg",
+        "filename": "",
         "format": "",
         "chunk": false,
         "sendError": false,
         "encoding": "none",
-        "x": 740,
-        "y": 460,
+        "x": 780,
+        "y": 480,
         "wires": [
             [
-                "f3a77316a142090b"
+                "535c68cb1d7c59eb"
             ]
         ]
     },
     {
-        "id": "ee1728b79fedf48f",
+        "id": "935e46db35cd8696",
         "type": "function",
-        "z": "62168f16fb9cb960",
+        "z": "fe54917cf124892f",
         "name": "Div image",
         "func": "let text = \"<img src=\\\"data:image/png;base64,\";\ntext += msg.payload;\ntext += \"\\\" width=\\\"100%\\\"/>\";\nmsg.payload = text;\nreturn msg;",
         "outputs": 1,
@@ -2944,18 +3170,33 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1040,
-        "y": 460,
+        "x": 1080,
+        "y": 480,
         "wires": [
             [
-                "1ec03f77c131fff2"
+                "eaa1b785a82474e8"
             ]
         ]
     },
     {
-        "id": "cf09d98db7656238",
+        "id": "535c68cb1d7c59eb",
+        "type": "base64",
+        "z": "fe54917cf124892f",
+        "name": "",
+        "action": "",
+        "property": "payload",
+        "x": 940,
+        "y": 480,
+        "wires": [
+            [
+                "935e46db35cd8696"
+            ]
+        ]
+    },
+    {
+        "id": "d1b51e6221d81c9e",
         "type": "function",
-        "z": "62168f16fb9cb960",
+        "z": "fe54917cf124892f",
         "name": "Change folder",
         "func": "\nif (msg.payload.stat.isDirectory) {\n\n    msg.topic = \"change\";\n    msg.payload = msg.payload.name;\n\n    return msg;\n}",
         "outputs": 1,
@@ -2963,18 +3204,35 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 480,
-        "y": 260,
+        "x": 520,
+        "y": 280,
         "wires": [
             [
-                "5e18896e060736a2"
+                "179b082f62a7823e"
             ]
         ]
     },
     {
-        "id": "ab85eb9606fc412a",
+        "id": "5e41127cc0347f3a",
+        "type": "ui_text",
+        "z": "fe54917cf124892f",
+        "group": "7c3d1ffe5de85af4",
+        "order": 4,
+        "width": "9",
+        "height": "1",
+        "name": "",
+        "label": "Folder:",
+        "format": "{{msg.payload.start}}",
+        "layout": "row-left",
+        "className": "",
+        "x": 520,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "7cea2f877f87e3ca",
         "type": "function",
-        "z": "62168f16fb9cb960",
+        "z": "fe54917cf124892f",
         "name": "Handle file actions",
         "func": "switch (msg.topic) {\n    case (\"delete\"):\n        msg.file = context.get(\"lastfile\");\n        if (msg.file!==undefined) {\n            msg.filename = msg.file.name;\n            return [msg,null];\n        }\n        break;\n    case (\"download\"):\n        msg.file = context.get(\"lastfile\");\n        if (msg.file !== undefined) {\n            //msg.template = \"<script>window.location.href = \\\"/download?filename=\"+msg.file.name+\"\\\";</script>\";\n            msg.template = \"<script>window.open('/download?filename=\" + encodeURIComponent(msg.file.name) + \"', '_blank');</script>\";\n            return [null, msg];\n        }\n        break;\n    default:\n        context.set(\"lastfile\", msg.payload);\n}",
         "outputs": 2,
@@ -2982,21 +3240,21 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1150,
-        "y": 280,
+        "x": 1190,
+        "y": 300,
         "wires": [
             [
-                "346d1bfad5842d5e"
+                "67b42c09f58f2a25"
             ],
             [
-                "f27d36356901af0b"
+                "e4de1ad0101079c4"
             ]
         ]
     },
     {
-        "id": "346d1bfad5842d5e",
+        "id": "67b42c09f58f2a25",
         "type": "change",
-        "z": "62168f16fb9cb960",
+        "z": "fe54917cf124892f",
         "name": "Set message",
         "rules": [
             {
@@ -3019,18 +3277,40 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1370,
-        "y": 280,
+        "x": 1410,
+        "y": 300,
         "wires": [
             [
-                "89dc6deaab1808aa"
+                "05edb6e023888c9e"
             ]
         ]
     },
     {
-        "id": "32285273e011031e",
+        "id": "05edb6e023888c9e",
+        "type": "ui_toast",
+        "z": "fe54917cf124892f",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": false,
+        "outputs": 1,
+        "ok": "Yes",
+        "cancel": "No",
+        "raw": false,
+        "topic": "",
+        "name": "Confirmation",
+        "x": 1590,
+        "y": 300,
+        "wires": [
+            [
+                "cdb520329fcbd02e"
+            ]
+        ]
+    },
+    {
+        "id": "cdb520329fcbd02e",
         "type": "switch",
-        "z": "62168f16fb9cb960",
+        "z": "fe54917cf124892f",
         "name": "",
         "property": "payload",
         "propertyType": "msg",
@@ -3044,18 +3324,18 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1710,
-        "y": 280,
+        "x": 1750,
+        "y": 300,
         "wires": [
             [
-                "2ac7af71cd82b7a7"
+                "d104e5fd4ef54ede"
             ]
         ]
     },
     {
-        "id": "2ac7af71cd82b7a7",
+        "id": "d104e5fd4ef54ede",
         "type": "file",
-        "z": "62168f16fb9cb960",
+        "z": "fe54917cf124892f",
         "name": "Delete file",
         "filename": "filename",
         "filenameType": "msg",
@@ -3063,47 +3343,47 @@
         "createDir": false,
         "overwriteFile": "delete",
         "encoding": "none",
-        "x": 1860,
-        "y": 280,
+        "x": 1900,
+        "y": 300,
         "wires": [
             [
-                "3d10270c932dca69"
+                "35c8d1a91b41682a"
             ]
         ]
     },
     {
-        "id": "3d10270c932dca69",
+        "id": "35c8d1a91b41682a",
         "type": "link out",
-        "z": "62168f16fb9cb960",
+        "z": "fe54917cf124892f",
         "name": "link out 13",
         "mode": "link",
         "links": [
-            "1275bed0427c4097"
+            "eed2521a12aabc7b"
         ],
-        "x": 1975,
-        "y": 280,
+        "x": 2015,
+        "y": 300,
         "wires": []
     },
     {
-        "id": "1275bed0427c4097",
+        "id": "eed2521a12aabc7b",
         "type": "link in",
-        "z": "62168f16fb9cb960",
+        "z": "fe54917cf124892f",
         "name": "Refresh File List",
         "links": [
-            "3d10270c932dca69"
+            "35c8d1a91b41682a"
         ],
-        "x": 125,
-        "y": 340,
+        "x": 165,
+        "y": 360,
         "wires": [
             [
-                "5e18896e060736a2"
+                "179b082f62a7823e"
             ]
         ]
     },
     {
-        "id": "94f0866931125570",
+        "id": "6ae3b5a5d657f2f8",
         "type": "function",
-        "z": "62168f16fb9cb960",
+        "z": "fe54917cf124892f",
         "name": "Div text",
         "func": "msg.payload = \"<div>No preview available</div>\";\nreturn msg;",
         "outputs": 1,
@@ -3111,18 +3391,67 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1040,
-        "y": 520,
+        "x": 1080,
+        "y": 540,
         "wires": [
             [
-                "1ec03f77c131fff2"
+                "eaa1b785a82474e8"
             ]
         ]
     },
     {
-        "id": "777954f42573efc6",
+        "id": "e4de1ad0101079c4",
+        "type": "ui_template",
+        "z": "fe54917cf124892f",
+        "group": "b9eaf4515438b94a",
+        "name": "",
+        "order": 18,
+        "width": 0,
+        "height": 0,
+        "format": "",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 1420,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f6648be4a898f98c",
+        "type": "ui_button",
+        "z": "fe54917cf124892f",
+        "name": "",
+        "group": "b9eaf4515438b94a",
+        "order": 2,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Download",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "file_download",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "download",
+        "topicType": "str",
+        "x": 1000,
+        "y": 340,
+        "wires": [
+            [
+                "7cea2f877f87e3ca"
+            ]
+        ]
+    },
+    {
+        "id": "ec346886c2c98b9b",
         "type": "function",
-        "z": "62168f16fb9cb960",
+        "z": "fe54917cf124892f",
         "name": "File too big",
         "func": "msg.payload = \"<div>File too large for preview</div>\";\nreturn msg;",
         "outputs": 1,
@@ -3130,18 +3459,46 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 910,
-        "y": 420,
+        "x": 950,
+        "y": 440,
         "wires": [
             [
-                "1ec03f77c131fff2"
+                "eaa1b785a82474e8"
             ]
         ]
     },
     {
-        "id": "66bc0f58da04db30",
+        "id": "69b87840a116af60",
+        "type": "ui_button",
+        "z": "fe54917cf124892f",
+        "name": "",
+        "group": "7c3d1ffe5de85af4",
+        "order": 7,
+        "width": "3",
+        "height": "1",
+        "passthru": false,
+        "label": "Download All",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "file_download",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "download_all",
+        "topicType": "str",
+        "x": 170,
+        "y": 660,
+        "wires": [
+            [
+                "cad526a5087b8c17"
+            ]
+        ]
+    },
+    {
+        "id": "cad526a5087b8c17",
         "type": "function",
-        "z": "62168f16fb9cb960",
+        "z": "fe54917cf124892f",
         "name": "Sure?",
         "func": "let folder = flow.get(\"currentfolder\");\nlet count = 0;\nlet total = 0;\n\nif (folder===undefined) {\n    return;\n}\n\nfor (var i = 0; i < folder.length; i++) {\n    if (folder[i].stat.isFile) {\n        count++\n        total+=folder[i].stat.size;\n    } \n}\n\nmsg.topic=\"Download all files?\"\nmsg.payload = \"This will zip \" + count + \" file(s) in this folder with a total size of \" + total.toString().replace(/\\B(?=(\\d{3})+(?!\\d))/g, \",\")+\" bytes. Are you sure?\";\nreturn msg;\n\n",
         "outputs": 1,
@@ -3149,18 +3506,41 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 310,
-        "y": 640,
+        "x": 350,
+        "y": 660,
         "wires": [
             [
-                "fe70301f0dba3337"
+                "cb68563af8c8e311"
             ]
         ]
     },
     {
-        "id": "1342a37f07b7f60b",
+        "id": "cb68563af8c8e311",
+        "type": "ui_toast",
+        "z": "fe54917cf124892f",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": false,
+        "outputs": 1,
+        "ok": "Yes",
+        "cancel": "No",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Confirmation",
+        "x": 510,
+        "y": 660,
+        "wires": [
+            [
+                "b24ec3db606a1cbe"
+            ]
+        ]
+    },
+    {
+        "id": "b24ec3db606a1cbe",
         "type": "switch",
-        "z": "62168f16fb9cb960",
+        "z": "fe54917cf124892f",
         "name": "Yes?",
         "property": "payload",
         "propertyType": "msg",
@@ -3174,18 +3554,18 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 630,
-        "y": 640,
+        "x": 670,
+        "y": 660,
         "wires": [
             [
-                "03c02db4323050f9"
+                "c9f7a9a65bf09a87"
             ]
         ]
     },
     {
-        "id": "03c02db4323050f9",
+        "id": "c9f7a9a65bf09a87",
         "type": "function",
-        "z": "62168f16fb9cb960",
+        "z": "fe54917cf124892f",
         "name": "Zip command",
         "func": "let folder = flow.get(\"folder\");\n\n// Get the current time and convert it to text\nvar now = new Date();\nvar yyyy = now.getFullYear();\nvar mm = now.getMonth() < 9 ? \"0\" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based\nvar dd = now.getDate() < 10 ? \"0\" + now.getDate() : now.getDate();\nvar hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\nvar mmm = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\nvar ss = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\n\n// Generate out file name pattern\nlet filename = folder.match(/([^\\/]*)\\/*$/)[1]+\"_\" + yyyy + mm + dd + hh + mmm+ss+\".zip\";\nlet filepath = folder + \"/\" + filename;\n\nmsg.save = {\"name\": filepath, \"fname\": filename };\n\nmsg.payload = \"zip \" + filepath+\" \"+folder+\"/*.*\";\nreturn msg;",
         "outputs": 1,
@@ -3193,18 +3573,18 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 800,
-        "y": 640,
+        "x": 840,
+        "y": 660,
         "wires": [
             [
-                "08f02bd4e485aba7"
+                "f8ff35c664e0633f"
             ]
         ]
     },
     {
-        "id": "08f02bd4e485aba7",
+        "id": "f8ff35c664e0633f",
         "type": "exec",
-        "z": "62168f16fb9cb960",
+        "z": "fe54917cf124892f",
         "command": "",
         "addpay": "payload",
         "append": "",
@@ -3213,20 +3593,20 @@
         "winHide": false,
         "oldrc": false,
         "name": "Execute zip",
-        "x": 1010,
-        "y": 640,
+        "x": 1050,
+        "y": 660,
         "wires": [
             [
-                "9442aea2f165046c"
+                "512acbb703e0e8c3"
             ],
             [],
             []
         ]
     },
     {
-        "id": "278d2f3e30bb8eed",
+        "id": "020e593008574c70",
         "type": "change",
-        "z": "62168f16fb9cb960",
+        "z": "fe54917cf124892f",
         "name": "Get zip details",
         "rules": [
             {
@@ -3242,19 +3622,19 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1400,
-        "y": 600,
+        "x": 1440,
+        "y": 620,
         "wires": [
             [
-                "9f0139c9d4cf303c",
-                "ab85eb9606fc412a"
+                "8a9563fc8d848d29",
+                "7cea2f877f87e3ca"
             ]
         ]
     },
     {
-        "id": "9442aea2f165046c",
+        "id": "512acbb703e0e8c3",
         "type": "switch",
-        "z": "62168f16fb9cb960",
+        "z": "fe54917cf124892f",
         "name": "Success?",
         "property": "rc.code",
         "propertyType": "msg",
@@ -3271,22 +3651,22 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 1180,
-        "y": 620,
+        "x": 1220,
+        "y": 640,
         "wires": [
             [
-                "278d2f3e30bb8eed",
-                "33821421f5f9e1c3"
+                "020e593008574c70",
+                "ba88a7d22f4dfc03"
             ],
             [
-                "a14832dbe8ca1c31"
+                "5ee1ccb527981c93"
             ]
         ]
     },
     {
-        "id": "33821421f5f9e1c3",
+        "id": "ba88a7d22f4dfc03",
         "type": "change",
-        "z": "62168f16fb9cb960",
+        "z": "fe54917cf124892f",
         "name": "Notification",
         "rules": [
             {
@@ -3302,18 +3682,18 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1390,
-        "y": 640,
+        "x": 1430,
+        "y": 660,
         "wires": [
             [
-                "1ec03f77c131fff2"
+                "eaa1b785a82474e8"
             ]
         ]
     },
     {
-        "id": "a14832dbe8ca1c31",
+        "id": "5ee1ccb527981c93",
         "type": "change",
-        "z": "62168f16fb9cb960",
+        "z": "fe54917cf124892f",
         "name": "Failed notification",
         "rules": [
             {
@@ -3336,18 +3716,65 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1410,
-        "y": 680,
+        "x": 1450,
+        "y": 700,
         "wires": [
             [
-                "6c43b2f8441fd24e"
+                "5bcf25f22298681c"
             ]
         ]
     },
     {
-        "id": "4434a55ef1ec1dbc",
+        "id": "5bcf25f22298681c",
+        "type": "ui_toast",
+        "z": "fe54917cf124892f",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": false,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1650,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "442a856796f14a64",
+        "type": "ui_text_input",
+        "z": "fe54917cf124892f",
+        "name": "",
+        "label": "Filter:",
+        "tooltip": "",
+        "group": "7c3d1ffe5de85af4",
+        "order": 7,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "mode": "text",
+        "delay": 300,
+        "topic": "quickfilter",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 810,
+        "y": 140,
+        "wires": [
+            [
+                "09aeec3a5a2b5b59"
+            ]
+        ]
+    },
+    {
+        "id": "5caa1aeabee2f1f9",
         "type": "change",
-        "z": "62168f16fb9cb960",
+        "z": "fe54917cf124892f",
         "name": "Empty",
         "rules": [
             {
@@ -3363,488 +3790,69 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 630,
-        "y": 120,
+        "x": 670,
+        "y": 140,
         "wires": [
             [
-                "bfc3ef112044fb10"
+                "442a856796f14a64"
             ]
         ]
     },
     {
-        "id": "8dd5fe2ad1c1362e",
-        "type": "ui_etable",
-        "z": "62168f16fb9cb960",
-        "payload": "[{\"title\":\"Type\",\"field\":\"icon\",\"formatter\":\"html\",\"width\":50},{\"title\":\"Name\",\"field\":\"fname\"},{\"title\":\"Size\",\"field\":\"stat.size\",\"sorter\":\"number\",\"width\":100,\"sorterParams\":{\"thousandSeparator\":\",\",\"decimalSeparator\":\".\",\"alignEmptyValues\":\"top\"}},{\"title\":\"Created\",\"field\":\"stat.created\",\"formatter\":\"datetime\",\"width\":200,\"formatterParams\":{\"outputFormat\":\"yyyy.MM.DD HH:mm:ss\",\"invalidPlaceholder\":\"(invalid date)\",\"timezone\":\"system\"}},{\"title\":\"Changed\",\"field\":\"stat.changed\",\"formatter\":\"datetime\",\"width\":200,\"formatterParams\":{\"outputFormat\":\"yyyy.MM.DD HH:mm:ss\",\"invalidPlaceholder\":\"(invalid date)\",\"timezone\":\"system\"}}]",
-        "payloadType": "json",
-        "options": "{\"movableColumns\":true,\"resizableColumns\":true,\"selectable\":1,\"responsiveLayout\":\"collapse\",\"autoResize\":true,\"layout\":\"fitColumns\",\"pagination\":\"local\",\"height\":\"100%\"}",
-        "group": "7c3d1ffe5de85af4",
-        "name": "File Browser",
-        "order": 6,
-        "width": "18",
-        "height": "10",
-        "columns": [],
-        "outputs": 1,
-        "cts": false,
-        "x": 790,
-        "y": 180,
-        "wires": [
-            [
-                "9f0139c9d4cf303c",
-                "2fd8e45dcc9f2743",
-                "cf09d98db7656238",
-                "ab85eb9606fc412a"
-            ]
-        ]
-    },
-    {
-        "id": "4c3c5231e3d633dd",
-        "type": "ui_button",
-        "z": "62168f16fb9cb960",
-        "name": "",
-        "group": "7c3d1ffe5de85af4",
-        "order": 1,
-        "width": "2",
-        "height": "1",
-        "passthru": false,
-        "label": "Refresh",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "refresh",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "refresh",
-        "topicType": "str",
-        "x": 80,
-        "y": 180,
-        "wires": [
-            [
-                "5e18896e060736a2"
-            ]
-        ]
-    },
-    {
-        "id": "8ee8106b5f5eda72",
-        "type": "ui_button",
-        "z": "62168f16fb9cb960",
-        "name": "",
-        "group": "b9eaf4515438b94a",
-        "order": 2,
-        "width": "2",
-        "height": "1",
-        "passthru": false,
-        "label": "Delete",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "delete",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "delete",
-        "topicType": "str",
-        "x": 950,
-        "y": 280,
-        "wires": [
-            [
-                "ab85eb9606fc412a"
-            ]
-        ]
-    },
-    {
-        "id": "c79fd4ed4bd87baa",
-        "type": "ui_button",
-        "z": "62168f16fb9cb960",
-        "name": "",
-        "group": "7c3d1ffe5de85af4",
-        "order": 3,
-        "width": "2",
-        "height": "1",
-        "passthru": false,
-        "label": "Up",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "arrow_upwards",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "up",
-        "topicType": "str",
-        "x": 90,
-        "y": 260,
-        "wires": [
-            [
-                "5e18896e060736a2"
-            ]
-        ]
-    },
-    {
-        "id": "630956d807bb897f",
-        "type": "ui_button",
-        "z": "62168f16fb9cb960",
-        "name": "",
-        "group": "7c3d1ffe5de85af4",
-        "order": 2,
-        "width": "2",
-        "height": "1",
-        "passthru": false,
-        "label": "Reset",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "autorenew",
-        "payload": "filebrowser_default_folder",
-        "payloadType": "global",
-        "topic": "change",
-        "topicType": "str",
-        "x": 90,
-        "y": 220,
-        "wires": [
-            [
-                "5e18896e060736a2"
-            ]
-        ]
-    },
-    {
-        "id": "9c81f3c971381924",
-        "type": "ui_button",
-        "z": "62168f16fb9cb960",
-        "name": "",
-        "group": "b9eaf4515438b94a",
-        "order": 2,
-        "width": "3",
-        "height": "1",
-        "passthru": false,
-        "label": "Download",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "file_download",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "download",
-        "topicType": "str",
-        "x": 960,
-        "y": 320,
-        "wires": [
-            [
-                "ab85eb9606fc412a"
-            ]
-        ]
-    },
-    {
-        "id": "aabb0360fd74425e",
-        "type": "ui_button",
-        "z": "62168f16fb9cb960",
-        "name": "",
-        "group": "7c3d1ffe5de85af4",
-        "order": 7,
-        "width": "3",
-        "height": "1",
-        "passthru": false,
-        "label": "Download All",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "file_download",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "download_all",
-        "topicType": "str",
-        "x": 130,
-        "y": 640,
-        "wires": [
-            [
-                "66bc0f58da04db30"
-            ]
-        ]
-    },
-    {
-        "id": "58dab00dd15f92fc",
-        "type": "ui_switch",
-        "z": "62168f16fb9cb960",
-        "name": "",
-        "label": "Hidden",
-        "tooltip": "Show hidden files or not",
-        "group": "7c3d1ffe5de85af4",
-        "order": 5,
-        "width": "2",
-        "height": "1",
-        "passthru": false,
-        "decouple": "false",
-        "topic": "hidden",
-        "topicType": "str",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "check_box",
-        "oncolor": "#000000",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "check_box_outline_blank",
-        "offcolor": "#000000",
-        "animate": true,
-        "className": "",
-        "x": 80,
-        "y": 300,
-        "wires": [
-            [
-                "5e18896e060736a2"
-            ]
-        ]
-    },
-    {
-        "id": "bfc3ef112044fb10",
-        "type": "ui_text_input",
-        "z": "62168f16fb9cb960",
-        "name": "",
-        "label": "Filter:",
-        "tooltip": "",
-        "group": "7c3d1ffe5de85af4",
-        "order": 7,
-        "width": "6",
-        "height": "1",
-        "passthru": false,
-        "mode": "text",
-        "delay": 300,
-        "topic": "quickfilter",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "str",
-        "x": 770,
-        "y": 120,
-        "wires": [
-            [
-                "1a853077cd0370f3"
-            ]
-        ]
-    },
-    {
-        "id": "9f0139c9d4cf303c",
-        "type": "ui_text",
-        "z": "62168f16fb9cb960",
-        "group": "b9eaf4515438b94a",
-        "order": 1,
-        "width": "5",
-        "height": "1",
-        "name": "Filename",
-        "label": "",
-        "format": "{{msg.payload.fname}}",
-        "layout": "row-left",
-        "className": "",
-        "x": 1100,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "c9bad6d25a599039",
-        "type": "ui_text",
-        "z": "62168f16fb9cb960",
-        "group": "7c3d1ffe5de85af4",
-        "order": 4,
-        "width": "9",
-        "height": "1",
-        "name": "",
-        "label": "Folder:",
-        "format": "{{msg.payload.start}}",
-        "layout": "row-left",
-        "className": "",
-        "x": 480,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "89dc6deaab1808aa",
-        "type": "ui_toast",
-        "z": "62168f16fb9cb960",
-        "position": "dialog",
-        "displayTime": "3",
-        "highlight": "",
-        "sendall": false,
-        "outputs": 1,
-        "ok": "Yes",
-        "cancel": "No",
-        "raw": false,
-        "topic": "",
-        "name": "Confirmation",
-        "x": 1550,
-        "y": 280,
-        "wires": [
-            [
-                "32285273e011031e"
-            ]
-        ]
-    },
-    {
-        "id": "fe70301f0dba3337",
-        "type": "ui_toast",
-        "z": "62168f16fb9cb960",
-        "position": "dialog",
-        "displayTime": "3",
-        "highlight": "",
-        "sendall": false,
-        "outputs": 1,
-        "ok": "Yes",
-        "cancel": "No",
-        "raw": false,
-        "className": "",
-        "topic": "",
-        "name": "Confirmation",
-        "x": 470,
-        "y": 640,
-        "wires": [
-            [
-                "1342a37f07b7f60b"
-            ]
-        ]
-    },
-    {
-        "id": "6c43b2f8441fd24e",
-        "type": "ui_toast",
-        "z": "62168f16fb9cb960",
-        "position": "dialog",
-        "displayTime": "3",
-        "highlight": "",
-        "sendall": false,
-        "outputs": 1,
-        "ok": "OK",
-        "cancel": "",
-        "raw": false,
-        "className": "",
-        "topic": "",
-        "name": "",
-        "x": 1610,
-        "y": 680,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "1ec03f77c131fff2",
-        "type": "ui_template",
-        "z": "62168f16fb9cb960",
-        "group": "b9eaf4515438b94a",
-        "name": "File Preview",
-        "order": 3,
-        "width": "10",
-        "height": "11",
-        "format": "<div ng-bind-html=\"msg.payload\" height=\"100%\" style=\"height: 100%;\"><br/>\n</div>\n\n",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": false,
-        "templateScope": "local",
-        "className": "",
-        "x": 1230,
-        "y": 380,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "f27d36356901af0b",
-        "type": "ui_template",
-        "z": "62168f16fb9cb960",
-        "group": "b9eaf4515438b94a",
-        "name": "",
-        "order": 18,
-        "width": 0,
-        "height": 0,
-        "format": "",
-        "storeOutMessages": false,
-        "fwdInMessages": false,
-        "resendOnRefresh": false,
-        "templateScope": "local",
-        "className": "",
-        "x": 1380,
-        "y": 320,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "f3a77316a142090b",
-        "type": "base64",
-        "z": "62168f16fb9cb960",
-        "name": "",
-        "action": "",
-        "property": "payload",
-        "x": 900,
-        "y": 460,
-        "wires": [
-            [
-                "ee1728b79fedf48f"
-            ]
-        ]
-    },
-    {
-        "id": "7940237deb98874d",
-        "type": "fs-file-lister",
-        "z": "62168f16fb9cb960",
-        "name": "Files",
-        "start": "/home/ovum/datalog/",
-        "pattern": "*.*",
-        "folders": "*",
-        "hidden": false,
-        "lstype": "both",
-        "path": true,
-        "single": true,
-        "depth": 0,
-        "stat": true,
-        "showWarnings": false,
-        "x": 470,
-        "y": 180,
-        "wires": [
-            [
-                "1a853077cd0370f3",
-                "4434a55ef1ec1dbc"
-            ]
-        ]
-    },
-    {
-        "id": "537ac0e30ee20d74",
+        "id": "905d3dfb9057ff1a",
         "type": "comment",
-        "z": "6d0ed0a9ab0d76e2",
-        "name": "File Browser",
-        "info": "1) Update the default folder in the Init node\n2) Update the default folder in the Reset node as well\n3) You can duplicate the Reset nodes and use them as saved shortcuts\n4) Check the Convert Timestamps function node if you want to see your dates in a different format. I just used the Javascript toISOString format.\n5) The Graph button can read any CSV file which have any number of values, but the first column always contains a timestamp column with javascript timestamp of the data point.",
-        "x": 210,
-        "y": 80,
+        "z": "f97f75b309eab0be",
+        "name": "Auto Logger archiving",
+        "info": "Generate file name that are to be archived.\n\nIdea is that this generates a list of file names for let's say between current day-5 days to current day-10 days, so all files that are 5-10 days old will get archived. And this can be executed daily or weekly, and the interval allows some overlap (e.g. the program fails, Node-Red was down, etc.)\n\nInject node should contain a JSON:\n{    \n    \"start\": 20,    \n    \"end\": 10\n}\n\nThis will generate file names D-20 to D-10 days.\nStart should be greather than end!\n",
+        "x": 200,
+        "y": 60,
         "wires": []
     },
     {
-        "id": "84a22772a8d3b955",
-        "type": "fs-file-lister",
-        "z": "6d0ed0a9ab0d76e2",
-        "name": "Files",
-        "start": "/home/pi",
-        "pattern": "*.*",
-        "folders": "*",
-        "hidden": false,
-        "lstype": "files",
-        "path": true,
-        "single": true,
-        "depth": 0,
-        "stat": true,
-        "showWarnings": false,
-        "x": 610,
-        "y": 180,
+        "id": "4372b0073e72a9c2",
+        "type": "function",
+        "z": "f97f75b309eab0be",
+        "name": "Maplin Filename generator",
+        "func": "let output = [];\nfor (var i=msg.payload.end;i<msg.payload.start;i++) {\n    \n    // calculate the date\n    let now = new Date();\n    now.setTime(now.getTime() - 1000*60*60*24*i);\n    let yyyy = now.getFullYear();\n    let mm = now.getMonth() < 9 ? \"0\" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based\n    let dd  = now.getDate() < 10 ? \"0\" + now.getDate() : now.getDate();\n    let hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\n    let mmm  = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\n    let ss  = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\n    \n    let newfile = { \"topic\": \"archive\", \"payload\": \"\"};\n    // Generate out file name pattern\n    newfile.fname = \"maplin_\"+ yyyy + mm + dd + \".csv\";\n    // Full filename with path \n    newfile.filename = \"/home/ovum/datalog/\"+ newfile.fname;\n    \n    // Shell script only needs the filename without the path\n    newfile.payload = newfile.fname;\n    output.push(newfile);\n\n}\n\nreturn [output];",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 140,
         "wires": [
             [
-                "3a419c8fb2b95140",
-                "80c10c17d226f8cd"
+                "69b24cb2fe7768da"
             ]
         ]
     },
     {
-        "id": "6637b9f061857aab",
+        "id": "e5ce3db2f731dbe1",
+        "type": "function",
+        "z": "f97f75b309eab0be",
+        "name": "Weather Station Filename generator",
+        "func": "let output = [];\nfor (var i=msg.payload.end;i<msg.payload.start;i++) {\n    \n    // calculate the date\n    let now = new Date();\n    now.setTime(now.getTime() - 1000*60*60*24*i);\n    let yyyy = now.getFullYear();\n    let mm = now.getMonth() < 9 ? \"0\" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based\n    let dd  = now.getDate() < 10 ? \"0\" + now.getDate() : now.getDate();\n    let hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\n    let mmm  = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\n    let ss  = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\n    \n    let newfile = { \"topic\": \"archive\", \"payload\": \"\"};\n    // Generate out file name pattern\n    newfile.fname = \"weather_sensor_\"+ yyyy + mm + dd + \".csv\";\n    // Full filename with path \n    newfile.filename = \"/home/ovum/datalog/\"+ newfile.fname;\n    \n    // Shell script only needs the filename without the path\n    newfile.payload = newfile.fname;\n    output.push(newfile);\n\n}\n\nreturn [output];",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 200,
+        "wires": [
+            [
+                "69b24cb2fe7768da"
+            ]
+        ]
+    },
+    {
+        "id": "4c74f8fa18ded457",
         "type": "inject",
-        "z": "6d0ed0a9ab0d76e2",
-        "name": "Init",
+        "z": "f97f75b309eab0be",
+        "name": "Start",
         "props": [
             {
                 "p": "payload"
@@ -3855,924 +3863,26 @@
             }
         ],
         "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "change",
-        "payload": "/home/ovum",
-        "payloadType": "str",
-        "x": 210,
-        "y": 140,
-        "wires": [
-            [
-                "e546ed7f7367d140"
-            ]
-        ]
-    },
-    {
-        "id": "cfc11ffb3ebb4c1c",
-        "type": "ui_button",
-        "z": "6d0ed0a9ab0d76e2",
-        "name": "",
-        "group": "93b72251a36883d1",
-        "order": 1,
-        "width": "2",
-        "height": "1",
-        "passthru": false,
-        "label": "Refresh",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "refresh",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "refresh",
-        "topicType": "str",
-        "x": 200,
-        "y": 180,
-        "wires": [
-            [
-                "e546ed7f7367d140"
-            ]
-        ]
-    },
-    {
-        "id": "c9a1f3bd7e0f98dc",
-        "type": "ui_dropdown",
-        "z": "6d0ed0a9ab0d76e2",
-        "name": "File Selector",
-        "label": "",
-        "tooltip": "",
-        "place": "Select a file",
-        "group": "93b72251a36883d1",
-        "order": 9,
-        "width": "5",
-        "height": "1",
-        "passthru": false,
-        "options": [
-            {
-                "label": "",
-                "value": "",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "",
-        "x": 1010,
-        "y": 180,
-        "wires": [
-            [
-                "37e00edeafc7fba5"
-            ]
-        ]
-    },
-    {
-        "id": "3a419c8fb2b95140",
-        "type": "function",
-        "z": "6d0ed0a9ab0d76e2",
-        "name": "Format data",
-        "func": "// format the data for the dropdown\nmsg.options = [];\nfor (var i=0; i<msg.payload.length; i++) {\n    // This is a file\n    obj = {};\n    obj [msg.payload[i].name.replace(/^.*(\\\\|\\/|\\:)/, '')]=msg.payload[i].name;\n    msg.options.push(obj);\n}\nmsg.payload={};\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 810,
-        "y": 180,
-        "wires": [
-            [
-                "c9a1f3bd7e0f98dc"
-            ]
-        ]
-    },
-    {
-        "id": "24ead722f4dd0db8",
-        "type": "ui_template",
-        "z": "6d0ed0a9ab0d76e2",
-        "group": "93b72251a36883d1",
-        "name": "",
-        "order": 6,
-        "width": "18",
-        "height": "6",
-        "format": "<div ng-bind-html=\"msg.payload\" height=\"400\" style=\"height: 400px;\"><br/>\n</div>\n\n",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "templateScope": "local",
-        "x": 1200,
-        "y": 240,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ef385ca41a2fa621",
-        "type": "template",
-        "z": "6d0ed0a9ab0d76e2",
-        "name": "",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "<table width=\"100%\">\n    <tr><th>File Name</th><th>Size</th><th>Created</th><th>Changed</th></tr>\n    {{#payload}}\n        <tr>\n            <td><a href=\"/download?filename={{name}}\" target=\"blank\">{{fname}}</a></td>\n            <td>{{stat.size}}</td>\n            <td>{{stat.created}}</td>\n            <td>{{stat.changed}}</td>\n        </tr>\n    {{/payload}}\n</table>\n",
-        "output": "str",
-        "x": 1040,
-        "y": 240,
-        "wires": [
-            [
-                "24ead722f4dd0db8"
-            ]
-        ]
-    },
-    {
-        "id": "80c10c17d226f8cd",
-        "type": "function",
-        "z": "6d0ed0a9ab0d76e2",
-        "name": "Convert timestamps",
-        "func": "for (var i=0; i<msg.payload.length; i++) {\n    msg.payload[i].stat.created = msg.payload[i].stat.created.toISOString().slice(0, 19).replace('T', ' ');\n    msg.payload[i].stat.changed = msg.payload[i].stat.changed.toISOString().slice(0, 19).replace('T', ' ');\n    msg.payload[i].stat.accessed = msg.payload[i].stat.accessed.toISOString().slice(0, 19).replace('T', ' ');\n    msg.payload[i].stat.statusChanged = msg.payload[i].stat.statusChanged.toISOString().slice(0, 19).replace('T', ' ');\n    msg.payload[i].fname = msg.payload[i].name.replace(/^.*(\\\\|\\/|\\:)/, '');\n}\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 840,
-        "y": 240,
-        "wires": [
-            [
-                "ef385ca41a2fa621"
-            ]
-        ]
-    },
-    {
-        "id": "82d90c86a54c30df",
-        "type": "ui_button",
-        "z": "6d0ed0a9ab0d76e2",
-        "name": "",
-        "group": "93b72251a36883d1",
-        "order": 10,
-        "width": "2",
-        "height": "1",
-        "passthru": false,
-        "label": "Delete",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "delete",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "",
-        "x": 230,
-        "y": 340,
-        "wires": [
-            [
-                "01a75514432b7311"
-            ]
-        ]
-    },
-    {
-        "id": "34fb4447adbe471c",
-        "type": "function",
-        "z": "6d0ed0a9ab0d76e2",
-        "name": "Get filename",
-        "func": "// Get the filename from the flow context\nlet filename = flow.get(\"fileselected\");\n\n// check, if the filename is undefined that means it does not exist yet, nothing is selected yet\n// return: do not output anything\nif (filename===undefined) {\n    return;\n}\n\n// return the filename to the file-in node to delete\nmsg.filename = filename;\n\nif (msg.filename.replace(/^.*(\\\\|\\/|\\:)/, '')[0]!==\".\") {\n    // Only do this if this is a file, we don't delete folders\n    // and delete the context/selection as we are deleting the file as well\n    flow.set(\"fileselected\");\n    return msg;\n}",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 430,
-        "y": 400,
-        "wires": [
-            [
-                "acd6e1731fcb557b"
-            ]
-        ]
-    },
-    {
-        "id": "acd6e1731fcb557b",
-        "type": "file",
-        "z": "6d0ed0a9ab0d76e2",
-        "name": "Delete file",
-        "filename": "",
-        "appendNewline": true,
-        "createDir": false,
-        "overwriteFile": "delete",
-        "encoding": "none",
-        "x": 640,
-        "y": 400,
-        "wires": [
-            [
-                "84a22772a8d3b955",
-                "db9688f9813b3f08"
-            ]
-        ]
-    },
-    {
-        "id": "4ef0eac6530e502c",
-        "type": "http in",
-        "z": "6d0ed0a9ab0d76e2",
-        "name": "",
-        "url": "/download",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 240,
-        "y": 540,
-        "wires": [
-            [
-                "ea6e11be2065e379"
-            ]
-        ]
-    },
-    {
-        "id": "c0828ad4376e2e86",
-        "type": "http response",
-        "z": "6d0ed0a9ab0d76e2",
-        "name": "",
-        "statusCode": "",
-        "headers": {},
-        "x": 1030,
-        "y": 540,
-        "wires": []
-    },
-    {
-        "id": "ea6e11be2065e379",
-        "type": "function",
-        "z": "6d0ed0a9ab0d76e2",
-        "name": "Get the file name",
-        "func": "msg.filename = msg.req.query.filename;\nmsg.contentdisposition = \"attachment; filename=\\\"\" + msg.req.query.filename.replace(/^.*(\\\\|\\/|\\:)/, '') + \"\\\"\";\nreturn msg;\n",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 490,
-        "y": 540,
-        "wires": [
-            [
-                "f8e79bd0c62a7457"
-            ]
-        ],
-        "outputLabels": [
-            "Folder selected",
-            "File selected"
-        ]
-    },
-    {
-        "id": "f8e79bd0c62a7457",
-        "type": "file in",
-        "z": "6d0ed0a9ab0d76e2",
-        "name": "",
-        "filename": "",
-        "format": "",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "x": 680,
-        "y": 540,
-        "wires": [
-            [
-                "f161cfdbc87b84ed"
-            ]
-        ]
-    },
-    {
-        "id": "f161cfdbc87b84ed",
-        "type": "change",
-        "z": "6d0ed0a9ab0d76e2",
-        "name": "Set Headers",
-        "rules": [
-            {
-                "t": "set",
-                "p": "headers",
-                "pt": "msg",
-                "to": "{}",
-                "tot": "json"
-            },
-            {
-                "t": "set",
-                "p": "headers.content-type",
-                "pt": "msg",
-                "to": "text/csv",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "headers.Content-Disposition",
-                "pt": "msg",
-                "to": "contentdisposition",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 850,
-        "y": 540,
-        "wires": [
-            [
-                "c0828ad4376e2e86"
-            ]
-        ]
-    },
-    {
-        "id": "107734809ea61b3c",
-        "type": "ui_button",
-        "z": "6d0ed0a9ab0d76e2",
-        "name": "",
-        "group": "93b72251a36883d1",
-        "order": 11,
-        "width": "2",
-        "height": "1",
-        "passthru": false,
-        "label": "Graph",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "show_chart",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "",
-        "x": 190,
-        "y": 660,
-        "wires": [
-            [
-                "01ae50ad7655d603"
-            ]
-        ]
-    },
-    {
-        "id": "01ae50ad7655d603",
-        "type": "function",
-        "z": "6d0ed0a9ab0d76e2",
-        "name": "Get filename",
-        "func": "// Get the filename from the flow context\nlet filename = flow.get(\"fileselected\");\n\n// check, if the filename is undefined that means it does not exist yet, nothing is selected yet\n// return: do not output anything\nif (filename===undefined) {\n    return;\n}\n\n// return the filename to the file-in node to delete\nmsg.filename = filename;\n\nif (msg.filename.replace(/^.*(\\\\|\\/|\\:)/, '')[0]!==\".\") {\n    // Only do this if this is a file, we don't delete folders\n    return msg;\n}",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 360,
-        "y": 660,
-        "wires": [
-            [
-                "1add06096258cbcd"
-            ]
-        ]
-    },
-    {
-        "id": "1add06096258cbcd",
-        "type": "file in",
-        "z": "6d0ed0a9ab0d76e2",
-        "name": "",
-        "filename": "",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "x": 540,
-        "y": 660,
-        "wires": [
-            [
-                "f05393645cee5b34"
-            ]
-        ]
-    },
-    {
-        "id": "f05393645cee5b34",
-        "type": "csv",
-        "z": "6d0ed0a9ab0d76e2",
-        "name": "",
-        "sep": ",",
-        "hdrin": true,
-        "hdrout": "",
-        "multi": "mult",
-        "ret": "\\n",
-        "temp": "",
-        "skip": "0",
-        "strings": true,
-        "x": 690,
-        "y": 660,
-        "wires": [
-            [
-                "f417c2a1c0118b4f"
-            ]
-        ]
-    },
-    {
-        "id": "f921f6837903c673",
-        "type": "debug",
-        "z": "6d0ed0a9ab0d76e2",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "x": 1110,
-        "y": 620,
-        "wires": []
-    },
-    {
-        "id": "f417c2a1c0118b4f",
-        "type": "function",
-        "z": "6d0ed0a9ab0d76e2",
-        "name": "Format data for chart",
-        "func": "var chart = [{\n    \"series\":[],\n    \"data\":[],\n    \"labels\":[msg.filename]\n}];\n\n\n/*\nvar pressure = [];\nvar out2 = [];\n\nfor (var i=0; i<msg.payload.length; i++) {\n    pressure.push({\"x\":msg.payload[i].timestamp, \"y\":msg.payload[i].pressure});\n    out2.push({\"x\":msg.payload[i].timestamp, \"y\":msg.payload[i].out2*200});\n\n}\nchart[0].data.push(pressure);\nchart[0].data.push(out2);\n*/\n\nlet columns = 0;\n\nfor(var series in msg.payload[0]) {\n    if(series!==\"timestamp\") {\n        chart[0].series.push(series);\n        chart[0].data.push([]);\n        columns++;\n    }\n}\n\n\nfor (var j=0; j<msg.payload.length; j++) {\n   for(var i=0;i<columns;i++) {\n       chart[0].data[i].push({\"x\":msg.payload[j].timestamp, \"y\":msg.payload[j][chart[0].series[i]]});\n   } \n}\n\n\n\n\nmsg.payload = chart;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 900,
-        "y": 660,
-        "wires": [
-            [
-                "0131835b3ee16d1c",
-                "f921f6837903c673"
-            ]
-        ]
-    },
-    {
-        "id": "0131835b3ee16d1c",
-        "type": "ui_chart",
-        "z": "6d0ed0a9ab0d76e2",
-        "name": "",
-        "group": "93b72251a36883d1",
-        "order": 12,
-        "width": "18",
-        "height": "6",
-        "label": "",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "x": 1100,
-        "y": 660,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "1029a50c99d77d8f",
-        "type": "ui_toast",
-        "z": "6d0ed0a9ab0d76e2",
-        "position": "dialog",
-        "displayTime": "3",
-        "highlight": "",
-        "sendall": false,
-        "outputs": 1,
-        "ok": "Yes",
-        "cancel": "No",
-        "raw": false,
-        "topic": "",
-        "name": "Confirmation",
-        "x": 610,
-        "y": 340,
-        "wires": [
-            [
-                "e9d5840cf559030b"
-            ]
-        ]
-    },
-    {
-        "id": "01a75514432b7311",
-        "type": "change",
-        "z": "6d0ed0a9ab0d76e2",
-        "name": "Set message",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "Delete confirmation",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "Are you sure you want to delete this file?",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 410,
-        "y": 340,
-        "wires": [
-            [
-                "1029a50c99d77d8f"
-            ]
-        ]
-    },
-    {
-        "id": "e9d5840cf559030b",
-        "type": "switch",
-        "z": "6d0ed0a9ab0d76e2",
-        "name": "",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "Yes",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 810,
-        "y": 340,
-        "wires": [
-            [
-                "34fb4447adbe471c"
-            ]
-        ]
-    },
-    {
-        "id": "e546ed7f7367d140",
-        "type": "function",
-        "z": "6d0ed0a9ab0d76e2",
-        "name": "Folder handling",
-        "func": "let folder = context.get(\"folder\");\nif (folder===undefined) {\n    folder=\"/\";\n    context.set(\"folder\", folder);\n}\n\nlet hidden = context.get(\"hidden\");\nif (hidden===undefined) {\n    hidden=false;\n    context.set(\"hidden\", hidden);\n}\n\nif (msg.topic===\"up\") {\n    var the_arr = folder.split('/');\n    the_arr.pop();\n    folder=the_arr.join('/'); \n    context.set(\"folder\", folder);\n}\nif (msg.topic===\"change\") {\n    folder=msg.payload;    \n    context.set(\"folder\", folder);\n}\nif (msg.topic===\"hidden\") {\n    hidden=msg.payload;    \n    context.set(\"hidden\", hidden);\n}\n\nmsg.payload = {\"start\":folder, \"hidden\": hidden};\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 400,
-        "y": 240,
-        "wires": [
-            [
-                "84a22772a8d3b955",
-                "717858c4eb0114c9",
-                "db9688f9813b3f08"
-            ]
-        ]
-    },
-    {
-        "id": "717858c4eb0114c9",
-        "type": "ui_text",
-        "z": "6d0ed0a9ab0d76e2",
-        "group": "93b72251a36883d1",
-        "order": 4,
-        "width": "9",
-        "height": "1",
-        "name": "",
-        "label": "Folder:",
-        "format": "{{msg.payload.start}}",
-        "layout": "row-left",
-        "x": 600,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "bc95d6ab1a29252e",
-        "type": "ui_button",
-        "z": "6d0ed0a9ab0d76e2",
-        "name": "",
-        "group": "93b72251a36883d1",
-        "order": 3,
-        "width": "2",
-        "height": "1",
-        "passthru": false,
-        "label": "Up",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "arrow_upwards",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "up",
-        "topicType": "str",
-        "x": 210,
-        "y": 260,
-        "wires": [
-            [
-                "e546ed7f7367d140"
-            ]
-        ]
-    },
-    {
-        "id": "e5a957611438452b",
-        "type": "ui_button",
-        "z": "6d0ed0a9ab0d76e2",
-        "name": "",
-        "group": "93b72251a36883d1",
-        "order": 8,
-        "width": "2",
-        "height": "1",
-        "passthru": false,
-        "label": "Open",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "folder_open",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "",
-        "x": 230,
-        "y": 460,
-        "wires": [
-            [
-                "ea0b9749435075d1"
-            ]
-        ]
-    },
-    {
-        "id": "ea0b9749435075d1",
-        "type": "function",
-        "z": "6d0ed0a9ab0d76e2",
-        "name": "Change folder",
-        "func": "// Get the filename from the flow context\nlet folderselected = flow.get(\"folderselected\");\n\n// check, if the filename is undefined that means it does not exist yet, nothing is selected yet\n// return: do not output anything\nif (folderselected===undefined) {\n    return;\n}\n\nmsg.topic = \"change\";\nmsg.payload = folderselected;\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 440,
-        "y": 460,
-        "wires": [
-            [
-                "e546ed7f7367d140"
-            ]
-        ]
-    },
-    {
-        "id": "230717bb54a4d8b8",
-        "type": "ui_button",
-        "z": "6d0ed0a9ab0d76e2",
-        "name": "",
-        "group": "93b72251a36883d1",
-        "order": 2,
-        "width": "2",
-        "height": "1",
-        "passthru": false,
-        "label": "Reset",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "autorenew",
-        "payload": "/home/ovum",
-        "payloadType": "str",
-        "topic": "change",
-        "topicType": "str",
-        "x": 210,
-        "y": 220,
-        "wires": [
-            [
-                "e546ed7f7367d140"
-            ]
-        ]
-    },
-    {
-        "id": "db9688f9813b3f08",
-        "type": "fs-file-lister",
-        "z": "6d0ed0a9ab0d76e2",
-        "name": "Folders",
-        "start": "/home/pi",
-        "pattern": "*.*",
-        "folders": "*",
-        "hidden": false,
-        "lstype": "directories",
-        "path": true,
-        "single": true,
-        "depth": 0,
-        "stat": true,
-        "showWarnings": false,
-        "x": 620,
-        "y": 280,
-        "wires": [
-            [
-                "17e337ec3789a80e"
-            ]
-        ]
-    },
-    {
-        "id": "c02cd72bd6640b89",
-        "type": "ui_dropdown",
-        "z": "6d0ed0a9ab0d76e2",
-        "name": "Folder Selector",
-        "label": "",
-        "tooltip": "",
-        "place": "Select a folder",
-        "group": "93b72251a36883d1",
-        "order": 7,
-        "width": "5",
-        "height": "1",
-        "passthru": false,
-        "options": [
-            {
-                "label": "",
-                "value": "",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "",
-        "x": 1020,
-        "y": 280,
-        "wires": [
-            [
-                "07eb184c701c7046"
-            ]
-        ]
-    },
-    {
-        "id": "17e337ec3789a80e",
-        "type": "function",
-        "z": "6d0ed0a9ab0d76e2",
-        "name": "Format data",
-        "func": "// format the data for the dropdown\nmsg.options = [];\nfor (var i=0; i<msg.payload.length; i++) {\n    // This is a foler\n    obj = {};\n    obj [\"[\"+msg.payload[i].name.replace(/^.*(\\\\|\\/|\\:)/, '')+\"]\"]=msg.payload[i].name;\n    msg.options.push(obj);\n}\nmsg.payload={};\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 810,
-        "y": 280,
-        "wires": [
-            [
-                "c02cd72bd6640b89"
-            ]
-        ]
-    },
-    {
-        "id": "37e00edeafc7fba5",
-        "type": "change",
-        "z": "6d0ed0a9ab0d76e2",
-        "name": "Save selection",
-        "rules": [
-            {
-                "t": "set",
-                "p": "fileselected",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1220,
-        "y": 180,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "07eb184c701c7046",
-        "type": "change",
-        "z": "6d0ed0a9ab0d76e2",
-        "name": "Save selection",
-        "rules": [
-            {
-                "t": "set",
-                "p": "folderselected",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1220,
-        "y": 280,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "b8432c0730fc09f8",
-        "type": "ui_switch",
-        "z": "6d0ed0a9ab0d76e2",
-        "name": "",
-        "label": "Hidden",
-        "tooltip": "Show hidden files or not",
-        "group": "93b72251a36883d1",
-        "order": 5,
-        "width": "2",
-        "height": "1",
-        "passthru": false,
-        "decouple": "false",
-        "topic": "hidden",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "check_box",
-        "oncolor": "#000000",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "check_box_outline_blank",
-        "offcolor": "#000000",
-        "x": 200,
-        "y": 300,
-        "wires": [
-            [
-                "e546ed7f7367d140"
-            ]
-        ]
-    },
-    {
-        "id": "782b06fb.cc1df8",
-        "type": "comment",
-        "z": "f685952b3b13c23f",
-        "name": "Auto Logger archiving",
-        "info": "Generate file name that are to be archived.\n\nIdea is that this generates a list of file names for let's say between current day-5 days to current day-10 days, so all files that are 5-10 days old will get archived. And this can be executed daily or weekly, and the interval allows some overlap (e.g. the program fails, Node-Red was down, etc.)\n\nInject node should contain a JSON:\n{    \n    \"start\": 20,    \n    \"end\": 10\n}\n\nThis will generate file names D-20 to D-10 days.\nStart should be greather than end!\n",
-        "x": 200,
-        "y": 60,
-        "wires": []
-    },
-    {
-        "id": "f14e2f71.1ad87",
-        "type": "function",
-        "z": "f685952b3b13c23f",
-        "name": "Maplin Filename generator",
-        "func": "let output = [];\nfor (var i=msg.payload.end;i<msg.payload.start;i++) {\n    \n    // calculate the date\n    let now = new Date();\n    now.setTime(now.getTime() - 1000*60*60*24*i);\n    let yyyy = now.getFullYear();\n    let mm = now.getMonth() < 9 ? \"0\" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based\n    let dd  = now.getDate() < 10 ? \"0\" + now.getDate() : now.getDate();\n    let hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\n    let mmm  = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\n    let ss  = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\n    \n    let newfile = { \"topic\": \"archive\", \"payload\": \"\"};\n    // Generate out file name pattern\n    newfile.fname = \"pressure_\"+ yyyy + mm + dd + \".csv\";\n    // Full filename with path \n    newfile.filename = \"/home/ovum/datalog/\"+ newfile.fname;\n    \n    // Shell script only needs the filename without the path\n    newfile.payload = newfile.fname;\n    output.push(newfile);\n\n}\n\nreturn [output];",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 360,
-        "y": 160,
-        "wires": [
-            [
-                "5ba61ce5.11d8a4"
-            ]
-        ]
-    },
-    {
-        "id": "b57ab78e.cf1658",
-        "type": "function",
-        "z": "f685952b3b13c23f",
-        "name": "Weather Station Filename generator",
-        "func": "let output = [];\nfor (var i=msg.payload.end;i<msg.payload.start;i++) {\n    \n    // calculate the date\n    let now = new Date();\n    now.setTime(now.getTime() - 1000*60*60*24*i);\n    let yyyy = now.getFullYear();\n    let mm = now.getMonth() < 9 ? \"0\" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based\n    let dd  = now.getDate() < 10 ? \"0\" + now.getDate() : now.getDate();\n    let hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\n    let mmm  = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\n    let ss  = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\n    \n    let newfile = { \"topic\": \"archive\", \"payload\": \"\"};\n    // Generate out file name pattern\n    newfile.fname = \"weather_sensor_\"+ yyyy + mm + dd + \".csv\";\n    // Full filename with path \n    newfile.filename = \"/home/ovum/datalog/\"+ newfile.fname;\n    \n    // Shell script only needs the filename without the path\n    newfile.payload = newfile.fname;\n    output.push(newfile);\n\n}\n\nreturn [output];",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 390,
-        "y": 220,
-        "wires": [
-            [
-                "5ba61ce5.11d8a4"
-            ]
-        ]
-    },
-    {
-        "id": "5e47f3b4.7c779c",
-        "type": "inject",
-        "z": "f685952b3b13c23f",
-        "name": "Start",
-        "props": [
-            {
-                "p": "payload",
-                "v": "{\"start\":20,\"end\":10}",
-                "vt": "json"
-            },
-            {
-                "p": "topic",
-                "v": "",
-                "vt": "string"
-            }
-        ],
-        "repeat": "",
         "crontab": "40 02 * * *",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "{\"start\":20,\"end\":10}",
         "payloadType": "json",
-        "x": 90,
-        "y": 180,
+        "x": 190,
+        "y": 160,
         "wires": [
             [
-                "f14e2f71.1ad87",
-                "b57ab78e.cf1658"
+                "4372b0073e72a9c2",
+                "e5ce3db2f731dbe1"
             ]
         ]
     },
     {
-        "id": "ad87fee.c53d5",
+        "id": "93eafef28a811846",
         "type": "exec",
-        "z": "f685952b3b13c23f",
-        "command": "/home/pi/log_upload.sh",
+        "z": "f97f75b309eab0be",
+        "command": "/home/ovum/log_upload.sh",
         "addpay": "payload",
         "append": "",
         "useSpawn": "false",
@@ -4780,20 +3890,20 @@
         "winHide": false,
         "oldrc": false,
         "name": "File upload",
-        "x": 310,
-        "y": 320,
+        "x": 790,
+        "y": 140,
         "wires": [
             [],
             [],
             [
-                "5f0f09f4.a09208"
+                "868be4750ae7a124"
             ]
         ]
     },
     {
-        "id": "5f0f09f4.a09208",
+        "id": "868be4750ae7a124",
         "type": "switch",
-        "z": "f685952b3b13c23f",
+        "z": "f97f75b309eab0be",
         "name": "Return code",
         "property": "payload.code",
         "propertyType": "msg",
@@ -4812,19 +3922,19 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 490,
-        "y": 320,
+        "x": 1070,
+        "y": 240,
         "wires": [
             [],
             [
-                "639dcab5.1028b4"
+                "bdc00bb3bd2088c2"
             ]
         ]
     },
     {
-        "id": "49210be0.0dbbe4",
+        "id": "42eb499cf6ef3fad",
         "type": "exec",
-        "z": "f685952b3b13c23f",
+        "z": "f97f75b309eab0be",
         "command": "sudo rm ",
         "addpay": "payload",
         "append": "",
@@ -4833,20 +3943,20 @@
         "winHide": false,
         "oldrc": false,
         "name": "File delete",
-        "x": 850,
-        "y": 320,
+        "x": 1210,
+        "y": 140,
         "wires": [
             [],
             [],
             [
-                "1fee1de5.695e32"
+                "a7c4a9039bc72bf3"
             ]
         ]
     },
     {
-        "id": "639dcab5.1028b4",
+        "id": "bdc00bb3bd2088c2",
         "type": "change",
-        "z": "f685952b3b13c23f",
+        "z": "f97f75b309eab0be",
         "name": "Get filename",
         "rules": [
             {
@@ -4862,18 +3972,18 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 670,
-        "y": 320,
+        "x": 1030,
+        "y": 140,
         "wires": [
             [
-                "49210be0.0dbbe4"
+                "42eb499cf6ef3fad"
             ]
         ]
     },
     {
-        "id": "1fee1de5.695e32",
+        "id": "a7c4a9039bc72bf3",
         "type": "switch",
-        "z": "f685952b3b13c23f",
+        "z": "f97f75b309eab0be",
         "name": "Return code",
         "property": "payload.code",
         "propertyType": "msg",
@@ -4891,17 +4001,17 @@
         ],
         "checkall": "true",
         "outputs": 2,
-        "x": 1050,
-        "y": 320,
+        "x": 1430,
+        "y": 160,
         "wires": [
             [],
             []
         ]
     },
     {
-        "id": "5ba61ce5.11d8a4",
+        "id": "69b24cb2fe7768da",
         "type": "delay",
-        "z": "f685952b3b13c23f",
+        "z": "f97f75b309eab0be",
         "name": "",
         "pauseType": "rate",
         "timeout": "5",
@@ -4914,22 +4024,279 @@
         "randomUnits": "seconds",
         "drop": false,
         "outputs": 1,
-        "x": 680,
-        "y": 180,
+        "x": 720,
+        "y": 340,
         "wires": [
             [
-                "ad87fee.c53d5"
+                "93eafef28a811846"
             ]
         ]
     },
     {
-        "id": "9da5c02.66c844",
+        "id": "97567ac25ab2d94d",
         "type": "comment",
-        "z": "f685952b3b13c23f",
+        "z": "f97f75b309eab0be",
         "name": "log_upload.sh",
         "info": "ftp -inv 192.168.1.x << EOF\n    user <username> <password>\n    binary\n    cd backup/logs\n    lcd /home/pi/datalog\n    put $1\nEOF",
-        "x": 670,
-        "y": 100,
+        "x": 770,
+        "y": 80,
         "wires": []
+    },
+    {
+        "id": "db645ecd948b2844",
+        "type": "comment",
+        "z": "f97f75b309eab0be",
+        "name": "Auto Logger",
+        "info": "",
+        "x": 210,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "f10d7e66de0d3791",
+        "type": "function",
+        "z": "f97f75b309eab0be",
+        "name": "Set data",
+        "func": "var now = new Date();\n\nmsg.payload = {\n    \"timestamp\" : now.getTime(),\n    \"temperature\" : msg.msg433.TEMP,\n    \"humidity\" : msg.msg433.HUM\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 300,
+        "y": 480,
+        "wires": [
+            [
+                "c2a671682fe6592b"
+            ]
+        ]
+    },
+    {
+        "id": "c2a671682fe6592b",
+        "type": "function",
+        "z": "f97f75b309eab0be",
+        "name": "Filename generator",
+        "func": "// Get the current time and convert it to text\nvar now = new Date();\nvar yyyy = now.getFullYear();\nvar mm = now.getMonth() < 9 ? \"0\" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based\nvar dd  = now.getDate() < 10 ? \"0\" + now.getDate() : now.getDate();\nvar hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\nvar mmm  = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\nvar ss  = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\n\n// Generate out file name pattern\nmsg.fname = \"maplin_\"+ yyyy + mm + dd + \".csv\";\n// Full filename with path for the file node later\nmsg.filename = \"/home/ovum/datalog/\"+ msg.fname;\n\n// We save the current payload into a different place on the msg object\nmsg.filecontent = msg.payload;\n\n// We are passing the file name search pattern to fs node to tell us if the file exists or not\nmsg.payload = {\"pattern\":msg.fname};\n\nnode.status({fill:\"blue\",shape:\"ring\",text:msg.fname});\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 600,
+        "wires": [
+            [
+                "45f2a31ff4c323b0"
+            ]
+        ]
+    },
+    {
+        "id": "45f2a31ff4c323b0",
+        "type": "fs-file-lister",
+        "z": "f97f75b309eab0be",
+        "name": "",
+        "start": "/home/ovum/datalog/",
+        "pattern": "",
+        "folders": "*",
+        "hidden": true,
+        "lstype": "files",
+        "path": true,
+        "single": true,
+        "depth": 0,
+        "stat": true,
+        "showWarnings": false,
+        "x": 460,
+        "y": 600,
+        "wires": [
+            [
+                "d4ba1996386259cb",
+                "98156f96119e8947"
+            ]
+        ]
+    },
+    {
+        "id": "d4ba1996386259cb",
+        "type": "debug",
+        "z": "f97f75b309eab0be",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 630,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "98156f96119e8947",
+        "type": "switch",
+        "z": "f97f75b309eab0be",
+        "name": "",
+        "property": "$count(msg.payload)",
+        "propertyType": "jsonata",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 610,
+        "y": 600,
+        "wires": [
+            [
+                "5a6942fe5b9a12a1"
+            ],
+            [
+                "0694377f4ec8d7f1"
+            ]
+        ]
+    },
+    {
+        "id": "a1841ba135f0083f",
+        "type": "csv",
+        "z": "f97f75b309eab0be",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "all",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "timestamp,temperature,humidity",
+        "skip": "0",
+        "strings": true,
+        "x": 950,
+        "y": 580,
+        "wires": [
+            [
+                "f28b75539578a54b"
+            ]
+        ]
+    },
+    {
+        "id": "f28b75539578a54b",
+        "type": "file",
+        "z": "f97f75b309eab0be",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 1110,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b4b236ebb93df10b",
+        "type": "csv",
+        "z": "f97f75b309eab0be",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": false,
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "timestamp,temperature,humidity",
+        "skip": "0",
+        "strings": true,
+        "x": 950,
+        "y": 620,
+        "wires": [
+            [
+                "f28b75539578a54b"
+            ]
+        ]
+    },
+    {
+        "id": "5a6942fe5b9a12a1",
+        "type": "change",
+        "z": "f97f75b309eab0be",
+        "name": "Get file content",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "filecontent",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 780,
+        "y": 580,
+        "wires": [
+            [
+                "a1841ba135f0083f"
+            ]
+        ]
+    },
+    {
+        "id": "0694377f4ec8d7f1",
+        "type": "change",
+        "z": "f97f75b309eab0be",
+        "name": "Get file content",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "filecontent",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 780,
+        "y": 620,
+        "wires": [
+            [
+                "b4b236ebb93df10b"
+            ]
+        ]
+    },
+    {
+        "id": "a9a11686057f4886",
+        "type": "inject",
+        "z": "f97f75b309eab0be",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 90,
+        "y": 480,
+        "wires": [
+            [
+                "f10d7e66de0d3791"
+            ]
+        ]
     }
 ]
