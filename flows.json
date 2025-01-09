@@ -978,24 +978,6 @@
         ]
     },
     {
-        "id": "aace742ac1d86035",
-        "type": "function",
-        "z": "61d663c65d5d04a2",
-        "name": "32bit converter",
-        "func": "var msg0 = {payload:(msg.payload[1]<<16) + msg.payload[0]}\nreturn msg0;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 960,
-        "y": 340,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "f43489c54b3ce0d4",
         "type": "inject",
         "z": "61d663c65d5d04a2",
@@ -1211,7 +1193,7 @@
         "type": "ui_chart",
         "z": "61d663c65d5d04a2",
         "name": "",
-        "group": "",
+        "group": "1591b6c7b8497e57",
         "order": 4,
         "width": "0",
         "height": "0",
@@ -1279,7 +1261,8 @@
         "y": 380,
         "wires": [
             [
-                "639fb3a6663fcca4"
+                "639fb3a6663fcca4",
+                "1c8da97e6bd427e4"
             ]
         ]
     },
@@ -1336,7 +1319,7 @@
         "type": "function",
         "z": "61d663c65d5d04a2",
         "name": "Set data",
-        "func": "var now = new Date();\n\nmsg.payload = {\n    \"timestamp\" : now.getTime(),\n    \"pressure\" : msg.payload,\n }\nreturn msg;",
+        "func": "let date = msg.payload.date; // A dátum a msg.payload.date-ben érkezik\nlet pressure = msg.payload.pressure; // A nyomás a msg.payload.pressure-ben érkezik\n\n// Dátum formázása (ha nem string formátumban érkezik)\nlet formattedDate;\nif (typeof date === 'object' && date instanceof Date) {\n    formattedDate = date.toISOString(); // ISO 8601 formátum (pl. 2024-10-27T10:30:00.000Z)\n} else if (typeof date === 'number'){\n    formattedDate = new Date(date).toISOString(); // ha timestamp ms-ban\n}\nelse{\n    formattedDate = date;\n}\n\n// Adatok stringgé alakítása\nlet outputString = `Date: ${formattedDate}, Pressure: ${pressure}\\n`; // \\n sortörést ad a végére\n\nmsg.payload = outputString; // Az outputString kerül a msg.payload-ba\n\n// Fájlnév dinamikus generálása (opcionális)\nmsg.filename = \"nyomas_adatok_\" + new Date().toISOString().slice(0,10) + \".txt\"; //pl. nyomas_adatok_2023-11-20.txt\n//vagy fix fájlnév:\n//msg.filename = \"nyomas_adatok.txt\";\n\n\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -1357,7 +1340,7 @@
         "type": "function",
         "z": "61d663c65d5d04a2",
         "name": "Filename generator",
-        "func": "// Get the current time and convert it to text\nvar now = new Date();\nvar yyyy = now.getFullYear();\nvar mm = now.getMonth() < 9 ? \"0\" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based\nvar dd  = now.getDate() < 10 ? \"0\" + now.getDate() : now.getDate();\nvar hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\nvar mmm  = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\nvar ss  = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\n\n// Generate out file name pattern\nmsg.fname = \"pressure  \"+ yyyy + mm + dd + \".csv\";\n// Full filename with path for the file node later\nmsg.filename = \"/home/ovum/\"+ msg.fname;\n\n// We save the current payload into a different place on the msg object\nmsg.filecontent = msg.payload;\n\n// We are passing the file name search pattern to fs node to tell us if the file exists or not\nmsg.payload = {\"pattern\":msg.fname};\n\nnode.status({fill:\"blue\",shape:\"ring\",text:msg.fname});\nreturn msg;",
+        "func": "// Get the current time and convert it to text\nvar now = new Date();\nvar yyyy = now.getFullYear();\nvar mm = now.getMonth() < 9 ? \"0\" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based\nvar dd  = now.getDate() < 10 ? \"0\" + now.getDate() : now.getDate();\nvar hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\nvar mmm  = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\nvar ss  = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\n\n// Generate out file name pattern\nmsg.fname = \"pressure  \"+ yyyy + mm + dd + \".csv\";\n// Full filename with path for the file node later\nmsg.filename = \"/home/gabor/\"+ msg.fname;\n\n// We save the current payload into a different place on the msg object\nmsg.filecontent = msg.payload;\n\n// We are passing the file name search pattern to fs node to tell us if the file exists or not\nmsg.payload = {\"pattern\":msg.fname};\n\nnode.status({fill:\"blue\",shape:\"ring\",text:msg.fname});\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -1427,9 +1410,11 @@
         "hdrout": "all",
         "multi": "one",
         "ret": "\\n",
-        "temp": "timestamp,temperature,humidity",
+        "temp": "date,pressure",
         "skip": "0",
         "strings": true,
+        "include_empty_strings": false,
+        "include_null_values": false,
         "x": 970,
         "y": 780,
         "wires": [
@@ -1467,9 +1452,11 @@
         "hdrout": "none",
         "multi": "one",
         "ret": "\\n",
-        "temp": "timestamp,temperature,humidity",
+        "temp": "date,pressure",
         "skip": "0",
         "strings": true,
+        "include_empty_strings": false,
+        "include_null_values": false,
         "x": 970,
         "y": 820,
         "wires": [
@@ -1537,14 +1524,14 @@
         "type": "fs-file-lister",
         "z": "61d663c65d5d04a2",
         "name": "",
-        "start": "/home/ovum/",
+        "start": "/home/gabor",
         "pattern": "",
         "folders": "*",
         "hidden": true,
         "lstype": "files",
         "path": true,
         "single": true,
-        "depth": 0,
+        "depth": "0",
         "stat": true,
         "showWarnings": false,
         "x": 480,
@@ -1577,7 +1564,7 @@
         "type": "debug",
         "z": "61d663c65d5d04a2",
         "name": "debug 2",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1616,6 +1603,50 @@
                 "4c8ae605.33be88"
             ]
         ]
+    },
+    {
+        "id": "1c8da97e6bd427e4",
+        "type": "change",
+        "z": "61d663c65d5d04a2",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "pressure",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 210,
+        "y": 580,
+        "wires": [
+            [
+                "63d400f80df1838c",
+                "4c8ae605.33be88"
+            ]
+        ]
+    },
+    {
+        "id": "63d400f80df1838c",
+        "type": "debug",
+        "z": "61d663c65d5d04a2",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 580,
+        "wires": []
     },
     {
         "id": "7cd15b310a690116",
