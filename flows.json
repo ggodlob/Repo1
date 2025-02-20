@@ -1240,7 +1240,6 @@
         "wires": [
             [
                 "321433c3d1b939cc",
-                "76ed89e23b46d303",
                 "26902db07b997b26"
             ]
         ]
@@ -1345,7 +1344,6 @@
         "wires": [
             [
                 "a3fbb6cbdf996fbf",
-                "76ed89e23b46d303",
                 "26902db07b997b26"
             ]
         ]
@@ -1475,51 +1473,26 @@
         "z": "61d663c65d5d04a2",
         "name": "",
         "mode": "custom",
-        "build": "object",
+        "build": "array",
         "property": "payload",
         "propertyType": "msg",
         "key": "topic",
         "joiner": "\\n",
         "joinerType": "str",
         "useparts": false,
-        "accumulate": true,
+        "accumulate": false,
         "timeout": "",
         "count": "",
         "reduceRight": false,
         "reduceExp": "",
         "reduceInit": "",
-        "reduceInitType": "",
+        "reduceInitType": "num",
         "reduceFixup": "",
         "x": 830,
         "y": 340,
         "wires": [
             [
-                "fba0dc8b36122152"
-            ]
-        ]
-    },
-    {
-        "id": "a5eb89bcdd3f1aa5",
-        "type": "inject",
-        "z": "61d663c65d5d04a2",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "10",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "payload",
-        "payloadType": "msg",
-        "x": 650,
-        "y": 400,
-        "wires": [
-            [
-                "26902db07b997b26"
+                "76ed89e23b46d303"
             ]
         ]
     },
