@@ -1043,7 +1043,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 620,
+        "x": 440,
         "y": 40,
         "wires": []
     },
@@ -1064,7 +1064,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 600,
+        "x": 420,
         "y": 220,
         "wires": []
     },
@@ -1085,7 +1085,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 610,
+        "x": 430,
         "y": 280,
         "wires": []
     },
@@ -1106,7 +1106,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 610,
+        "x": 430,
         "y": 100,
         "wires": []
     },
@@ -1145,8 +1145,7 @@
         "wires": [
             [
                 "668723cb7ac53144",
-                "4776defa8873253a",
-                "1ac4608334b0b75b"
+                "4776defa8873253a"
             ]
         ]
     },
@@ -1166,8 +1165,7 @@
         "wires": [
             [
                 "e4483f25e9b66328",
-                "639fb3a6663fcca4",
-                "c9dc26d601a5b559"
+                "639fb3a6663fcca4"
             ]
         ]
     },
@@ -1176,14 +1174,14 @@
         "type": "function",
         "z": "61d663c65d5d04a2",
         "name": "Data prepare",
-        "func": "console.log(\"Serialnumber: \" + msg.serialnumber);\nconsole.log(\"Pressure: \" + msg.pressure);\n\n// Tároljuk el az előző serialnumber-t a context-ben\ncontext.previousSerialNumber = context.previousSerialNumber || null;\n\n// Ellenőrizzük, hogy a serialnumber változott-e\nif (msg.serialnumber !== context.previousSerialNumber) {\n\n// Ha változott, akkor beállítjuk a flag-et és frissítjük az előző serialnumber-t\n  msg.serialnumber_changed = true;\n  context.previousSerialNumber = msg.serialnumber;\n} else {\n  msg.serialnumber_changed = false; // Ha nem változott, ne legyen true\n}\n\n// Tároljuk el az előző nyomásértéket a context-ben\ncontext.previousPressure = context.previousPressure || null;\n\nvar pressure = msg.pressure;\n\nif (pressure === undefined || pressure === null || isNaN(pressure)) {\n  console.error(\"Nem található vagy érvénytelen nyomásérték a msg.payload-ban: \" + pressure);\n  \n  // Ha nincs érvényes nyomásérték, használjuk az előzőt, ha van\n  pressure = context.previousPressure !== null ? context.previousPressure : 0;\n} else {\n    // Ha van érvényes nyomásérték, frissítsük az előzőt\n    context.previousPressure = pressure;\n}\n\nvar date = new Date();// Aktuális dátum és idő\nvar formattedDate = date.toLocaleDateString(\"de-DE\");// Dátum formázása magyar lokalizáció szerint (éééé.hh.nn.)\nvar formattedTime = date.toLocaleTimeString(\"de-DE\");// Idő formázása magyar lokalizáció szerint (óó:pp:mm)\nvar timestamp = formattedDate + \" \" + formattedTime;// Dátum és idő kombinálása\n\ncontext.data = context.data || [];\ncontext.data.push({\n    timestamp: timestamp,\n    pressure: pressure\n});\n\nvar csv = \"Timestamp,Pressure\\n\";\ncontext.data.forEach(function(item) {\n    csv += item.timestamp + \",\" + item.pressure + \"\\n\";\n});\n\nvar newMsg = { ...msg };\nnewMsg.payload = csv;\n\nvar fileName = \"sn\" + msg.serialnumber + \"_pressure_loss.csv\";\nvar filePath = \"/home/gabor/\" + fileName;\nnewMsg.filename = filePath;\n\nreturn newMsg;",
+        "func": "console.log(\"Serialnumber: \" + msg.serialnumber);\nconsole.log(\"Pressure: \" + msg.pressure);\n\n// Tároljuk el az előző serialnumber-t a context-ben\ncontext.previousSerialNumber = context.previousSerialNumber || null;\n\n// Ellenőrizzük, hogy a serialnumber változott-e\nif (msg.serialnumber !== context.previousSerialNumber) {\n\n// Ha változott, akkor beállítjuk a flag-et és frissítjük az előző serialnumber-t\n  msg.serialnumber_changed = true;\n  context.previousSerialNumber = msg.serialnumber;\n} else {\n  msg.serialnumber_changed = false; // Ha nem változott, ne legyen true\n}\n\n// Tároljuk el az előző nyomásértéket a context-ben\ncontext.previousPressure = context.previousPressure || null;\n\nvar pressure = msg.pressure;\n\nif (pressure === undefined || pressure === null || isNaN(pressure)) {\n  console.error(\"Nem található vagy érvénytelen nyomásérték a msg.payload-ban: \" + pressure);\n  \n  // Ha nincs érvényes nyomásérték, használjuk az előzőt, ha van\n  pressure = context.previousPressure !== null ? context.previousPressure : 0;\n} else {\n    // Ha van érvényes nyomásérték, frissítsük az előzőt\n    context.previousPressure = pressure;\n}\n\nvar date = new Date();// Aktuális dátum és idő\nvar formattedDate = date.toLocaleDateString(\"de-DE\");// Dátum formázása magyar lokalizáció szerint (éééé.hh.nn.)\nvar formattedTime = date.toLocaleTimeString(\"de-DE\");// Idő formázása magyar lokalizáció szerint (óó:pp:mm)\nvar timestamp = formattedDate + \" \" + formattedTime;// Dátum és idő kombinálása\n\ncontext.data = context.data || [];\ncontext.data.push({\n    timestamp: timestamp,\n    pressure: pressure\n});\n\nvar csv = \"\";\ncontext.data.forEach(function(item) {\n    csv += item.timestamp + \",\" + item.pressure + \"\\n\";\n});\n\nvar newMsg = { ...msg };\nnewMsg.payload = csv;\n\nvar fileName = \"sn\" + msg.serialnumber + \"_pressure_loss.csv\";\nvar filePath = \"/home/gabor/\" + fileName;\nnewMsg.filename = filePath;\n\nreturn newMsg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1030,
+        "x": 950,
         "y": 160,
         "wires": [
             [
@@ -1203,8 +1201,8 @@
         "createDir": true,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 1340,
-        "y": 140,
+        "x": 1260,
+        "y": 160,
         "wires": [
             [
                 "958aa64d4e478396"
@@ -1237,11 +1235,10 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 800,
+        "x": 620,
         "y": 200,
         "wires": [
             [
-                "321433c3d1b939cc",
                 "26902db07b997b26"
             ]
         ]
@@ -1284,7 +1281,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 590,
+        "x": 410,
         "y": 160,
         "wires": [
             []
@@ -1316,11 +1313,10 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 800,
+        "x": 620,
         "y": 140,
         "wires": [
             [
-                "a3fbb6cbdf996fbf",
                 "26902db07b997b26"
             ]
         ]
@@ -1338,93 +1334,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1240,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "a3fbb6cbdf996fbf",
-        "type": "debug",
-        "z": "61d663c65d5d04a2",
-        "name": "debug 3",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1040,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "321433c3d1b939cc",
-        "type": "debug",
-        "z": "61d663c65d5d04a2",
-        "name": "debug 4",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1020,
+        "x": 1120,
         "y": 240,
-        "wires": []
-    },
-    {
-        "id": "1ac4608334b0b75b",
-        "type": "debug",
-        "z": "61d663c65d5d04a2",
-        "name": "debug 5",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 360,
-        "y": 240,
-        "wires": []
-    },
-    {
-        "id": "c9dc26d601a5b559",
-        "type": "debug",
-        "z": "61d663c65d5d04a2",
-        "name": "debug 6",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 360,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "fba0dc8b36122152",
-        "type": "debug",
-        "z": "61d663c65d5d04a2",
-        "name": "debug 7",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1160,
-        "y": 340,
         "wires": []
     },
     {
@@ -1448,12 +1359,11 @@
         "reduceInit": "",
         "reduceInitType": "num",
         "reduceFixup": "",
-        "x": 830,
-        "y": 340,
+        "x": 790,
+        "y": 160,
         "wires": [
             [
-                "76ed89e23b46d303",
-                "fba0dc8b36122152"
+                "76ed89e23b46d303"
             ]
         ]
     },
@@ -1473,11 +1383,12 @@
         "strings": false,
         "include_empty_strings": "",
         "include_null_values": "",
-        "x": 1190,
-        "y": 140,
+        "x": 1110,
+        "y": 160,
         "wires": [
             [
-                "49c561fd45d99556"
+                "49c561fd45d99556",
+                "a40e3135062a99bf"
             ]
         ]
     },
@@ -1494,8 +1405,24 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1530,
-        "y": 140,
+        "x": 1410,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "a40e3135062a99bf",
+        "type": "debug",
+        "z": "61d663c65d5d04a2",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1340,
+        "y": 80,
         "wires": []
     },
     {
