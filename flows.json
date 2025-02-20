@@ -1177,8 +1177,8 @@
         "y": 160,
         "wires": [
             [
-                "69f00db47fd6c7a3",
-                "49c561fd45d99556"
+                "49c561fd45d99556",
+                "0a1aa193ec0d5e34"
             ]
         ]
     },
@@ -1193,7 +1193,7 @@
         "createDir": true,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 1120,
+        "x": 1160,
         "y": 160,
         "wires": [
             [
@@ -1314,23 +1314,6 @@
         ]
     },
     {
-        "id": "69f00db47fd6c7a3",
-        "type": "debug",
-        "z": "61d663c65d5d04a2",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1120,
-        "y": 240,
-        "wires": []
-    },
-    {
         "id": "26902db07b997b26",
         "type": "join",
         "z": "61d663c65d5d04a2",
@@ -1377,20 +1360,76 @@
         "wires": []
     },
     {
-        "id": "a40e3135062a99bf",
-        "type": "debug",
+        "id": "63aa1b06ba361f24",
+        "type": "ui_button",
         "z": "61d663c65d5d04a2",
-        "name": "debug 9",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1340,
+        "name": "",
+        "group": "b9eaf4515438b94a",
+        "order": 2,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "Inject",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 790,
         "y": 80,
-        "wires": []
+        "wires": [
+            [
+                "76ed89e23b46d303"
+            ]
+        ]
+    },
+    {
+        "id": "0a1aa193ec0d5e34",
+        "type": "ui_chart",
+        "z": "61d663c65d5d04a2",
+        "name": "",
+        "group": "b9eaf4515438b94a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "bezier",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "15",
+        "removeOlderPoints": "100",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1130,
+        "y": 80,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "9bb7bdb1eae4948e",
@@ -2035,18 +2074,22 @@
         "order": 2,
         "width": "2",
         "height": "1",
+        "passthru": false,
         "label": "Inject",
+        "tooltip": "",
         "color": "",
         "bgcolor": "",
+        "className": "",
         "icon": "",
         "payload": "",
         "payloadType": "str",
         "topic": "",
+        "topicType": "str",
         "x": 470,
         "y": 420,
         "wires": [
             [
-                "7343e5ea61328c71"
+                "5f9474b7153f5ee9"
             ]
         ]
     },
@@ -2103,7 +2146,7 @@
         "type": "ui_chart",
         "z": "23ae8c9958392184",
         "name": "",
-        "group": "b9eaf4515438b94a",
+        "group": "212b7f06.b4731",
         "order": 1,
         "width": 0,
         "height": 0,
@@ -2141,23 +2184,6 @@
         "wires": [
             [
                 "e5c9d15b18b90c65"
-            ]
-        ]
-    },
-    {
-        "id": "7343e5ea61328c71",
-        "type": "random",
-        "z": "23ae8c9958392184",
-        "name": "",
-        "low": "0",
-        "high": "10",
-        "inte": "true",
-        "property": "payload",
-        "x": 620,
-        "y": 420,
-        "wires": [
-            [
-                "5f9474b7153f5ee9"
             ]
         ]
     },
