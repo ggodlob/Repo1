@@ -1234,7 +1234,7 @@
         "wires": [
             [
                 "321433c3d1b939cc",
-                "a6985752de7ee62f"
+                "a5dabe10b5b31b80"
             ]
         ]
     },
@@ -1333,12 +1333,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 790,
+        "x": 800,
         "y": 140,
         "wires": [
             [
                 "a3fbb6cbdf996fbf",
-                "a6985752de7ee62f"
+                "a5dabe10b5b31b80"
             ]
         ]
     },
@@ -1411,37 +1411,6 @@
         "wires": []
     },
     {
-        "id": "a6985752de7ee62f",
-        "type": "join",
-        "z": "61d663c65d5d04a2",
-        "name": "",
-        "mode": "reduce",
-        "build": "object",
-        "property": "payload",
-        "propertyType": "msg",
-        "key": "topic",
-        "joiner": "\\n",
-        "joinerType": "str",
-        "useparts": false,
-        "accumulate": true,
-        "timeout": "",
-        "count": "",
-        "reduceRight": false,
-        "reduceExp": "",
-        "reduceInit": "",
-        "reduceInitType": "num",
-        "reduceFixup": "",
-        "x": 950,
-        "y": 340,
-        "wires": [
-            [
-                "76ed89e23b46d303",
-                "fba0dc8b36122152"
-            ]
-        ],
-        "info": "if (msg.topic === \"serialnumber\") {\r\n  msg.serialnumber = msg.payload;\r\n} else if (msg.topic === \"pressure\") {\r\n  msg.pressure = msg.payload;\r\n}\r\nreturn msg;"
-    },
-    {
         "id": "1ac4608334b0b75b",
         "type": "debug",
         "z": "61d663c65d5d04a2",
@@ -1491,6 +1460,31 @@
         "x": 1160,
         "y": 340,
         "wires": []
+    },
+    {
+        "id": "a5dabe10b5b31b80",
+        "type": "trigger",
+        "z": "61d663c65d5d04a2",
+        "name": "",
+        "op1": "",
+        "op2": "0",
+        "op1type": "pay",
+        "op2type": "str",
+        "duration": "-10",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "s",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 790,
+        "y": 380,
+        "wires": [
+            [
+                "76ed89e23b46d303"
+            ]
+        ]
     },
     {
         "id": "9bb7bdb1eae4948e",
