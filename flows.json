@@ -1678,21 +1678,6 @@
         ]
     },
     {
-        "id": "47afcc504ff10feb",
-        "type": "git-nodes",
-        "z": "cb52c966d2fad605",
-        "label": "",
-        "branch": "main",
-        "sourcebranch": "main",
-        "gitadd": "settings.js,package.json,.config.json,lib",
-        "gitrmcache": "nodes/*/x,nodes/*/y,nodes/*/z",
-        "debugging": true,
-        "git": "174db71a85fd3665",
-        "x": 180,
-        "y": 360,
-        "wires": []
-    },
-    {
         "id": "12bbbd87a10398fa",
         "type": "ui_text",
         "z": "f820c1bd7223bd88",
