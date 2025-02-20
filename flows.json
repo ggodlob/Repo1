@@ -1499,6 +1499,25 @@
         ]
     },
     {
+        "id": "a5eb89bcdd3f1aa5",
+        "type": "inject",
+        "z": "61d663c65d5d04a2",
+        "name": "",
+        "props": [],
+        "repeat": "10",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 510,
+        "y": 400,
+        "wires": [
+            [
+                "26902db07b997b26"
+            ]
+        ]
+    },
+    {
         "id": "9bb7bdb1eae4948e",
         "type": "ui_text",
         "z": "cb52c966d2fad605",
