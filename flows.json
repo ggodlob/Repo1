@@ -1215,6 +1215,13 @@
                 "pt": "msg",
                 "to": "pressure",
                 "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "pressure",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -1227,7 +1234,7 @@
         "wires": [
             [
                 "321433c3d1b939cc",
-                "76ed89e23b46d303"
+                "a6985752de7ee62f"
             ]
         ]
     },
@@ -1312,6 +1319,13 @@
                 "pt": "msg",
                 "to": "payload",
                 "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "serialnumber",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -1319,12 +1333,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 810,
+        "x": 790,
         "y": 140,
         "wires": [
             [
                 "a3fbb6cbdf996fbf",
-                "76ed89e23b46d303"
+                "a6985752de7ee62f"
             ]
         ]
     },
@@ -1416,10 +1430,12 @@
         "reduceInit": "",
         "reduceInitType": "num",
         "reduceFixup": "",
-        "x": 930,
-        "y": 360,
+        "x": 950,
+        "y": 340,
         "wires": [
-            []
+            [
+                "76ed89e23b46d303"
+            ]
         ]
     },
     {
