@@ -1239,8 +1239,7 @@
         "y": 200,
         "wires": [
             [
-                "321433c3d1b939cc",
-                "a5dabe10b5b31b80"
+                "321433c3d1b939cc"
             ]
         ]
     },
@@ -1343,8 +1342,7 @@
         "y": 140,
         "wires": [
             [
-                "a3fbb6cbdf996fbf",
-                "a5dabe10b5b31b80"
+                "a3fbb6cbdf996fbf"
             ]
         ]
     },
@@ -1474,7 +1472,7 @@
         "name": "",
         "op1": "",
         "op2": "0",
-        "op1type": "pay",
+        "op1type": "num",
         "op2type": "str",
         "duration": "-10",
         "extend": false,
@@ -1484,11 +1482,12 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 790,
+        "x": 510,
         "y": 380,
         "wires": [
             [
-                "76ed89e23b46d303"
+                "4776defa8873253a",
+                "e4483f25e9b66328"
             ]
         ]
     },
