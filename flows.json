@@ -1201,7 +1201,7 @@
         "filenameType": "msg",
         "appendNewline": true,
         "createDir": true,
-        "overwriteFile": "false",
+        "overwriteFile": "true",
         "encoding": "none",
         "x": 1260,
         "y": 140,
