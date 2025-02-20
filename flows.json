@@ -56,22 +56,6 @@
         "env": []
     },
     {
-        "id": "f97f75b309eab0be",
-        "type": "tab",
-        "label": "Logger",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "5ab99c650d95a3f7",
-        "type": "tab",
-        "label": "Flow 1",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "0f7a1f209ffd4d33",
         "type": "ui_base",
         "theme": {
@@ -398,8 +382,8 @@
         "seg2": "75",
         "diff": false,
         "className": "",
-        "x": 580,
-        "y": 160,
+        "x": 560,
+        "y": 220,
         "wires": []
     },
     {
@@ -426,8 +410,8 @@
         "seg2": "75",
         "diff": false,
         "className": "",
-        "x": 580,
-        "y": 220,
+        "x": 560,
+        "y": 280,
         "wires": []
     },
     {
@@ -454,8 +438,8 @@
         "seg2": "75",
         "diff": false,
         "className": "",
-        "x": 580,
-        "y": 400,
+        "x": 560,
+        "y": 460,
         "wires": []
     },
     {
@@ -482,8 +466,8 @@
         "seg2": "75",
         "diff": false,
         "className": "",
-        "x": 580,
-        "y": 460,
+        "x": 560,
+        "y": 520,
         "wires": []
     },
     {
@@ -510,8 +494,8 @@
         "seg2": "75",
         "diff": false,
         "className": "",
-        "x": 580,
-        "y": 640,
+        "x": 560,
+        "y": 700,
         "wires": []
     },
     {
@@ -538,8 +522,8 @@
         "seg2": "75",
         "diff": false,
         "className": "",
-        "x": 580,
-        "y": 700,
+        "x": 560,
+        "y": 760,
         "wires": []
     },
     {
@@ -559,8 +543,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 600,
-        "y": 280,
+        "x": 580,
+        "y": 340,
         "wires": []
     },
     {
@@ -580,8 +564,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 600,
-        "y": 40,
+        "x": 580,
+        "y": 100,
         "wires": []
     },
     {
@@ -601,8 +585,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 600,
-        "y": 520,
+        "x": 580,
+        "y": 580,
         "wires": []
     },
     {
@@ -643,8 +627,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 610,
-        "y": 340,
+        "x": 590,
+        "y": 400,
         "wires": [
             []
         ]
@@ -687,10 +671,200 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 610,
-        "y": 580,
+        "x": 590,
+        "y": 640,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "ad726035dfa06db6",
+        "type": "cmi in",
+        "z": "8e6f93d6c1999015",
+        "cmi": "ef6702f2eebd5bef",
+        "name": "Temp 1",
+        "item": "9",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 150,
+        "y": 220,
+        "wires": [
+            [
+                "2d4646b0db2f1313"
+            ]
+        ]
+    },
+    {
+        "id": "de12cbaa5501373f",
+        "type": "cmi in",
+        "z": "8e6f93d6c1999015",
+        "cmi": "ef6702f2eebd5bef",
+        "name": "Temp 2",
+        "item": "10",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 150,
+        "y": 280,
+        "wires": [
+            [
+                "4792b5d5ea1aed4f"
+            ]
+        ]
+    },
+    {
+        "id": "89be54a0f9f4c0fb",
+        "type": "cmi in",
+        "z": "8e6f93d6c1999015",
+        "cmi": "ef6702f2eebd5bef",
+        "name": "Temp 3",
+        "item": "11",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 150,
+        "y": 460,
+        "wires": [
+            [
+                "0bbb900fda5f8a90"
+            ]
+        ]
+    },
+    {
+        "id": "f0567c3deaf9dca0",
+        "type": "cmi in",
+        "z": "8e6f93d6c1999015",
+        "cmi": "ef6702f2eebd5bef",
+        "name": "Temp 4",
+        "item": "12",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 150,
+        "y": 520,
+        "wires": [
+            [
+                "b29637cc286b1e69"
+            ]
+        ]
+    },
+    {
+        "id": "b0bd15f59e1c429c",
+        "type": "cmi in",
+        "z": "8e6f93d6c1999015",
+        "cmi": "ef6702f2eebd5bef",
+        "name": "Temp 5",
+        "item": "13",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 150,
+        "y": 700,
+        "wires": [
+            [
+                "eaee38cd727c1251"
+            ]
+        ]
+    },
+    {
+        "id": "d890a15763d9dda8",
+        "type": "cmi in",
+        "z": "8e6f93d6c1999015",
+        "cmi": "ef6702f2eebd5bef",
+        "name": "Temp 6",
+        "item": "14",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 150,
+        "y": 760,
+        "wires": [
+            [
+                "12972f49c15be411"
+            ]
+        ]
+    },
+    {
+        "id": "2c5c58ab31243918",
+        "type": "cmi in",
+        "z": "8e6f93d6c1999015",
+        "cmi": "ef6702f2eebd5bef",
+        "name": "Magnetventil 1",
+        "item": "1",
+        "source": "1",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 120,
+        "y": 100,
+        "wires": [
+            [
+                "3e546ec86a098a36"
+            ]
+        ]
+    },
+    {
+        "id": "efd959b4e4661483",
+        "type": "cmi in",
+        "z": "8e6f93d6c1999015",
+        "cmi": "ef6702f2eebd5bef",
+        "name": "Magnetventil 2",
+        "item": "4",
+        "source": "1",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 120,
+        "y": 340,
+        "wires": [
+            [
+                "6fa0c3400be1c116"
+            ]
+        ]
+    },
+    {
+        "id": "9398100a3c56d871",
+        "type": "cmi in",
+        "z": "8e6f93d6c1999015",
+        "cmi": "ef6702f2eebd5bef",
+        "name": "Magnetventil 3",
+        "item": "7",
+        "source": "1",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 120,
+        "y": 580,
+        "wires": [
+            [
+                "34e4382fd48aae50"
+            ]
+        ]
+    },
+    {
+        "id": "02239ec65fc616be",
+        "type": "cmi in",
+        "z": "8e6f93d6c1999015",
+        "cmi": "ef6702f2eebd5bef",
+        "name": "Pressure 1",
+        "item": "1",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 140,
+        "y": 160,
+        "wires": [
+            [
+                "fce49c478cef3616"
+            ]
         ]
     },
     {
@@ -731,44 +905,25 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 610,
-        "y": 100,
+        "x": 590,
+        "y": 160,
         "wires": [
             []
         ]
     },
     {
-        "id": "4947b6e5851162dd",
+        "id": "e2976faf21ef3429",
         "type": "cmi in",
         "z": "8e6f93d6c1999015",
         "cmi": "ef6702f2eebd5bef",
-        "name": "Pressure 2",
-        "item": "2",
+        "name": "Pressure 3",
+        "item": "3",
         "source": "0",
         "timestamp": "0",
         "skip": "0",
         "severity": "0",
-        "x": 160,
-        "y": 100,
-        "wires": [
-            [
-                "fce49c478cef3616"
-            ]
-        ]
-    },
-    {
-        "id": "0dac9e1e9ba2ace0",
-        "type": "cmi in",
-        "z": "8e6f93d6c1999015",
-        "cmi": "ef6702f2eebd5bef",
-        "name": "Pressure 4",
-        "item": "4",
-        "source": "0",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 160,
-        "y": 340,
+        "x": 140,
+        "y": 400,
         "wires": [
             [
                 "b88c8f75645447d7"
@@ -776,94 +931,18 @@
         ]
     },
     {
-        "id": "ad726035dfa06db6",
+        "id": "30e635d19735dd29",
         "type": "cmi in",
         "z": "8e6f93d6c1999015",
         "cmi": "ef6702f2eebd5bef",
-        "name": "Temp 1",
-        "item": "9",
+        "name": "Pressure 5",
+        "item": "5",
         "source": "0",
         "timestamp": "0",
         "skip": "0",
         "severity": "0",
-        "x": 170,
-        "y": 160,
-        "wires": [
-            [
-                "2d4646b0db2f1313"
-            ]
-        ]
-    },
-    {
-        "id": "de12cbaa5501373f",
-        "type": "cmi in",
-        "z": "8e6f93d6c1999015",
-        "cmi": "ef6702f2eebd5bef",
-        "name": "Temp 2",
-        "item": "10",
-        "source": "0",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 170,
-        "y": 220,
-        "wires": [
-            [
-                "4792b5d5ea1aed4f"
-            ]
-        ]
-    },
-    {
-        "id": "89be54a0f9f4c0fb",
-        "type": "cmi in",
-        "z": "8e6f93d6c1999015",
-        "cmi": "ef6702f2eebd5bef",
-        "name": "Temp 3",
-        "item": "11",
-        "source": "0",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 170,
-        "y": 400,
-        "wires": [
-            [
-                "0bbb900fda5f8a90"
-            ]
-        ]
-    },
-    {
-        "id": "f0567c3deaf9dca0",
-        "type": "cmi in",
-        "z": "8e6f93d6c1999015",
-        "cmi": "ef6702f2eebd5bef",
-        "name": "Temp 4",
-        "item": "12",
-        "source": "0",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 170,
-        "y": 460,
-        "wires": [
-            [
-                "b29637cc286b1e69"
-            ]
-        ]
-    },
-    {
-        "id": "a3b9352113447f8d",
-        "type": "cmi in",
-        "z": "8e6f93d6c1999015",
-        "cmi": "ef6702f2eebd5bef",
-        "name": "Pressure 6",
-        "item": "6",
-        "source": "0",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 160,
-        "y": 580,
+        "x": 140,
+        "y": 640,
         "wires": [
             [
                 "65876a0943268809"
@@ -871,169 +950,66 @@
         ]
     },
     {
-        "id": "b0bd15f59e1c429c",
+        "id": "4c5831159efa3864",
         "type": "cmi in",
         "z": "8e6f93d6c1999015",
         "cmi": "ef6702f2eebd5bef",
-        "name": "Temp 5",
-        "item": "13",
-        "source": "0",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 170,
-        "y": 640,
-        "wires": [
-            [
-                "eaee38cd727c1251"
-            ]
-        ]
-    },
-    {
-        "id": "d890a15763d9dda8",
-        "type": "cmi in",
-        "z": "8e6f93d6c1999015",
-        "cmi": "ef6702f2eebd5bef",
-        "name": "Temp 6",
-        "item": "14",
-        "source": "0",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 170,
-        "y": 700,
-        "wires": [
-            [
-                "12972f49c15be411"
-            ]
-        ]
-    },
-    {
-        "id": "2c5c58ab31243918",
-        "type": "cmi in",
-        "z": "8e6f93d6c1999015",
-        "cmi": "ef6702f2eebd5bef",
-        "name": "Magnetventil 1",
-        "item": "1",
-        "source": "1",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 140,
-        "y": 40,
-        "wires": [
-            [
-                "3e546ec86a098a36"
-            ]
-        ]
-    },
-    {
-        "id": "efd959b4e4661483",
-        "type": "cmi in",
-        "z": "8e6f93d6c1999015",
-        "cmi": "ef6702f2eebd5bef",
-        "name": "Magnetventil 2",
-        "item": "4",
-        "source": "1",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 140,
-        "y": 280,
-        "wires": [
-            [
-                "6fa0c3400be1c116"
-            ]
-        ]
-    },
-    {
-        "id": "9398100a3c56d871",
-        "type": "cmi in",
-        "z": "8e6f93d6c1999015",
-        "cmi": "ef6702f2eebd5bef",
-        "name": "Magnetventil 3",
+        "name": "Pressure 7",
         "item": "7",
-        "source": "1",
+        "source": "0",
         "timestamp": "0",
         "skip": "0",
         "severity": "0",
         "x": 140,
-        "y": 520,
+        "y": 820,
         "wires": [
             [
-                "34e4382fd48aae50"
+                "2a36a20d7b83ed69"
             ]
         ]
     },
     {
-        "id": "f43489c54b3ce0d4",
-        "type": "inject",
-        "z": "61d663c65d5d04a2",
+        "id": "2a36a20d7b83ed69",
+        "type": "ui_chart",
+        "z": "8e6f93d6c1999015",
         "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
+        "group": "",
+        "order": 1,
+        "width": "6",
+        "height": "3",
+        "label": "Vakuumpumpe 3",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-1000",
+        "ymax": "0",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
         ],
-        "repeat": "60",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 150,
-        "y": 180,
-        "wires": [
-            [
-                "96bd7268dbc259c2",
-                "4a2c7889b033f882"
-            ]
-        ]
-    },
-    {
-        "id": "96bd7268dbc259c2",
-        "type": "function",
-        "z": "61d663c65d5d04a2",
-        "name": "function 1",
-        "func": "msg.payload = 900\nmsg.topic = \"Messzeit\"\nreturn msg;",
         "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 360,
-        "y": 180,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 590,
+        "y": 820,
         "wires": [
-            [
-                "cf30e5419fedd884"
-            ]
-        ]
-    },
-    {
-        "id": "4a2c7889b033f882",
-        "type": "function",
-        "z": "61d663c65d5d04a2",
-        "name": "function 2",
-        "func": "msg.payload = 450\nmsg.topic = \"Restzeit\"\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 360,
-        "y": 220,
-        "wires": [
-            [
-                "cf30e5419fedd884",
-                "87be1f3f2b0360b2"
-            ]
+            []
         ]
     },
     {
@@ -1096,7 +1072,7 @@
         "fontSize": 16,
         "color": "#000000",
         "x": 610,
-        "y": 300,
+        "y": 280,
         "wires": []
     },
     {
@@ -1119,6 +1095,156 @@
         "x": 610,
         "y": 100,
         "wires": []
+    },
+    {
+        "id": "7faf11fff9ca8b96",
+        "type": "cmi in",
+        "z": "61d663c65d5d04a2",
+        "cmi": "ef6702f2eebd5bef",
+        "name": "Überdruckventil 1",
+        "item": "3",
+        "source": "1",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 140,
+        "y": 40,
+        "wires": [
+            [
+                "44734ecb313db565"
+            ]
+        ]
+    },
+    {
+        "id": "38eee3690a5c708f",
+        "type": "cmi in",
+        "z": "61d663c65d5d04a2",
+        "cmi": "ef6702f2eebd5bef",
+        "name": "SN 1",
+        "item": "17",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 170,
+        "y": 100,
+        "wires": [
+            [
+                "668723cb7ac53144",
+                "4776defa8873253a"
+            ]
+        ]
+    },
+    {
+        "id": "4947b6e5851162dd",
+        "type": "cmi in",
+        "z": "61d663c65d5d04a2",
+        "cmi": "ef6702f2eebd5bef",
+        "name": "Pressure 2",
+        "item": "2",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 160,
+        "y": 160,
+        "wires": [
+            [
+                "e4483f25e9b66328",
+                "639fb3a6663fcca4"
+            ]
+        ]
+    },
+    {
+        "id": "76ed89e23b46d303",
+        "type": "function",
+        "z": "61d663c65d5d04a2",
+        "name": "Data prepare",
+        "func": "// Tároljuk el az előző serialnumber-t a context-ben\ncontext.previousSerialNumber = context.previousSerialNumber || null;\n\n// Ellenőrizzük, hogy a serialnumber változott-e\nif (msg.serialnumber !== context.previousSerialNumber) {\n\n// Ha változott, akkor beállítjuk a flag-et és frissítjük az előző serialnumber-t\n  msg.serialnumber_changed = true;\n  context.previousSerialNumber = msg.serialnumber;\n} else {\n  msg.serialnumber_changed = false; // Ha nem változott, ne legyen true\n}\n\n// Tároljuk el az előző nyomásértéket a context-ben\ncontext.previousPressure = context.previousPressure || null;\n\nvar pressure = msg.pressure;\n\nif (pressure === undefined || pressure === null || isNaN(pressure)) {\n  console.error(\"Nem található vagy érvénytelen nyomásérték a msg.payload-ban: \" + pressure);\n  \n  // Ha nincs érvényes nyomásérték, használjuk az előzőt, ha van\n  pressure = context.previousPressure !== null ? context.previousPressure : 0;\n} else {\n    // Ha van érvényes nyomásérték, frissítsük az előzőt\n    context.previousPressure = pressure;\n}\n\nvar date = new Date();// Aktuális dátum és idő\nvar formattedDate = date.toLocaleDateString(\"de-DE\");// Dátum formázása magyar lokalizáció szerint (éééé.hh.nn.)\nvar formattedTime = date.toLocaleTimeString(\"de-DE\");// Idő formázása magyar lokalizáció szerint (óó:pp:mm)\nvar timestamp = formattedDate + \" \" + formattedTime;// Dátum és idő kombinálása\n\ncontext.data = context.data || [];\ncontext.data.push({\n    timestamp: timestamp,\n    pressure: pressure\n});\n\nvar csv = \"Timestamp,Pressure\\n\";\ncontext.data.forEach(function(item) {\n    csv += item.timestamp + \",\" + item.pressure + \"\\n\";\n});\n\nvar newMsg = { ...msg };\nnewMsg.payload = csv;\n\nvar fileName = \"sn\" + msg.serialnumber + \"_pressure_loss.csv\";\nvar filePath = \"/home/gabor/\" + fileName;\nnewMsg.filename = filePath;\n\nreturn newMsg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1030,
+        "y": 140,
+        "wires": [
+            [
+                "ccbd06f3eb4a00e3",
+                "69f00db47fd6c7a3"
+            ]
+        ]
+    },
+    {
+        "id": "49c561fd45d99556",
+        "type": "file",
+        "z": "61d663c65d5d04a2",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 1380,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e4483f25e9b66328",
+        "type": "change",
+        "z": "61d663c65d5d04a2",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "pressure",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 810,
+        "y": 200,
+        "wires": [
+            [
+                "76ed89e23b46d303",
+                "321433c3d1b939cc"
+            ]
+        ]
+    },
+    {
+        "id": "ccbd06f3eb4a00e3",
+        "type": "csv",
+        "z": "61d663c65d5d04a2",
+        "name": "",
+        "spec": "rfc",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": "once",
+        "multi": "one",
+        "ret": "\\r\\n",
+        "temp": "Timestamp,Pressure",
+        "skip": "1",
+        "strings": false,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 1190,
+        "y": 140,
+        "wires": [
+            [
+                "49c561fd45d99556",
+                "114e92604f8787b3"
+            ]
+        ]
     },
     {
         "id": "639fb3a6663fcca4",
@@ -1158,271 +1284,21 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 570,
-        "y": 380,
+        "x": 590,
+        "y": 160,
         "wires": [
             []
         ]
     },
     {
-        "id": "cf30e5419fedd884",
-        "type": "ui_chart",
-        "z": "61d663c65d5d04a2",
-        "name": "",
-        "group": "1591b6c7b8497e57",
-        "order": 4,
-        "width": "0",
-        "height": "0",
-        "label": "Messzeit",
-        "chartType": "pie",
-        "legend": "false",
-        "xformat": "HH:mm",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "200",
-        "ymax": "900",
-        "removeOlder": "30",
-        "removeOlderPoints": "",
-        "removeOlderUnit": "60",
-        "cutout": "50",
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 580,
-        "y": 180,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "02239ec65fc616be",
-        "type": "cmi in",
-        "z": "61d663c65d5d04a2",
-        "cmi": "ef6702f2eebd5bef",
-        "name": "Pressure 1",
-        "item": "1",
-        "source": "0",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 180,
-        "y": 380,
-        "wires": [
-            [
-                "639fb3a6663fcca4",
-                "0c325ea5e24aee6e",
-                "e4483f25e9b66328"
-            ]
-        ]
-    },
-    {
-        "id": "7faf11fff9ca8b96",
-        "type": "cmi in",
-        "z": "61d663c65d5d04a2",
-        "cmi": "ef6702f2eebd5bef",
-        "name": "Überdruckventil 1",
-        "item": "3",
-        "source": "1",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 140,
-        "y": 40,
-        "wires": [
-            [
-                "44734ecb313db565"
-            ]
-        ]
-    },
-    {
-        "id": "38eee3690a5c708f",
-        "type": "cmi in",
-        "z": "61d663c65d5d04a2",
-        "cmi": "ef6702f2eebd5bef",
-        "name": "SN 1",
-        "item": "17",
-        "source": "0",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 110,
-        "y": 100,
-        "wires": [
-            [
-                "668723cb7ac53144"
-            ]
-        ]
-    },
-    {
-        "id": "754bac4296686af7",
-        "type": "inject",
-        "z": "61d663c65d5d04a2",
-        "name": "",
-        "props": [
-            {
-                "p": "serialnumber",
-                "v": "12345678",
-                "vt": "str"
-            }
-        ],
-        "repeat": "10",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 190,
-        "y": 480,
-        "wires": [
-            [
-                "e4483f25e9b66328"
-            ]
-        ]
-    },
-    {
-        "id": "63d400f80df1838c",
-        "type": "debug",
-        "z": "61d663c65d5d04a2",
-        "name": "debug 3",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 600,
-        "y": 560,
-        "wires": []
-    },
-    {
-        "id": "a7d6868719c2112d",
-        "type": "json",
-        "z": "61d663c65d5d04a2",
-        "name": "",
-        "property": "pressure",
-        "action": "obj",
-        "pretty": false,
-        "x": 350,
-        "y": 780,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "76ed89e23b46d303",
-        "type": "function",
-        "z": "61d663c65d5d04a2",
-        "name": "function 3",
-        "func": "// Tároljuk el az előző serialnumber-t a context-ben\ncontext.previousSerialNumber = context.previousSerialNumber || null;\n\n// Ellenőrizzük, hogy a serialnumber változott-e\nif (msg.serialnumber !== context.previousSerialNumber) {\n  // Ha változott, akkor beállítjuk a flag-et és frissítjük az előző serialnumber-t\n  msg.serialnumber_changed = true;\n  context.previousSerialNumber = msg.serialnumber;\n} else {\n  msg.serialnumber_changed = false; // Ha nem változott, ne legyen true\n}\n\n// ... (A többi kód ugyanaz, mint előtte)\n\n// Tároljuk el az előző nyomásértéket a context-ben\ncontext.previousPressure = context.previousPressure || null;\n\nvar pressure = msg.pressure;\n\nif (pressure === undefined || pressure === null || isNaN(pressure)) {\n  console.error(\"Nem található vagy érvénytelen nyomásérték a msg.payload-ban: \" + pressure);\n  \n  // Ha nincs érvényes nyomásérték, használjuk az előzőt, ha van\n  pressure = context.previousPressure !== null ? context.previousPressure : 0;\n} else {\n    // Ha van érvényes nyomásérték, frissítsük az előzőt\n    context.previousPressure = pressure;\n}\n\nvar date = new Date(); // Aktuális dátum és idő\nvar formattedDate = date.toLocaleDateString(\"de-DE\"); // Dátum formázása magyar lokalizáció szerint (éééé.hh.nn.)\nvar formattedTime = date.toLocaleTimeString(\"de-DE\"); // Idő formázása magyar lokalizáció szerint (óó:pp:mm)\nvar timestamp = formattedDate + \" \" + formattedTime; // Dátum és idő kombinálása\n\ncontext.data = context.data || [];\ncontext.data.push({\n    timestamp: timestamp,\n    pressure: pressure\n});\n\nvar csv = \"Timestamp,Pressure\\n\";\ncontext.data.forEach(function(item) {\n    csv += item.timestamp + \",\" + item.pressure + \"\\n\";\n});\n\nvar newMsg = { ...msg };\nnewMsg.payload = csv;\n\nvar fileName = \"sn\" + msg.serialnumber + \"_pressure_loss.csv\";\n\nvar filePath = \"/home/gabor/\" + fileName;\n\nnewMsg.filename = filePath;\n\nreturn newMsg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 600,
-        "y": 480,
-        "wires": [
-            [
-                "a7c756a355c6f2ba",
-                "49c561fd45d99556"
-            ]
-        ]
-    },
-    {
-        "id": "a7c756a355c6f2ba",
-        "type": "debug",
-        "z": "61d663c65d5d04a2",
-        "name": "debug 5",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 800,
-        "y": 480,
-        "wires": []
-    },
-    {
-        "id": "49c561fd45d99556",
-        "type": "file",
-        "z": "61d663c65d5d04a2",
-        "name": "",
-        "filename": "filename",
-        "filenameType": "msg",
-        "appendNewline": false,
-        "createDir": true,
-        "overwriteFile": "true",
-        "encoding": "none",
-        "x": 1040,
-        "y": 580,
-        "wires": [
-            [
-                "b934b4c0322bc9ed"
-            ]
-        ]
-    },
-    {
-        "id": "0c325ea5e24aee6e",
-        "type": "debug",
-        "z": "61d663c65d5d04a2",
-        "name": "debug 7",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 380,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "b934b4c0322bc9ed",
-        "type": "debug",
-        "z": "61d663c65d5d04a2",
-        "name": "debug 8",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1320,
-        "y": 580,
-        "wires": []
-    },
-    {
-        "id": "e4483f25e9b66328",
+        "id": "4776defa8873253a",
         "type": "change",
         "z": "61d663c65d5d04a2",
         "name": "",
         "rules": [
             {
                 "t": "set",
-                "p": "pressure",
+                "p": "serialnumber",
                 "pt": "msg",
                 "to": "payload",
                 "tot": "msg"
@@ -1433,32 +1309,81 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 370,
-        "y": 480,
+        "x": 820,
+        "y": 140,
         "wires": [
             [
                 "76ed89e23b46d303",
-                "63d400f80df1838c"
+                "a3fbb6cbdf996fbf"
             ]
         ]
     },
     {
-        "id": "7cd15b310a690116",
-        "type": "function",
-        "z": "cb52c966d2fad605",
-        "name": "32bit converter",
-        "func": "var msg0 = {payload:(msg.payload[1]<<16) + msg.payload[0]}\nreturn msg0;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 340,
-        "y": 440,
-        "wires": [
-            []
-        ]
+        "id": "69f00db47fd6c7a3",
+        "type": "debug",
+        "z": "61d663c65d5d04a2",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1200,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "114e92604f8787b3",
+        "type": "debug",
+        "z": "61d663c65d5d04a2",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1380,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "a3fbb6cbdf996fbf",
+        "type": "debug",
+        "z": "61d663c65d5d04a2",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1040,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "321433c3d1b939cc",
+        "type": "debug",
+        "z": "61d663c65d5d04a2",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 220,
+        "wires": []
     },
     {
         "id": "9bb7bdb1eae4948e",
@@ -1589,25 +1514,6 @@
         ]
     },
     {
-        "id": "e2976faf21ef3429",
-        "type": "cmi in",
-        "z": "cb52c966d2fad605",
-        "cmi": "ef6702f2eebd5bef",
-        "name": "Pressure 3",
-        "item": "3",
-        "source": "0",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 160,
-        "y": 160,
-        "wires": [
-            [
-                "244d8d9f6e6c67f4"
-            ]
-        ]
-    },
-    {
         "id": "1f0472a9c58261f4",
         "type": "cmi in",
         "z": "cb52c966d2fad605",
@@ -1646,21 +1552,22 @@
         ]
     },
     {
-        "id": "e3ba7a980ec17e5e",
-        "type": "function",
-        "z": "f820c1bd7223bd88",
-        "name": "32bit converter",
-        "func": "var msg0 = {payload:(msg.payload[1]<<16) + msg.payload[0]}\nreturn msg0;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 340,
-        "y": 440,
+        "id": "0dac9e1e9ba2ace0",
+        "type": "cmi in",
+        "z": "cb52c966d2fad605",
+        "cmi": "ef6702f2eebd5bef",
+        "name": "Pressure 4",
+        "item": "4",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 160,
+        "y": 160,
         "wires": [
-            []
+            [
+                "244d8d9f6e6c67f4"
+            ]
         ]
     },
     {
@@ -1792,57 +1699,6 @@
         ]
     },
     {
-        "id": "e018f54e4e011ee6",
-        "type": "modbus-read",
-        "z": "f820c1bd7223bd88",
-        "name": "Serialnumber 3",
-        "topic": "",
-        "showStatusActivities": false,
-        "logIOActivities": false,
-        "showErrors": false,
-        "showWarnings": true,
-        "unitid": "3",
-        "dataType": "HoldingRegister",
-        "adr": "74",
-        "quantity": "2",
-        "rate": "10",
-        "rateUnit": "s",
-        "delayOnStart": false,
-        "startDelayTime": "",
-        "server": "ba51c7e6bf23486c",
-        "useIOFile": false,
-        "ioFile": "",
-        "useIOForPayload": false,
-        "emptyMsgOnFail": false,
-        "x": 140,
-        "y": 440,
-        "wires": [
-            [
-                "e3ba7a980ec17e5e"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "30e635d19735dd29",
-        "type": "cmi in",
-        "z": "f820c1bd7223bd88",
-        "cmi": "ef6702f2eebd5bef",
-        "name": "Pressure 5",
-        "item": "5",
-        "source": "0",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 160,
-        "y": 160,
-        "wires": [
-            [
-                "04b283f4a235b802"
-            ]
-        ]
-    },
-    {
         "id": "57fc2ea8d083fcca",
         "type": "cmi in",
         "z": "f820c1bd7223bd88",
@@ -1881,21 +1737,22 @@
         ]
     },
     {
-        "id": "bce431684206e30c",
-        "type": "function",
-        "z": "28c240172645bd4e",
-        "name": "32bit converter",
-        "func": "var msg0 = {payload:(msg.payload[1]<<16) + msg.payload[0]}\nreturn msg0;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 340,
-        "y": 440,
+        "id": "a3b9352113447f8d",
+        "type": "cmi in",
+        "z": "f820c1bd7223bd88",
+        "cmi": "ef6702f2eebd5bef",
+        "name": "Pressure 6",
+        "item": "6",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 160,
+        "y": 160,
         "wires": [
-            []
+            [
+                "04b283f4a235b802"
+            ]
         ]
     },
     {
@@ -2027,57 +1884,6 @@
         ]
     },
     {
-        "id": "07ee0e3d7d9d0fc7",
-        "type": "modbus-read",
-        "z": "28c240172645bd4e",
-        "name": "Serialnumber 4",
-        "topic": "",
-        "showStatusActivities": false,
-        "logIOActivities": false,
-        "showErrors": false,
-        "showWarnings": true,
-        "unitid": "4",
-        "dataType": "HoldingRegister",
-        "adr": "74",
-        "quantity": "2",
-        "rate": "10",
-        "rateUnit": "s",
-        "delayOnStart": false,
-        "startDelayTime": "",
-        "server": "ba51c7e6bf23486c",
-        "useIOFile": false,
-        "ioFile": "",
-        "useIOForPayload": false,
-        "emptyMsgOnFail": false,
-        "x": 160,
-        "y": 440,
-        "wires": [
-            [
-                "bce431684206e30c"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "4c5831159efa3864",
-        "type": "cmi in",
-        "z": "28c240172645bd4e",
-        "cmi": "ef6702f2eebd5bef",
-        "name": "Pressure 7",
-        "item": "7",
-        "source": "0",
-        "timestamp": "0",
-        "skip": "0",
-        "severity": "0",
-        "x": 160,
-        "y": 160,
-        "wires": [
-            [
-                "153d8ec83f3e3c6a"
-            ]
-        ]
-    },
-    {
         "id": "597d947bf4559845",
         "type": "cmi in",
         "z": "28c240172645bd4e",
@@ -2116,6 +1922,25 @@
         ]
     },
     {
+        "id": "07e66188b631010a",
+        "type": "cmi in",
+        "z": "28c240172645bd4e",
+        "cmi": "ef6702f2eebd5bef",
+        "name": "Pressure 8",
+        "item": "8",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 160,
+        "y": 160,
+        "wires": [
+            [
+                "153d8ec83f3e3c6a"
+            ]
+        ]
+    },
+    {
         "id": "0b61ed2d88682e3f",
         "type": "file",
         "z": "23ae8c9958392184",
@@ -2125,8 +1950,8 @@
         "appendNewline": true,
         "createDir": false,
         "overwriteFile": "true",
-        "x": 740,
-        "y": 320,
+        "x": 730,
+        "y": 600,
         "wires": [
             []
         ]
@@ -2136,12 +1961,12 @@
         "type": "file in",
         "z": "23ae8c9958392184",
         "name": "",
-        "filename": "/home/ovum/chart.log",
+        "filename": "/home/gabor/chart.log",
         "filenameType": "str",
         "format": "utf8",
         "allProps": false,
-        "x": 440,
-        "y": 460,
+        "x": 450,
+        "y": 480,
         "wires": [
             [
                 "b0ad92b8f04430e5"
@@ -2153,8 +1978,8 @@
         "type": "json",
         "z": "23ae8c9958392184",
         "name": "",
-        "x": 690,
-        "y": 160,
+        "x": 910,
+        "y": 420,
         "wires": [
             [
                 "f9c7a725cf2c7658"
@@ -2166,8 +1991,8 @@
         "type": "json",
         "z": "23ae8c9958392184",
         "name": "",
-        "x": 610,
-        "y": 460,
+        "x": 620,
+        "y": 480,
         "wires": [
             [
                 "5f9474b7153f5ee9"
@@ -2186,8 +2011,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 430,
-        "y": 320,
+        "x": 420,
+        "y": 600,
         "wires": [
             [
                 "0b61ed2d88682e3f"
@@ -2210,8 +2035,8 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
-        "x": 250,
-        "y": 160,
+        "x": 470,
+        "y": 420,
         "wires": [
             [
                 "7343e5ea61328c71"
@@ -2234,8 +2059,8 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
-        "x": 250,
-        "y": 460,
+        "x": 260,
+        "y": 480,
         "wires": [
             [
                 "28a4eff1523a3b04"
@@ -2258,8 +2083,8 @@
         "payload": "",
         "payloadType": "str",
         "topic": "save",
-        "x": 250,
-        "y": 320,
+        "x": 240,
+        "y": 600,
         "wires": [
             [
                 "f9c7a725cf2c7658"
@@ -2288,8 +2113,8 @@
         "removeOlderUnit": "60",
         "cutout": 0,
         "outputs": 1,
-        "x": 550,
-        "y": 160,
+        "x": 770,
+        "y": 420,
         "wires": [
             [
                 "e5c9d15b18b90c65"
@@ -2304,8 +2129,9 @@
         "low": "0",
         "high": "10",
         "inte": "true",
-        "x": 400,
-        "y": 160,
+        "property": "payload",
+        "x": 620,
+        "y": 420,
         "wires": [
             [
                 "5f9474b7153f5ee9"
@@ -3624,971 +3450,6 @@
         "wires": [
             [
                 "442a856796f14a64"
-            ]
-        ]
-    },
-    {
-        "id": "905d3dfb9057ff1a",
-        "type": "comment",
-        "z": "f97f75b309eab0be",
-        "name": "Auto Logger archiving",
-        "info": "Generate file name that are to be archived.\n\nIdea is that this generates a list of file names for let's say between current day-5 days to current day-10 days, so all files that are 5-10 days old will get archived. And this can be executed daily or weekly, and the interval allows some overlap (e.g. the program fails, Node-Red was down, etc.)\n\nInject node should contain a JSON:\n{    \n    \"start\": 20,    \n    \"end\": 10\n}\n\nThis will generate file names D-20 to D-10 days.\nStart should be greather than end!\n",
-        "x": 200,
-        "y": 60,
-        "wires": []
-    },
-    {
-        "id": "4372b0073e72a9c2",
-        "type": "function",
-        "z": "f97f75b309eab0be",
-        "name": "Maplin Filename generator",
-        "func": "let output = [];\nfor (var i=msg.payload.end;i<msg.payload.start;i++) {\n    \n    // calculate the date\n    let now = new Date();\n    now.setTime(now.getTime() - 1000*60*60*24*i);\n    let yyyy = now.getFullYear();\n    let mm = now.getMonth() < 9 ? \"0\" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based\n    let dd  = now.getDate() < 10 ? \"0\" + now.getDate() : now.getDate();\n    let hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\n    let mmm  = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\n    let ss  = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\n    \n    let newfile = { \"topic\": \"archive\", \"payload\": \"\"};\n    // Generate out file name pattern\n    newfile.fname = \"maplin_\"+ yyyy + mm + dd + \".csv\";\n    // Full filename with path \n    newfile.filename = \"/home/ovum/datalog/\"+ newfile.fname;\n    \n    // Shell script only needs the filename without the path\n    newfile.payload = newfile.fname;\n    output.push(newfile);\n\n}\n\nreturn [output];",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 460,
-        "y": 140,
-        "wires": [
-            [
-                "69b24cb2fe7768da"
-            ]
-        ]
-    },
-    {
-        "id": "e5ce3db2f731dbe1",
-        "type": "function",
-        "z": "f97f75b309eab0be",
-        "name": "Weather Station Filename generator",
-        "func": "let output = [];\nfor (var i=msg.payload.end;i<msg.payload.start;i++) {\n    \n    // calculate the date\n    let now = new Date();\n    now.setTime(now.getTime() - 1000*60*60*24*i);\n    let yyyy = now.getFullYear();\n    let mm = now.getMonth() < 9 ? \"0\" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based\n    let dd  = now.getDate() < 10 ? \"0\" + now.getDate() : now.getDate();\n    let hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\n    let mmm  = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\n    let ss  = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\n    \n    let newfile = { \"topic\": \"archive\", \"payload\": \"\"};\n    // Generate out file name pattern\n    newfile.fname = \"weather_sensor_\"+ yyyy + mm + dd + \".csv\";\n    // Full filename with path \n    newfile.filename = \"/home/ovum/datalog/\"+ newfile.fname;\n    \n    // Shell script only needs the filename without the path\n    newfile.payload = newfile.fname;\n    output.push(newfile);\n\n}\n\nreturn [output];",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 490,
-        "y": 200,
-        "wires": [
-            [
-                "69b24cb2fe7768da"
-            ]
-        ]
-    },
-    {
-        "id": "4c74f8fa18ded457",
-        "type": "inject",
-        "z": "f97f75b309eab0be",
-        "name": "Start",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "40 02 * * *",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"start\":20,\"end\":10}",
-        "payloadType": "json",
-        "x": 190,
-        "y": 160,
-        "wires": [
-            [
-                "4372b0073e72a9c2",
-                "e5ce3db2f731dbe1"
-            ]
-        ]
-    },
-    {
-        "id": "93eafef28a811846",
-        "type": "exec",
-        "z": "f97f75b309eab0be",
-        "command": "/home/ovum/log_upload.sh",
-        "addpay": "payload",
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "winHide": false,
-        "oldrc": false,
-        "name": "File upload",
-        "x": 790,
-        "y": 140,
-        "wires": [
-            [],
-            [],
-            [
-                "868be4750ae7a124"
-            ]
-        ]
-    },
-    {
-        "id": "868be4750ae7a124",
-        "type": "switch",
-        "z": "f97f75b309eab0be",
-        "name": "Return code",
-        "property": "payload.code",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "neq",
-                "v": "0",
-                "vt": "num"
-            },
-            {
-                "t": "eq",
-                "v": "0",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 1070,
-        "y": 240,
-        "wires": [
-            [],
-            [
-                "bdc00bb3bd2088c2"
-            ]
-        ]
-    },
-    {
-        "id": "42eb499cf6ef3fad",
-        "type": "exec",
-        "z": "f97f75b309eab0be",
-        "command": "sudo rm ",
-        "addpay": "payload",
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "winHide": false,
-        "oldrc": false,
-        "name": "File delete",
-        "x": 1210,
-        "y": 140,
-        "wires": [
-            [],
-            [],
-            [
-                "a7c4a9039bc72bf3"
-            ]
-        ]
-    },
-    {
-        "id": "bdc00bb3bd2088c2",
-        "type": "change",
-        "z": "f97f75b309eab0be",
-        "name": "Get filename",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "filename",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1030,
-        "y": 140,
-        "wires": [
-            [
-                "42eb499cf6ef3fad"
-            ]
-        ]
-    },
-    {
-        "id": "a7c4a9039bc72bf3",
-        "type": "switch",
-        "z": "f97f75b309eab0be",
-        "name": "Return code",
-        "property": "payload.code",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "neq",
-                "v": "0",
-                "vt": "num"
-            },
-            {
-                "t": "eq",
-                "v": "0",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "outputs": 2,
-        "x": 1430,
-        "y": 160,
-        "wires": [
-            [],
-            []
-        ]
-    },
-    {
-        "id": "69b24cb2fe7768da",
-        "type": "delay",
-        "z": "f97f75b309eab0be",
-        "name": "",
-        "pauseType": "rate",
-        "timeout": "5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "5",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "outputs": 1,
-        "x": 720,
-        "y": 340,
-        "wires": [
-            [
-                "93eafef28a811846"
-            ]
-        ]
-    },
-    {
-        "id": "97567ac25ab2d94d",
-        "type": "comment",
-        "z": "f97f75b309eab0be",
-        "name": "log_upload.sh",
-        "info": "ftp -inv 192.168.1.x << EOF\n    user <username> <password>\n    binary\n    cd backup/logs\n    lcd /home/pi/datalog\n    put $1\nEOF",
-        "x": 770,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "db645ecd948b2844",
-        "type": "comment",
-        "z": "f97f75b309eab0be",
-        "name": "Auto Logger",
-        "info": "",
-        "x": 210,
-        "y": 420,
-        "wires": []
-    },
-    {
-        "id": "f10d7e66de0d3791",
-        "type": "function",
-        "z": "f97f75b309eab0be",
-        "name": "Set data",
-        "func": "var now = new Date();\n\nmsg.payload = {\n    \"timestamp\" : now.getTime(),\n    \"temperature\" : msg.msg433.TEMP,\n    \"humidity\" : msg.msg433.HUM\n}\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 300,
-        "y": 480,
-        "wires": [
-            [
-                "c2a671682fe6592b"
-            ]
-        ]
-    },
-    {
-        "id": "c2a671682fe6592b",
-        "type": "function",
-        "z": "f97f75b309eab0be",
-        "name": "Filename generator",
-        "func": "// Get the current time and convert it to text\nvar now = new Date();\nvar yyyy = now.getFullYear();\nvar mm = now.getMonth() < 9 ? \"0\" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based\nvar dd  = now.getDate() < 10 ? \"0\" + now.getDate() : now.getDate();\nvar hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\nvar mmm  = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\nvar ss  = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\n\n// Generate out file name pattern\nmsg.fname = \"maplin_\"+ yyyy + mm + dd + \".csv\";\n// Full filename with path for the file node later\nmsg.filename = \"/home/ovum/datalog/\"+ msg.fname;\n\n// We save the current payload into a different place on the msg object\nmsg.filecontent = msg.payload;\n\n// We are passing the file name search pattern to fs node to tell us if the file exists or not\nmsg.payload = {\"pattern\":msg.fname};\n\nnode.status({fill:\"blue\",shape:\"ring\",text:msg.fname});\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 270,
-        "y": 600,
-        "wires": [
-            [
-                "45f2a31ff4c323b0"
-            ]
-        ]
-    },
-    {
-        "id": "45f2a31ff4c323b0",
-        "type": "fs-file-lister",
-        "z": "f97f75b309eab0be",
-        "name": "",
-        "start": "/home/ovum/datalog/",
-        "pattern": "",
-        "folders": "*",
-        "hidden": true,
-        "lstype": "files",
-        "path": true,
-        "single": true,
-        "depth": 0,
-        "stat": true,
-        "showWarnings": false,
-        "x": 460,
-        "y": 600,
-        "wires": [
-            [
-                "d4ba1996386259cb",
-                "98156f96119e8947"
-            ]
-        ]
-    },
-    {
-        "id": "d4ba1996386259cb",
-        "type": "debug",
-        "z": "f97f75b309eab0be",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "x": 630,
-        "y": 520,
-        "wires": []
-    },
-    {
-        "id": "98156f96119e8947",
-        "type": "switch",
-        "z": "f97f75b309eab0be",
-        "name": "",
-        "property": "$count(msg.payload)",
-        "propertyType": "jsonata",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "0",
-                "vt": "num"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 610,
-        "y": 600,
-        "wires": [
-            [
-                "5a6942fe5b9a12a1"
-            ],
-            [
-                "0694377f4ec8d7f1"
-            ]
-        ]
-    },
-    {
-        "id": "a1841ba135f0083f",
-        "type": "csv",
-        "z": "f97f75b309eab0be",
-        "name": "",
-        "sep": ",",
-        "hdrin": "",
-        "hdrout": "all",
-        "multi": "one",
-        "ret": "\\n",
-        "temp": "timestamp,temperature,humidity",
-        "skip": "0",
-        "strings": true,
-        "x": 950,
-        "y": 580,
-        "wires": [
-            [
-                "f28b75539578a54b"
-            ]
-        ]
-    },
-    {
-        "id": "f28b75539578a54b",
-        "type": "file",
-        "z": "f97f75b309eab0be",
-        "name": "",
-        "filename": "filename",
-        "filenameType": "msg",
-        "appendNewline": false,
-        "createDir": true,
-        "overwriteFile": "false",
-        "encoding": "none",
-        "x": 1110,
-        "y": 580,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "b4b236ebb93df10b",
-        "type": "csv",
-        "z": "f97f75b309eab0be",
-        "name": "",
-        "sep": ",",
-        "hdrin": "",
-        "hdrout": false,
-        "multi": "one",
-        "ret": "\\n",
-        "temp": "timestamp,temperature,humidity",
-        "skip": "0",
-        "strings": true,
-        "x": 950,
-        "y": 620,
-        "wires": [
-            [
-                "f28b75539578a54b"
-            ]
-        ]
-    },
-    {
-        "id": "5a6942fe5b9a12a1",
-        "type": "change",
-        "z": "f97f75b309eab0be",
-        "name": "Get file content",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "filecontent",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 780,
-        "y": 580,
-        "wires": [
-            [
-                "a1841ba135f0083f"
-            ]
-        ]
-    },
-    {
-        "id": "0694377f4ec8d7f1",
-        "type": "change",
-        "z": "f97f75b309eab0be",
-        "name": "Get file content",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "filecontent",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 780,
-        "y": 620,
-        "wires": [
-            [
-                "b4b236ebb93df10b"
-            ]
-        ]
-    },
-    {
-        "id": "a9a11686057f4886",
-        "type": "inject",
-        "z": "f97f75b309eab0be",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "60",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 90,
-        "y": 480,
-        "wires": [
-            [
-                "f10d7e66de0d3791"
-            ]
-        ]
-    },
-    {
-        "id": "1a803f07cc90120c",
-        "type": "comment",
-        "z": "5ab99c650d95a3f7",
-        "name": "Auto Logger archiving",
-        "info": "Generate file name that are to be archived.\n\nIdea is that this generates a list of file names for let's say between current day-5 days to current day-10 days, so all files that are 5-10 days old will get archived. And this can be executed daily or weekly, and the interval allows some overlap (e.g. the program fails, Node-Red was down, etc.)\n\nInject node should contain a JSON:\n{    \n    \"start\": 20,    \n    \"end\": 10\n}\n\nThis will generate file names D-20 to D-10 days.\nStart should be greather than end!\n",
-        "x": 120,
-        "y": 100,
-        "wires": []
-    },
-    {
-        "id": "d2ff6a174db2e31c",
-        "type": "function",
-        "z": "5ab99c650d95a3f7",
-        "name": "Maplin Filename generator",
-        "func": "let output = [];\nfor (var i=msg.payload.end;i<msg.payload.start;i++) {\n    \n    // calculate the date\n    let now = new Date();\n    now.setTime(now.getTime() - 1000*60*60*24*i);\n    let yyyy = now.getFullYear();\n    let mm = now.getMonth() < 9 ? \"0\" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based\n    let dd  = now.getDate() < 10 ? \"0\" + now.getDate() : now.getDate();\n    let hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\n    let mmm  = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\n    let ss  = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\n    \n    let newfile = { \"topic\": \"archive\", \"payload\": \"\"};\n    // Generate out file name pattern\n    newfile.fname = \"maplin_\"+ yyyy + mm + dd + \".csv\";\n    // Full filename with path \n    newfile.filename = \"/home/pi/datalog/\"+ newfile.fname;\n    \n    // Shell script only needs the filename without the path\n    newfile.payload = newfile.fname;\n    output.push(newfile);\n\n}\n\nreturn [output];",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 380,
-        "y": 180,
-        "wires": [
-            [
-                "7a235c67cf03169b"
-            ]
-        ]
-    },
-    {
-        "id": "ef6a0345b487c67a",
-        "type": "function",
-        "z": "5ab99c650d95a3f7",
-        "name": "Weather Station Filename generator",
-        "func": "let output = [];\nfor (var i=msg.payload.end;i<msg.payload.start;i++) {\n    \n    // calculate the date\n    let now = new Date();\n    now.setTime(now.getTime() - 1000*60*60*24*i);\n    let yyyy = now.getFullYear();\n    let mm = now.getMonth() < 9 ? \"0\" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based\n    let dd  = now.getDate() < 10 ? \"0\" + now.getDate() : now.getDate();\n    let hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\n    let mmm  = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\n    let ss  = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\n    \n    let newfile = { \"topic\": \"archive\", \"payload\": \"\"};\n    // Generate out file name pattern\n    newfile.fname = \"weather_sensor_\"+ yyyy + mm + dd + \".csv\";\n    // Full filename with path \n    newfile.filename = \"/home/pi/datalog/\"+ newfile.fname;\n    \n    // Shell script only needs the filename without the path\n    newfile.payload = newfile.fname;\n    output.push(newfile);\n\n}\n\nreturn [output];",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 410,
-        "y": 240,
-        "wires": [
-            [
-                "7a235c67cf03169b"
-            ]
-        ]
-    },
-    {
-        "id": "57b433b54d60d842",
-        "type": "inject",
-        "z": "5ab99c650d95a3f7",
-        "name": "Start",
-        "props": [
-            {
-                "p": "payload",
-                "v": "{\"start\":20,\"end\":10}",
-                "vt": "json"
-            },
-            {
-                "p": "topic",
-                "v": "",
-                "vt": "string"
-            }
-        ],
-        "repeat": "",
-        "crontab": "40 02 * * *",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"start\":20,\"end\":10}",
-        "payloadType": "json",
-        "x": 110,
-        "y": 200,
-        "wires": [
-            [
-                "d2ff6a174db2e31c",
-                "ef6a0345b487c67a"
-            ]
-        ]
-    },
-    {
-        "id": "88dd4d4e2aad8a95",
-        "type": "exec",
-        "z": "5ab99c650d95a3f7",
-        "command": "/home/pi/log_upload.sh",
-        "addpay": true,
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "oldrc": false,
-        "name": "File upload",
-        "x": 710,
-        "y": 180,
-        "wires": [
-            [],
-            [],
-            [
-                "0b3583796f6d8c2e"
-            ]
-        ]
-    },
-    {
-        "id": "0b3583796f6d8c2e",
-        "type": "switch",
-        "z": "5ab99c650d95a3f7",
-        "name": "Return code",
-        "property": "payload.code",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "neq",
-                "v": "0",
-                "vt": "num"
-            },
-            {
-                "t": "eq",
-                "v": "0",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 990,
-        "y": 280,
-        "wires": [
-            [],
-            [
-                "32cf218615cd63ec"
-            ]
-        ]
-    },
-    {
-        "id": "7e261706a323fb55",
-        "type": "exec",
-        "z": "5ab99c650d95a3f7",
-        "command": "sudo rm ",
-        "addpay": true,
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "oldrc": false,
-        "name": "File delete",
-        "x": 1130,
-        "y": 180,
-        "wires": [
-            [],
-            [],
-            [
-                "d1d97b3222cf410b"
-            ]
-        ]
-    },
-    {
-        "id": "32cf218615cd63ec",
-        "type": "change",
-        "z": "5ab99c650d95a3f7",
-        "name": "Get filename",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "filename",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 950,
-        "y": 180,
-        "wires": [
-            [
-                "7e261706a323fb55"
-            ]
-        ]
-    },
-    {
-        "id": "d1d97b3222cf410b",
-        "type": "switch",
-        "z": "5ab99c650d95a3f7",
-        "name": "Return code",
-        "property": "payload.code",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "neq",
-                "v": "0",
-                "vt": "num"
-            },
-            {
-                "t": "eq",
-                "v": "0",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "outputs": 2,
-        "x": 1350,
-        "y": 200,
-        "wires": [
-            [],
-            []
-        ]
-    },
-    {
-        "id": "7a235c67cf03169b",
-        "type": "delay",
-        "z": "5ab99c650d95a3f7",
-        "name": "",
-        "pauseType": "rate",
-        "timeout": "5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "5",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "outputs": 1,
-        "x": 640,
-        "y": 380,
-        "wires": [
-            [
-                "88dd4d4e2aad8a95"
-            ]
-        ]
-    },
-    {
-        "id": "9fe6ab217aa31c86",
-        "type": "comment",
-        "z": "5ab99c650d95a3f7",
-        "name": "log_upload.sh",
-        "info": "ftp -inv 192.168.1.x << EOF\n    user <username> <password>\n    binary\n    cd backup/logs\n    lcd /home/pi/datalog\n    put $1\nEOF",
-        "x": 690,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "066c69cdeb8caefb",
-        "type": "comment",
-        "z": "5ab99c650d95a3f7",
-        "name": "Auto Logger",
-        "info": "",
-        "x": 130,
-        "y": 460,
-        "wires": []
-    },
-    {
-        "id": "3e0365c4cc1bbcb1",
-        "type": "function",
-        "z": "5ab99c650d95a3f7",
-        "name": "Set data",
-        "func": "var now = new Date();\n\nmsg.payload = {\n    \"timestamp\" : now.getTime(),\n    \"temperature\" : msg.msg433.TEMP,\n    \"humidity\" : msg.msg433.HUM\n}\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 220,
-        "y": 520,
-        "wires": [
-            [
-                "6603a0940cf92caa"
-            ]
-        ]
-    },
-    {
-        "id": "6603a0940cf92caa",
-        "type": "function",
-        "z": "5ab99c650d95a3f7",
-        "name": "Filename generator",
-        "func": "// Get the current time and convert it to text\nvar now = new Date();\nvar yyyy = now.getFullYear();\nvar mm = now.getMonth() < 9 ? \"0\" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based\nvar dd  = now.getDate() < 10 ? \"0\" + now.getDate() : now.getDate();\nvar hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\nvar mmm  = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\nvar ss  = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\n\n// Generate out file name pattern\nmsg.fname = \"maplin_\"+ yyyy + mm + dd + \".csv\";\n// Full filename with path for the file node later\nmsg.filename = \"/home/pi/datalog/\"+ msg.fname;\n\n// We save the current payload into a different place on the msg object\nmsg.filecontent = msg.payload;\n\n// We are passing the file name search pattern to fs node to tell us if the file exists or not\nmsg.payload = {\"pattern\":msg.fname};\n\nnode.status({fill:\"blue\",shape:\"ring\",text:msg.fname});\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 190,
-        "y": 640,
-        "wires": [
-            [
-                "8f9a687cdcf5c49a"
-            ]
-        ]
-    },
-    {
-        "id": "8f9a687cdcf5c49a",
-        "type": "fs-file-lister",
-        "z": "5ab99c650d95a3f7",
-        "name": "",
-        "start": "/home/pi/datalog/",
-        "pattern": "",
-        "folders": "*",
-        "hidden": true,
-        "lstype": "files",
-        "path": true,
-        "single": true,
-        "depth": 0,
-        "stat": true,
-        "showWarnings": false,
-        "x": 380,
-        "y": 640,
-        "wires": [
-            [
-                "5fbae22e7bdba58d",
-                "b3ae92e3472416ed"
-            ]
-        ]
-    },
-    {
-        "id": "5fbae22e7bdba58d",
-        "type": "debug",
-        "z": "5ab99c650d95a3f7",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "x": 550,
-        "y": 560,
-        "wires": []
-    },
-    {
-        "id": "b3ae92e3472416ed",
-        "type": "switch",
-        "z": "5ab99c650d95a3f7",
-        "name": "",
-        "property": "$count(msg.payload)",
-        "propertyType": "jsonata",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "0",
-                "vt": "num"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 530,
-        "y": 640,
-        "wires": [
-            [
-                "cf835898c3c4ad1c"
-            ],
-            [
-                "827a31dfb027ca52"
-            ]
-        ]
-    },
-    {
-        "id": "10ebb08952beefdf",
-        "type": "csv",
-        "z": "5ab99c650d95a3f7",
-        "name": "",
-        "sep": ",",
-        "hdrin": "",
-        "hdrout": true,
-        "multi": "one",
-        "ret": "\\n",
-        "temp": "timestamp,temperature,humidity",
-        "skip": "0",
-        "strings": true,
-        "x": 870,
-        "y": 620,
-        "wires": [
-            [
-                "3a89bd9c3a391d6e"
-            ]
-        ]
-    },
-    {
-        "id": "3a89bd9c3a391d6e",
-        "type": "file",
-        "z": "5ab99c650d95a3f7",
-        "name": "",
-        "filename": "",
-        "appendNewline": false,
-        "createDir": true,
-        "overwriteFile": "false",
-        "encoding": "none",
-        "x": 1030,
-        "y": 620,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "01fef77ca9edb324",
-        "type": "csv",
-        "z": "5ab99c650d95a3f7",
-        "name": "",
-        "sep": ",",
-        "hdrin": "",
-        "hdrout": false,
-        "multi": "one",
-        "ret": "\\n",
-        "temp": "timestamp,temperature,humidity",
-        "skip": "0",
-        "strings": true,
-        "x": 870,
-        "y": 660,
-        "wires": [
-            [
-                "3a89bd9c3a391d6e"
-            ]
-        ]
-    },
-    {
-        "id": "cf835898c3c4ad1c",
-        "type": "change",
-        "z": "5ab99c650d95a3f7",
-        "name": "Get file content",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "filecontent",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 700,
-        "y": 620,
-        "wires": [
-            [
-                "10ebb08952beefdf"
-            ]
-        ]
-    },
-    {
-        "id": "827a31dfb027ca52",
-        "type": "change",
-        "z": "5ab99c650d95a3f7",
-        "name": "Get file content",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "filecontent",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 700,
-        "y": 660,
-        "wires": [
-            [
-                "01fef77ca9edb324"
             ]
         ]
     }
