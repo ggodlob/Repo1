@@ -1187,8 +1187,8 @@
         "y": 160,
         "wires": [
             [
-                "ccbd06f3eb4a00e3",
-                "69f00db47fd6c7a3"
+                "69f00db47fd6c7a3",
+                "49c561fd45d99556"
             ]
         ]
     },
@@ -1203,7 +1203,7 @@
         "createDir": true,
         "overwriteFile": "false",
         "encoding": "none",
-        "x": 1380,
+        "x": 1260,
         "y": 140,
         "wires": [
             []
@@ -1241,31 +1241,6 @@
             [
                 "321433c3d1b939cc",
                 "26902db07b997b26"
-            ]
-        ]
-    },
-    {
-        "id": "ccbd06f3eb4a00e3",
-        "type": "csv",
-        "z": "61d663c65d5d04a2",
-        "name": "",
-        "spec": "rfc",
-        "sep": ",",
-        "hdrin": true,
-        "hdrout": "once",
-        "multi": "one",
-        "ret": "\\r\\n",
-        "temp": "Timestamp,Pressure",
-        "skip": "1",
-        "strings": false,
-        "include_empty_strings": "",
-        "include_null_values": "",
-        "x": 1190,
-        "y": 140,
-        "wires": [
-            [
-                "49c561fd45d99556",
-                "114e92604f8787b3"
             ]
         ]
     },
@@ -1361,24 +1336,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1200,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "114e92604f8787b3",
-        "type": "debug",
-        "z": "61d663c65d5d04a2",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1380,
+        "x": 1240,
         "y": 200,
         "wires": []
     },
