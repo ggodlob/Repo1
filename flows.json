@@ -1240,7 +1240,8 @@
         "wires": [
             [
                 "321433c3d1b939cc",
-                "76ed89e23b46d303"
+                "76ed89e23b46d303",
+                "26902db07b997b26"
             ]
         ]
     },
@@ -1344,7 +1345,8 @@
         "wires": [
             [
                 "a3fbb6cbdf996fbf",
-                "76ed89e23b46d303"
+                "76ed89e23b46d303",
+                "26902db07b997b26"
             ]
         ]
     },
@@ -1468,28 +1470,31 @@
         "wires": []
     },
     {
-        "id": "a5dabe10b5b31b80",
-        "type": "trigger",
+        "id": "26902db07b997b26",
+        "type": "join",
         "z": "61d663c65d5d04a2",
         "name": "",
-        "op1": "",
-        "op2": "0",
-        "op1type": "num",
-        "op2type": "str",
-        "duration": "-10",
-        "extend": false,
-        "overrideDelay": false,
-        "units": "s",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 510,
-        "y": 380,
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": true,
+        "timeout": "",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 830,
+        "y": 340,
         "wires": [
             [
-                "4776defa8873253a",
-                "e4483f25e9b66328"
+                "fba0dc8b36122152"
             ]
         ]
     },
