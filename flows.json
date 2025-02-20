@@ -1468,7 +1468,7 @@
         "hdrout": "once",
         "multi": "mult",
         "ret": "\\r\\n",
-        "temp": "Timestamp, Pressure",
+        "temp": "",
         "skip": "0",
         "strings": false,
         "include_empty_strings": "",
