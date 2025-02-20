@@ -1503,17 +1503,23 @@
         "type": "inject",
         "z": "61d663c65d5d04a2",
         "name": "",
-        "props": [],
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
         "repeat": "10",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "x": 510,
-        "y": 400,
+        "payload": "payload",
+        "payloadType": "msg",
+        "x": 930,
+        "y": 420,
         "wires": [
             [
-                "26902db07b997b26"
+                "fba0dc8b36122152"
             ]
         ]
     },
