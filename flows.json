@@ -1174,7 +1174,7 @@
         "type": "function",
         "z": "61d663c65d5d04a2",
         "name": "Data prepare",
-        "func": "console.log(\"Serialnumber: \" + msg.serialnumber);\nconsole.log(\"Pressure: \" + msg.pressure);\n\n// Tároljuk el az előző serialnumber-t a context-ben\ncontext.previousSerialNumber = context.previousSerialNumber || null;\n\n// Ellenőrizzük, hogy a serialnumber változott-e\nif (msg.serialnumber !== context.previousSerialNumber) {\n\n// Ha változott, akkor beállítjuk a flag-et és frissítjük az előző serialnumber-t\n  msg.serialnumber_changed = true;\n  context.previousSerialNumber = msg.serialnumber;\n} else {\n  msg.serialnumber_changed = false; // Ha nem változott, ne legyen true\n}\n\n// Tároljuk el az előző nyomásértéket a context-ben\ncontext.previousPressure = context.previousPressure || null;\n\nvar pressure = msg.pressure;\n\nif (pressure === undefined || pressure === null || isNaN(pressure)) {\n  console.error(\"Nem található vagy érvénytelen nyomásérték a msg.payload-ban: \" + pressure);\n  \n  // Ha nincs érvényes nyomásérték, használjuk az előzőt, ha van\n  pressure = context.previousPressure !== null ? context.previousPressure : 0;\n} else {\n    // Ha van érvényes nyomásérték, frissítsük az előzőt\n    context.previousPressure = pressure;\n}\n\nvar date = new Date();// Aktuális dátum és idő\nvar formattedDate = date.toLocaleDateString(\"de-DE\");// Dátum formázása magyar lokalizáció szerint (éééé.hh.nn.)\nvar formattedTime = date.toLocaleTimeString(\"de-DE\");// Idő formázása magyar lokalizáció szerint (óó:pp:mm)\nvar timestamp = formattedDate + \" \" + formattedTime;// Dátum és idő kombinálása\n\ncontext.data = context.data || [];\ncontext.data.push({\n    timestamp: timestamp,\n    pressure: pressure\n});\n\nvar csv = \"\";\ncontext.data.forEach(function(item) {\n    csv += item.timestamp + \",\" + item.pressure + \"\\n\";\n});\n\nvar newMsg = { ...msg };\nnewMsg.payload = csv;\n\nvar fileName = \"sn\" + msg.serialnumber + \"_pressure_loss.csv\";\nvar filePath = \"/home/gabor/\" + fileName;\nnewMsg.filename = filePath;\n\nreturn newMsg;",
+        "func": "console.log(\"Serialnumber: \" + msg.serialnumber);\nconsole.log(\"Pressure: \" + msg.pressure);\n\n// Tároljuk el az előző serialnumber-t a context-ben\ncontext.previousSerialNumber = context.previousSerialNumber || null;\n\n// Ellenőrizzük, hogy a serialnumber változott-e\nif (msg.serialnumber !== context.previousSerialNumber) {\n\n// Ha változott, akkor beállítjuk a flag-et és frissítjük az előző serialnumber-t\n  msg.serialnumber_changed = true;\n  context.previousSerialNumber = msg.serialnumber;\n} else {\n  msg.serialnumber_changed = false; // Ha nem változott, ne legyen true\n}\n\n// Tároljuk el az előző nyomásértéket a context-ben\ncontext.previousPressure = context.previousPressure || null;\n\nvar pressure = msg.pressure;\n\nif (pressure === undefined || pressure === null || isNaN(pressure)) {\n  console.error(\"Nem található vagy érvénytelen nyomásérték a msg.payload-ban: \" + pressure);\n  \n  // Ha nincs érvényes nyomásérték, használjuk az előzőt, ha van\n  pressure = context.previousPressure !== null ? context.previousPressure : 0;\n} else {\n    // Ha van érvényes nyomásérték, frissítsük az előzőt\n    context.previousPressure = pressure;\n}\n\nvar date = new Date();// Aktuális dátum és idő\nvar formattedDate = date.toLocaleDateString(\"de-DE\");// Dátum formázása magyar lokalizáció szerint (éééé.hh.nn.)\nvar formattedTime = date.toLocaleTimeString(\"de-DE\");// Idő formázása magyar lokalizáció szerint (óó:pp:mm)\nvar timestamp = formattedDate + \" \" + formattedTime;// Dátum és idő kombinálása\n\ncontext.data = context.data || [];\ncontext.data.push({\n    timestamp: timestamp,\n    pressure: pressure\n});\n\nvar csv = \"Timestamp,Pressure\\n\";\ncontext.data.forEach(function(item) {\n    csv += item.timestamp + \",\" + item.pressure + \"\\n\";\n});\n\nvar newMsg = { ...msg };\nnewMsg.payload = csv;\n\nvar fileName = \"sn\" + msg.serialnumber + \"_pressure_loss.csv\";\nvar filePath = \"/home/gabor/\" + fileName;\nnewMsg.filename = filePath;\n\nreturn newMsg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1186,7 +1186,7 @@
         "wires": [
             [
                 "69f00db47fd6c7a3",
-                "8f5a6300b4671bb9"
+                "49c561fd45d99556"
             ]
         ]
     },
@@ -1201,7 +1201,7 @@
         "createDir": true,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 1260,
+        "x": 1120,
         "y": 160,
         "wires": [
             [
@@ -1364,31 +1364,6 @@
         "wires": [
             [
                 "76ed89e23b46d303"
-            ]
-        ]
-    },
-    {
-        "id": "8f5a6300b4671bb9",
-        "type": "csv",
-        "z": "61d663c65d5d04a2",
-        "name": "",
-        "spec": "rfc",
-        "sep": ",",
-        "hdrin": true,
-        "hdrout": "once",
-        "multi": "mult",
-        "ret": "\\r\\n",
-        "temp": "Timestamp,Pressure",
-        "skip": "0",
-        "strings": false,
-        "include_empty_strings": "",
-        "include_null_values": "",
-        "x": 1110,
-        "y": 160,
-        "wires": [
-            [
-                "49c561fd45d99556",
-                "a40e3135062a99bf"
             ]
         ]
     },
