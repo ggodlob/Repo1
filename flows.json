@@ -1386,6 +1386,31 @@
         "wires": []
     },
     {
+        "id": "9b9817ba70278288",
+        "type": "inject",
+        "z": "61d663c65d5d04a2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "serialnumber",
+        "payloadType": "msg",
+        "x": 790,
+        "y": 60,
+        "wires": [
+            [
+                "76ed89e23b46d303"
+            ]
+        ]
+    },
+    {
         "id": "9bb7bdb1eae4948e",
         "type": "ui_text",
         "z": "cb52c966d2fad605",
