@@ -1211,9 +1211,9 @@
         "rules": [
             {
                 "t": "set",
-                "p": "pressure",
+                "p": "payload",
                 "pt": "msg",
-                "to": "payload",
+                "to": "pressure",
                 "tot": "msg"
             },
             {
