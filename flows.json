@@ -1480,7 +1480,7 @@
         "joiner": "\\n",
         "joinerType": "str",
         "useparts": false,
-        "accumulate": true,
+        "accumulate": false,
         "timeout": "10",
         "count": "2",
         "reduceRight": false,
