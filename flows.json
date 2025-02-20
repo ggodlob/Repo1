@@ -1465,7 +1465,7 @@
         "spec": "rfc",
         "sep": ",",
         "hdrin": true,
-        "hdrout": "all",
+        "hdrout": "once",
         "multi": "mult",
         "ret": "\\r\\n",
         "temp": "Timestamp, Pressure",
