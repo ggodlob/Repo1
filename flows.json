@@ -1188,7 +1188,7 @@
         "wires": [
             [
                 "69f00db47fd6c7a3",
-                "49c561fd45d99556"
+                "8f5a6300b4671bb9"
             ]
         ]
     },
@@ -1203,7 +1203,7 @@
         "createDir": true,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 1260,
+        "x": 1340,
         "y": 140,
         "wires": [
             []
@@ -1452,6 +1452,30 @@
             [
                 "76ed89e23b46d303",
                 "fba0dc8b36122152"
+            ]
+        ]
+    },
+    {
+        "id": "8f5a6300b4671bb9",
+        "type": "csv",
+        "z": "61d663c65d5d04a2",
+        "name": "",
+        "spec": "rfc",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": "none",
+        "multi": "mult",
+        "ret": "\\r\\n",
+        "temp": "Timestamp, Pressure",
+        "skip": "1",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 1190,
+        "y": 140,
+        "wires": [
+            [
+                "49c561fd45d99556"
             ]
         ]
     },
