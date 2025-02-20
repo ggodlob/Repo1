@@ -367,6 +367,12 @@
         "hidden": false
     },
     {
+        "id": "174db71a85fd3665",
+        "type": "git-nodes-config",
+        "name": "Repo1",
+        "git": "https://github.com/ggodlob/Repo1.git"
+    },
+    {
         "id": "2d4646b0db2f1313",
         "type": "ui_gauge",
         "z": "8e6f93d6c1999015",
@@ -1670,6 +1676,21 @@
                 "244d8d9f6e6c67f4"
             ]
         ]
+    },
+    {
+        "id": "47afcc504ff10feb",
+        "type": "git-nodes",
+        "z": "cb52c966d2fad605",
+        "label": "",
+        "branch": "main",
+        "sourcebranch": "main",
+        "gitadd": "settings.js,package.json,.config.json,lib",
+        "gitrmcache": "nodes/*/x,nodes/*/y,nodes/*/z",
+        "debugging": true,
+        "git": "174db71a85fd3665",
+        "x": 180,
+        "y": 360,
+        "wires": []
     },
     {
         "id": "12bbbd87a10398fa",
