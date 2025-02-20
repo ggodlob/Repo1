@@ -1515,11 +1515,11 @@
         "topic": "",
         "payload": "payload",
         "payloadType": "msg",
-        "x": 930,
-        "y": 420,
+        "x": 650,
+        "y": 400,
         "wires": [
             [
-                "fba0dc8b36122152"
+                "26902db07b997b26"
             ]
         ]
     },
