@@ -1408,34 +1408,6 @@
         "wires": []
     },
     {
-        "id": "9b9817ba70278288",
-        "type": "inject",
-        "z": "61d663c65d5d04a2",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "60",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "pressure",
-        "payloadType": "str",
-        "x": 800,
-        "y": 60,
-        "wires": [
-            [
-                "4776defa8873253a"
-            ]
-        ]
-    },
-    {
         "id": "a6985752de7ee62f",
         "type": "join",
         "z": "61d663c65d5d04a2",
