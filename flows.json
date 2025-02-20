@@ -1177,8 +1177,7 @@
         "y": 160,
         "wires": [
             [
-                "49c561fd45d99556",
-                "0a1aa193ec0d5e34"
+                "49c561fd45d99556"
             ]
         ]
     },
@@ -1358,78 +1357,6 @@
         "x": 1410,
         "y": 160,
         "wires": []
-    },
-    {
-        "id": "63aa1b06ba361f24",
-        "type": "ui_button",
-        "z": "61d663c65d5d04a2",
-        "name": "",
-        "group": "b9eaf4515438b94a",
-        "order": 2,
-        "width": "2",
-        "height": "1",
-        "passthru": false,
-        "label": "Inject",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "",
-        "topicType": "str",
-        "x": 790,
-        "y": 80,
-        "wires": [
-            [
-                "76ed89e23b46d303"
-            ]
-        ]
-    },
-    {
-        "id": "0a1aa193ec0d5e34",
-        "type": "ui_chart",
-        "z": "61d663c65d5d04a2",
-        "name": "",
-        "group": "b9eaf4515438b94a",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "label": "chart",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "bezier",
-        "nodata": "",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": "15",
-        "removeOlderPoints": "100",
-        "removeOlderUnit": "60",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 1130,
-        "y": 80,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "9bb7bdb1eae4948e",
