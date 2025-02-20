@@ -3,9 +3,7 @@
     "description": "A Node-RED Project",
     "version": "0.0.1",
     "dependencies": {
-        "node-red-contrib-edge-trigger": "1.0.1",
         "node-red-contrib-fs": "1.4.1",
-        "node-red-contrib-modbustcp": "1.2.3",
         "node-red-contrib-modbus": "5.43.0",
         "node-red-contrib-ui-etable": "4.6.3",
         "node-red-dashboard": "3.6.5",
