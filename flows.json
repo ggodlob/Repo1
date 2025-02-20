@@ -1481,14 +1481,14 @@
         "joinerType": "str",
         "useparts": false,
         "accumulate": true,
-        "timeout": "",
-        "count": "10",
+        "timeout": "10",
+        "count": "2",
         "reduceRight": false,
         "reduceExp": "",
         "reduceInit": "",
         "reduceInitType": "num",
         "reduceFixup": "",
-        "x": 840,
+        "x": 830,
         "y": 340,
         "wires": [
             [
