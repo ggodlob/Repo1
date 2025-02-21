@@ -1179,7 +1179,8 @@
         "y": 160,
         "wires": [
             [
-                "49c561fd45d99556"
+                "49c561fd45d99556",
+                "0e83d2f0bf1773aa"
             ]
         ]
     },
@@ -1194,7 +1195,7 @@
         "createDir": true,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 1160,
+        "x": 1120,
         "y": 160,
         "wires": [
             [
@@ -1356,7 +1357,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1410,
+        "x": 1290,
         "y": 160,
         "wires": []
     },
@@ -1403,6 +1404,50 @@
         "x": 400,
         "y": 380,
         "wires": []
+    },
+    {
+        "id": "0e83d2f0bf1773aa",
+        "type": "ui_chart",
+        "z": "61d663c65d5d04a2",
+        "name": "",
+        "group": "b9eaf4515438b94a",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1130,
+        "y": 100,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "9bb7bdb1eae4948e",
