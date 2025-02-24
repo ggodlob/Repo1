@@ -2392,7 +2392,8 @@
         "wires": [
             [
                 "27d8e064f51c1055",
-                "84c00c69a8866abc"
+                "84c00c69a8866abc",
+                "ec2192b099101950"
             ]
         ]
     },
@@ -3292,7 +3293,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1590,
+        "x": 1950,
         "y": 400,
         "wires": [
             []
@@ -3314,7 +3315,6 @@
         "y": 400,
         "wires": [
             [
-                "04df77c1efb2569b",
                 "db0e99b3c71b3ebd"
             ]
         ]
@@ -3352,6 +3352,31 @@
         "x": 1460,
         "y": 460,
         "wires": []
+    },
+    {
+        "id": "ec2192b099101950",
+        "type": "csv to json ext",
+        "z": "fe54917cf124892f",
+        "name": "",
+        "version": "0.1",
+        "source": "payload",
+        "delimiter": ",",
+        "quote": "\"",
+        "escape": "\"",
+        "ignoreEmpty": false,
+        "checkType": false,
+        "trim": true,
+        "noheader": false,
+        "includeColumns": "",
+        "headers": "Timestamp,Pressure",
+        "debug": false,
+        "x": 1690,
+        "y": 560,
+        "wires": [
+            [
+                "04df77c1efb2569b"
+            ]
+        ]
     },
     {
         "id": "0b61ed2d88682e3f",
