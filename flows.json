@@ -1173,8 +1173,7 @@
         "y": 160,
         "wires": [
             [
-                "49c561fd45d99556",
-                "ef918a690b853a3a"
+                "49c561fd45d99556"
             ]
         ]
     },
@@ -1379,158 +1378,6 @@
         "wires": [
             [
                 "76ed89e23b46d303"
-            ]
-        ]
-    },
-    {
-        "id": "12ee852cbaf22954",
-        "type": "exec",
-        "z": "61d663c65d5d04a2",
-        "command": "/home/ovum",
-        "addpay": "payload",
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "winHide": false,
-        "oldrc": false,
-        "name": "File upload",
-        "x": 570,
-        "y": 380,
-        "wires": [
-            [],
-            [],
-            [
-                "064ad722377ceb23"
-            ]
-        ]
-    },
-    {
-        "id": "064ad722377ceb23",
-        "type": "switch",
-        "z": "61d663c65d5d04a2",
-        "name": "Return code",
-        "property": "payload.code",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "neq",
-                "v": "0",
-                "vt": "num"
-            },
-            {
-                "t": "eq",
-                "v": "0",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 750,
-        "y": 380,
-        "wires": [
-            [],
-            []
-        ]
-    },
-    {
-        "id": "f3a99c39ca77c1dd",
-        "type": "exec",
-        "z": "61d663c65d5d04a2",
-        "command": "sudo rm ",
-        "addpay": true,
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "oldrc": false,
-        "name": "File delete",
-        "x": 1110,
-        "y": 380,
-        "wires": [
-            [],
-            [],
-            [
-                "f73acb7549031ce9"
-            ]
-        ]
-    },
-    {
-        "id": "38e2c965f35263b9",
-        "type": "change",
-        "z": "61d663c65d5d04a2",
-        "name": "Get filename",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "filename",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 930,
-        "y": 380,
-        "wires": [
-            [
-                "f3a99c39ca77c1dd"
-            ]
-        ]
-    },
-    {
-        "id": "f73acb7549031ce9",
-        "type": "switch",
-        "z": "61d663c65d5d04a2",
-        "name": "Return code",
-        "property": "payload.code",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "neq",
-                "v": "0",
-                "vt": "num"
-            },
-            {
-                "t": "eq",
-                "v": "0",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "outputs": 2,
-        "x": 1290,
-        "y": 380,
-        "wires": [
-            [],
-            []
-        ]
-    },
-    {
-        "id": "ef918a690b853a3a",
-        "type": "delay",
-        "z": "61d663c65d5d04a2",
-        "name": "",
-        "pauseType": "rate",
-        "timeout": "5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "10",
-        "rateUnits": "minute",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 370,
-        "y": 380,
-        "wires": [
-            [
-                "12ee852cbaf22954"
             ]
         ]
     },
@@ -2544,7 +2391,7 @@
         "y": 400,
         "wires": [
             [
-                "f34de6b754f68979"
+                "27d8e064f51c1055"
             ]
         ]
     },
@@ -3451,14 +3298,18 @@
         ]
     },
     {
-        "id": "f34de6b754f68979",
-        "type": "json",
+        "id": "27d8e064f51c1055",
+        "type": "function",
         "z": "fe54917cf124892f",
-        "name": "",
-        "property": "payload",
-        "action": "str",
-        "pretty": false,
-        "x": 1430,
+        "name": "function 1",
+        "func": "// Ellenőrizzük, hogy a msg.payload egy tömb-e\nif (!Array.isArray(msg.payload)) {\n    node.error(\"A msg.payload nem tömb!\");\n    return null;\n}\n\n// Fejléc sor létrehozása\nvar csv = \"Timestamp,Pressure\\n\";\n\n// Adatok feldolgozása és CSV sorok létrehozása\nmsg.payload.forEach(function(item) {\n    // Ellenőrizzük, hogy az item objektum tartalmazza-e a timestamp és pressure tulajdonságokat\n    if (item.hasOwnProperty(\"timestamp\") && item.hasOwnProperty(\"pressure\")) {\n        csv += item.timestamp + \",\" + item.pressure + \"\\n\";\n    } else {\n        node.warn(\"Hiányzó timestamp vagy pressure tulajdonság: \" + JSON.stringify(item));\n    }\n});\n\n// Új üzenet létrehozása a CSV adatokkal\nmsg.payload = csv;\n\n// Üzenet továbbítása\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1440,
         "y": 400,
         "wires": [
             [
@@ -3476,8 +3327,8 @@
         "appendNewline": true,
         "createDir": false,
         "overwriteFile": "true",
-        "x": 730,
-        "y": 600,
+        "x": 690,
+        "y": 320,
         "wires": [
             []
         ]
@@ -3491,8 +3342,8 @@
         "filenameType": "str",
         "format": "utf8",
         "allProps": false,
-        "x": 450,
-        "y": 480,
+        "x": 410,
+        "y": 200,
         "wires": [
             [
                 "b0ad92b8f04430e5"
@@ -3504,8 +3355,8 @@
         "type": "json",
         "z": "23ae8c9958392184",
         "name": "",
-        "x": 910,
-        "y": 420,
+        "x": 870,
+        "y": 140,
         "wires": [
             [
                 "f9c7a725cf2c7658"
@@ -3517,8 +3368,8 @@
         "type": "json",
         "z": "23ae8c9958392184",
         "name": "",
-        "x": 620,
-        "y": 480,
+        "x": 580,
+        "y": 200,
         "wires": [
             [
                 "5f9474b7153f5ee9"
@@ -3537,8 +3388,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 420,
-        "y": 600,
+        "x": 380,
+        "y": 320,
         "wires": [
             [
                 "0b61ed2d88682e3f"
@@ -3565,8 +3416,8 @@
         "payloadType": "str",
         "topic": "",
         "topicType": "str",
-        "x": 470,
-        "y": 420,
+        "x": 430,
+        "y": 140,
         "wires": [
             [
                 "5f9474b7153f5ee9"
@@ -3589,8 +3440,8 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
-        "x": 260,
-        "y": 480,
+        "x": 220,
+        "y": 200,
         "wires": [
             [
                 "28a4eff1523a3b04"
@@ -3613,8 +3464,8 @@
         "payload": "",
         "payloadType": "str",
         "topic": "save",
-        "x": 240,
-        "y": 600,
+        "x": 200,
+        "y": 320,
         "wires": [
             [
                 "f9c7a725cf2c7658"
@@ -3659,8 +3510,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 770,
-        "y": 420,
+        "x": 730,
+        "y": 140,
         "wires": [
             [
                 "e5c9d15b18b90c65"
