@@ -2390,10 +2390,7 @@
         "x": 1270,
         "y": 400,
         "wires": [
-            [
-                "27d8e064f51c1055",
-                "84c00c69a8866abc"
-            ]
+            []
         ]
     },
     {
@@ -2567,8 +2564,7 @@
         "y": 400,
         "wires": [
             [
-                "eaa1b785a82474e8",
-                "ec2192b099101950"
+                "eaa1b785a82474e8"
             ]
         ]
     },
@@ -3252,129 +3248,6 @@
         "wires": [
             [
                 "442a856796f14a64"
-            ]
-        ]
-    },
-    {
-        "id": "04df77c1efb2569b",
-        "type": "ui_chart",
-        "z": "fe54917cf124892f",
-        "name": "",
-        "group": "b9eaf4515438b94a",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "label": "chart",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "-100",
-        "ymax": "100",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 1950,
-        "y": 400,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "27d8e064f51c1055",
-        "type": "function",
-        "z": "fe54917cf124892f",
-        "name": "function 1",
-        "func": "const parse = require('csv-parse/sync');\n\ntry {\n  const records = parse(msg.payload.replace(/<[^>]*>?/gm, ''), {\n    columns: true,\n    skip_empty_lines: true\n  });\n\n  msg.payload = records;\n  return msg;\n} catch (err) {\n  node.error(err);\n  return null;\n}",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1440,
-        "y": 400,
-        "wires": [
-            [
-                "db0e99b3c71b3ebd"
-            ]
-        ]
-    },
-    {
-        "id": "db0e99b3c71b3ebd",
-        "type": "debug",
-        "z": "fe54917cf124892f",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1640,
-        "y": 480,
-        "wires": []
-    },
-    {
-        "id": "84c00c69a8866abc",
-        "type": "debug",
-        "z": "fe54917cf124892f",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1460,
-        "y": 460,
-        "wires": []
-    },
-    {
-        "id": "ec2192b099101950",
-        "type": "csv to json ext",
-        "z": "fe54917cf124892f",
-        "name": "",
-        "version": "0.1",
-        "source": "payload",
-        "delimiter": ",",
-        "quote": "\"",
-        "escape": "\"",
-        "ignoreEmpty": false,
-        "checkType": false,
-        "trim": true,
-        "noheader": false,
-        "includeColumns": "",
-        "headers": "\"Timestamp\",\"Pressure\"",
-        "debug": true,
-        "x": 1690,
-        "y": 560,
-        "wires": [
-            [
-                "04df77c1efb2569b"
             ]
         ]
     },
