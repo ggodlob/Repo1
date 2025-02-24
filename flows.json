@@ -371,6 +371,17 @@
         "className": ""
     },
     {
+        "id": "c1c3c6b12dccd791",
+        "type": "ui_group",
+        "name": "VP4",
+        "tab": "58c2aa06.ef46e4",
+        "order": 8,
+        "disp": true,
+        "width": 6,
+        "collapse": true,
+        "className": ""
+    },
+    {
         "id": "2d4646b0db2f1313",
         "type": "ui_gauge",
         "z": "8e6f93d6c1999015",
@@ -985,11 +996,11 @@
         "type": "ui_chart",
         "z": "8e6f93d6c1999015",
         "name": "",
-        "group": "",
+        "group": "c1c3c6b12dccd791",
         "order": 1,
         "width": "6",
         "height": "3",
-        "label": "Vakuumpumpe 3",
+        "label": "Vakuumpumpe 4",
         "chartType": "line",
         "legend": "false",
         "xformat": "HH:mm",
@@ -1022,6 +1033,100 @@
         "y": 820,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "70600d4118d447a5",
+        "type": "ui_gauge",
+        "z": "8e6f93d6c1999015",
+        "name": "",
+        "group": "c1c3c6b12dccd791",
+        "order": 2,
+        "width": "3",
+        "height": "3",
+        "gtype": "gage",
+        "title": "Temp 5",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "60",
+        "seg2": "75",
+        "diff": false,
+        "className": "",
+        "x": 560,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "993c0e7130fa0458",
+        "type": "ui_gauge",
+        "z": "8e6f93d6c1999015",
+        "name": "",
+        "group": "c1c3c6b12dccd791",
+        "order": 3,
+        "width": "3",
+        "height": "3",
+        "gtype": "gage",
+        "title": "Temp 6",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "60",
+        "seg2": "75",
+        "diff": false,
+        "className": "",
+        "x": 560,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "1bb31b011b1278c7",
+        "type": "cmi in",
+        "z": "8e6f93d6c1999015",
+        "cmi": "ef6702f2eebd5bef",
+        "name": "Temp 7",
+        "item": "15",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 150,
+        "y": 880,
+        "wires": [
+            [
+                "70600d4118d447a5"
+            ]
+        ]
+    },
+    {
+        "id": "49b072bed68759d6",
+        "type": "cmi in",
+        "z": "8e6f93d6c1999015",
+        "cmi": "ef6702f2eebd5bef",
+        "name": "Temp 8",
+        "item": "16",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 150,
+        "y": 940,
+        "wires": [
+            [
+                "993c0e7130fa0458"
+            ]
         ]
     },
     {
