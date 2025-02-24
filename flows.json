@@ -56,16 +56,9 @@
         "env": []
     },
     {
-        "id": "60463e3a.b7fb4",
+        "id": "62e9b78de1713d88",
         "type": "tab",
-        "label": "graph csv",
-        "disabled": false,
-        "info": ""
-    },
-    {
-        "id": "a70dc87b8c0b85b4",
-        "type": "tab",
-        "label": "Flow 1",
+        "label": "Flow 2",
         "disabled": false,
         "info": "",
         "env": []
@@ -3523,436 +3516,467 @@
         ]
     },
     {
-        "id": "fd6a782f.8607a8",
-        "type": "inject",
-        "z": "60463e3a.b7fb4",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "start",
-        "payload": "1",
-        "payloadType": "num",
-        "x": 150,
+        "id": "782b06fb.cc1df8",
+        "type": "comment",
+        "z": "62e9b78de1713d88",
+        "name": "Auto Logger archiving",
+        "info": "Generate file name that are to be archived.\n\nIdea is that this generates a list of file names for let's say between current day-5 days to current day-10 days, so all files that are 5-10 days old will get archived. And this can be executed daily or weekly, and the interval allows some overlap (e.g. the program fails, Node-Red was down, etc.)\n\nInject node should contain a JSON:\n{    \n    \"start\": 20,    \n    \"end\": 10\n}\n\nThis will generate file names D-20 to D-10 days.\nStart should be greather than end!\n",
+        "x": 120,
         "y": 80,
+        "wires": []
+    },
+    {
+        "id": "f14e2f71.1ad87",
+        "type": "function",
+        "z": "62e9b78de1713d88",
+        "name": "Maplin Filename generator",
+        "func": "let output = [];\nfor (var i=msg.payload.end;i<msg.payload.start;i++) {\n    \n    // calculate the date\n    let now = new Date();\n    now.setTime(now.getTime() - 1000*60*60*24*i);\n    let yyyy = now.getFullYear();\n    let mm = now.getMonth() < 9 ? \"0\" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based\n    let dd  = now.getDate() < 10 ? \"0\" + now.getDate() : now.getDate();\n    let hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\n    let mmm  = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\n    let ss  = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\n    \n    let newfile = { \"topic\": \"archive\", \"payload\": \"\"};\n    // Generate out file name pattern\n    newfile.fname = \"maplin_\"+ yyyy + mm + dd + \".csv\";\n    // Full filename with path \n    newfile.filename = \"/home/pi/datalog/\"+ newfile.fname;\n    \n    // Shell script only needs the filename without the path\n    newfile.payload = newfile.fname;\n    output.push(newfile);\n\n}\n\nreturn [output];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 380,
+        "y": 160,
         "wires": [
             [
-                "f6d3c9af.1c6d18"
+                "5ba61ce5.11d8a4"
             ]
         ]
     },
     {
-        "id": "ff0ba1e2.f46ab",
-        "type": "ui_chart",
-        "z": "60463e3a.b7fb4",
-        "name": "",
-        "group": "2ac8e3fa.8b8584",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "label": "chart",
-        "chartType": "line",
-        "legend": "true",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": "2",
-        "removeOlderPoints": "1000",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": true,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
+        "id": "b57ab78e.cf1658",
+        "type": "function",
+        "z": "62e9b78de1713d88",
+        "name": "Weather Station Filename generator",
+        "func": "let output = [];\nfor (var i=msg.payload.end;i<msg.payload.start;i++) {\n    \n    // calculate the date\n    let now = new Date();\n    now.setTime(now.getTime() - 1000*60*60*24*i);\n    let yyyy = now.getFullYear();\n    let mm = now.getMonth() < 9 ? \"0\" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based\n    let dd  = now.getDate() < 10 ? \"0\" + now.getDate() : now.getDate();\n    let hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\n    let mmm  = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\n    let ss  = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\n    \n    let newfile = { \"topic\": \"archive\", \"payload\": \"\"};\n    // Generate out file name pattern\n    newfile.fname = \"weather_sensor_\"+ yyyy + mm + dd + \".csv\";\n    // Full filename with path \n    newfile.filename = \"/home/pi/datalog/\"+ newfile.fname;\n    \n    // Shell script only needs the filename without the path\n    newfile.payload = newfile.fname;\n    output.push(newfile);\n\n}\n\nreturn [output];",
         "outputs": 1,
-        "x": 590,
-        "y": 340,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 410,
+        "y": 220,
         "wires": [
+            [
+                "5ba61ce5.11d8a4"
+            ]
+        ]
+    },
+    {
+        "id": "5e47f3b4.7c779c",
+        "type": "inject",
+        "z": "62e9b78de1713d88",
+        "name": "Start",
+        "props": [
+            {
+                "p": "payload",
+                "v": "{\"start\":20,\"end\":10}",
+                "vt": "json"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "string"
+            }
+        ],
+        "repeat": "",
+        "crontab": "40 02 * * *",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"start\":20,\"end\":10}",
+        "payloadType": "json",
+        "x": 110,
+        "y": 180,
+        "wires": [
+            [
+                "f14e2f71.1ad87",
+                "b57ab78e.cf1658"
+            ]
+        ]
+    },
+    {
+        "id": "ad87fee.c53d5",
+        "type": "exec",
+        "z": "62e9b78de1713d88",
+        "command": "/home/pi/log_upload.sh",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "File upload",
+        "x": 710,
+        "y": 160,
+        "wires": [
+            [],
+            [],
+            [
+                "5f0f09f4.a09208"
+            ]
+        ]
+    },
+    {
+        "id": "5f0f09f4.a09208",
+        "type": "switch",
+        "z": "62e9b78de1713d88",
+        "name": "Return code",
+        "property": "payload.code",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 990,
+        "y": 260,
+        "wires": [
+            [],
+            [
+                "639dcab5.1028b4"
+            ]
+        ]
+    },
+    {
+        "id": "49210be0.0dbbe4",
+        "type": "exec",
+        "z": "62e9b78de1713d88",
+        "command": "sudo rm ",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "File delete",
+        "x": 1130,
+        "y": 160,
+        "wires": [
+            [],
+            [],
+            [
+                "1fee1de5.695e32"
+            ]
+        ]
+    },
+    {
+        "id": "639dcab5.1028b4",
+        "type": "change",
+        "z": "62e9b78de1713d88",
+        "name": "Get filename",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "filename",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 950,
+        "y": 160,
+        "wires": [
+            [
+                "49210be0.0dbbe4"
+            ]
+        ]
+    },
+    {
+        "id": "1fee1de5.695e32",
+        "type": "switch",
+        "z": "62e9b78de1713d88",
+        "name": "Return code",
+        "property": "payload.code",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "outputs": 2,
+        "x": 1350,
+        "y": 180,
+        "wires": [
+            [],
             []
         ]
     },
     {
-        "id": "2466e014.fe459",
-        "type": "debug",
-        "z": "60463e3a.b7fb4",
+        "id": "5ba61ce5.11d8a4",
+        "type": "delay",
+        "z": "62e9b78de1713d88",
         "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 570,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "f6d3c9af.1c6d18",
-        "type": "file in",
-        "z": "60463e3a.b7fb4",
-        "name": "",
-        "filename": "example.csv",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "x": 260,
-        "y": 160,
-        "wires": [
-            [
-                "3d784d1.a733332",
-                "2466e014.fe459"
-            ]
-        ]
-    },
-    {
-        "id": "3d784d1.a733332",
-        "type": "csv",
-        "z": "60463e3a.b7fb4",
-        "name": "",
-        "sep": ",",
-        "hdrin": true,
-        "hdrout": "",
-        "multi": "mult",
-        "ret": "\\n",
-        "temp": "",
-        "skip": "0",
-        "strings": true,
-        "x": 350,
-        "y": 240,
-        "wires": [
-            [
-                "f3d8e5f0.29d548",
-                "2466e014.fe459"
-            ]
-        ]
-    },
-    {
-        "id": "f3d8e5f0.29d548",
-        "type": "function",
-        "z": "60463e3a.b7fb4",
-        "name": "graph generate",
-        "func": "\nfunction toTimestamp(strDate){\n     var datum = Date.parse(strDate);\n     return datum/1000;\n    }\nvar payload=msg.payload;\n\n\nvar data_out=[];\nvar a1=[];\nvar a2=[];\nvar a3=[];\nvar a4=[];\nfor(let i=0;i<payload.length;i++)\n{\n  \nvar Data= payload[i].Data.split(\"-\");\nvar t=Data[2]+\"/\"+Data[1]+\"/\"+Data[0];\nvar timestamp=toTimestamp(t+\" \"+payload[i][\"Godzina\"]);\n\n\nvar temp1={ \"x\": timestamp, \"y\":parseInt( payload[i][\"Temp_RS-485\"]) };\nvar temp2={ \"x\": timestamp, \"y\":parseInt( payload[i][\"Wilg_RS-485\"]) };\nvar temp3={ \"x\": timestamp, \"y\": parseInt(payload[i][\"Temperatura I\"])};\nvar temp4={\"x\": timestamp, \"y\": parseInt(payload[i][\"Wilgotność I\"])};\n\na1.push(temp1);\na2.push(temp2);\na3.push(temp3);\na4.push(temp4);\n \n \n //\n \n \n}\n\ndata_out=[a1,a2,a3,a4];\nmsg.payload=[{\n\"series\": [\"Temp_RS-485\",\"Wilg_RS-485\",\"Temperatura I\",\"Wilgotność I\"],\n\"data\":data_out,\n\"labels\": [\"Temp_RS-485\",\"Wilg_RS-485\",\"Temperatura I\",\"Wilgotność I\"]\n}];\n\nreturn msg;",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
         "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 360,
+        "x": 640,
         "y": 360,
         "wires": [
             [
-                "2466e014.fe459",
-                "ff0ba1e2.f46ab"
+                "ad87fee.c53d5"
             ]
         ]
     },
     {
-        "id": "c8e4d550.f8f788",
+        "id": "9da5c02.66c844",
+        "type": "comment",
+        "z": "62e9b78de1713d88",
+        "name": "log_upload.sh",
+        "info": "ftp -inv 192.168.1.x << EOF\n    user <username> <password>\n    binary\n    cd backup/logs\n    lcd /home/pi/datalog\n    put $1\nEOF",
+        "x": 690,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "f79c29b7.055068",
+        "type": "comment",
+        "z": "62e9b78de1713d88",
+        "name": "Auto Logger",
+        "info": "",
+        "x": 130,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "4c8ae605.33be88",
+        "type": "function",
+        "z": "62e9b78de1713d88",
+        "name": "Set data",
+        "func": "var now = new Date();\n\nmsg.payload = {\n    \"timestamp\" : now.getTime(),\n    \"temperature\" : msg.msg433.TEMP,\n    \"humidity\" : msg.msg433.HUM\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 220,
+        "y": 500,
+        "wires": [
+            [
+                "f46f569e.ff1a08"
+            ]
+        ]
+    },
+    {
+        "id": "f46f569e.ff1a08",
+        "type": "function",
+        "z": "62e9b78de1713d88",
+        "name": "Filename generator",
+        "func": "// Get the current time and convert it to text\nvar now = new Date();\nvar yyyy = now.getFullYear();\nvar mm = now.getMonth() < 9 ? \"0\" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based\nvar dd  = now.getDate() < 10 ? \"0\" + now.getDate() : now.getDate();\nvar hh = now.getHours() < 10 ? \"0\" + now.getHours() : now.getHours();\nvar mmm  = now.getMinutes() < 10 ? \"0\" + now.getMinutes() : now.getMinutes();\nvar ss  = now.getSeconds() < 10 ? \"0\" + now.getSeconds() : now.getSeconds();\n\n// Generate out file name pattern\nmsg.fname = \"maplin_\"+ yyyy + mm + dd + \".csv\";\n// Full filename with path for the file node later\nmsg.filename = \"/home/pi/datalog/\"+ msg.fname;\n\n// We save the current payload into a different place on the msg object\nmsg.filecontent = msg.payload;\n\n// We are passing the file name search pattern to fs node to tell us if the file exists or not\nmsg.payload = {\"pattern\":msg.fname};\n\nnode.status({fill:\"blue\",shape:\"ring\",text:msg.fname});\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 190,
+        "y": 620,
+        "wires": [
+            [
+                "fa6936f.7758dc8"
+            ]
+        ]
+    },
+    {
+        "id": "fa6936f.7758dc8",
+        "type": "fs-file-lister",
+        "z": "62e9b78de1713d88",
+        "name": "",
+        "start": "/home/pi/datalog/",
+        "pattern": "",
+        "folders": "*",
+        "hidden": true,
+        "lstype": "files",
+        "path": true,
+        "single": true,
+        "depth": 0,
+        "stat": true,
+        "showWarnings": false,
+        "x": 380,
+        "y": 620,
+        "wires": [
+            [
+                "a96494a5.b0f4c8",
+                "3db97537.b889ea"
+            ]
+        ]
+    },
+    {
+        "id": "a96494a5.b0f4c8",
         "type": "debug",
-        "z": "a70dc87b8c0b85b4",
+        "z": "62e9b78de1713d88",
         "name": "",
         "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 1130,
-        "y": 180,
+        "complete": "false",
+        "x": 550,
+        "y": 540,
         "wires": []
     },
     {
-        "id": "c2c39eab.211a6",
-        "type": "file",
-        "z": "a70dc87b8c0b85b4",
-        "name": "Test1.csv",
-        "filename": "Test1.csv",
-        "appendNewline": true,
-        "createDir": false,
-        "overwriteFile": "false",
-        "encoding": "utf8",
-        "x": 980,
-        "y": 180,
-        "wires": [
-            [
-                "c8e4d550.f8f788"
-            ]
-        ]
-    },
-    {
-        "id": "32f4ca72.741486",
-        "type": "join",
-        "z": "a70dc87b8c0b85b4",
+        "id": "3db97537.b889ea",
+        "type": "switch",
+        "z": "62e9b78de1713d88",
         "name": "",
-        "mode": "custom",
-        "build": "string",
-        "property": "payload",
-        "propertyType": "msg",
-        "key": "topic",
-        "joiner": ",",
-        "joinerType": "str",
-        "accumulate": false,
-        "timeout": "",
-        "count": "4",
-        "reduceRight": false,
-        "reduceExp": "",
-        "reduceInit": "",
-        "reduceInitType": "",
-        "reduceFixup": "",
-        "x": 830,
-        "y": 180,
-        "wires": [
-            [
-                "c2c39eab.211a6"
-            ]
-        ]
-    },
-    {
-        "id": "6b5f6d37.652484",
-        "type": "inject",
-        "z": "a70dc87b8c0b85b4",
-        "name": "",
-        "props": [
+        "property": "$count(msg.payload)",
+        "propertyType": "jsonata",
+        "rules": [
             {
-                "p": "payload",
-                "v": "",
-                "vt": "date"
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
             },
             {
-                "p": "topic",
-                "v": "",
-                "vt": "str"
+                "t": "else"
             }
         ],
-        "repeat": "30",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 410,
-        "y": 180,
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 530,
+        "y": 620,
         "wires": [
             [
-                "32f4ca72.741486",
-                "eb500166.0bc5d",
-                "e6407ccc.b860c",
-                "728ba8ff.c51c18"
+                "3cb887e8.e533a8"
+            ],
+            [
+                "f3ba1c7a.54ef5"
             ]
         ]
     },
     {
-        "id": "eb500166.0bc5d",
-        "type": "random",
-        "z": "a70dc87b8c0b85b4",
-        "name": "Temp Water",
-        "low": "-5",
-        "high": "45",
-        "inte": "true",
-        "property": "payload",
-        "x": 590,
-        "y": 240,
-        "wires": [
-            [
-                "32f4ca72.741486",
-                "77736558.b2ba6c"
-            ]
-        ]
-    },
-    {
-        "id": "e6407ccc.b860c",
-        "type": "random",
-        "z": "a70dc87b8c0b85b4",
-        "name": "Temp Air",
-        "low": "-5",
-        "high": "45",
-        "inte": "true",
-        "property": "payload",
-        "x": 580,
-        "y": 280,
-        "wires": [
-            [
-                "32f4ca72.741486",
-                "dc3749c5.0b4cc8"
-            ]
-        ]
-    },
-    {
-        "id": "728ba8ff.c51c18",
-        "type": "random",
-        "z": "a70dc87b8c0b85b4",
-        "name": "Liight Level",
-        "low": "0",
-        "high": "100",
-        "inte": "true",
-        "property": "payload",
-        "x": 590,
-        "y": 320,
-        "wires": [
-            [
-                "32f4ca72.741486",
-                "3fd2e425.46e2ec"
-            ]
-        ]
-    },
-    {
-        "id": "c447faa1.5481d8",
-        "type": "comment",
-        "z": "a70dc87b8c0b85b4",
-        "name": "Creat Data",
-        "info": "",
-        "x": 400,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "3915c320.7a7e5c",
-        "type": "comment",
-        "z": "a70dc87b8c0b85b4",
-        "name": "Creat CSV",
-        "info": "",
-        "x": 980,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "77736558.b2ba6c",
-        "type": "ui_chart",
-        "z": "a70dc87b8c0b85b4",
+        "id": "fe6f74d5.674ec8",
+        "type": "csv",
+        "z": "62e9b78de1713d88",
         "name": "",
-        "group": "c678f9c6.9694b8",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "label": "Temp Water",
-        "chartType": "line",
-        "legend": "true",
-        "xformat": "HH:mm",
-        "interpolate": "step",
-        "nodata": "",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": "1",
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "x": 850,
-        "y": 240,
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": true,
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "timestamp,temperature,humidity",
+        "skip": "0",
+        "strings": true,
+        "x": 870,
+        "y": 600,
+        "wires": [
+            [
+                "3a8ebdf3.772cc2"
+            ]
+        ]
+    },
+    {
+        "id": "3a8ebdf3.772cc2",
+        "type": "file",
+        "z": "62e9b78de1713d88",
+        "name": "",
+        "filename": "",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 1030,
+        "y": 600,
         "wires": [
             []
         ]
     },
     {
-        "id": "dc3749c5.0b4cc8",
-        "type": "ui_chart",
-        "z": "a70dc87b8c0b85b4",
+        "id": "f226a86d.9bdfb8",
+        "type": "csv",
+        "z": "62e9b78de1713d88",
         "name": "",
-        "group": "c678f9c6.9694b8",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "label": "Temp Air",
-        "chartType": "line",
-        "legend": "true",
-        "xformat": "HH:mm",
-        "interpolate": "step",
-        "nodata": "",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": "1",
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "x": 840,
-        "y": 280,
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": false,
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "timestamp,temperature,humidity",
+        "skip": "0",
+        "strings": true,
+        "x": 870,
+        "y": 640,
         "wires": [
-            []
+            [
+                "3a8ebdf3.772cc2"
+            ]
         ]
     },
     {
-        "id": "3fd2e425.46e2ec",
-        "type": "ui_chart",
-        "z": "a70dc87b8c0b85b4",
-        "name": "",
-        "group": "c678f9c6.9694b8",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "label": "Light Level",
-        "chartType": "line",
-        "legend": "true",
-        "xformat": "HH:mm",
-        "interpolate": "step",
-        "nodata": "",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": "1",
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
+        "id": "3cb887e8.e533a8",
+        "type": "change",
+        "z": "62e9b78de1713d88",
+        "name": "Get file content",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "filecontent",
+                "tot": "msg"
+            }
         ],
-        "outputs": 1,
-        "x": 850,
-        "y": 320,
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 600,
         "wires": [
-            []
+            [
+                "fe6f74d5.674ec8"
+            ]
+        ]
+    },
+    {
+        "id": "f3ba1c7a.54ef5",
+        "type": "change",
+        "z": "62e9b78de1713d88",
+        "name": "Get file content",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "filecontent",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 640,
+        "wires": [
+            [
+                "f226a86d.9bdfb8"
+            ]
         ]
     }
 ]
