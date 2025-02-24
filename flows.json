@@ -136,7 +136,7 @@
             }
         },
         "site": {
-            "name": "OVUM Vakuumstand",
+            "name": "OVUM",
             "hideToolbar": "false",
             "allowSwipe": "mouse",
             "lockMenu": "true",
