@@ -157,7 +157,7 @@
     {
         "id": "58c2aa06.ef46e4",
         "type": "ui_tab",
-        "name": "OVUM Vakuumstand",
+        "name": "Vakuumstand",
         "icon": "dashboard",
         "order": 1,
         "disabled": false,
