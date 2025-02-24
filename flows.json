@@ -1125,7 +1125,7 @@
         "wires": [
             [
                 "e4483f25e9b66328",
-                "1c64aec88a06bd0e"
+                "639fb3a6663fcca4"
             ]
         ]
     },
@@ -1345,34 +1345,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 660,
+        "x": 620,
         "y": 80,
         "wires": [
             [
                 "76ed89e23b46d303"
-            ]
-        ]
-    },
-    {
-        "id": "1c64aec88a06bd0e",
-        "type": "ui_template",
-        "z": "61d663c65d5d04a2",
-        "group": "1591b6c7b8497e57",
-        "name": "",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "format": "<div style=\"position: absolute; top: 100px; left: 200px;\">\n    <ui-chart ng-model=\"data.chart1\"></ui-chart>\n</div>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 400,
-        "y": 400,
-        "wires": [
-            [
-                "639fb3a6663fcca4"
             ]
         ]
     },
