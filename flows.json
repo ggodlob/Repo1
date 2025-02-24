@@ -3456,7 +3456,7 @@
         "z": "fe54917cf124892f",
         "name": "",
         "property": "payload",
-        "action": "",
+        "action": "str",
         "pretty": false,
         "x": 1430,
         "y": 400,
