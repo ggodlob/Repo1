@@ -1118,8 +1118,7 @@
         "wires": [
             [
                 "44734ecb313db565",
-                "ea6d59356ce914d4",
-                "6a81eeaa1452b30a"
+                "ea6d59356ce914d4"
             ]
         ]
     },
@@ -1179,9 +1178,7 @@
         "y": 160,
         "wires": [
             [
-                "49c561fd45d99556",
-                "c41b36a9d604e018",
-                "34c1dc8fe6a167f4"
+                "49c561fd45d99556"
             ]
         ]
     },
@@ -1385,151 +1382,9 @@
         "y": 80,
         "wires": [
             [
-                "76ed89e23b46d303",
-                "f0d5b0bc69186f20"
+                "76ed89e23b46d303"
             ]
         ]
-    },
-    {
-        "id": "6a81eeaa1452b30a",
-        "type": "debug",
-        "z": "61d663c65d5d04a2",
-        "name": "debug 9",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 400,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "a67bb79da8eb5aee",
-        "type": "pdfmake",
-        "z": "61d663c65d5d04a2",
-        "name": "",
-        "outputType": "base64",
-        "inputProperty": "payload",
-        "options": "{}",
-        "outputProperty": "payload",
-        "x": 1280,
-        "y": 220,
-        "wires": [
-            [
-                "c3e07f4aa2c85082",
-                "39b53f531984b32a"
-            ]
-        ]
-    },
-    {
-        "id": "c41b36a9d604e018",
-        "type": "function",
-        "z": "61d663c65d5d04a2",
-        "name": "function 1",
-        "func": "var PdfPrinter = require('pdfmake');\nvar fs = require('fs');\n\nvar printer = new PdfPrinter({\n  Roboto: {\n    normal: 'fonts/Roboto-Regular.ttf',\n    bold: 'fonts/Roboto-Medium.ttf',\n    italics: 'fonts/Roboto-Italic.ttf',\n    bolditalics: 'fonts/Roboto-MediumItalic.ttf'\n  }\n});\n\nvar csvData = msg.payload; // Feltételezzük, hogy a CSV-adatok msg.payload-ban vannak\n\nvar tableBody = [csvData[0]]; // Fejléc sor hozzáadása\n\nfor (var i = 1; i < csvData.length; i++) {\n  tableBody.push(csvData[i]); // Adatsorok hozzáadása\n}\n\nvar docDefinition = {\n  content: [\n    {\n      table: {\n        body: tableBody\n      }\n    }\n  ]\n};\n\nvar pdfDoc = printer.createPdfKitDocument(docDefinition);\nvar chunks = [];\n\npdfDoc.on('data', (chunk) => {\n  chunks.push(chunk);\n});\n\npdfDoc.on('end', () => {\n  var result = Buffer.concat(chunks);\n  msg.payload = result;\n  node.send(msg);\n});\n\npdfDoc.end();",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1120,
-        "y": 220,
-        "wires": [
-            [
-                "a67bb79da8eb5aee",
-                "219dcdcf7f05b714"
-            ]
-        ]
-    },
-    {
-        "id": "34c1dc8fe6a167f4",
-        "type": "debug",
-        "z": "61d663c65d5d04a2",
-        "name": "debug 11",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1120,
-        "y": 100,
-        "wires": []
-    },
-    {
-        "id": "c3e07f4aa2c85082",
-        "type": "file",
-        "z": "61d663c65d5d04a2",
-        "name": "",
-        "filename": "filename",
-        "filenameType": "msg",
-        "appendNewline": true,
-        "createDir": true,
-        "overwriteFile": "true",
-        "encoding": "none",
-        "x": 1440,
-        "y": 220,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "219dcdcf7f05b714",
-        "type": "debug",
-        "z": "61d663c65d5d04a2",
-        "name": "debug 12",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1300,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "39b53f531984b32a",
-        "type": "debug",
-        "z": "61d663c65d5d04a2",
-        "name": "debug 13",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1480,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "f0d5b0bc69186f20",
-        "type": "debug",
-        "z": "61d663c65d5d04a2",
-        "name": "debug 14",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 940,
-        "y": 80,
-        "wires": []
     },
     {
         "id": "9bb7bdb1eae4948e",
