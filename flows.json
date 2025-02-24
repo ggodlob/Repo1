@@ -1354,6 +1354,27 @@
         ]
     },
     {
+        "id": "1c64aec88a06bd0e",
+        "type": "ui_template",
+        "z": "61d663c65d5d04a2",
+        "group": "a53d8deeea11707a",
+        "name": "",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "format": "<div style=\"position: absolute; top: 300px; left: 400px;\">\n    <ui-chart ng-model=\"Druck WP1\"></ui-chart>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 400,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "9bb7bdb1eae4948e",
         "type": "ui_text",
         "z": "cb52c966d2fad605",
