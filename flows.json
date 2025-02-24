@@ -3368,8 +3368,8 @@
         "trim": true,
         "noheader": false,
         "includeColumns": "",
-        "headers": "Timestamp,Pressure",
-        "debug": false,
+        "headers": "\"Timestamp\",\"Pressure\"",
+        "debug": true,
         "x": 1690,
         "y": 560,
         "wires": [
