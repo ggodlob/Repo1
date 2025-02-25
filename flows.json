@@ -1503,135 +1503,6 @@
         ]
     },
     {
-        "id": "0b61ed2d88682e3f",
-        "type": "file",
-        "z": "61d663c65d5d04a2",
-        "name": "",
-        "filename": "/home/ovum/chart.log",
-        "filenameType": "str",
-        "appendNewline": true,
-        "createDir": false,
-        "overwriteFile": "true",
-        "x": 1240,
-        "y": 500,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e5c9d15b18b90c65",
-        "type": "json",
-        "z": "61d663c65d5d04a2",
-        "name": "",
-        "x": 850,
-        "y": 460,
-        "wires": [
-            [
-                "f9c7a725cf2c7658"
-            ]
-        ]
-    },
-    {
-        "id": "f9c7a725cf2c7658",
-        "type": "function",
-        "z": "61d663c65d5d04a2",
-        "name": "",
-        "func": "if (msg.topic === \"save\") {\n    msg.payload = context.last;\n    return msg;\n}\nelse {\n    context.last = msg.payload;\n}\nreturn null;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1040,
-        "y": 500,
-        "wires": [
-            [
-                "0b61ed2d88682e3f"
-            ]
-        ]
-    },
-    {
-        "id": "da2c47557c34dd61",
-        "type": "ui_button",
-        "z": "61d663c65d5d04a2",
-        "name": "",
-        "group": "4b87de5b15c38c06",
-        "order": 2,
-        "width": "2",
-        "height": "1",
-        "passthru": false,
-        "label": "Inject",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "",
-        "topicType": "str",
-        "x": 210,
-        "y": 460,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "c3674e9a8a432b11",
-        "type": "ui_button",
-        "z": "61d663c65d5d04a2",
-        "name": "",
-        "group": "4b87de5b15c38c06",
-        "order": 4,
-        "width": "2",
-        "height": "1",
-        "passthru": false,
-        "label": "restore",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "",
-        "topicType": "str",
-        "x": 200,
-        "y": 420,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e32a35d3d315463e",
-        "type": "ui_button",
-        "z": "61d663c65d5d04a2",
-        "name": "",
-        "group": "4b87de5b15c38c06",
-        "order": 3,
-        "width": "2",
-        "height": "1",
-        "passthru": false,
-        "label": "save",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "save",
-        "topicType": "str",
-        "x": 210,
-        "y": 500,
-        "wires": [
-            [
-                "f9c7a725cf2c7658"
-            ]
-        ]
-    },
-    {
         "id": "5f9474b7153f5ee9",
         "type": "ui_chart",
         "z": "61d663c65d5d04a2",
@@ -1672,9 +1543,7 @@
         "x": 1270,
         "y": 220,
         "wires": [
-            [
-                "e5c9d15b18b90c65"
-            ]
+            []
         ]
     },
     {
@@ -1728,7 +1597,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1280,
-        "y": 340,
+        "y": 280,
         "wires": []
     },
     {
