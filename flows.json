@@ -1631,7 +1631,7 @@
         "multi": "mult",
         "ret": "\\r\\n",
         "temp": "",
-        "skip": "0",
+        "skip": "1",
         "strings": true,
         "include_empty_strings": "",
         "include_null_values": "",
