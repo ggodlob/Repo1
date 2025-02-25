@@ -48,14 +48,6 @@
         "env": []
     },
     {
-        "id": "23ae8c9958392184",
-        "type": "tab",
-        "label": "Restore",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "0434627783d5f543",
         "type": "tab",
         "label": "Flow 3",
@@ -1280,7 +1272,8 @@
         "wires": [
             [
                 "e4483f25e9b66328",
-                "639fb3a6663fcca4"
+                "639fb3a6663fcca4",
+                "4bc8682f170a30c9"
             ]
         ]
     },
@@ -1319,8 +1312,7 @@
         "y": 160,
         "wires": [
             [
-                "958aa64d4e478396",
-                "7dab1a9a668cdb74"
+                "958aa64d4e478396"
             ]
         ]
     },
@@ -1539,22 +1531,6 @@
         ]
     },
     {
-        "id": "b0ad92b8f04430e5",
-        "type": "json",
-        "z": "61d663c65d5d04a2",
-        "name": "",
-        "property": "payload",
-        "action": "obj",
-        "pretty": false,
-        "x": 550,
-        "y": 420,
-        "wires": [
-            [
-                "5f9474b7153f5ee9"
-            ]
-        ]
-    },
-    {
         "id": "f9c7a725cf2c7658",
         "type": "function",
         "z": "61d663c65d5d04a2",
@@ -1598,8 +1574,7 @@
         "y": 460,
         "wires": [
             [
-                "5f9474b7153f5ee9",
-                "c3674e9a8a432b11"
+                "5f9474b7153f5ee9"
             ]
         ]
     },
@@ -1623,12 +1598,10 @@
         "payloadType": "str",
         "topic": "",
         "topicType": "str",
-        "x": 380,
+        "x": 200,
         "y": 420,
         "wires": [
-            [
-                "b0ad92b8f04430e5"
-            ]
+            []
         ]
     },
     {
@@ -1706,31 +1679,20 @@
         ]
     },
     {
-        "id": "7dab1a9a668cdb74",
-        "type": "change",
+        "id": "4bc8682f170a30c9",
+        "type": "debug",
         "z": "61d663c65d5d04a2",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "msg.filename",
-                "pt": "msg",
-                "to": "msg.filename",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1250,
-        "y": 260,
-        "wires": [
-            [
-                "da2c47557c34dd61"
-            ]
-        ]
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 360,
+        "wires": []
     },
     {
         "id": "9bb7bdb1eae4948e",
