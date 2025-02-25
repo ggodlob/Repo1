@@ -1662,7 +1662,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
+        "payload": "object",
         "payloadType": "date",
         "x": 770,
         "y": 280,
