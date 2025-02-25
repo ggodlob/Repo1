@@ -1568,7 +1568,7 @@
         "type": "function",
         "z": "61d663c65d5d04a2",
         "name": "function 1",
-        "func": "var csv = msg.payload;\nvar lines = csv.split(\"\\n\");\nvar data = [];\nvar headers = lines[0].split(\";\");\n\nfor (var i = 1; i < lines.length; i++) {\n    var values = lines[i].split(\";\");\n    if (values.length === headers.length) {\n        var point = {};\n        for (var j = 0; j < headers.length; j++) {\n            point[headers[j]] = parseFloat(values[j]); // Parse values as numbers\n        }\n        data.push(point);\n    }\n}\n\n// Set chart labels\nmsg.labels = {\n    x: headers[0], // Timestamp\n    y: headers[1]  // Pressure\n};\n\nmsg.payload = data;\nreturn msg;",
+        "func": "var csv = msg.payload;\nvar lines = csv.split(\"\\n\");\nvar data = [];\nvar headers = lines[0].split(\";\");\n\nfor (var i = 1; i < lines.length; i++) {\n    var values = lines[i].split(\";\");\n    if (values.length === headers.length) {\n        var point = {};\n        for (var j = 0; j < headers.length; j++) {\n            if (headers[j] === \"Timestamp\") {\n                point[headers[j]] = values[j]; // Timestamp as string\n            } else {\n                point[headers[j]] = parseFloat(values[j]); // Pressure as number\n            }\n        }\n        data.push(point);\n    }\n}\n\n// Set chart labels\nmsg.labels = {\n    x: headers[0], // Timestamp\n    y: headers[1]  // Pressure\n};\n\nmsg.payload = data;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
