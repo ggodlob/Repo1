@@ -1293,7 +1293,8 @@
         "y": 160,
         "wires": [
             [
-                "49c561fd45d99556"
+                "49c561fd45d99556",
+                "b5036735a370d589"
             ]
         ]
     },
@@ -1573,9 +1574,7 @@
         "x": 210,
         "y": 460,
         "wires": [
-            [
-                "5f9474b7153f5ee9"
-            ]
+            []
         ]
     },
     {
@@ -1670,8 +1669,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 710,
-        "y": 460,
+        "x": 1270,
+        "y": 220,
         "wires": [
             [
                 "e5c9d15b18b90c65"
@@ -1693,6 +1692,26 @@
         "x": 440,
         "y": 360,
         "wires": []
+    },
+    {
+        "id": "b5036735a370d589",
+        "type": "function",
+        "z": "61d663c65d5d04a2",
+        "name": "function 1",
+        "func": "var csv = msg.payload;\nvar lines = csv.split(\"\\n\");\nvar data = [];\nvar headers = lines[0].split(\";\");\n\nfor (var i = 1; i < lines.length; i++) {\n    var values = lines[i].split(\";\");\n    if (values.length === headers.length) {\n        var point = {};\n        for (var j = 0; j < headers.length; j++) {\n            point[headers[j]] = parseFloat(values[j]); // Parse values as numbers\n        }\n        data.push(point);\n    }\n}\n\n// Set chart labels\nmsg.labels = {\n    x: headers[0], // Timestamp\n    y: headers[1]  // Pressure\n};\n\nmsg.payload = data;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1120,
+        "y": 220,
+        "wires": [
+            [
+                "5f9474b7153f5ee9"
+            ]
+        ]
     },
     {
         "id": "9bb7bdb1eae4948e",
