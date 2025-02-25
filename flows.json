@@ -1530,11 +1530,11 @@
         "type": "file in",
         "z": "61d663c65d5d04a2",
         "name": "",
-        "filename": "/home/gabor/chart.log",
+        "filename": "filename",
         "filenameType": "str",
         "format": "utf8",
         "allProps": false,
-        "x": 430,
+        "x": 390,
         "y": 420,
         "wires": [
             [
