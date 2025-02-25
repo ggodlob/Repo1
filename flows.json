@@ -1290,7 +1290,7 @@
         "wires": [
             [
                 "49c561fd45d99556",
-                "2f962c51629bc340"
+                "5f9474b7153f5ee9"
             ]
         ]
     },
@@ -1499,20 +1499,213 @@
         ]
     },
     {
-        "id": "2f962c51629bc340",
-        "type": "debug",
+        "id": "0b61ed2d88682e3f",
+        "type": "file",
         "z": "61d663c65d5d04a2",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1120,
-        "y": 240,
-        "wires": []
+        "name": "",
+        "filename": "/home/ovum/chart.log",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "x": 1280,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "28a4eff1523a3b04",
+        "type": "file in",
+        "z": "61d663c65d5d04a2",
+        "name": "",
+        "filename": "/home/gabor/chart.log",
+        "filenameType": "str",
+        "format": "utf8",
+        "allProps": false,
+        "x": 430,
+        "y": 420,
+        "wires": [
+            [
+                "b0ad92b8f04430e5"
+            ]
+        ]
+    },
+    {
+        "id": "e5c9d15b18b90c65",
+        "type": "json",
+        "z": "61d663c65d5d04a2",
+        "name": "",
+        "x": 910,
+        "y": 360,
+        "wires": [
+            [
+                "f9c7a725cf2c7658"
+            ]
+        ]
+    },
+    {
+        "id": "b0ad92b8f04430e5",
+        "type": "json",
+        "z": "61d663c65d5d04a2",
+        "name": "",
+        "x": 600,
+        "y": 420,
+        "wires": [
+            [
+                "5f9474b7153f5ee9"
+            ]
+        ]
+    },
+    {
+        "id": "f9c7a725cf2c7658",
+        "type": "function",
+        "z": "61d663c65d5d04a2",
+        "name": "",
+        "func": "if (msg.topic === \"save\") {\n    msg.payload = context.last;\n    return msg;\n}\nelse {\n    context.last = msg.payload;\n}\nreturn null;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1080,
+        "y": 420,
+        "wires": [
+            [
+                "0b61ed2d88682e3f"
+            ]
+        ]
+    },
+    {
+        "id": "da2c47557c34dd61",
+        "type": "ui_button",
+        "z": "61d663c65d5d04a2",
+        "name": "",
+        "group": "b9eaf4515438b94a",
+        "order": 2,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "Inject",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 250,
+        "y": 360,
+        "wires": [
+            [
+                "76ed89e23b46d303"
+            ]
+        ]
+    },
+    {
+        "id": "c3674e9a8a432b11",
+        "type": "ui_button",
+        "z": "61d663c65d5d04a2",
+        "name": "",
+        "group": "b9eaf4515438b94a",
+        "order": 4,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "restore",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 240,
+        "y": 420,
+        "wires": [
+            [
+                "28a4eff1523a3b04"
+            ]
+        ]
+    },
+    {
+        "id": "e32a35d3d315463e",
+        "type": "ui_button",
+        "z": "61d663c65d5d04a2",
+        "name": "",
+        "group": "b9eaf4515438b94a",
+        "order": 3,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "save",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "save",
+        "topicType": "str",
+        "x": 250,
+        "y": 480,
+        "wires": [
+            [
+                "f9c7a725cf2c7658"
+            ]
+        ]
+    },
+    {
+        "id": "5f9474b7153f5ee9",
+        "type": "ui_chart",
+        "z": "61d663c65d5d04a2",
+        "name": "",
+        "group": "b9eaf4515438b94a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "bezier",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "15",
+        "removeOlderPoints": "100",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 770,
+        "y": 360,
+        "wires": [
+            [
+                "e5c9d15b18b90c65"
+            ]
+        ]
     },
     {
         "id": "9bb7bdb1eae4948e",
@@ -3381,207 +3574,6 @@
         "wires": [
             [
                 "442a856796f14a64"
-            ]
-        ]
-    },
-    {
-        "id": "0b61ed2d88682e3f",
-        "type": "file",
-        "z": "23ae8c9958392184",
-        "name": "",
-        "filename": "/home/ovum/chart.log",
-        "filenameType": "str",
-        "appendNewline": true,
-        "createDir": false,
-        "overwriteFile": "true",
-        "x": 690,
-        "y": 320,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "28a4eff1523a3b04",
-        "type": "file in",
-        "z": "23ae8c9958392184",
-        "name": "",
-        "filename": "/home/gabor/chart.log",
-        "filenameType": "str",
-        "format": "utf8",
-        "allProps": false,
-        "x": 410,
-        "y": 200,
-        "wires": [
-            [
-                "b0ad92b8f04430e5"
-            ]
-        ]
-    },
-    {
-        "id": "e5c9d15b18b90c65",
-        "type": "json",
-        "z": "23ae8c9958392184",
-        "name": "",
-        "x": 870,
-        "y": 140,
-        "wires": [
-            [
-                "f9c7a725cf2c7658"
-            ]
-        ]
-    },
-    {
-        "id": "b0ad92b8f04430e5",
-        "type": "json",
-        "z": "23ae8c9958392184",
-        "name": "",
-        "x": 580,
-        "y": 200,
-        "wires": [
-            [
-                "5f9474b7153f5ee9"
-            ]
-        ]
-    },
-    {
-        "id": "f9c7a725cf2c7658",
-        "type": "function",
-        "z": "23ae8c9958392184",
-        "name": "",
-        "func": "if (msg.topic === \"save\") {\n    msg.payload = context.last;\n    return msg;\n}\nelse {\n    context.last = msg.payload;\n}\nreturn null;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 380,
-        "y": 320,
-        "wires": [
-            [
-                "0b61ed2d88682e3f"
-            ]
-        ]
-    },
-    {
-        "id": "da2c47557c34dd61",
-        "type": "ui_button",
-        "z": "23ae8c9958392184",
-        "name": "",
-        "group": "",
-        "order": 2,
-        "width": "2",
-        "height": "1",
-        "passthru": false,
-        "label": "Inject",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "",
-        "topicType": "str",
-        "x": 430,
-        "y": 140,
-        "wires": [
-            [
-                "5f9474b7153f5ee9"
-            ]
-        ]
-    },
-    {
-        "id": "c3674e9a8a432b11",
-        "type": "ui_button",
-        "z": "23ae8c9958392184",
-        "name": "",
-        "group": "",
-        "order": 4,
-        "width": "2",
-        "height": "1",
-        "label": "restore",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "",
-        "x": 220,
-        "y": 200,
-        "wires": [
-            [
-                "28a4eff1523a3b04"
-            ]
-        ]
-    },
-    {
-        "id": "e32a35d3d315463e",
-        "type": "ui_button",
-        "z": "23ae8c9958392184",
-        "name": "",
-        "group": "",
-        "order": 3,
-        "width": "2",
-        "height": "1",
-        "label": "save",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "save",
-        "x": 200,
-        "y": 320,
-        "wires": [
-            [
-                "f9c7a725cf2c7658"
-            ]
-        ]
-    },
-    {
-        "id": "5f9474b7153f5ee9",
-        "type": "ui_chart",
-        "z": "23ae8c9958392184",
-        "name": "",
-        "group": "",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "label": "chart",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "bezier",
-        "nodata": "",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": "15",
-        "removeOlderPoints": "100",
-        "removeOlderUnit": "60",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 730,
-        "y": 140,
-        "wires": [
-            [
-                "e5c9d15b18b90c65"
             ]
         ]
     },
