@@ -1300,8 +1300,7 @@
         "y": 160,
         "wires": [
             [
-                "49c561fd45d99556",
-                "acdb0713043e7124"
+                "49c561fd45d99556"
             ]
         ]
     },
@@ -1320,7 +1319,8 @@
         "y": 160,
         "wires": [
             [
-                "958aa64d4e478396"
+                "958aa64d4e478396",
+                "7dab1a9a668cdb74"
             ]
         ]
     },
@@ -1543,6 +1543,9 @@
         "type": "json",
         "z": "61d663c65d5d04a2",
         "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
         "x": 550,
         "y": 420,
         "wires": [
@@ -1595,7 +1598,8 @@
         "y": 460,
         "wires": [
             [
-                "5f9474b7153f5ee9"
+                "5f9474b7153f5ee9",
+                "c3674e9a8a432b11"
             ]
         ]
     },
@@ -1619,7 +1623,7 @@
         "payloadType": "str",
         "topic": "",
         "topicType": "str",
-        "x": 200,
+        "x": 380,
         "y": 420,
         "wires": [
             [
@@ -1702,21 +1706,31 @@
         ]
     },
     {
-        "id": "acdb0713043e7124",
-        "type": "debug",
+        "id": "7dab1a9a668cdb74",
+        "type": "change",
         "z": "61d663c65d5d04a2",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1120,
-        "y": 220,
-        "wires": []
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "msg.filename",
+                "pt": "msg",
+                "to": "msg.filename",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1250,
+        "y": 260,
+        "wires": [
+            [
+                "da2c47557c34dd61"
+            ]
+        ]
     },
     {
         "id": "9bb7bdb1eae4948e",
