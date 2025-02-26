@@ -1576,12 +1576,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1120,
-        "y": 220,
+        "x": 860,
+        "y": 320,
         "wires": [
             [
-                "5f9474b7153f5ee9",
-                "4ba2f501fe15c8ff"
+                "ac652a1617d2cc83"
             ]
         ]
     },
@@ -1618,6 +1617,23 @@
         "x": 1120,
         "y": 100,
         "wires": []
+    },
+    {
+        "id": "ac652a1617d2cc83",
+        "type": "chartjs-line",
+        "z": "61d663c65d5d04a2",
+        "name": "",
+        "path": "charts",
+        "charttitle": "Chart title",
+        "xaxis": "x",
+        "yaxis": "y",
+        "x": 1050,
+        "y": 340,
+        "wires": [
+            [
+                "5f9474b7153f5ee9"
+            ]
+        ]
     },
     {
         "id": "9bb7bdb1eae4948e",
