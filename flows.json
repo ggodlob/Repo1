@@ -1515,7 +1515,7 @@
         "label": "chart",
         "chartType": "line",
         "legend": "true",
-        "xformat": "x/1000",
+        "xformat": "x",
         "interpolate": "linear",
         "nodata": "Leer",
         "dot": true,
