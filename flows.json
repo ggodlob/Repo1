@@ -1521,7 +1521,7 @@
         "dot": true,
         "ymin": "-100",
         "ymax": "100",
-        "removeOlder": "5",
+        "removeOlder": "1",
         "removeOlderPoints": "100",
         "removeOlderUnit": "3600",
         "cutout": 0,
