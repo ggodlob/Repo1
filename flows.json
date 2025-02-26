@@ -1620,35 +1620,6 @@
         "wires": []
     },
     {
-        "id": "31e5fd28f2ac9842",
-        "type": "inject",
-        "z": "61d663c65d5d04a2",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 780,
-        "y": 280,
-        "wires": [
-            [
-                "b5036735a370d589"
-            ]
-        ]
-    },
-    {
         "id": "d1cc9fe6fa6256ff",
         "type": "inject",
         "z": "61d663c65d5d04a2",
