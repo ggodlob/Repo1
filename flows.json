@@ -1518,7 +1518,7 @@
         "xformat": "x",
         "interpolate": "linear",
         "nodata": "Leer",
-        "dot": true,
+        "dot": false,
         "ymin": "-100.0",
         "ymax": "100.0",
         "removeOlder": "1",
