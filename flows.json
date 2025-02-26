@@ -1522,7 +1522,7 @@
         "ymin": "-100.0",
         "ymax": "100.0",
         "removeOlder": "1",
-        "removeOlderPoints": "100",
+        "removeOlderPoints": "60",
         "removeOlderUnit": "3600",
         "cutout": 0,
         "useOneColor": false,
