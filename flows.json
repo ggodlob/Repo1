@@ -1620,6 +1620,35 @@
         "wires": []
     },
     {
+        "id": "4b199fc3627d5d47",
+        "type": "inject",
+        "z": "61d663c65d5d04a2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1060,
+        "y": 300,
+        "wires": [
+            [
+                "5f9474b7153f5ee9"
+            ]
+        ]
+    },
+    {
         "id": "9bb7bdb1eae4948e",
         "type": "ui_text",
         "z": "cb52c966d2fad605",
