@@ -1514,7 +1514,7 @@
         "height": 0,
         "label": "chart",
         "chartType": "line",
-        "legend": "false",
+        "legend": "true",
         "xformat": "auto",
         "interpolate": "bezier",
         "nodata": "",
