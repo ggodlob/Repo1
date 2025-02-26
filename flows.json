@@ -1516,7 +1516,7 @@
         "chartType": "line",
         "legend": "true",
         "xformat": "x",
-        "interpolate": "bezier",
+        "interpolate": "linear",
         "nodata": "",
         "dot": true,
         "ymin": "-100",
