@@ -1545,7 +1545,7 @@
         "xformat": "HH:mm",
         "interpolate": "linear",
         "nodata": "Leer",
-        "dot": false,
+        "dot": true,
         "ymin": "-100.0",
         "ymax": "0",
         "removeOlder": "30",
@@ -1553,7 +1553,7 @@
         "removeOlderUnit": "60",
         "cutout": 0,
         "useOneColor": false,
-        "useUTC": true,
+        "useUTC": false,
         "colors": [
             "#1f77b4",
             "#aec7e8",
