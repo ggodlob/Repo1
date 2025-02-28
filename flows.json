@@ -1542,7 +1542,7 @@
         "label": "chart",
         "chartType": "line",
         "legend": "true",
-        "xformat": "auto",
+        "xformat": "HH:mm",
         "interpolate": "linear",
         "nodata": "Leer",
         "dot": false,
@@ -1608,8 +1608,7 @@
         "wires": [
             [
                 "5f9474b7153f5ee9",
-                "4ba2f501fe15c8ff",
-                "b83c9e8f8bb5e143"
+                "4ba2f501fe15c8ff"
             ]
         ]
     },
@@ -1674,50 +1673,6 @@
             [
                 "76ed89e23b46d303"
             ]
-        ]
-    },
-    {
-        "id": "b83c9e8f8bb5e143",
-        "type": "ui_chart",
-        "z": "61d663c65d5d04a2",
-        "name": "",
-        "group": "4b87de5b15c38c06",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "label": "Druck WP1",
-        "chartType": "line",
-        "legend": "true",
-        "xformat": "time",
-        "interpolate": "bezier",
-        "nodata": "",
-        "dot": false,
-        "ymin": "-100",
-        "ymax": "0",
-        "removeOlder": "15",
-        "removeOlderPoints": "100",
-        "removeOlderUnit": "60",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 1290,
-        "y": 360,
-        "wires": [
-            []
         ]
     },
     {
