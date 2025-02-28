@@ -1520,7 +1520,7 @@
         "nodata": "Leer",
         "dot": false,
         "ymin": "-100.0",
-        "ymax": "100.0",
+        "ymax": "0",
         "removeOlder": "5",
         "removeOlderPoints": "1000",
         "removeOlderUnit": "86400",
