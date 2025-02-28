@@ -1688,7 +1688,7 @@
         "label": "Druck WP1",
         "chartType": "line",
         "legend": "true",
-        "xformat": "auto",
+        "xformat": "time",
         "interpolate": "bezier",
         "nodata": "",
         "dot": false,
