@@ -56,6 +56,14 @@
         "env": []
     },
     {
+        "id": "cb1a3d5460e00228",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "0f7a1f209ffd4d33",
         "type": "ui_base",
         "theme": {
@@ -381,6 +389,25 @@
         "order": 3,
         "disp": true,
         "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0ed4eeb8e062e528",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "feee56445f470f84",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "0ed4eeb8e062e528",
+        "order": 1,
+        "disp": true,
+        "width": "6",
         "collapse": false,
         "className": ""
     },
@@ -1581,7 +1608,8 @@
         "wires": [
             [
                 "5f9474b7153f5ee9",
-                "4ba2f501fe15c8ff"
+                "4ba2f501fe15c8ff",
+                "b83c9e8f8bb5e143"
             ]
         ]
     },
@@ -1646,6 +1674,50 @@
             [
                 "76ed89e23b46d303"
             ]
+        ]
+    },
+    {
+        "id": "b83c9e8f8bb5e143",
+        "type": "ui_chart",
+        "z": "61d663c65d5d04a2",
+        "name": "",
+        "group": "4b87de5b15c38c06",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Druck WP1",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "bezier",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-1000",
+        "ymax": "0",
+        "removeOlder": "15",
+        "removeOlderPoints": "100",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1290,
+        "y": 360,
+        "wires": [
+            []
         ]
     },
     {
@@ -3982,6 +4054,132 @@
         "wires": [
             [
                 "f226a86d.9bdfb8"
+            ]
+        ]
+    },
+    {
+        "id": "509f2e65acb1d7c1",
+        "type": "ui_chart",
+        "z": "cb1a3d5460e00228",
+        "name": "",
+        "group": "feee56445f470f84",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 730,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "95a2bf1261670e2a",
+        "type": "inject",
+        "z": "cb1a3d5460e00228",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "Time",
+        "x": 410,
+        "y": 340,
+        "wires": [
+            [
+                "3b73600aaef1eb01"
+            ]
+        ]
+    },
+    {
+        "id": "7955e5011809ccbf",
+        "type": "inject",
+        "z": "cb1a3d5460e00228",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "Voltaje",
+        "x": 420,
+        "y": 440,
+        "wires": [
+            [
+                "bb1b231451b142af"
+            ]
+        ]
+    },
+    {
+        "id": "3b73600aaef1eb01",
+        "type": "random",
+        "z": "cb1a3d5460e00228",
+        "name": "",
+        "low": 1,
+        "high": 10,
+        "inte": "true",
+        "property": "payload",
+        "x": 560,
+        "y": 340,
+        "wires": [
+            [
+                "509f2e65acb1d7c1"
+            ]
+        ]
+    },
+    {
+        "id": "bb1b231451b142af",
+        "type": "random",
+        "z": "cb1a3d5460e00228",
+        "name": "",
+        "low": 1,
+        "high": "100",
+        "inte": "true",
+        "property": "payload",
+        "x": 560,
+        "y": 440,
+        "wires": [
+            [
+                "509f2e65acb1d7c1"
             ]
         ]
     }
