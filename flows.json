@@ -1203,7 +1203,7 @@
         "height": 0,
         "name": "",
         "label": "Druckverlust WP1",
-        "format": "{{msg.payload}} mbar",
+        "format": "{{msg.payload.noUnit ? msg.payload.text : msg.payload + \" mbar\"}}",
         "layout": "col-center",
         "className": "",
         "style": true,
