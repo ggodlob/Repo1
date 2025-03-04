@@ -1204,7 +1204,7 @@
         "name": "",
         "label": "Druckverlust WP1",
         "format": "{{msg.payload.noUnit ? msg.payload.text : msg.payload + \" mbar\"}}",
-        "layout": "col-center",
+        "layout": "row-spread",
         "className": "",
         "style": true,
         "font": "",
