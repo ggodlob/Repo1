@@ -1701,6 +1701,25 @@
         ]
     },
     {
+        "id": "57038e54f537ca1f",
+        "type": "cmi in",
+        "z": "61d663c65d5d04a2",
+        "cmi": "ef6702f2eebd5bef",
+        "name": "Messzeit 1",
+        "item": "17",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 160,
+        "y": 220,
+        "wires": [
+            [
+                "87be1f3f2b0360b2"
+            ]
+        ]
+    },
+    {
         "id": "9bb7bdb1eae4948e",
         "type": "ui_text",
         "z": "cb52c966d2fad605",
