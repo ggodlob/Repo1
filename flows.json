@@ -1516,7 +1516,8 @@
         "y": 280,
         "wires": [
             [
-                "d0b93f205b27dcd5"
+                "d0b93f205b27dcd5",
+                "e45d0880a5f8808a"
             ]
         ]
     },
@@ -1640,7 +1641,7 @@
         "order": 5,
         "width": 0,
         "height": 0,
-        "format": "<i id=\"icon0\" class=\"fa fa-circle-o\" style=\"display: none;\"></i>\n<i id=\"icon1\" class=\"fa fa-circle\" style=\"display: none;\"></i>\n<i id=\"icon2\" class=\"fa fa-circle-o-notch fa-spin\" style=\"display: none;\"></i>\n\n<script>\n    (function(scope) {\n  scope.$watch('msg', function(msg) {\n    if (msg) {\n      document.getElementById('icon0').style.display = 'none';\n      document.getElementById('icon1').style.display = 'none';\n      document.getElementById('icon2').style.display = 'none';\n\n      if (msg.payload === 0) {\n        document.getElementById('icon0').style.display = 'inline';\n      } else if (msg.payload === 1) {\n        document.getElementById('icon1').style.display = 'inline';\n      } else if (msg.payload === 2) {\n        document.getElementById('icon2').style.display = 'inline';\n      }\n    }\n  });\n})(scope);\n</script>",
+        "format": "<style>\n  .status-icon {\n    width: 20px;\n    height: 20px;\n    border-radius: 50%;\n    display: inline-block;\n  }\n\n  .status-icon.green {\n    background-color: green;\n  }\n\n  .status-icon.yellow {\n    background-color: yellow;\n  }\n\n  .status-icon.red {\n    background-color: red;\n  }\n</style>\n\n<div id=\"statusIcon\" class=\"status-icon\"></div>\n\n<script>\n  (function(scope) {\n  scope.$watch('msg', function(msg) {\n    if (msg && msg.payload !== undefined) {\n      var icon = document.getElementById('statusIcon');\n      icon.classList.remove('green', 'yellow', 'red');\n\n      if (msg.payload === 0) {\n        icon.classList.add('green');\n      } else if (msg.payload < 100.0) {\n        icon.classList.add('yellow');\n      } else if (msg.payload > 100.0) {\n        icon.classList.add('red');\n      }\n    }\n  });\n})(scope);\n</script>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
