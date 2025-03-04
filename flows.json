@@ -1705,17 +1705,17 @@
         "type": "cmi in",
         "z": "61d663c65d5d04a2",
         "cmi": "ef6702f2eebd5bef",
-        "name": "Messzeit 1",
-        "item": "17",
+        "name": "Druckverlust 1",
+        "item": "21",
         "source": "0",
         "timestamp": "0",
         "skip": "0",
         "severity": "0",
-        "x": 160,
-        "y": 220,
+        "x": 170,
+        "y": 280,
         "wires": [
             [
-                "87be1f3f2b0360b2"
+                "f563ef869b6642b1"
             ]
         ]
     },
