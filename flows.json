@@ -1632,6 +1632,27 @@
         "wires": []
     },
     {
+        "id": "e45d0880a5f8808a",
+        "type": "ui_template",
+        "z": "61d663c65d5d04a2",
+        "group": "1591b6c7b8497e57",
+        "name": "",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "format": "<i id=\"icon0\" class=\"fa fa-circle-o\" style=\"display: none;\"></i>\n<i id=\"icon1\" class=\"fa fa-circle\" style=\"display: none;\"></i>\n<i id=\"icon2\" class=\"fa fa-circle-o-notch fa-spin\" style=\"display: none;\"></i>\n\n<script>\n    (function(scope) {\n  scope.$watch('msg', function(msg) {\n    if (msg) {\n      document.getElementById('icon0').style.display = 'none';\n      document.getElementById('icon1').style.display = 'none';\n      document.getElementById('icon2').style.display = 'none';\n\n      if (msg.payload === 0) {\n        document.getElementById('icon0').style.display = 'inline';\n      } else if (msg.payload === 1) {\n        document.getElementById('icon1').style.display = 'inline';\n      } else if (msg.payload === 2) {\n        document.getElementById('icon2').style.display = 'inline';\n      }\n    }\n  });\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 420,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
         "id": "9bb7bdb1eae4948e",
         "type": "ui_text",
         "z": "cb52c966d2fad605",
