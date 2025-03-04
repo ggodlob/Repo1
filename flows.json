@@ -1379,7 +1379,7 @@
         "chartType": "line",
         "legend": "false",
         "xformat": "HH:mm",
-        "interpolate": "bezier",
+        "interpolate": "linear",
         "nodata": "",
         "dot": false,
         "ymin": "-1000",
