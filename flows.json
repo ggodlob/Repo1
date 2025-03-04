@@ -1183,7 +1183,7 @@
         "name": "",
         "label": "Messzeit WP1",
         "format": "{{msg.payload}} Sek",
-        "layout": "col-center",
+        "layout": "row-spread",
         "className": "",
         "style": false,
         "font": "",
