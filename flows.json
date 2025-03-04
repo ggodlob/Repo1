@@ -1299,8 +1299,7 @@
         "wires": [
             [
                 "e4483f25e9b66328",
-                "639fb3a6663fcca4",
-                "4bc8682f170a30c9"
+                "639fb3a6663fcca4"
             ]
         ]
     },
@@ -1320,9 +1319,7 @@
         "y": 160,
         "wires": [
             [
-                "49c561fd45d99556",
-                "be35c3dcf73d0e4a",
-                "b5036735a370d589"
+                "49c561fd45d99556"
             ]
         ]
     },
@@ -1340,9 +1337,7 @@
         "x": 1120,
         "y": 160,
         "wires": [
-            [
-                "958aa64d4e478396"
-            ]
+            []
         ]
     },
     {
@@ -1487,23 +1482,6 @@
         ]
     },
     {
-        "id": "958aa64d4e478396",
-        "type": "debug",
-        "z": "61d663c65d5d04a2",
-        "name": "debug 8",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1280,
-        "y": 160,
-        "wires": []
-    },
-    {
         "id": "ea6d59356ce914d4",
         "type": "change",
         "z": "61d663c65d5d04a2",
@@ -1531,176 +1509,6 @@
         ]
     },
     {
-        "id": "5f9474b7153f5ee9",
-        "type": "ui_chart",
-        "z": "61d663c65d5d04a2",
-        "name": "",
-        "group": "4b87de5b15c38c06",
-        "order": 1,
-        "width": "1",
-        "height": "1",
-        "label": "chart",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "Leer",
-        "dot": true,
-        "ymin": "0",
-        "ymax": "0",
-        "removeOlder": "1",
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 1310,
-        "y": 220,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "4bc8682f170a30c9",
-        "type": "debug",
-        "z": "61d663c65d5d04a2",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 400,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "b5036735a370d589",
-        "type": "function",
-        "z": "61d663c65d5d04a2",
-        "name": "function 1",
-        "func": "// Tároló objektum létrehozása (ha még nem létezik)\nif (!context.get(\"pressureData\")) {\n    context.set(\"pressureData\", {});\n}\n\nvar pressureData = context.get(\"pressureData\");\n\n// Adatok feldolgozása\nconst csvString = msg.payload;\nconst lines = csvString.split('\\n');\nconst timestamp = msg.timestamp;\n\nfor (let i = 1; i < lines.length; i++) {\n    const line = lines[i];\n    if (line.trim() !== \"\") {\n        const values = line.split(';');\n        if (values.length === 2) {\n            const pressureValue = parseFloat(values[1]);\n            if (!isNaN(pressureValue)) {\n                // Időbélyeg formázása HH:mm formátumra\n                const date = new Date(timestamp + i * 1000);\n                const hours = date.getHours().toString().padStart(2, '0');\n                const minutes = date.getMinutes().toString().padStart(2, '0');\n                const formattedTime = hours + \":\" + minutes;\n\n                // Adatok tárolása az objektumban\n                if (pressureData[formattedTime]) {\n                    pressureData[formattedTime].push(pressureValue);\n                } else {\n                    pressureData[formattedTime] = [pressureValue];\n                }\n            }\n        }\n    }\n}\n\n// Adatok átalakítása a chart node számára\nvar dataPoints = [];\nfor (var time in pressureData) {\n    pressureData[time].forEach(function(value) {\n        dataPoints.push({\n            x: time,\n            y: value\n        });\n    });\n}\n\n// Legutolsó nyomásérték lekérése\nvar lastPressureValue = dataPoints.length > 0 ? dataPoints[dataPoints.length - 1].y : 0;\n\nmsg.payload = lastPressureValue; // Csak a legutolsó nyomásérték\n\nmsg.topic = \"Pressure\";\n\ncontext.set(\"pressureData\", pressureData); // Objektum frissítése\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 940,
-        "y": 280,
-        "wires": [
-            [
-                "b2d7e77407274c47"
-            ]
-        ]
-    },
-    {
-        "id": "4ba2f501fe15c8ff",
-        "type": "debug",
-        "z": "61d663c65d5d04a2",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1280,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "be35c3dcf73d0e4a",
-        "type": "debug",
-        "z": "61d663c65d5d04a2",
-        "name": "debug 3",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1120,
-        "y": 100,
-        "wires": []
-    },
-    {
-        "id": "d1cc9fe6fa6256ff",
-        "type": "inject",
-        "z": "61d663c65d5d04a2",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 740,
-        "y": 240,
-        "wires": [
-            [
-                "76ed89e23b46d303"
-            ]
-        ]
-    },
-    {
-        "id": "b2d7e77407274c47",
-        "type": "delay",
-        "z": "61d663c65d5d04a2",
-        "name": "",
-        "pauseType": "rate",
-        "timeout": "5",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "minute",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 1140,
-        "y": 220,
-        "wires": [
-            [
-                "5f9474b7153f5ee9",
-                "4ba2f501fe15c8ff"
-            ]
-        ]
-    },
-    {
         "id": "57038e54f537ca1f",
         "type": "cmi in",
         "z": "61d663c65d5d04a2",
@@ -1711,7 +1519,7 @@
         "timestamp": "0",
         "skip": "0",
         "severity": "0",
-        "x": 170,
+        "x": 150,
         "y": 280,
         "wires": [
             [
