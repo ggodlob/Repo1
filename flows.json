@@ -1640,7 +1640,7 @@
         "order": 6,
         "width": "2",
         "height": "2",
-        "format": "<style>\n  .grid-container {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    grid-template-rows: 1fr 1fr;\n    width: 30px;\n    /* Finomhangolás */\n    height: 30px;\n    /* Finomhangolás */\n    position: relative;\n    /* Relatív pozicionálás a ui_template node-hoz képest */\n    top: -15px;\n    /* Finomhangolás */\n    left: 100px;\n    /* Finomhangolás */\n  }\n\n  .circle {\n    width: 10px;\n    height: 10px;\n    border-radius: 50%;\n    background-color: red;\n    grid-column: 2;\n    grid-row: 2;\n    justify-self: center;\n    align-self: center;\n  }\n</style>\n\n<div class=\"grid-container\">\n  <div class=\"circle\"></div>\n</div>\n\n<script>\n  // ... JavaScript kód ...\n</script>",
+        "format": "<style>\n  .grid-container {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    grid-template-rows: 1fr 1fr;\n    width: 30px;\n    /* Finomhangolás */\n    height: 30px;\n    /* Finomhangolás */\n    position: relative;\n    /* Relatív pozicionálás a ui_template node-hoz képest */\n    top: 10px;\n    /* Lejjebb mozgatás */\n    left: -20px;\n    /* Balra mozgatás */\n  }\n\n  .circle {\n    width: 10px;\n    height: 10px;\n    border-radius: 50%;\n    background-color: red;\n    grid-column: 2;\n    grid-row: 2;\n    justify-self: center;\n    align-self: center;\n  }\n</style>\n\n<div class=\"grid-container\">\n  <div class=\"circle\"></div>\n</div>\n\n<script>\n  // ... JavaScript kód ...\n</script>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
