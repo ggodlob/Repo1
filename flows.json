@@ -1520,6 +1520,25 @@
         ]
     },
     {
+        "id": "29045d9f37e5d9fa",
+        "type": "cmi in",
+        "z": "61d663c65d5d04a2",
+        "cmi": "ef6702f2eebd5bef",
+        "name": "Messzeit 1",
+        "item": "25",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 140,
+        "y": 220,
+        "wires": [
+            [
+                "87be1f3f2b0360b2"
+            ]
+        ]
+    },
+    {
         "id": "9bb7bdb1eae4948e",
         "type": "ui_text",
         "z": "cb52c966d2fad605",
@@ -1720,6 +1739,25 @@
         "wires": [
             [
                 "3be77a102f31d277"
+            ]
+        ]
+    },
+    {
+        "id": "4eda28078d2e9bb8",
+        "type": "cmi in",
+        "z": "cb52c966d2fad605",
+        "cmi": "ef6702f2eebd5bef",
+        "name": "Messzeit 2",
+        "item": "26",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 160,
+        "y": 220,
+        "wires": [
+            [
+                "730d51ad838c3289"
             ]
         ]
     },
@@ -1928,6 +1966,25 @@
         ]
     },
     {
+        "id": "e77edd7319dd44c9",
+        "type": "cmi in",
+        "z": "f820c1bd7223bd88",
+        "cmi": "ef6702f2eebd5bef",
+        "name": "Messzeit 3",
+        "item": "27",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 160,
+        "y": 220,
+        "wires": [
+            [
+                "6a317b620df64d1c"
+            ]
+        ]
+    },
+    {
         "id": "bc0279d6d6d66c7a",
         "type": "ui_text",
         "z": "28c240172645bd4e",
@@ -2128,6 +2185,25 @@
         "wires": [
             [
                 "7fb0ee86dd7afcef"
+            ]
+        ]
+    },
+    {
+        "id": "2c49ac3845e5662f",
+        "type": "cmi in",
+        "z": "28c240172645bd4e",
+        "cmi": "ef6702f2eebd5bef",
+        "name": "Messzeit 4",
+        "item": "28",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 160,
+        "y": 220,
+        "wires": [
+            [
+                "bc0279d6d6d66c7a"
             ]
         ]
     },
