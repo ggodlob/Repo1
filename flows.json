@@ -1905,6 +1905,25 @@
         ]
     },
     {
+        "id": "2857e4967eec56a1",
+        "type": "cmi in",
+        "z": "cb52c966d2fad605",
+        "cmi": "ef6702f2eebd5bef",
+        "name": "Druckverlust 2",
+        "item": "22",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 150,
+        "y": 280,
+        "wires": [
+            [
+                "3be77a102f31d277"
+            ]
+        ]
+    },
+    {
         "id": "12bbbd87a10398fa",
         "type": "ui_text",
         "z": "f820c1bd7223bd88",
@@ -2090,6 +2109,25 @@
         ]
     },
     {
+        "id": "4aa24ce1b02a23e8",
+        "type": "cmi in",
+        "z": "f820c1bd7223bd88",
+        "cmi": "ef6702f2eebd5bef",
+        "name": "Druckverlust 3",
+        "item": "23",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 150,
+        "y": 280,
+        "wires": [
+            [
+                "371420ab9311d8d9"
+            ]
+        ]
+    },
+    {
         "id": "bc0279d6d6d66c7a",
         "type": "ui_text",
         "z": "28c240172645bd4e",
@@ -2271,6 +2309,25 @@
         "wires": [
             [
                 "153d8ec83f3e3c6a"
+            ]
+        ]
+    },
+    {
+        "id": "0de97b421a9dadd2",
+        "type": "cmi in",
+        "z": "28c240172645bd4e",
+        "cmi": "ef6702f2eebd5bef",
+        "name": "Druckverlust 4",
+        "item": "24",
+        "source": "0",
+        "timestamp": "0",
+        "skip": "0",
+        "severity": "0",
+        "x": 150,
+        "y": 280,
+        "wires": [
+            [
+                "7fb0ee86dd7afcef"
             ]
         ]
     },
