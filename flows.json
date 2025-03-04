@@ -1702,12 +1702,12 @@
         "z": "cb52c966d2fad605",
         "group": "de078532d6f5e387",
         "order": 4,
-        "width": 0,
-        "height": 0,
+        "width": "5",
+        "height": "1",
         "name": "",
         "label": "Messzeit WP2",
         "format": "{{msg.payload}} Sek",
-        "layout": "col-center",
+        "layout": "row-spread",
         "className": "",
         "style": false,
         "font": "",
@@ -1723,8 +1723,8 @@
         "z": "cb52c966d2fad605",
         "group": "de078532d6f5e387",
         "order": 5,
-        "width": 0,
-        "height": 0,
+        "width": "5",
+        "height": "1",
         "name": "",
         "label": "Druckverlust WP2",
         "format": "{{msg.payload}} mbar",
@@ -1854,7 +1854,7 @@
         "y": 280,
         "wires": [
             [
-                "3be77a102f31d277"
+                "2d88cda952e11a2a"
             ]
         ]
     },
@@ -1874,6 +1874,29 @@
         "wires": [
             [
                 "730d51ad838c3289"
+            ]
+        ]
+    },
+    {
+        "id": "2d88cda952e11a2a",
+        "type": "ui_template",
+        "z": "cb52c966d2fad605",
+        "group": "de078532d6f5e387",
+        "name": "",
+        "order": 6,
+        "width": "2",
+        "height": "2",
+        "format": "<style>\n  .grid-container {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    grid-template-rows: 1fr 1fr;\n    width: 30px;\n    /* Finomhangolás */\n    height: 30px;\n    /* Finomhangolás */\n    position: relative;\n    /* Relatív pozicionálás a ui_template node-hoz képest */\n    top: 30px;\n    /* Lejjebb mozgatás */\n    left: 20px;\n    /* Balra mozgatás */\n  }\n\n  .circle {\n    width: 30px;\n    height: 30px;\n    border-radius: 50%;\n    background-color: red;\n    grid-column: 2;\n    grid-row: 2;\n    justify-self: center;\n    align-self: center;\n  }\n</style>\n\n<div class=\"grid-container\">\n  <div class=\"circle\"></div>\n</div>\n\n<script>\n  // ... JavaScript kód ...\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 360,
+        "y": 280,
+        "wires": [
+            [
+                "3be77a102f31d277"
             ]
         ]
     },
