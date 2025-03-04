@@ -1210,8 +1210,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 430,
-        "y": 280,
+        "x": 870,
+        "y": 300,
         "wires": []
     },
     {
@@ -1515,7 +1515,7 @@
         "y": 280,
         "wires": [
             [
-                "f563ef869b6642b1"
+                "d0b93f205b27dcd5"
             ]
         ]
     },
@@ -1530,13 +1530,124 @@
         "timestamp": "0",
         "skip": "0",
         "severity": "0",
-        "x": 140,
+        "x": 160,
         "y": 220,
         "wires": [
             [
-                "87be1f3f2b0360b2"
+                "87be1f3f2b0360b2",
+                "981ed44cb60490ad"
             ]
         ]
+    },
+    {
+        "id": "3de59a6353d35a8f",
+        "type": "function",
+        "z": "61d663c65d5d04a2",
+        "name": "function 1",
+        "func": "// A korábbi measuretime érték tárolására szolgáló változó\ncontext.previousMeasuretime = context.previousMeasuretime || null;\n\n// Az aktuális measuretime és pressureloss értékek lekérdezése\nconst currentMeasuretime = msg.measuretime;\nconst pressureLoss = msg.pressureloss;\n\n// Ellenőrizzük, hogy a measuretime nullról nullára váltott-e\nif (context.previousMeasuretime > 0 && currentMeasuretime === 0) {\n    // Ha igen, akkor a pressureloss értékét adjuk ki a payload-ban\n    msg.payload = pressureLoss;\n    // Frissítjük a korábbi measuretime értéket\n    context.previousMeasuretime = currentMeasuretime;\n    return msg;\n} else if (currentMeasuretime > 0) {\n    // Ha a measuretime nagyobb mint 0, akkor 0-t adunk ki\n    msg.payload = 0;\n    // Frissítjük a korábbi measuretime értéket\n    context.previousMeasuretime = currentMeasuretime;\n    return msg;\n} else {\n    // Egyéb esetekben nem adunk ki semmit\n    // Frissítjük a korábbi measuretime értéket\n    context.previousMeasuretime = currentMeasuretime;\n    return null;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 300,
+        "wires": [
+            [
+                "f563ef869b6642b1",
+                "a6797ca8ef422501"
+            ]
+        ]
+    },
+    {
+        "id": "981ed44cb60490ad",
+        "type": "change",
+        "z": "61d663c65d5d04a2",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "measuretime",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 280,
+        "wires": [
+            [
+                "3de59a6353d35a8f",
+                "d55bdfd09f61013b"
+            ]
+        ]
+    },
+    {
+        "id": "d0b93f205b27dcd5",
+        "type": "change",
+        "z": "61d663c65d5d04a2",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "pressureloss",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 340,
+        "wires": [
+            [
+                "3de59a6353d35a8f",
+                "d55bdfd09f61013b"
+            ]
+        ]
+    },
+    {
+        "id": "d55bdfd09f61013b",
+        "type": "debug",
+        "z": "61d663c65d5d04a2",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "a6797ca8ef422501",
+        "type": "debug",
+        "z": "61d663c65d5d04a2",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 240,
+        "wires": []
     },
     {
         "id": "9bb7bdb1eae4948e",
