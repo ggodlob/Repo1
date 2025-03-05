@@ -1773,7 +1773,8 @@
         "y": 40,
         "wires": [
             [
-                "0913bfd313b2f67c"
+                "0913bfd313b2f67c",
+                "64f8b5d7a75e400f"
             ]
         ]
     },
@@ -1792,7 +1793,8 @@
         "y": 100,
         "wires": [
             [
-                "9bb7bdb1eae4948e"
+                "9bb7bdb1eae4948e",
+                "81be8eb80019d540"
             ]
         ]
     },
@@ -1811,7 +1813,8 @@
         "y": 160,
         "wires": [
             [
-                "244d8d9f6e6c67f4"
+                "244d8d9f6e6c67f4",
+                "708a7f02e875c8a4"
             ]
         ]
     },
@@ -1955,6 +1958,167 @@
         "y": 340,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "7fa00185d9868c64",
+        "type": "function",
+        "z": "cb52c966d2fad605",
+        "name": "Data prepare",
+        "func": "console.log(\"Serialnumber: \" + msg.serialnumber);\nconsole.log(\"Pressure: \" + msg.pressure);\nconsole.log(\"Valve: \" + msg.valve);\n\n// Tároljuk el az előző serialnumber-t a context-ben\ncontext.previousSerialNumber = context.previousSerialNumber || null;\n\n// Ellenőrizzük, hogy a serialnumber változott-e\nif (msg.serialnumber !== context.previousSerialNumber) {\n  // Ha változott, akkor beállítjuk a flag-et és frissítjük az előző serialnumber-t\n  msg.serialnumber_changed = true;\n  context.previousSerialNumber = msg.serialnumber;\n} else {\n  msg.serialnumber_changed = false; // Ha nem változott, ne legyen true\n}\n\n// Tároljuk el az előző nyomásértéket a context-ben\ncontext.previousPressure = context.previousPressure || null;\n\nvar pressure = msg.pressure;\n\nvar valve = msg.valve;\n\nif (pressure === undefined || pressure === null || isNaN(pressure)) {\n  console.error(\"Nem található vagy érvénytelen nyomásérték a msg.payload-ban: \" + pressure);\n  // Ha nincs érvényes nyomásérték, használjuk az előzőt, ha van\n  pressure = context.previousPressure !== null ? context.previousPressure : 0;\n} else {\n  // Ha van érvényes nyomásérték, frissítsük az előzőt\n  context.previousPressure = pressure;\n}\n\nvar date = new Date(); // Aktuális dátum és idő\nvar formattedDate = date.toLocaleDateString(\"de-DE\"); // Dátum formázása magyar lokalizáció szerint (éééé.hh.nn.)\nvar formattedTime = date.toLocaleTimeString(\"de-DE\"); // Idő formázása magyar lokalizáció szerint (óó:pp:mm)\nvar timestamp = formattedDate + \" \" + formattedTime; // Dátum és idő kombinálása\n\ncontext.data = context.data || [];\n\ncontext.data.push({\n  timestamp: timestamp,\n  pressure: pressure\n});\n\nvar csv = \"Timestamp;Pressure\\n\";\ncontext.data.forEach(function (item) {\n  csv += item.timestamp + \";\" + item.pressure + \"\\n\";\n});\n\nvar newMsg = { ...msg };\nnewMsg.payload = csv;\n\n// Ellenőrizzük, hogy a serialnumber létezik-e és nem undefined\nif (msg.serialnumber !== undefined && msg.serialnumber !== null) {\n  var fileName = \"sn\" + msg.serialnumber + \"_pressure_loss.csv\";\n  var filePath = \"/home/ovum/\" + fileName;\n  newMsg.filename = filePath;\n  return newMsg; // Csak akkor küldjük tovább az üzenetet, ha van serialnumber\n} else {\n  console.error(\"A msg.serialnumber undefined vagy null. Fájlmentés kihagyva.\");\n  return null; // Ne küldjünk tovább üzenetet, ha nincs serialnumber\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 160,
+        "wires": [
+            [
+                "0c7dbfdd92a78f56"
+            ]
+        ]
+    },
+    {
+        "id": "0c7dbfdd92a78f56",
+        "type": "file",
+        "z": "cb52c966d2fad605",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1120,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "708a7f02e875c8a4",
+        "type": "change",
+        "z": "cb52c966d2fad605",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "pressure",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "pressure",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 200,
+        "wires": [
+            [
+                "d6bfdbe4d87c1340"
+            ]
+        ]
+    },
+    {
+        "id": "81be8eb80019d540",
+        "type": "change",
+        "z": "cb52c966d2fad605",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "serialnumber",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "serialnumber",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 140,
+        "wires": [
+            [
+                "d6bfdbe4d87c1340"
+            ]
+        ]
+    },
+    {
+        "id": "d6bfdbe4d87c1340",
+        "type": "join",
+        "z": "cb52c966d2fad605",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "10",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 790,
+        "y": 160,
+        "wires": [
+            [
+                "7fa00185d9868c64"
+            ]
+        ]
+    },
+    {
+        "id": "64f8b5d7a75e400f",
+        "type": "change",
+        "z": "cb52c966d2fad605",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "valve",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 80,
+        "wires": [
+            [
+                "7fa00185d9868c64"
+            ]
         ]
     },
     {
