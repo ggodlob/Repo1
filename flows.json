@@ -385,25 +385,6 @@
         "className": ""
     },
     {
-        "id": "0ed4eeb8e062e528",
-        "type": "ui_tab",
-        "name": "Home",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
-    },
-    {
-        "id": "feee56445f470f84",
-        "type": "ui_group",
-        "name": "Default",
-        "tab": "0ed4eeb8e062e528",
-        "order": 1,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
         "id": "2d4646b0db2f1313",
         "type": "ui_gauge",
         "z": "8e6f93d6c1999015",
