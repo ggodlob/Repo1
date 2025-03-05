@@ -1643,7 +1643,7 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "className": "",
+        "className": "p1",
         "x": 680,
         "y": 500,
         "wires": [
