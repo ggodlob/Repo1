@@ -1962,7 +1962,7 @@
         "order": 5,
         "width": "1",
         "height": "2",
-        "format": "(function(scope) {\nscope.$watch('msg', function(msg) {\nvar circle = document.getElementById('statusCircle');\ncircle.classList.remove('red', 'green', 'orange', 'gray');\n\nif (msg && msg.pressureloss !== undefined) { // msg.pressureloss-t használjuk\nif(typeof msg.pressureloss === 'number'){\nif (msg.pressureloss === 0) {\ncircle.classList.add('green');\n} else if (msg.pressureloss > 0 && msg.pressureloss <= 100.0) { circle.classList.add('orange'); } else if\n  (msg.pressureloss> 100.0) {\n  circle.classList.add('red');\n  }\n  }else{\n  circle.classList.add('gray');\n  }\n\n  } else {\n  circle.classList.add('gray');\n  }\n  });\n  })(scope);",
+        "format": "(function(scope) {\nscope.$watch('msg', function(msg) {\nvar circle = document.getElementById('statusCircle');\ncircle.classList.remove('red', 'green', 'orange', 'gray');\n\nif (msg && msg.pressureloss !== undefined) {\nif(typeof msg.pressureloss === 'number'){\nif (msg.pressureloss === 0) {\ncircle.classList.add('green');\n} else if (msg.pressureloss > 0 && msg.pressureloss <= 100.0) { circle.classList.add('orange'); } else if\n  (msg.pressureloss> 100.0) {\n  circle.classList.add('red');\n  }\n  }else{\n  circle.classList.add('gray');\n  }\n\n  } else {\n  circle.classList.add('gray');\n  }\n  });\n  })(scope);",
         "storeOutMessages": false,
         "fwdInMessages": true,
         "resendOnRefresh": true,
