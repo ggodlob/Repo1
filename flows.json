@@ -1515,8 +1515,7 @@
         "y": 280,
         "wires": [
             [
-                "d0b93f205b27dcd5",
-                "be5af1d1b9cd5208"
+                "d0b93f205b27dcd5"
             ]
         ]
     },
@@ -1667,38 +1666,6 @@
         "x": 840,
         "y": 260,
         "wires": []
-    },
-    {
-        "id": "be5af1d1b9cd5208",
-        "type": "change",
-        "z": "61d663c65d5d04a2",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "pressureloss1",
-                "pt": "msg",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "pressureloss1",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 430,
-        "y": 400,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "9bb7bdb1eae4948e",
@@ -1900,8 +1867,7 @@
         "y": 280,
         "wires": [
             [
-                "93977b64a2c4b76a",
-                "463f22b8174c407e"
+                "93977b64a2c4b76a"
             ]
         ]
     },
@@ -1930,7 +1896,7 @@
         "type": "function",
         "z": "cb52c966d2fad605",
         "name": "function 2",
-        "func": "// Kontextus inicializálása\nif (context.previousMeasuretime === undefined) {\n    context.previousMeasuretime = null;\n}\n\n// Az aktuális measuretime és pressureloss értékek lekérdezése\nconst currentMeasuretime = msg.measuretime;\nconst pressureLoss = msg.pressureloss;\n\n// Ellenőrizzük, hogy a measuretime nullról nullára váltott-e\nif (context.previousMeasuretime > 0 && currentMeasuretime === 0) {\n    // Ha igen, akkor a pressureloss értékét adjuk ki a payload-ban\n    msg.payload = pressureLoss;\n    // Frissítjük a korábbi measuretime értéket\n    context.previousMeasuretime = currentMeasuretime;\n    return msg;\n} else if (currentMeasuretime > 0) {\n    // Ha a measuretime nagyobb mint 0, akkor \"Messung Läuft\"-ot adunk ki\n    msg.payload = {\n        text: \"Messung Läuft\",\n        noUnit: true\n    };\n    // Frissítjük a korábbi measuretime értéket\n    context.previousMeasuretime = currentMeasuretime;\n    return msg;\n} else {\n    // Ha a measuretime 0, akkor a pressureLoss értékét adjuk ki\n    msg.payload = pressureLoss;\n    // Frissítjük a korábbi measuretime értéket\n    context.previousMeasuretime = currentMeasuretime;\n    return msg;\n}",
+        "func": "// Kontextus inicializálása\nif (context.previousMeasuretime === undefined) {\n    context.previousMeasuretime = null;\n}\n\n// Az aktuális measuretime és pressureloss értékek lekérdezése\nconst currentMeasuretime = msg.measuretime;\nconst pressureLoss = msg.pressureloss2;\n\n// Ellenőrizzük, hogy a measuretime nullról nullára váltott-e\nif (context.previousMeasuretime > 0 && currentMeasuretime === 0) {\n    // Ha igen, akkor a pressureloss értékét adjuk ki a payload-ban\n    msg.payload = pressureLoss;\n    // Frissítjük a korábbi measuretime értéket\n    context.previousMeasuretime = currentMeasuretime;\n    return msg;\n} else if (currentMeasuretime > 0) {\n    // Ha a measuretime nagyobb mint 0, akkor \"Messung Läuft\"-ot adunk ki\n    msg.payload = {\n        text: \"Messung Läuft\",\n        noUnit: true\n    };\n    // Frissítjük a korábbi measuretime értéket\n    context.previousMeasuretime = currentMeasuretime;\n    return msg;\n} else {\n    // Ha a measuretime 0, akkor a pressureLoss értékét adjuk ki\n    msg.payload = pressureLoss;\n    // Frissítjük a korábbi measuretime értéket\n    context.previousMeasuretime = currentMeasuretime;\n    return msg;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1981,7 +1947,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "pressureloss",
+                "p": "pressureloss2",
                 "pt": "msg",
                 "to": "payload",
                 "tot": "msg"
@@ -1990,7 +1956,7 @@
                 "t": "set",
                 "p": "topic",
                 "pt": "msg",
-                "to": "pressureloss",
+                "to": "pressureloss2",
                 "tot": "str"
             }
         ],
@@ -2003,7 +1969,8 @@
         "y": 340,
         "wires": [
             [
-                "bae7a317e42f1cee"
+                "bae7a317e42f1cee",
+                "2f66d82741884bfb"
             ]
         ]
     },
@@ -2023,7 +1990,7 @@
         "templateScope": "local",
         "className": "",
         "x": 860,
-        "y": 400,
+        "y": 340,
         "wires": [
             []
         ]
@@ -2044,40 +2011,6 @@
         "x": 840,
         "y": 260,
         "wires": []
-    },
-    {
-        "id": "463f22b8174c407e",
-        "type": "change",
-        "z": "cb52c966d2fad605",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "pressureloss2",
-                "pt": "msg",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "pressureloss2",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 430,
-        "y": 400,
-        "wires": [
-            [
-                "2f66d82741884bfb"
-            ]
-        ]
     },
     {
         "id": "12bbbd87a10398fa",
@@ -2279,8 +2212,7 @@
         "y": 280,
         "wires": [
             [
-                "682f0cd1c82fa823",
-                "da2c9e4da9d08875"
+                "682f0cd1c82fa823"
             ]
         ]
     },
@@ -2309,7 +2241,7 @@
         "type": "function",
         "z": "f820c1bd7223bd88",
         "name": "function 3",
-        "func": "// Kontextus inicializálása\nif (context.previousMeasuretime === undefined) {\n    context.previousMeasuretime = null;\n}\n\n// Az aktuális measuretime és pressureloss értékek lekérdezése\nconst currentMeasuretime = msg.measuretime;\nconst pressureLoss = msg.pressureloss;\n\n// Ellenőrizzük, hogy a measuretime nullról nullára váltott-e\nif (context.previousMeasuretime > 0 && currentMeasuretime === 0) {\n    // Ha igen, akkor a pressureloss értékét adjuk ki a payload-ban\n    msg.payload = pressureLoss;\n    // Frissítjük a korábbi measuretime értéket\n    context.previousMeasuretime = currentMeasuretime;\n    return msg;\n} else if (currentMeasuretime > 0) {\n    // Ha a measuretime nagyobb mint 0, akkor \"Messung Läuft\"-ot adunk ki\n    msg.payload = {\n        text: \"Messung Läuft\",\n        noUnit: true\n    };\n    // Frissítjük a korábbi measuretime értéket\n    context.previousMeasuretime = currentMeasuretime;\n    return msg;\n} else {\n    // Ha a measuretime 0, akkor a pressureLoss értékét adjuk ki\n    msg.payload = pressureLoss;\n    // Frissítjük a korábbi measuretime értéket\n    context.previousMeasuretime = currentMeasuretime;\n    return msg;\n}",
+        "func": "// Kontextus inicializálása\nif (context.previousMeasuretime === undefined) {\n    context.previousMeasuretime = null;\n}\n\n// Az aktuális measuretime és pressureloss értékek lekérdezése\nconst currentMeasuretime = msg.measuretime;\nconst pressureLoss = msg.pressureloss3;\n\n// Ellenőrizzük, hogy a measuretime nullról nullára váltott-e\nif (context.previousMeasuretime > 0 && currentMeasuretime === 0) {\n    // Ha igen, akkor a pressureloss értékét adjuk ki a payload-ban\n    msg.payload = pressureLoss;\n    // Frissítjük a korábbi measuretime értéket\n    context.previousMeasuretime = currentMeasuretime;\n    return msg;\n} else if (currentMeasuretime > 0) {\n    // Ha a measuretime nagyobb mint 0, akkor \"Messung Läuft\"-ot adunk ki\n    msg.payload = {\n        text: \"Messung Läuft\",\n        noUnit: true\n    };\n    // Frissítjük a korábbi measuretime értéket\n    context.previousMeasuretime = currentMeasuretime;\n    return msg;\n} else {\n    // Ha a measuretime 0, akkor a pressureLoss értékét adjuk ki\n    msg.payload = pressureLoss;\n    // Frissítjük a korábbi measuretime értéket\n    context.previousMeasuretime = currentMeasuretime;\n    return msg;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2359,10 +2291,17 @@
         "rules": [
             {
                 "t": "set",
-                "p": "pressureloss",
+                "p": "pressureloss3",
                 "pt": "msg",
                 "to": "payload",
                 "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "pressureloss3",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -2370,11 +2309,12 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 450,
+        "x": 430,
         "y": 340,
         "wires": [
             [
-                "7d35564ac34885cb"
+                "7d35564ac34885cb",
+                "748d19738dd6cb82"
             ]
         ]
     },
@@ -2394,43 +2334,9 @@
         "templateScope": "local",
         "className": "",
         "x": 860,
-        "y": 400,
+        "y": 340,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "da2c9e4da9d08875",
-        "type": "change",
-        "z": "f820c1bd7223bd88",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "pressureloss3",
-                "pt": "msg",
-                "to": "payload",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "pressureloss3",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 470,
-        "y": 400,
-        "wires": [
-            [
-                "748d19738dd6cb82"
-            ]
         ]
     },
     {
