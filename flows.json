@@ -1643,7 +1643,7 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "className": "p1",
+        "className": "",
         "x": 680,
         "y": 500,
         "wires": [
@@ -2033,7 +2033,7 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "className": "p2",
+        "className": "",
         "x": 860,
         "y": 340,
         "wires": [
@@ -2370,7 +2370,7 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "className": "p3",
+        "className": "",
         "x": 860,
         "y": 340,
         "wires": [
@@ -2615,7 +2615,7 @@
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
-        "className": "p4",
+        "className": "",
         "x": 600,
         "y": 320,
         "wires": [
