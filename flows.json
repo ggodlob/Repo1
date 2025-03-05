@@ -2577,8 +2577,7 @@
         "y": 280,
         "wires": [
             [
-                "7fb0ee86dd7afcef",
-                "364ed1fb7054f943"
+                "7fb0ee86dd7afcef"
             ]
         ]
     },
