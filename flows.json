@@ -1878,27 +1878,6 @@
         ]
     },
     {
-        "id": "83f83ff9fcab2c9a",
-        "type": "ui_template",
-        "z": "cb52c966d2fad605",
-        "group": "de078532d6f5e387",
-        "name": "Dot feedback 2",
-        "order": 6,
-        "width": "1",
-        "height": "2",
-        "format": "<style>\n  .grid-container {\n    display: grid;\n    grid-template-columns: 1fr;\n    grid-template-rows: 1fr 1fr;\n    width: 30px;\n    height: 48px;\n    /* 1x2-es konténer magassága */\n    position: relative;\n    top: 35px;\n    /* Pont a Messzeit és Druckverlust közé */\n    left: 0;\n  }\n\n  .circle {\n    width: 20px;\n    height: 20px;\n    border-radius: 50%;\n    grid-column: 1;\n    grid-row: 1;\n    justify-self: start;\n    align-self: start;\n  }\n\n  .circle.red {\n    background-color: red;\n  }\n\n  .circle.green {\n    background-color: green;\n  }\n\n  .circle.orange {\n    background-color: orange;\n  }\n</style>\n\n<div class=\"grid-container\">\n  <div id=\"statusCircle\" class=\"circle\"></div>\n</div>\n\n<script>\n  (function(scope) {\n  scope.$watch('msg', function(msg) {\n    if (msg && msg.pressureloss !== undefined) {\n      var circle = document.getElementById('statusCircle');\n      circle.classList.remove('red', 'green', 'orange');\n\n      if (msg.pressureloss === 0) {\n        circle.classList.add('green');\n      } else if (msg.pressureloss > 0 && msg.payload <= 1000) {\n        circle.classList.add('orange');\n      } else if (msg.pressureloss > 1000) {\n        circle.classList.add('red');\n      }\n    }\n  });\n})(scope);\n</script>",
-        "storeOutMessages": false,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 860,
-        "y": 340,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "bae7a317e42f1cee",
         "type": "function",
         "z": "cb52c966d2fad605",
@@ -1914,7 +1893,6 @@
         "y": 300,
         "wires": [
             [
-                "83f83ff9fcab2c9a",
                 "3be77a102f31d277"
             ]
         ]
@@ -2235,8 +2213,7 @@
         "y": 360,
         "wires": [
             [
-                "513dc3880291d13f",
-                "c46810914b3d39d5"
+                "513dc3880291d13f"
             ]
         ]
     },
@@ -2292,27 +2269,6 @@
             [
                 "7d35564ac34885cb"
             ]
-        ]
-    },
-    {
-        "id": "c46810914b3d39d5",
-        "type": "ui_template",
-        "z": "f820c1bd7223bd88",
-        "group": "422ba1667a7ab9f8",
-        "name": "Dot feedback 3",
-        "order": 6,
-        "width": "1",
-        "height": "2",
-        "format": "<style>\n  .grid-container {\n    display: grid;\n    grid-template-columns: 1fr;\n    grid-template-rows: 1fr 1fr;\n    width: 30px;\n    height: 48px;\n    /* 1x2-es konténer magassága */\n    position: relative;\n    top: 35px;\n    /* Pont a Messzeit és Druckverlust közé */\n    left: 0;\n  }\n\n  .circle {\n    width: 20px;\n    height: 20px;\n    border-radius: 50%;\n    grid-column: 1;\n    grid-row: 1;\n    justify-self: start;\n    align-self: start;\n  }\n\n  .circle.red {\n    background-color: red;\n  }\n\n  .circle.green {\n    background-color: green;\n  }\n\n  .circle.orange {\n    background-color: orange;\n  }\n</style>\n\n<div class=\"grid-container\">\n  <div id=\"statusCircle\" class=\"circle\"></div>\n</div>\n\n<script>\n  (function(scope) {\n  scope.$watch('msg', function(msg) {\n    if (msg && msg.pressureloss !== undefined) {\n      var circle = document.getElementById('statusCircle');\n      circle.classList.remove('red', 'green', 'orange');\n\n      if (msg.pressureloss === 0) {\n        circle.classList.add('green');\n      } else if (msg.pressureloss > 0 && msg.payload <= 1000) {\n        circle.classList.add('orange');\n      } else if (msg.pressureloss > 1000) {\n        circle.classList.add('red');\n      }\n    }\n  });\n})(scope);\n</script>",
-        "storeOutMessages": false,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 860,
-        "y": 400,
-        "wires": [
-            []
         ]
     },
     {
