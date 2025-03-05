@@ -1573,6 +1573,13 @@
                 "pt": "msg",
                 "to": "payload",
                 "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "measuretime",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -1580,7 +1587,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 450,
+        "x": 430,
         "y": 280,
         "wires": [
             [
@@ -1600,6 +1607,13 @@
                 "pt": "msg",
                 "to": "payload",
                 "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "pressureloss",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -1607,7 +1621,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 450,
+        "x": 430,
         "y": 340,
         "wires": [
             [
