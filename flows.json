@@ -1555,8 +1555,7 @@
         "y": 300,
         "wires": [
             [
-                "f563ef869b6642b1",
-                "9740dd990353dc6b"
+                "f563ef869b6642b1"
             ]
         ]
     },
@@ -1649,23 +1648,6 @@
         "wires": [
             []
         ]
-    },
-    {
-        "id": "9740dd990353dc6b",
-        "type": "debug",
-        "z": "61d663c65d5d04a2",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 840,
-        "y": 260,
-        "wires": []
     },
     {
         "id": "9bb7bdb1eae4948e",
@@ -1907,8 +1889,7 @@
         "y": 300,
         "wires": [
             [
-                "3be77a102f31d277",
-                "b18321f76caccbf2"
+                "3be77a102f31d277"
             ]
         ]
     },
@@ -1996,23 +1977,6 @@
         ]
     },
     {
-        "id": "b18321f76caccbf2",
-        "type": "debug",
-        "z": "cb52c966d2fad605",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 840,
-        "y": 260,
-        "wires": []
-    },
-    {
         "id": "12bbbd87a10398fa",
         "type": "ui_text",
         "z": "f820c1bd7223bd88",
@@ -2029,7 +1993,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 610,
+        "x": 430,
         "y": 100,
         "wires": []
     },
@@ -2050,7 +2014,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 620,
+        "x": 440,
         "y": 40,
         "wires": []
     },
@@ -2071,7 +2035,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 600,
+        "x": 420,
         "y": 220,
         "wires": []
     },
@@ -2134,7 +2098,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 590,
+        "x": 410,
         "y": 160,
         "wires": [
             []
@@ -2356,7 +2320,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 600,
+        "x": 420,
         "y": 220,
         "wires": []
     },
@@ -2377,8 +2341,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 610,
-        "y": 280,
+        "x": 870,
+        "y": 300,
         "wires": []
     },
     {
@@ -2398,7 +2362,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 610,
+        "x": 430,
         "y": 100,
         "wires": []
     },
@@ -2419,7 +2383,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 620,
+        "x": 440,
         "y": 40,
         "wires": []
     },
@@ -2461,7 +2425,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 590,
+        "x": 410,
         "y": 160,
         "wires": [
             []
@@ -2539,7 +2503,6 @@
         "y": 280,
         "wires": [
             [
-                "7fb0ee86dd7afcef",
                 "dfaadf5fae5f60f3"
             ]
         ]
@@ -2559,7 +2522,8 @@
         "y": 220,
         "wires": [
             [
-                "bc0279d6d6d66c7a"
+                "bc0279d6d6d66c7a",
+                "064a7ae034738451"
             ]
         ]
     },
@@ -2578,7 +2542,7 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 600,
+        "x": 860,
         "y": 340,
         "wires": [
             []
@@ -2610,11 +2574,59 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 390,
+        "x": 430,
         "y": 340,
         "wires": [
             [
+                "59a9ba2ce502b69b",
                 "364ed1fb7054f943"
+            ]
+        ]
+    },
+    {
+        "id": "064a7ae034738451",
+        "type": "change",
+        "z": "28c240172645bd4e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "measuretime",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 280,
+        "wires": [
+            [
+                "59a9ba2ce502b69b"
+            ]
+        ]
+    },
+    {
+        "id": "59a9ba2ce502b69b",
+        "type": "function",
+        "z": "28c240172645bd4e",
+        "name": "function 4",
+        "func": "// Kontextus inicializálása\nif (context.previousMeasuretime === undefined) {\n    context.previousMeasuretime = null;\n}\n\n// Az aktuális measuretime és pressureloss értékek lekérdezése\nconst currentMeasuretime = msg.measuretime;\nconst pressureLoss = msg.pressureloss3;\n\n// Ellenőrizzük, hogy a measuretime nullról nullára váltott-e\nif (context.previousMeasuretime > 0 && currentMeasuretime === 0) {\n    // Ha igen, akkor a pressureloss értékét adjuk ki a payload-ban\n    msg.payload = pressureLoss;\n    // Frissítjük a korábbi measuretime értéket\n    context.previousMeasuretime = currentMeasuretime;\n    return msg;\n} else if (currentMeasuretime > 0) {\n    // Ha a measuretime nagyobb mint 0, akkor \"Messung Läuft\"-ot adunk ki\n    msg.payload = {\n        text: \"Messung Läuft\",\n        noUnit: true\n    };\n    // Frissítjük a korábbi measuretime értéket\n    context.previousMeasuretime = currentMeasuretime;\n    return msg;\n} else {\n    // Ha a measuretime 0, akkor a pressureLoss értékét adjuk ki\n    msg.payload = pressureLoss;\n    // Frissítjük a korábbi measuretime értéket\n    context.previousMeasuretime = currentMeasuretime;\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 300,
+        "wires": [
+            [
+                "7fb0ee86dd7afcef"
             ]
         ]
     },
