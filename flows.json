@@ -1919,7 +1919,8 @@
         "y": 280,
         "wires": [
             [
-                "93977b64a2c4b76a"
+                "93977b64a2c4b76a",
+                "25e702e988f9ac1f"
             ]
         ]
     },
@@ -1960,7 +1961,6 @@
         "wires": [
             [
                 "3be77a102f31d277",
-                "2f66d82741884bfb",
                 "b18321f76caccbf2"
             ]
         ]
@@ -2063,6 +2063,40 @@
         "x": 840,
         "y": 260,
         "wires": []
+    },
+    {
+        "id": "25e702e988f9ac1f",
+        "type": "change",
+        "z": "cb52c966d2fad605",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "pressureloss",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "pressureloss",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 430,
+        "y": 400,
+        "wires": [
+            [
+                "2f66d82741884bfb"
+            ]
+        ]
     },
     {
         "id": "12bbbd87a10398fa",
