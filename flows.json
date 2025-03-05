@@ -2053,8 +2053,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 610,
-        "y": 280,
+        "x": 870,
+        "y": 300,
         "wires": []
     },
     {
@@ -2173,7 +2173,6 @@
         "y": 280,
         "wires": [
             [
-                "371420ab9311d8d9",
                 "682f0cd1c82fa823"
             ]
         ]
@@ -2199,27 +2198,6 @@
         ]
     },
     {
-        "id": "513dc3880291d13f",
-        "type": "ui_text",
-        "z": "f820c1bd7223bd88",
-        "group": "422ba1667a7ab9f8",
-        "order": 5,
-        "width": "6",
-        "height": "1",
-        "name": "",
-        "label": "Druckverlust WP3",
-        "format": "{{msg.payload.noUnit ? msg.payload.text : msg.payload + \" mbar\"}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": true,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 870,
-        "y": 360,
-        "wires": []
-    },
-    {
         "id": "7d35564ac34885cb",
         "type": "function",
         "z": "f820c1bd7223bd88",
@@ -2232,10 +2210,10 @@
         "finalize": "",
         "libs": [],
         "x": 680,
-        "y": 360,
+        "y": 300,
         "wires": [
             [
-                "513dc3880291d13f"
+                "371420ab9311d8d9"
             ]
         ]
     },
@@ -2259,7 +2237,7 @@
         "to": "",
         "reg": false,
         "x": 450,
-        "y": 340,
+        "y": 280,
         "wires": [
             [
                 "7d35564ac34885cb"
@@ -2286,7 +2264,7 @@
         "to": "",
         "reg": false,
         "x": 450,
-        "y": 400,
+        "y": 340,
         "wires": [
             [
                 "7d35564ac34885cb"
