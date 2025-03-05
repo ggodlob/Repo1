@@ -2408,7 +2408,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "pressureloss2",
+                "p": "pressureloss3",
                 "pt": "msg",
                 "to": "payload",
                 "tot": "msg"
@@ -2417,7 +2417,7 @@
                 "t": "set",
                 "p": "topic",
                 "pt": "msg",
-                "to": "pressureloss2",
+                "to": "pressureloss3",
                 "tot": "str"
             }
         ],
