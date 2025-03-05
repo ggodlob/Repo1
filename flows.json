@@ -1640,7 +1640,7 @@
         "order": 6,
         "width": "1",
         "height": "2",
-        "format": "<style>\n  .grid-container {\n    display: grid;\n    grid-template-columns: 1fr;\n    grid-template-rows: 1fr 1fr;\n    width: 46px;\n    height: 96px;\n    /* Növelt magasság */\n    position: relative;\n    top: 24px;\n    /* Módosított top érték */\n    left: 0;\n  }\n\n  .circle {\n    width: 30px;\n    height: 30px;\n    border-radius: 50%;\n    grid-column: 1;\n    grid-row: 2;\n    justify-self: center;\n    align-self: center;\n  }\n\n  .circle.red {\n    background-color: red;\n  }\n\n  .circle.green {\n    background-color: green;\n  }\n\n  .circle.orange {\n    background-color: orange;\n  }\n</style>",
+        "format": "<style>\n  .grid-container {\n    display: grid;\n    grid-template-columns: 1fr;\n    grid-template-rows: 1fr 1fr;\n    width: 48px;\n    height: 96px;\n    /* Növelt magasság */\n    position: relative;\n    top: 24px;\n    /* Módosított top érték */\n    left: 0;\n  }\n\n  .circle {\n    width: 20px;\n    height: 20px;\n    border-radius: 50%;\n    grid-column: 1;\n    grid-row: 2;\n    justify-self: center;\n    align-self: center;\n  }\n\n  .circle.red {\n    background-color: red;\n  }\n\n  .circle.green {\n    background-color: green;\n  }\n\n  .circle.orange {\n    background-color: orange;\n  }\n</style>",
         "storeOutMessages": false,
         "fwdInMessages": true,
         "resendOnRefresh": true,
