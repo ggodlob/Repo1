@@ -2264,7 +2264,8 @@
         "y": 40,
         "wires": [
             [
-                "2c0c38adf570a5e0"
+                "2c0c38adf570a5e0",
+                "60637ee09f85aa88"
             ]
         ]
     },
@@ -2283,7 +2284,8 @@
         "y": 100,
         "wires": [
             [
-                "12bbbd87a10398fa"
+                "12bbbd87a10398fa",
+                "0409fb4c7bf063c0"
             ]
         ]
     },
@@ -2302,7 +2304,8 @@
         "y": 160,
         "wires": [
             [
-                "04b283f4a235b802"
+                "04b283f4a235b802",
+                "e80331fd9ee6965a"
             ]
         ]
     },
@@ -2449,6 +2452,167 @@
         ]
     },
     {
+        "id": "56bc494f5e579396",
+        "type": "function",
+        "z": "f820c1bd7223bd88",
+        "name": "Data prepare",
+        "func": "console.log(\"Serialnumber: \" + msg.serialnumber);\nconsole.log(\"Pressure: \" + msg.pressure);\nconsole.log(\"Valve: \" + msg.valve);\n\n// Tároljuk el az előző serialnumber-t a context-ben\ncontext.previousSerialNumber = context.previousSerialNumber || null;\n\n// Ellenőrizzük, hogy a serialnumber változott-e\nif (msg.serialnumber !== context.previousSerialNumber) {\n  // Ha változott, akkor beállítjuk a flag-et és frissítjük az előző serialnumber-t\n  msg.serialnumber_changed = true;\n  context.previousSerialNumber = msg.serialnumber;\n} else {\n  msg.serialnumber_changed = false; // Ha nem változott, ne legyen true\n}\n\n// Tároljuk el az előző nyomásértéket a context-ben\ncontext.previousPressure = context.previousPressure || null;\n\nvar pressure = msg.pressure;\n\nvar valve = msg.valve;\n\nif (pressure === undefined || pressure === null || isNaN(pressure)) {\n  console.error(\"Nem található vagy érvénytelen nyomásérték a msg.payload-ban: \" + pressure);\n  // Ha nincs érvényes nyomásérték, használjuk az előzőt, ha van\n  pressure = context.previousPressure !== null ? context.previousPressure : 0;\n} else {\n  // Ha van érvényes nyomásérték, frissítsük az előzőt\n  context.previousPressure = pressure;\n}\n\nvar date = new Date(); // Aktuális dátum és idő\nvar formattedDate = date.toLocaleDateString(\"de-DE\"); // Dátum formázása magyar lokalizáció szerint (éééé.hh.nn.)\nvar formattedTime = date.toLocaleTimeString(\"de-DE\"); // Idő formázása magyar lokalizáció szerint (óó:pp:mm)\nvar timestamp = formattedDate + \" \" + formattedTime; // Dátum és idő kombinálása\n\ncontext.data = context.data || [];\n\ncontext.data.push({\n  timestamp: timestamp,\n  pressure: pressure\n});\n\nvar csv = \"Timestamp;Pressure\\n\";\ncontext.data.forEach(function (item) {\n  csv += item.timestamp + \";\" + item.pressure + \"\\n\";\n});\n\nvar newMsg = { ...msg };\nnewMsg.payload = csv;\n\n// Ellenőrizzük, hogy a serialnumber létezik-e és nem undefined\nif (msg.serialnumber !== undefined && msg.serialnumber !== null) {\n  var fileName = \"sn\" + msg.serialnumber + \"_pressure_loss.csv\";\n  var filePath = \"/home/ovum/\" + fileName;\n  newMsg.filename = filePath;\n  return newMsg; // Csak akkor küldjük tovább az üzenetet, ha van serialnumber\n} else {\n  console.error(\"A msg.serialnumber undefined vagy null. Fájlmentés kihagyva.\");\n  return null; // Ne küldjünk tovább üzenetet, ha nincs serialnumber\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 160,
+        "wires": [
+            [
+                "957c4f215a3df585"
+            ]
+        ]
+    },
+    {
+        "id": "957c4f215a3df585",
+        "type": "file",
+        "z": "f820c1bd7223bd88",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1120,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e80331fd9ee6965a",
+        "type": "change",
+        "z": "f820c1bd7223bd88",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "pressure",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "pressure",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 200,
+        "wires": [
+            [
+                "8dab0ad85d372a84"
+            ]
+        ]
+    },
+    {
+        "id": "0409fb4c7bf063c0",
+        "type": "change",
+        "z": "f820c1bd7223bd88",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "serialnumber",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "serialnumber",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 140,
+        "wires": [
+            [
+                "8dab0ad85d372a84"
+            ]
+        ]
+    },
+    {
+        "id": "8dab0ad85d372a84",
+        "type": "join",
+        "z": "f820c1bd7223bd88",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "10",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 790,
+        "y": 160,
+        "wires": [
+            [
+                "56bc494f5e579396"
+            ]
+        ]
+    },
+    {
+        "id": "60637ee09f85aa88",
+        "type": "change",
+        "z": "f820c1bd7223bd88",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "valve",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 80,
+        "wires": [
+            [
+                "56bc494f5e579396"
+            ]
+        ]
+    },
+    {
         "id": "bc0279d6d6d66c7a",
         "type": "ui_text",
         "z": "28c240172645bd4e",
@@ -2591,7 +2755,8 @@
         "y": 100,
         "wires": [
             [
-                "b2c11f424328c412"
+                "b2c11f424328c412",
+                "88527aa3f3b3e8d7"
             ]
         ]
     },
@@ -2610,7 +2775,8 @@
         "y": 40,
         "wires": [
             [
-                "89644dc73fa4bfb2"
+                "89644dc73fa4bfb2",
+                "2b9f96ac05e6c7e0"
             ]
         ]
     },
@@ -2629,7 +2795,8 @@
         "y": 160,
         "wires": [
             [
-                "153d8ec83f3e3c6a"
+                "153d8ec83f3e3c6a",
+                "095aece90c46ad1f"
             ]
         ]
     },
@@ -2772,6 +2939,167 @@
         "wires": [
             [
                 "7fb0ee86dd7afcef"
+            ]
+        ]
+    },
+    {
+        "id": "6b52255eb5bea8bd",
+        "type": "function",
+        "z": "28c240172645bd4e",
+        "name": "Data prepare",
+        "func": "console.log(\"Serialnumber: \" + msg.serialnumber);\nconsole.log(\"Pressure: \" + msg.pressure);\nconsole.log(\"Valve: \" + msg.valve);\n\n// Tároljuk el az előző serialnumber-t a context-ben\ncontext.previousSerialNumber = context.previousSerialNumber || null;\n\n// Ellenőrizzük, hogy a serialnumber változott-e\nif (msg.serialnumber !== context.previousSerialNumber) {\n  // Ha változott, akkor beállítjuk a flag-et és frissítjük az előző serialnumber-t\n  msg.serialnumber_changed = true;\n  context.previousSerialNumber = msg.serialnumber;\n} else {\n  msg.serialnumber_changed = false; // Ha nem változott, ne legyen true\n}\n\n// Tároljuk el az előző nyomásértéket a context-ben\ncontext.previousPressure = context.previousPressure || null;\n\nvar pressure = msg.pressure;\n\nvar valve = msg.valve;\n\nif (pressure === undefined || pressure === null || isNaN(pressure)) {\n  console.error(\"Nem található vagy érvénytelen nyomásérték a msg.payload-ban: \" + pressure);\n  // Ha nincs érvényes nyomásérték, használjuk az előzőt, ha van\n  pressure = context.previousPressure !== null ? context.previousPressure : 0;\n} else {\n  // Ha van érvényes nyomásérték, frissítsük az előzőt\n  context.previousPressure = pressure;\n}\n\nvar date = new Date(); // Aktuális dátum és idő\nvar formattedDate = date.toLocaleDateString(\"de-DE\"); // Dátum formázása magyar lokalizáció szerint (éééé.hh.nn.)\nvar formattedTime = date.toLocaleTimeString(\"de-DE\"); // Idő formázása magyar lokalizáció szerint (óó:pp:mm)\nvar timestamp = formattedDate + \" \" + formattedTime; // Dátum és idő kombinálása\n\ncontext.data = context.data || [];\n\ncontext.data.push({\n  timestamp: timestamp,\n  pressure: pressure\n});\n\nvar csv = \"Timestamp;Pressure\\n\";\ncontext.data.forEach(function (item) {\n  csv += item.timestamp + \";\" + item.pressure + \"\\n\";\n});\n\nvar newMsg = { ...msg };\nnewMsg.payload = csv;\n\n// Ellenőrizzük, hogy a serialnumber létezik-e és nem undefined\nif (msg.serialnumber !== undefined && msg.serialnumber !== null) {\n  var fileName = \"sn\" + msg.serialnumber + \"_pressure_loss.csv\";\n  var filePath = \"/home/ovum/\" + fileName;\n  newMsg.filename = filePath;\n  return newMsg; // Csak akkor küldjük tovább az üzenetet, ha van serialnumber\n} else {\n  console.error(\"A msg.serialnumber undefined vagy null. Fájlmentés kihagyva.\");\n  return null; // Ne küldjünk tovább üzenetet, ha nincs serialnumber\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 160,
+        "wires": [
+            [
+                "95f2dbc6c197e44a"
+            ]
+        ]
+    },
+    {
+        "id": "95f2dbc6c197e44a",
+        "type": "file",
+        "z": "28c240172645bd4e",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 1120,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "095aece90c46ad1f",
+        "type": "change",
+        "z": "28c240172645bd4e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "pressure",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "pressure",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 200,
+        "wires": [
+            [
+                "2853f50b0b26155b"
+            ]
+        ]
+    },
+    {
+        "id": "88527aa3f3b3e8d7",
+        "type": "change",
+        "z": "28c240172645bd4e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "serialnumber",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "serialnumber",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 140,
+        "wires": [
+            [
+                "2853f50b0b26155b"
+            ]
+        ]
+    },
+    {
+        "id": "2853f50b0b26155b",
+        "type": "join",
+        "z": "28c240172645bd4e",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "10",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 790,
+        "y": 160,
+        "wires": [
+            [
+                "6b52255eb5bea8bd"
+            ]
+        ]
+    },
+    {
+        "id": "2b9f96ac05e6c7e0",
+        "type": "change",
+        "z": "28c240172645bd4e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "valve",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 80,
+        "wires": [
+            [
+                "6b52255eb5bea8bd"
             ]
         ]
     },
