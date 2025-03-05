@@ -1901,7 +1901,8 @@
         "y": 280,
         "wires": [
             [
-                "93977b64a2c4b76a"
+                "93977b64a2c4b76a",
+                "463f22b8174c407e"
             ]
         ]
     },
@@ -1942,8 +1943,7 @@
         "wires": [
             [
                 "3be77a102f31d277",
-                "b18321f76caccbf2",
-                "2f66d82741884bfb"
+                "b18321f76caccbf2"
             ]
         ]
     },
@@ -2017,14 +2017,14 @@
         "order": 5,
         "width": "1",
         "height": "2",
-        "format": "<style>\n  /* Egyedi CSS osztályok a csoportokhoz */\n  .grid-container-wp1,\n  .grid-container-wp2,\n  .grid-container-wp3,\n  .grid-container-wp4 {\n    display: grid;\n    grid-template-columns: 1fr;\n    grid-template-rows: 1fr 1fr;\n    width: 30px;\n    height: 48px;\n    position: relative;\n    /* A top értékeket a csoportokhoz igazítjuk */\n    left: 0px;\n  }\n\n  .grid-container-wp1 {\n    top: 0px;\n  }\n\n  .grid-container-wp2 {\n    top: 0px;\n  }\n\n  /* Példa: módosított top értékek */\n  .grid-container-wp3 {\n    top: 0px;\n  }\n\n  .grid-container-wp4 {\n    top: 0px;\n  }\n\n  .circle {\n    width: 20px;\n    height: 20px;\n    border-radius: 50%;\n    grid-column: 1;\n    grid-row: 1;\n    justify-self: center;\n    align-self: center;\n  }\n\n  .circle.red {\n    background-color: red;\n  }\n\n  .circle.green {\n    background-color: green;\n  }\n\n  .circle.orange {\n    background-color: orange;\n  }\n\n  .circle.gray {\n    background-color: gray;\n  }\n</style>\n\n<div class=\"grid-container-wp2\">\n  <div id=\"statusCircleWP2\" class=\"circle gray\"></div>\n</div>\n\n<script>\n  (function(scope) {\n    scope.$watch('msg', function(msg) {\n      var circle = document.getElementById('statusCircleWP2');\n      circle.classList.remove('red', 'green', 'orange', 'gray');\n\n      if (msg && msg.topic === \"pressureloss\") { // Egyedi topic\n        if (typeof msg.pressureloss === 'number') {\n          if (msg.pressureloss === 0) {\n            circle.classList.add('green');\n          } else if (msg.pressureloss > 0 && msg.pressureloss <= 100.0) {\n            circle.classList.add('orange');\n          } else if (msg.pressureloss > 100.0) {\n            circle.classList.add('red');\n          }\n        } else {\n          circle.classList.add('gray');\n        }\n      }\n    });\n  })(scope);\n</script>",
+        "format": "<style>\n  /* Egyedi CSS osztályok a csoportokhoz */\n  .grid-container-wp1,\n  .grid-container-wp2,\n  .grid-container-wp3,\n  .grid-container-wp4 {\n    display: grid;\n    grid-template-columns: 1fr;\n    grid-template-rows: 1fr 1fr;\n    width: 30px;\n    height: 48px;\n    position: relative;\n    /* A top értékeket a csoportokhoz igazítjuk */\n    left: 0px;\n  }\n\n  .grid-container-wp1 {\n    top: 0px;\n  }\n\n  .grid-container-wp2 {\n    top: 0px;\n  }\n\n  /* Példa: módosított top értékek */\n  .grid-container-wp3 {\n    top: 0px;\n  }\n\n  .grid-container-wp4 {\n    top: 0px;\n  }\n\n  .circle {\n    width: 20px;\n    height: 20px;\n    border-radius: 50%;\n    grid-column: 1;\n    grid-row: 1;\n    justify-self: center;\n    align-self: center;\n  }\n\n  .circle.red {\n    background-color: red;\n  }\n\n  .circle.green {\n    background-color: green;\n  }\n\n  .circle.orange {\n    background-color: orange;\n  }\n\n  .circle.gray {\n    background-color: gray;\n  }\n</style>\n\n<div class=\"grid-container-wp2\">\n  <div id=\"statusCircleWP2\" class=\"circle gray\"></div>\n</div>\n\n<script>\n  (function(scope) {\n    scope.$watch('msg', function(msg) {\n      var circle = document.getElementById('statusCircleWP2');\n      circle.classList.remove('red', 'green', 'orange', 'gray');\n\n      if (msg && msg.topic === \"pressureloss2\") { // Egyedi topic\n        if (typeof msg.pressureloss2 === 'number') {\n          if (msg.pressureloss2 === 0) {\n            circle.classList.add('green');\n          } else if (msg.pressureloss2 > 0 && msg.pressureloss <= 100.0) {\n            circle.classList.add('orange');\n          } else if (msg.pressureloss2 > 100.0) {\n            circle.classList.add('red');\n          }\n        } else {\n          circle.classList.add('gray');\n        }\n      }\n    });\n  })(scope);\n</script>",
         "storeOutMessages": false,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
         "x": 860,
-        "y": 340,
+        "y": 400,
         "wires": [
             []
         ]
@@ -2045,6 +2045,40 @@
         "x": 840,
         "y": 260,
         "wires": []
+    },
+    {
+        "id": "463f22b8174c407e",
+        "type": "change",
+        "z": "cb52c966d2fad605",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "pressureloss2",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "pressureloss2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 430,
+        "y": 400,
+        "wires": [
+            [
+                "2f66d82741884bfb"
+            ]
+        ]
     },
     {
         "id": "12bbbd87a10398fa",
