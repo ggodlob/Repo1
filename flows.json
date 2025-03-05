@@ -1854,7 +1854,6 @@
         "y": 280,
         "wires": [
             [
-                "3be77a102f31d277",
                 "83f83ff9fcab2c9a"
             ]
         ]
@@ -1893,10 +1892,12 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 580,
-        "y": 340,
+        "x": 380,
+        "y": 280,
         "wires": [
-            []
+            [
+                "3be77a102f31d277"
+            ]
         ]
     },
     {
