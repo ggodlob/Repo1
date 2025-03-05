@@ -1702,7 +1702,7 @@
         "z": "cb52c966d2fad605",
         "group": "de078532d6f5e387",
         "order": 4,
-        "width": "5",
+        "width": "6",
         "height": "1",
         "name": "",
         "label": "Messzeit WP2",
@@ -1723,7 +1723,7 @@
         "z": "cb52c966d2fad605",
         "group": "de078532d6f5e387",
         "order": 5,
-        "width": "5",
+        "width": "6",
         "height": "1",
         "name": "",
         "label": "Druckverlust WP2",
@@ -1875,6 +1875,27 @@
             [
                 "730d51ad838c3289"
             ]
+        ]
+    },
+    {
+        "id": "83f83ff9fcab2c9a",
+        "type": "ui_template",
+        "z": "cb52c966d2fad605",
+        "group": "de078532d6f5e387",
+        "name": "",
+        "order": 6,
+        "width": "1",
+        "height": "2",
+        "format": "<style>\n  .grid-container {\n    display: grid;\n    grid-template-columns: 1fr;\n    grid-template-rows: 1fr 1fr;\n    width: 30px;\n    height: 48px;\n    /* 1x2-es konténer magassága */\n    position: relative;\n    top: 35px;\n    /* Pont a Messzeit és Druckverlust közé */\n    left: 0;\n  }\n\n  .circle {\n    width: 20px;\n    height: 20px;\n    border-radius: 50%;\n    grid-column: 1;\n    grid-row: 1;\n    justify-self: start;\n    align-self: start;\n  }\n\n  .circle.red {\n    background-color: red;\n  }\n\n  .circle.green {\n    background-color: green;\n  }\n\n  .circle.orange {\n    background-color: orange;\n  }\n</style>\n\n<div class=\"grid-container\">\n  <div id=\"statusCircle\" class=\"circle\"></div>\n</div>\n\n<script>\n  (function(scope) {\n  scope.$watch('msg', function(msg) {\n    if (msg && msg.payload !== undefined) {\n      var circle = document.getElementById('statusCircle');\n      circle.classList.remove('red', 'green', 'orange');\n\n      if (msg.payload === 0) {\n        circle.classList.add('green');\n      } else if (msg.payload > 0 && msg.payload <= 1000) {\n        circle.classList.add('orange');\n      } else if (msg.payload > 1000) {\n        circle.classList.add('red');\n      }\n    }\n  });\n})(scope);\n</script>",
+        "storeOutMessages": false,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 380,
+        "y": 340,
+        "wires": [
+            []
         ]
     },
     {
