@@ -752,7 +752,7 @@
         "timestamp": "0",
         "skip": "0",
         "severity": "0",
-        "x": 150,
+        "x": 170,
         "y": 460,
         "wires": [
             [
@@ -771,7 +771,7 @@
         "timestamp": "0",
         "skip": "0",
         "severity": "0",
-        "x": 150,
+        "x": 170,
         "y": 520,
         "wires": [
             [
@@ -790,7 +790,7 @@
         "timestamp": "0",
         "skip": "0",
         "severity": "0",
-        "x": 150,
+        "x": 170,
         "y": 700,
         "wires": [
             [
@@ -809,7 +809,7 @@
         "timestamp": "0",
         "skip": "0",
         "severity": "0",
-        "x": 150,
+        "x": 170,
         "y": 760,
         "wires": [
             [
@@ -847,7 +847,7 @@
         "timestamp": "0",
         "skip": "0",
         "severity": "0",
-        "x": 120,
+        "x": 140,
         "y": 340,
         "wires": [
             [
@@ -866,7 +866,7 @@
         "timestamp": "0",
         "skip": "0",
         "severity": "0",
-        "x": 120,
+        "x": 140,
         "y": 580,
         "wires": [
             [
@@ -948,7 +948,7 @@
         "timestamp": "0",
         "skip": "0",
         "severity": "0",
-        "x": 140,
+        "x": 160,
         "y": 400,
         "wires": [
             [
@@ -967,7 +967,7 @@
         "timestamp": "0",
         "skip": "0",
         "severity": "0",
-        "x": 140,
+        "x": 160,
         "y": 640,
         "wires": [
             [
@@ -986,7 +986,7 @@
         "timestamp": "0",
         "skip": "0",
         "severity": "0",
-        "x": 140,
+        "x": 160,
         "y": 820,
         "wires": [
             [
@@ -1105,7 +1105,7 @@
         "timestamp": "0",
         "skip": "0",
         "severity": "0",
-        "x": 150,
+        "x": 170,
         "y": 880,
         "wires": [
             [
@@ -1124,7 +1124,7 @@
         "timestamp": "0",
         "skip": "0",
         "severity": "0",
-        "x": 150,
+        "x": 170,
         "y": 940,
         "wires": [
             [
