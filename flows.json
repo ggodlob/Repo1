@@ -2155,7 +2155,8 @@
         "y": 280,
         "wires": [
             [
-                "371420ab9311d8d9"
+                "371420ab9311d8d9",
+                "682f0cd1c82fa823"
             ]
         ]
     },
@@ -2174,8 +2175,126 @@
         "y": 220,
         "wires": [
             [
-                "6a317b620df64d1c"
+                "6a317b620df64d1c",
+                "401319eea4dfb732"
             ]
+        ]
+    },
+    {
+        "id": "513dc3880291d13f",
+        "type": "ui_text",
+        "z": "f820c1bd7223bd88",
+        "group": "422ba1667a7ab9f8",
+        "order": 5,
+        "width": "6",
+        "height": "1",
+        "name": "",
+        "label": "Druckverlust WP3",
+        "format": "{{msg.payload.noUnit ? msg.payload.text : msg.payload + \" mbar\"}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 870,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "7d35564ac34885cb",
+        "type": "function",
+        "z": "f820c1bd7223bd88",
+        "name": "function 3",
+        "func": "// Kontextus inicializálása\nif (context.previousMeasuretime === undefined) {\n    context.previousMeasuretime = null;\n}\n\n// Az aktuális measuretime és pressureloss értékek lekérdezése\nconst currentMeasuretime = msg.measuretime;\nconst pressureLoss = msg.pressureloss;\n\n// Ellenőrizzük, hogy a measuretime nullról nullára váltott-e\nif (context.previousMeasuretime > 0 && currentMeasuretime === 0) {\n    // Ha igen, akkor a pressureloss értékét adjuk ki a payload-ban\n    msg.payload = pressureLoss;\n    // Frissítjük a korábbi measuretime értéket\n    context.previousMeasuretime = currentMeasuretime;\n    return msg;\n} else if (currentMeasuretime > 0) {\n    // Ha a measuretime nagyobb mint 0, akkor \"Messung Läuft\"-ot adunk ki\n    msg.payload = {\n        text: \"Messung Läuft\",\n        noUnit: true\n    };\n    // Frissítjük a korábbi measuretime értéket\n    context.previousMeasuretime = currentMeasuretime;\n    return msg;\n} else {\n    // Ha a measuretime 0, akkor a pressureLoss értékét adjuk ki\n    msg.payload = pressureLoss;\n    // Frissítjük a korábbi measuretime értéket\n    context.previousMeasuretime = currentMeasuretime;\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 360,
+        "wires": [
+            [
+                "513dc3880291d13f",
+                "c46810914b3d39d5"
+            ]
+        ]
+    },
+    {
+        "id": "401319eea4dfb732",
+        "type": "change",
+        "z": "f820c1bd7223bd88",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "measuretime",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 340,
+        "wires": [
+            [
+                "7d35564ac34885cb"
+            ]
+        ]
+    },
+    {
+        "id": "682f0cd1c82fa823",
+        "type": "change",
+        "z": "f820c1bd7223bd88",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "pressureloss",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 450,
+        "y": 400,
+        "wires": [
+            [
+                "7d35564ac34885cb"
+            ]
+        ]
+    },
+    {
+        "id": "c46810914b3d39d5",
+        "type": "ui_template",
+        "z": "f820c1bd7223bd88",
+        "group": "422ba1667a7ab9f8",
+        "name": "Dot feedback 3",
+        "order": 6,
+        "width": "1",
+        "height": "2",
+        "format": "<style>\n  .grid-container {\n    display: grid;\n    grid-template-columns: 1fr;\n    grid-template-rows: 1fr 1fr;\n    width: 30px;\n    height: 48px;\n    /* 1x2-es konténer magassága */\n    position: relative;\n    top: 35px;\n    /* Pont a Messzeit és Druckverlust közé */\n    left: 0;\n  }\n\n  .circle {\n    width: 20px;\n    height: 20px;\n    border-radius: 50%;\n    grid-column: 1;\n    grid-row: 1;\n    justify-self: start;\n    align-self: start;\n  }\n\n  .circle.red {\n    background-color: red;\n  }\n\n  .circle.green {\n    background-color: green;\n  }\n\n  .circle.orange {\n    background-color: orange;\n  }\n</style>\n\n<div class=\"grid-container\">\n  <div id=\"statusCircle\" class=\"circle\"></div>\n</div>\n\n<script>\n  (function(scope) {\n  scope.$watch('msg', function(msg) {\n    if (msg && msg.pressureloss !== undefined) {\n      var circle = document.getElementById('statusCircle');\n      circle.classList.remove('red', 'green', 'orange');\n\n      if (msg.pressureloss === 0) {\n        circle.classList.add('green');\n      } else if (msg.pressureloss > 0 && msg.payload <= 1000) {\n        circle.classList.add('orange');\n      } else if (msg.pressureloss > 1000) {\n        circle.classList.add('red');\n      }\n    }\n  });\n})(scope);\n</script>",
+        "storeOutMessages": false,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 860,
+        "y": 400,
+        "wires": [
+            []
         ]
     },
     {
