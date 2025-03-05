@@ -1966,7 +1966,7 @@
         "storeOutMessages": false,
         "fwdInMessages": true,
         "resendOnRefresh": true,
-        "templateScope": "global",
+        "templateScope": "local",
         "className": "",
         "x": 860,
         "y": 340,
