@@ -2335,8 +2335,30 @@
         "y": 340,
         "wires": [
             [
-                "7d35564ac34885cb"
+                "7d35564ac34885cb",
+                "748d19738dd6cb82"
             ]
+        ]
+    },
+    {
+        "id": "748d19738dd6cb82",
+        "type": "ui_template",
+        "z": "f820c1bd7223bd88",
+        "group": "422ba1667a7ab9f8",
+        "name": "Dot feedback 3",
+        "order": 5,
+        "width": "1",
+        "height": "2",
+        "format": "<style>\n  .grid-container {\n    display: grid;\n    grid-template-columns: 1fr;\n    grid-template-rows: 1fr 1fr;\n    width: 30px;\n    height: 48px;\n    position: relative;\n    top: 40px;\n    left: 0;\n  }\n\n  .circle {\n    width: 20px;\n    height: 20px;\n    border-radius: 50%;\n    grid-column: 1;\n    grid-row: 1;\n    justify-self: start;\n    align-self: start;\n  }\n\n  .circle.red {\n    background-color: red;\n  }\n\n  .circle.green {\n    background-color: green;\n  }\n\n  .circle.orange {\n    background-color: orange;\n  }\n\n  .circle.gray {\n    background-color: gray;\n  }\n</style>\n\n<div class=\"grid-container\">\n  <div id=\"statusCircle\" class=\"circle gray\"></div>\n</div>\n\n<script>\n  (function(scope) {\n    scope.$watch('msg', function(msg) {\n      var circle = document.getElementById('statusCircle');\n      circle.classList.remove('red', 'green', 'orange', 'gray');\n\n      if (msg && msg.pressureloss !== undefined) {\n        if (msg.pressureloss === 0) {\n          circle.classList.add('green');\n        } else if (msg.pressureloss > 0 && msg.pressureloss <= 100.0) {\n          circle.classList.add('orange');\n        } else if (msg.pressureloss > 100.0) {\n          circle.classList.add('red');\n        }\n      } else {\n        circle.classList.add('gray');\n      }\n    });\n  })(scope);\n</script>",
+        "storeOutMessages": false,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 860,
+        "y": 340,
+        "wires": [
+            []
         ]
     },
     {
