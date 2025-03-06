@@ -3543,6 +3543,7 @@
         "id": "eaa1b785a82474e8",
         "type": "ui_template",
         "z": "fe54917cf124892f",
+        "d": true,
         "group": "b9eaf4515438b94a",
         "name": "File Preview",
         "order": 3,
