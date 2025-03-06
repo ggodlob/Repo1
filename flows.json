@@ -4424,7 +4424,7 @@
         "name": "",
         "spec": "rfc",
         "sep": ";",
-        "hdrin": "",
+        "hdrin": true,
         "hdrout": "none",
         "multi": "one",
         "ret": "\\r\\n",
