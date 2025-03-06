@@ -147,7 +147,7 @@
             "name": "OVUM",
             "hideToolbar": "false",
             "allowSwipe": "mouse",
-            "lockMenu": "false",
+            "lockMenu": "true",
             "allowTempTheme": "true",
             "dateFormat": "DD/MM/YYYY",
             "sizes": {
