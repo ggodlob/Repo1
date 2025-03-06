@@ -4428,7 +4428,7 @@
         "type": "function",
         "z": "fe54917cf124892f",
         "name": "function 5",
-        "func": "let data = msg.payload;\nlet chartData = [];\n\ndata.forEach(row => {\n    if (row && row.Timestamp && row.Pressure) {\n        let xValue = row.Timestamp;\n        let yValue = row.Pressure;\n\n        if (isNaN(yValue)) {\n            yValue = parseFloat(yValue);\n        }\n\n        if (!isNaN(yValue)) {\n            chartData.push({\n                x: xValue,\n                y: yValue\n            });\n        }\n    }\n});\n\nmsg.payload = {\n    series: [\"Nyomás\"],\n    data: [chartData],\n    labels: chartData.map(d => d.x)\n};\n\nreturn msg;\n",
+        "func": "const csv = require('csv-parse/lib/sync');\nlet decodedData = Buffer.from(msg.payload).toString('utf8');\nlet records = csv(decodedData, {\n    columns: true,\n    skip_empty_lines: true\n});\n\nlet chartData = [];\n\nrecords.forEach(row => {\n    if (row && row.Timestamp && row.Pressure) {\n        let xValue = row.Timestamp;\n        let yValue = parseFloat(row.Pressure);\n\n        if (!isNaN(yValue)) {\n            chartData.push({\n                x: xValue,\n                y: yValue\n            });\n        }\n    }\n});\n\nmsg.payload = {\n    series: [\"Nyomás\"],\n    data: [chartData],\n    labels: chartData.map(d => d.x)\n};\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
