@@ -402,7 +402,7 @@
         "width": "6"
     },
     {
-        "id": "26cec44cc9bf37cb",
+        "id": "21cbcb028cf83862",
         "type": "ui_spacer",
         "z": "0434627783d5f543",
         "name": "spacer",
@@ -412,7 +412,7 @@
         "height": 1
     },
     {
-        "id": "e0b6035ea320424c",
+        "id": "ca5fa5d8e1d4166a",
         "type": "ui_spacer",
         "z": "0434627783d5f543",
         "name": "spacer",
@@ -422,7 +422,7 @@
         "height": 1
     },
     {
-        "id": "e2bdc12cafb7748e",
+        "id": "e81aaedc48a8179c",
         "type": "ui_spacer",
         "z": "0434627783d5f543",
         "name": "spacer",
@@ -432,7 +432,7 @@
         "height": 1
     },
     {
-        "id": "99952e7b1b52d2f5",
+        "id": "c9bf3fc95d702905",
         "type": "ui_spacer",
         "z": "0434627783d5f543",
         "name": "spacer",
@@ -442,7 +442,7 @@
         "height": 1
     },
     {
-        "id": "9c7549c32fbcd072",
+        "id": "e1e53d1f513e1a43",
         "type": "ui_spacer",
         "z": "0434627783d5f543",
         "name": "spacer",
@@ -452,7 +452,7 @@
         "height": 1
     },
     {
-        "id": "1d0df413f3c04d2a",
+        "id": "7029ae7048e13f92",
         "type": "ui_spacer",
         "z": "0434627783d5f543",
         "name": "spacer",
@@ -462,7 +462,7 @@
         "height": 1
     },
     {
-        "id": "3db08625b052e2d6",
+        "id": "9f2510c5d523fb99",
         "type": "ui_spacer",
         "z": "0434627783d5f543",
         "name": "spacer",
@@ -472,7 +472,7 @@
         "height": 1
     },
     {
-        "id": "e15a8cebeef0fd0c",
+        "id": "54c14fdb81c4bc89",
         "type": "ui_spacer",
         "z": "0434627783d5f543",
         "name": "spacer",
@@ -482,7 +482,7 @@
         "height": 1
     },
     {
-        "id": "2c660d55f3d42cc6",
+        "id": "168dbc918b4c3612",
         "type": "ui_spacer",
         "z": "0434627783d5f543",
         "name": "spacer",
@@ -492,7 +492,7 @@
         "height": 1
     },
     {
-        "id": "6760f52e4bc01f57",
+        "id": "ce386dfc8fec7014",
         "type": "ui_spacer",
         "z": "0434627783d5f543",
         "name": "spacer",
@@ -502,7 +502,7 @@
         "height": 1
     },
     {
-        "id": "c2b085f70817eab5",
+        "id": "5a3296fc80dc58b5",
         "type": "ui_spacer",
         "z": "0434627783d5f543",
         "name": "spacer",
@@ -512,7 +512,7 @@
         "height": 1
     },
     {
-        "id": "ecb6a1fe2999ec74",
+        "id": "8f38f390cc8499a8",
         "type": "ui_spacer",
         "z": "0434627783d5f543",
         "name": "spacer",
@@ -759,8 +759,8 @@
         "name": "",
         "group": "5adbafdcfcc90c64",
         "order": 1,
-        "width": 0,
-        "height": 0,
+        "width": 7,
+        "height": 3,
         "label": "Vakuumpumpe 2",
         "chartType": "line",
         "legend": "false",
@@ -1037,8 +1037,8 @@
         "name": "",
         "group": "a53d8deeea11707a",
         "order": 1,
-        "width": 0,
-        "height": 0,
+        "width": 7,
+        "height": 3,
         "label": "Vakuumpumpe 1",
         "chartType": "line",
         "legend": "false",
