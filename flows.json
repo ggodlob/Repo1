@@ -402,7 +402,7 @@
         "width": "6"
     },
     {
-        "id": "79f02b36f7c757fa",
+        "id": "5b836ed653d60741",
         "type": "ui_spacer",
         "z": "0434627783d5f543",
         "name": "spacer",
@@ -412,7 +412,7 @@
         "height": 1
     },
     {
-        "id": "82948253eb5ef2c4",
+        "id": "7f9351b5d59ac66d",
         "type": "ui_spacer",
         "z": "0434627783d5f543",
         "name": "spacer",
@@ -422,7 +422,7 @@
         "height": 1
     },
     {
-        "id": "99edf57d95adc5df",
+        "id": "bdd9d39b17d1330f",
         "type": "ui_spacer",
         "z": "0434627783d5f543",
         "name": "spacer",
@@ -432,7 +432,7 @@
         "height": 1
     },
     {
-        "id": "dce96a85dc2d2b12",
+        "id": "87768278114dc7ad",
         "type": "ui_spacer",
         "z": "0434627783d5f543",
         "name": "spacer",
@@ -442,7 +442,7 @@
         "height": 1
     },
     {
-        "id": "3620cb77182953ce",
+        "id": "eb5eb80fe22f81d3",
         "type": "ui_spacer",
         "z": "0434627783d5f543",
         "name": "spacer",
@@ -452,7 +452,7 @@
         "height": 1
     },
     {
-        "id": "695dbf6577fbf1ee",
+        "id": "2077182ff96816ef",
         "type": "ui_spacer",
         "z": "0434627783d5f543",
         "name": "spacer",
@@ -462,7 +462,7 @@
         "height": 1
     },
     {
-        "id": "162a74d041b03ff5",
+        "id": "def44df00cc532e4",
         "type": "ui_spacer",
         "z": "0434627783d5f543",
         "name": "spacer",
@@ -472,7 +472,7 @@
         "height": 1
     },
     {
-        "id": "61952142ea8c9146",
+        "id": "021b19989d484949",
         "type": "ui_spacer",
         "z": "0434627783d5f543",
         "name": "spacer",
@@ -720,7 +720,7 @@
         "group": "5adbafdcfcc90c64",
         "order": 1,
         "width": 7,
-        "height": 3,
+        "height": 4,
         "label": "Vakuumpumpe 2",
         "chartType": "line",
         "legend": "false",
@@ -764,7 +764,7 @@
         "group": "781d599033b227b9",
         "order": 1,
         "width": 7,
-        "height": 3,
+        "height": 4,
         "label": "Vakuumpumpe 3",
         "chartType": "line",
         "legend": "false",
@@ -998,7 +998,7 @@
         "group": "a53d8deeea11707a",
         "order": 1,
         "width": 7,
-        "height": 3,
+        "height": 4,
         "label": "Vakuumpumpe 1",
         "chartType": "line",
         "legend": "false",
@@ -1099,7 +1099,7 @@
         "group": "c1c3c6b12dccd791",
         "order": 1,
         "width": 7,
-        "height": 3,
+        "height": 4,
         "label": "Vakuumpumpe 4",
         "chartType": "line",
         "legend": "false",
