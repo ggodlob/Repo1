@@ -4525,7 +4525,7 @@
         "ymax": "auto",
         "removeOlder": 1,
         "removeOlderPoints": "auto",
-        "removeOlderUnit": "3600",
+        "removeOlderUnit": "86400",
         "cutout": 0,
         "useOneColor": false,
         "useUTC": false,
