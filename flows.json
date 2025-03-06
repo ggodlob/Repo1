@@ -3543,6 +3543,7 @@
         "id": "eaa1b785a82474e8",
         "type": "ui_template",
         "z": "fe54917cf124892f",
+        "d": true,
         "group": "b9eaf4515438b94a",
         "name": "File Preview",
         "order": 3,
@@ -3554,7 +3555,7 @@
         "resendOnRefresh": false,
         "templateScope": "local",
         "className": "",
-        "x": 1270,
+        "x": 1450,
         "y": 400,
         "wires": [
             []
@@ -3712,7 +3713,7 @@
         "y": 400,
         "wires": [
             [
-                "6ddfe0872aa55cab"
+                "6ba1dfda5a91e85a"
             ]
         ]
     },
@@ -3727,12 +3728,10 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 940,
-        "y": 400,
+        "x": 1320,
+        "y": 100,
         "wires": [
-            [
-                "eaa1b785a82474e8"
-            ]
+            []
         ]
     },
     {
@@ -4415,6 +4414,96 @@
         "wires": [
             [
                 "442a856796f14a64"
+            ]
+        ]
+    },
+    {
+        "id": "6ba1dfda5a91e85a",
+        "type": "csv",
+        "z": "fe54917cf124892f",
+        "name": "",
+        "spec": "rfc",
+        "sep": ";",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\r\\n",
+        "temp": "Timestamp,Pressure",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 910,
+        "y": 400,
+        "wires": [
+            [
+                "48d6451aabd58726"
+            ]
+        ]
+    },
+    {
+        "id": "48d6451aabd58726",
+        "type": "function",
+        "z": "fe54917cf124892f",
+        "name": "function 5",
+        "func": "let data = msg.payload;\nlet chartData = [];\n\ndata.forEach(row => {\n    //Ellenőrizzük, hogy a sorban léteznek-e adatok, és hogy a Timestamp és Pressure oszlopok léteznek-e\n    if(row && row.Timestamp && row.Pressure){\n        let xValue = row.Timestamp; // x tengely értéke (Timestamp oszlop)\n        let yValue = row.Pressure; // y tengely értéke (Pressure oszlop)\n\n        //Ellenőrizzük, hogy az értékek numerikusak-e a Pressure oszlop esetében, ha nem, akkor megpróbáljuk számmá alakítani\n        if(isNaN(yValue)){\n            yValue = parseFloat(yValue);\n        }\n\n        //Csak akkor adjuk hozzá az adatot a diagramhoz, ha a Pressure érték numerikus\n        if(!isNaN(yValue)){\n            chartData.push({\n                x: xValue,\n                y: yValue\n            });\n        }\n    }\n});\n\nmsg.payload = {\n    series: [\"Nyomás\"], // A diagram adatainak neve\n    data: [chartData], // A diagram adatai\n    labels: chartData.map(d => d.x) // X tengely címkéi\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1060,
+        "y": 400,
+        "wires": [
+            [
+                "f87310bb2d773f78"
+            ]
+        ]
+    },
+    {
+        "id": "f87310bb2d773f78",
+        "type": "ui_chart",
+        "z": "fe54917cf124892f",
+        "name": "",
+        "group": "b9eaf4515438b94a",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1230,
+        "y": 400,
+        "wires": [
+            [
+                "eaa1b785a82474e8"
             ]
         ]
     },
