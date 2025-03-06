@@ -3558,7 +3558,8 @@
         "y": 400,
         "wires": [
             [
-                "ee88a0a41eb442c7"
+                "ee88a0a41eb442c7",
+                "3e176391b84614da"
             ]
         ]
     },
@@ -4447,6 +4448,7 @@
         "id": "f87310bb2d773f78",
         "type": "ui_chart",
         "z": "fe54917cf124892f",
+        "d": true,
         "name": "",
         "group": "b9eaf4515438b94a",
         "order": 5,
@@ -4502,6 +4504,70 @@
         "x": 1660,
         "y": 400,
         "wires": []
+    },
+    {
+        "id": "d5318132f8a8233e",
+        "type": "ui_chart",
+        "z": "fe54917cf124892f",
+        "name": "",
+        "group": "b9eaf4515438b94a",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "auto",
+        "ymax": "auto",
+        "removeOlder": 1,
+        "removeOlderPoints": "auto",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1830,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3e176391b84614da",
+        "type": "function",
+        "z": "fe54917cf124892f",
+        "name": "function 6",
+        "func": "var csv = msg.payload;\nvar lines = csv.split('\\n');\nvar data = [];\n\n// Feltételezzük, hogy az első sor a fejlécsor, ezért azt kihagyjuk\nfor (var i = 1; i < lines.length; i++) {\n    var line = lines[i].trim();\n    if (line !== '') {\n        var values = line.split(';'); // Pontosvesszővel elválasztott értékek\n        if (values.length >= 2) {\n            var timestamp = new Date(values[0].trim().replace(/(\\d{2})\\.(\\d{2})\\.(\\d{4})/, '$3-$2-$1')).getTime(); // Timestamp átalakítása Unix időbélyeggé\n            var pressure = parseFloat(values[1].trim());\n\n            if (!isNaN(timestamp) && !isNaN(pressure)) {\n                data.push({\n                    x: timestamp,\n                    y: pressure\n                });\n            }\n        }\n    }\n}\n\nmsg.payload = data;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1640,
+        "y": 460,
+        "wires": [
+            [
+                "d5318132f8a8233e"
+            ]
+        ]
     },
     {
         "id": "782b06fb.cc1df8",
