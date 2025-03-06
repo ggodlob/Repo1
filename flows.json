@@ -3716,8 +3716,7 @@
         "wires": [
             [
                 "6ddfe0872aa55cab",
-                "814b180397c459f9",
-                "48d6451aabd58726"
+                "814b180397c459f9"
             ]
         ]
     },
@@ -3737,7 +3736,8 @@
         "wires": [
             [
                 "eaa1b785a82474e8",
-                "0bab01c9aab6a7cb"
+                "0bab01c9aab6a7cb",
+                "48d6451aabd58726"
             ]
         ]
     },
@@ -4429,7 +4429,7 @@
         "type": "function",
         "z": "fe54917cf124892f",
         "name": "function 5",
-        "func": "const csv = require('csv-parse/lib/sync');\nlet decodedData = Buffer.from(msg.payload).toString('utf8');\nlet records = csv(decodedData, {\n    columns: true,\n    skip_empty_lines: true\n});\n\nlet chartData = [];\n\nrecords.forEach(row => {\n    if (row && row.Timestamp && row.Pressure) {\n        let xValue = row.Timestamp;\n        let yValue = parseFloat(row.Pressure);\n\n        if (!isNaN(yValue)) {\n            chartData.push({\n                x: xValue,\n                y: yValue\n            });\n        }\n    }\n});\n\nmsg.payload = {\n    series: [\"Nyomás\"],\n    data: [chartData],\n    labels: chartData.map(d => d.x)\n};\n\nreturn msg;\n",
+        "func": "var csv = msg.payload;\nvar lines = csv.split('\\n');\nvar data = [];\n\n// Feltételezzük, hogy az első sor a fejlécsor, ezért azt kihagyjuk\nfor (var i = 1; i < lines.length; i++) {\n    var line = lines[i].trim();\n    if (line !== '') {\n        var values = line.split(';'); // Feltételezzük, hogy vesszővel vannak elválasztva az értékek\n        if (values.length >= 2) {\n            var timestamp = new Date(values[0].trim()).getTime(); // Timestamp átalakítása Unix időbélyeggé\n            var pressure = parseFloat(values[1].trim());\n\n            if (!isNaN(timestamp) && !isNaN(pressure)) {\n                data.push({\n                    x: timestamp,\n                    y: pressure\n                });\n            }\n        }\n    }\n}\n\nmsg.payload = data;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
