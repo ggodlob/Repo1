@@ -4521,10 +4521,10 @@
         "interpolate": "linear",
         "nodata": "",
         "dot": false,
-        "ymin": "auto",
-        "ymax": "auto",
+        "ymin": "-1000",
+        "ymax": "0",
         "removeOlder": 1,
-        "removeOlderPoints": "auto",
+        "removeOlderPoints": "",
         "removeOlderUnit": "86400",
         "cutout": 0,
         "useOneColor": false,
@@ -4565,9 +4565,26 @@
         "y": 460,
         "wires": [
             [
-                "d5318132f8a8233e"
+                "d5318132f8a8233e",
+                "9c43c9298a70e68e"
             ]
         ]
+    },
+    {
+        "id": "9c43c9298a70e68e",
+        "type": "debug",
+        "z": "fe54917cf124892f",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1880,
+        "y": 400,
+        "wires": []
     },
     {
         "id": "782b06fb.cc1df8",
