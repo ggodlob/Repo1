@@ -3559,7 +3559,8 @@
         "wires": [
             [
                 "ee88a0a41eb442c7",
-                "3e176391b84614da"
+                "3e176391b84614da",
+                "c36610bfbbaa9d45"
             ]
         ]
     },
@@ -4520,6 +4521,46 @@
         "statusType": "auto",
         "x": 1880,
         "y": 340,
+        "wires": []
+    },
+    {
+        "id": "c36610bfbbaa9d45",
+        "type": "csv",
+        "z": "fe54917cf124892f",
+        "name": "",
+        "spec": "rfc",
+        "sep": ";",
+        "hdrin": true,
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\r\\n",
+        "temp": "Timestamp,Pressure",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 1630,
+        "y": 460,
+        "wires": [
+            [
+                "7611dcb2bc24cd1d"
+            ]
+        ]
+    },
+    {
+        "id": "7611dcb2bc24cd1d",
+        "type": "debug",
+        "z": "fe54917cf124892f",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1820,
+        "y": 460,
         "wires": []
     },
     {
