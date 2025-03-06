@@ -3715,9 +3715,9 @@
         "y": 400,
         "wires": [
             [
-                "6ba1dfda5a91e85a",
                 "6ddfe0872aa55cab",
-                "814b180397c459f9"
+                "814b180397c459f9",
+                "48d6451aabd58726"
             ]
         ]
     },
@@ -4424,35 +4424,11 @@
         ]
     },
     {
-        "id": "6ba1dfda5a91e85a",
-        "type": "csv",
-        "z": "fe54917cf124892f",
-        "name": "",
-        "spec": "rfc",
-        "sep": ";",
-        "hdrin": true,
-        "hdrout": "none",
-        "multi": "one",
-        "ret": "\\r\\n",
-        "temp": "Timestamp,Pressure",
-        "skip": "0",
-        "strings": true,
-        "include_empty_strings": "",
-        "include_null_values": "",
-        "x": 910,
-        "y": 400,
-        "wires": [
-            [
-                "48d6451aabd58726"
-            ]
-        ]
-    },
-    {
         "id": "48d6451aabd58726",
         "type": "function",
         "z": "fe54917cf124892f",
         "name": "function 5",
-        "func": "let data = msg.payload;\nlet chartData = [];\n\ndata.forEach(row => {\n    //Ellenőrizzük, hogy a sorban léteznek-e adatok, és hogy a Timestamp és Pressure oszlopok léteznek-e\n    if(row && row.Timestamp && row.Pressure){\n        let xValue = row.Timestamp; // x tengely értéke (Timestamp oszlop)\n        let yValue = row.Pressure; // y tengely értéke (Pressure oszlop)\n\n        //Ellenőrizzük, hogy az értékek numerikusak-e a Pressure oszlop esetében, ha nem, akkor megpróbáljuk számmá alakítani\n        if(isNaN(yValue)){\n            yValue = parseFloat(yValue);\n        }\n\n        //Csak akkor adjuk hozzá az adatot a diagramhoz, ha a Pressure érték numerikus\n        if(!isNaN(yValue)){\n            chartData.push({\n                x: xValue,\n                y: yValue\n            });\n        }\n    }\n});\n\nmsg.payload = {\n    series: [\"Nyomás\"], // A diagram adatainak neve\n    data: [chartData], // A diagram adatai\n    labels: chartData.map(d => d.x) // X tengely címkéi\n};\n\nreturn msg;",
+        "func": "let data = msg.payload;\nlet chartData = [];\n\ndata.forEach(row => {\n    if (row && row.Timestamp && row.Pressure) {\n        let xValue = row.Timestamp;\n        let yValue = row.Pressure;\n\n        if (isNaN(yValue)) {\n            yValue = parseFloat(yValue);\n        }\n\n        if (!isNaN(yValue)) {\n            chartData.push({\n                x: xValue,\n                y: yValue\n            });\n        }\n    }\n});\n\nmsg.payload = {\n    series: [\"Nyomás\"],\n    data: [chartData],\n    labels: chartData.map(d => d.x)\n};\n\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
